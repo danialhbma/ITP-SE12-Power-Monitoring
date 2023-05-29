@@ -1,6 +1,7 @@
-# Setting Up Eclipse-Mosquitto
-If setting up Eclispe-Mosquitto docker image for the first time perform steps (1) to (6).
-Else just run (1) and (5) if docker image not up. 
+# Setting Up Eclipse-Mosquitto in Google Cloud
+All steps performed in VM instance shell CLI.
+If setting up Eclispe-Mosquitto docker image for the first time perform steps (1) to (6). Else just run (1) and (5) if docker image not up. 
+
 1. cd to directory containing docker-compose.yml file
 	* docker-compose file used will use two ports, 1883 and 9001 for eclipse-mosquitto container image.
 	* Port 1883: This is the default port for MQTT communication. MQTT clients connect to the broker using this port to publish and subscribe to MQTT topics. It is a TCP-based port where MQTT messages are exchanged between clients and the MQTT broker. Port 1883 is used for native MQTT communication.

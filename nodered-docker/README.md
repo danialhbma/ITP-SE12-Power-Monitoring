@@ -1,4 +1,6 @@
 # Setting up Node-RED in Cloud
+All steps performed in Google Cloud VM shell / CLI.
+
 1. cd to directory containing docker-compose.yml 
 	* docker compose file provided will host node red on port 1880
 	* assumes that docker and docker-compose already installed
@@ -11,6 +13,6 @@
 	* run curl <ip address>:1880
 	* you should see html code for node-red, if so configure firewall rules to allow tcp connections externally.
 5. gcloud compute firewall-rules create node-red-rule --allow tcp:1880
-	* Allows TCP connections to port 1880, you should now be able to access node-red using the public-ip address of GoogleCloud.
+	* Adds a new firewall rule that allows TCP connections to port 1880, you should now be able to access node-red using the public-ip address of GoogleCloud.
 	* e.g., http://35.197.144.239:1880/
 
