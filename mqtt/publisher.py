@@ -5,7 +5,7 @@ class Publisher:
     # constructor when object is initialised
     def __init__(self, client_id):
         # private attributes
-        self.__host = '35.197.144.239'
+        self.__host = '35.198.233.52'
         self.__username = 'admin'
         self.__pwd = 'changemeplease'
         self.__port = 1883
