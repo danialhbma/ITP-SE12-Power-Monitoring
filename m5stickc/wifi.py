@@ -1,23 +1,16 @@
 from m5stack import *
 import wifiCfg
+from uiflow import *
 
 class Wifi:
     # constructor when object is initialised
     def __init__(self):
-        # private attributes
-        self.__ssid = 'FuzziNet'
-        self.__pwd = 'fauziiscute'
-        
-    # public getters for private attributes
-    def get_ssid(self):
-        return self.__ssid
-
-    def get_pwd(self):
-        return self.__pwd
+        self.__ssid = "FuzziNet"
+        self.__pwd = "fauziiscute"
         
     # function to connect to router
     def connect_wifi(self):
-        wifiCfg.doConnect(self.get_ssid(), self.get_pwd())
+        wifiCfg.doConnect(self.__ssid, self.__pwd)
 
     # function to reconnect to router
     def reconnect_wifi(self):
