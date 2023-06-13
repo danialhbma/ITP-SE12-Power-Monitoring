@@ -1,0 +1,42 @@
+version: '3.3'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    restart: always
+    ports:
+      - '1883:1883'
+      - '9001:9001'
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./passwd:/mosquitto/config/password_file
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+
+  nodered:
+    image: nodered/node-red
+    ports:
+      - '1880:1880'
+    restart: always
+    volumes:
+      - node-red-data:/data
+
+  influxdb:
+    image: influxdb:latest
+    restart: always
+    ports:
+      - '8086:8086'
+    volumes:
+      - influxdb-storage:/var/lib/influxdb
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=changemeplease
+      - DOCKER_INFLUXDB_INIT_ORG=my-org
+      - DOCKER_INFLUXDB_INIT_BUCKET=my-bucket
+
+volumes:
+  mosquitto-data:
+  mosquitto-log:
+  node-red-data:
+  influxdb-storage:
