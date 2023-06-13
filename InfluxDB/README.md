@@ -3,27 +3,28 @@
 ## Mass create buckets
 1. Add bucket name and description to buckets.json
 2. python3 BucketCreator.py 
-	* Buckets that already exists will be ignored
+	* Buckets that already exists will be ignored, buckets that do not exist will be created.
 
 ## Write Data To InfluxDB Server Using Python
-Writing to InfluxDB involves two classes, InfluxDBWriter and InfluxDBMeasurement (Abstract). InfluxDBMeasurement is an abstract class to be inherited, the _set_tags() and _set_fields() function must be implemented by sub-classes. 
-	* Tags are used for filtering e.g., device name.
-	* Fields are actual data / values e.g., Temp, Humidity etc.
-	* Tags and Fields are used to create a Measurement (Point) object. 
-	* InfluxDBWriter.write_single_measurement() takes in a point object, and writes this point object to InfluxDB server.
-	* See OpenWeatherMapAPIClient.py and code comments for example.
-
+Writing to InfluxDB involves two classes, InfluxDBWriter and InfluxDBMeasurement (Abstract). InfluxDBMeasurement is an abstract class to be
+inherited, the _set_tags() and _set_fields() function must be implemented by sub-classes. See OpenWeatherMapAPIClient.py and code comments for example usage.
+* Tags are used for filtering e.g., device name.
+* Fields are actual data / values e.g., Temp, Humidity etc.
+* Tags and Fields are used to create a Point object (Measurement). 
+* InfluxDBWriter.write_single_measurement() takes in a Point object, and writes this point object to InfluxDB server.
 
 ## OpenWeatherMap
-Makes API calls to OpenWeatherMapAPI, to retrieve weather information. Information is then written to InfluxDB server. This script will be scheduled using a CRON job and executed at 1 hourly intervals.
-1. Verify API key valid.
-2. Modify latitude and longitude to obtain weather information.
+Retrieves weather information from OpenWeatherMapAPI. Weather information is then written to InfluxDB server. This script will be scheduled via a CRON job and executed at the 10th minute of every hour.
+1. In OpenWeatherMapAPIClient, verify valid API, longitude and latitude used.
+2. In InfluxDBWriter.py, verify valid API token, org and URL used. 
 3. pip3 install influxdb-client
 4. python3 OpenWeatherMapAPIClient.py	
 
-## Creating CRONJOBS
+## Creating CRON Jobs
 1. crontab -e
-	* Add this line to run a script every hour on the 10th minute 
+	* To schedule a job to run at the 10th minute of every hour you can use the following CRON expression. 
 	* 10 * * * * cd <path to folder containing script> && python3 <script name> 
+	* e.g., 10 * * * *  cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && python3 OpenWeatherMapAPIClient.py >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/output.log 2>&1
+	* The aforementioned line also redirects the output from OpenWeatherMapAPIClient.py to output.log, this is mainly for debugging and is not mandatory. 
 2. crontab -l 
 	* View CRON jobs scheduled	
