@@ -23,7 +23,6 @@ class OpenWeatherMapAPIClient(InfluxDBMeasurement):
         url = f"http://api.openweathermap.org/data/2.5/weather?lat={self.latitude}&lon={self.longitude}&appid={self.api_key}&units=metric"
         response = requests.get(url)
         self.data = response.json()
-        print(self.data)
         self._set_fields()
         self._set_tags()
 

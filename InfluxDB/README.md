@@ -15,7 +15,7 @@ Writing to InfluxDB involves two classes, InfluxDBWriter and InfluxDBMeasurement
 
 
 ## OpenWeatherMap
-Makes API calls to OpenWeatherMapAPI, to retrieve weather information. Information is then written to InfluxDB server. This script will be scheduled using a CRON job and executed at 1 hourly intervals.
+Makes API calls to OpenWeatherMapAPI, to retrieve weather information. Information is then written to InfluxDB server. This script will be scheduled using a CRON job and executed at 30 minute intervals.
 1. Verify API key valid.
 2. Modify latitude and longitude to obtain weather information.
 3. pip3 install influxdb-client
@@ -23,7 +23,8 @@ Makes API calls to OpenWeatherMapAPI, to retrieve weather information. Informati
 
 ## Creating CRONJOBS
 1. crontab -e
-	* Add this line to run a script every hour on the 10th minute 
-	* 10 * * * * cd <path to folder containing script> && python3 <script name> 
+	* Add this line to run a script every 30 minutes.
+	* */30 * * * * cd < path to folder containing script > && python3 < script name > 
+	* e.g., */30 * * * *  cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && python3 OpenWeatherMapAPIClient.py 
 2. crontab -l 
 	* View CRON jobs scheduled	
