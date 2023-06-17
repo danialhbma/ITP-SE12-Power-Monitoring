@@ -20,3 +20,6 @@ class Wifi:
     def is_connected_wifi(self):
         return wifiCfg.wlan_sta.isconnected()
     
+    # function to disconnect from router
+    def disconnect_wifi(self):
+        wifiCfg.wlan_sta.disconnect()
