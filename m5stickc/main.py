@@ -77,6 +77,8 @@ if len(current) == 0:
             selectedRack = (selectedRack + 1) % len(rackOptions)
             display_menu("rack")
 
+lcd.clear()
+
 # initialise Wi-Fi
 wifi = Wifi()
 wifi.connect_wifi()
@@ -85,6 +87,8 @@ wifi.connect_wifi()
 m5mqtt = Publisher(current)
 m5mqtt.connect_mqtt()
 
+wait(5)
+
 # if wifi is not connected, deep sleep and try again in 5 mins
 if not wifi.is_connected_wifi():
     M5TextBox(0, 0, "wifi disconnected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
@@ -92,17 +96,21 @@ if not wifi.is_connected_wifi():
     
 # initialise selected sensor object and proceed to collect and publish data
 else:
-    if current[-5:] == "water":
-        sensor = WaterFlow()
-        sensor.read_and_publish_data(m5mqtt, current[0:5])
-    elif current[-5:] == "/tvoc":
-        sensor = TvocTemp()
-        sensor.read_and_publish_data(m5mqtt, current[0:5])
-    elif current[-5:] == "light":
-        sensor = Light()
-        sensor.read_and_publish_data(m5mqtt, current[0:5])
+    if m5mqtt is not None:
+        if current[-5:] == "water":
+            sensor = WaterFlow()
+            sensor.read_and_publish_data(m5mqtt, current[0:5])
+        elif current[-5:] == "/tvoc":
+            sensor = TvocTemp()
+            sensor.read_and_publish_data(m5mqtt, current[0:5])
+        elif current[-5:] == "light":
+            sensor = Light()
+            sensor.read_and_publish_data(m5mqtt, current[0:5])
+        else:
+            M5TextBox(0, 0, "Error " + str(len(current)), lcd.FONT_Default, 0xFFFFFF, rotate = 0)
     else:
-        M5TextBox(0, 0, "Error " + str(len(current)), lcd.FONT_Default, 0xFFFFFF, rotate = 0)
-
+        M5TextBox(0, 0, "mqtt disconnected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
+        deep_sleep(300 * 1000)
+        
 # deep sleep and wait for next cycle
 deep_sleep(1800 * 1000)
