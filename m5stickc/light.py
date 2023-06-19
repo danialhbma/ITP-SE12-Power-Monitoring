@@ -10,11 +10,10 @@ class Light(SensorInterface):
         self.__light = unit.get(unit.LIGHT, unit.PORTA)
 
     def read_and_publish_data(self, publisher, rack):
-        # FOR DEBUGGING: print status on LCD
-        M5TextBox(0, 16, "MQTT connected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
-        M5TextBox(0, 80, rack, lcd.FONT_Default, 0xFFFFFF, rotate = 0)
+        # M5TextBox(0, 16, "MQTT connected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
+        # M5TextBox(0, 80, rack, lcd.FONT_Default, 0xFFFFFF, rotate = 0)
 
         # publish MQTT messages
         publisher.publish_mqtt(topic = rack + "/light", data = self.__light.analogValue)
-        wait(1)
+        wait(2)
     

@@ -19,16 +19,15 @@ selectedRack = 0
 
 # function to turn off all components and go into deep sleep
 def deep_sleep(duration):
-    lcd.clear()
-    
-    # turn off lcd screen backlight
-    axp.setLcdBrightness(0)
-    
     # disconnect wifi
     wifi.disconnect_wifi()
     
     # disconnect from mqtt
     m5mqtt.disconnect_mqtt()
+    
+    # turn off lcd screen backlight
+    lcd.clear()
+    axp.setLcdBrightness(0)
     
     machine.deepsleep(duration)
 
@@ -52,8 +51,6 @@ def display_menu(menu):
 # check if user has made any selections prior to deepsleep
 rtc = machine.RTC()
 current = bytes(rtc.memory()).decode()
-
-lcd.clear()
 
 # display menu and wait for user input if user did not make any selection prior to deepsleep
 # right button -> navigate to next option
@@ -86,31 +83,24 @@ wifi.connect_wifi()
 # initialise publisher
 m5mqtt = Publisher(current)
 m5mqtt.connect_mqtt()
-
-wait(5)
+wait(3)
 
 # if wifi is not connected, deep sleep and try again in 5 mins
-if not wifi.is_connected_wifi():
+if not wifi.is_connected_wifi() or m5mqtt is None:
     M5TextBox(0, 0, "wifi disconnected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
     deep_sleep(300 * 1000)
-    
+
 # initialise selected sensor object and proceed to collect and publish data
 else:
-    if m5mqtt is not None:
-        if current[-5:] == "water":
-            sensor = WaterFlow()
-            sensor.read_and_publish_data(m5mqtt, current[0:5])
-        elif current[-5:] == "/tvoc":
-            sensor = TvocTemp()
-            sensor.read_and_publish_data(m5mqtt, current[0:5])
-        elif current[-5:] == "light":
-            sensor = Light()
-            sensor.read_and_publish_data(m5mqtt, current[0:5])
-        else:
-            M5TextBox(0, 0, "Error " + str(len(current)), lcd.FONT_Default, 0xFFFFFF, rotate = 0)
-    else:
-        M5TextBox(0, 0, "mqtt disconnected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
-        deep_sleep(300 * 1000)
+    if current[-5:] == "water":
+        sensor = WaterFlow()
+        sensor.read_and_publish_data(m5mqtt, current[0:5])
+    elif current[-5:] == "/tvoc":
+        sensor = TvocTemp()
+        sensor.read_and_publish_data(m5mqtt, current[0:5])
+    elif current[-5:] == "light":
+        sensor = Light()
+        sensor.read_and_publish_data(m5mqtt, current[0:5])
         
 # deep sleep and wait for next cycle
 deep_sleep(1800 * 1000)
