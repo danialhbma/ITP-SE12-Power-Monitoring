@@ -1,0 +1,1000 @@
+8 Jun 08:35:32 - [error] [influxdb out:Temperature Bucket] RequestTimedOutError: Request timed out
+8 Jun 08:35:32 - [error] [influxdb out:Humidity Bucket] RequestTimedOutError: Request timed out
+8 Jun 08:35:32 - [error] [influxdb out:C02 Bucket] RequestTimedOutError: Request timed out
+8 Jun 08:41:38 - [info] Stopping modified nodes
+8 Jun 08:41:38 - [info] Stopped modified nodes
+8 Jun 08:41:38 - [info] Updated flows
+8 Jun 08:41:38 - [info] Starting modified nodes
+8 Jun 08:41:38 - [info] Started modified nodes
+8 Jun 08:41:38 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+8 Jun 08:42:02 - [info] Stopping modified nodes
+8 Jun 08:42:02 - [info] Stopped modified nodes
+8 Jun 08:42:02 - [info] Updated flows
+8 Jun 08:42:02 - [info] Starting modified nodes
+8 Jun 08:42:02 - [info] Started modified nodes
+8 Jun 08:42:22 - [error] [influxdb out:Temperature Bucket] HttpError: unauthorized access
+8 Jun 08:42:22 - [error] [influxdb out:Humidity Bucket] HttpError: unauthorized access
+8 Jun 08:42:22 - [error] [influxdb out:C02 Bucket] HttpError: unauthorized access
+8 Jun 08:45:24 - [info] Stopping modified nodes
+8 Jun 08:45:24 - [info] Stopped modified nodes
+8 Jun 08:45:24 - [info] Updated flows
+8 Jun 08:45:24 - [info] Starting modified nodes
+8 Jun 08:45:24 - [info] Started modified nodes
+8 Jun 08:45:47 - [error] [influxdb out:Temperature Bucket] HttpError: unauthorized access
+8 Jun 08:45:48 - [error] [influxdb out:Humidity Bucket] HttpError: unauthorized access
+8 Jun 08:45:48 - [error] [influxdb out:C02 Bucket] HttpError: unauthorized access
+8 Jun 08:47:24 - [info] Stopping modified nodes
+8 Jun 08:47:24 - [info] Stopped modified nodes
+8 Jun 08:47:24 - [info] Updated flows
+8 Jun 08:47:24 - [info] Starting modified nodes
+8 Jun 08:47:24 - [info] Started modified nodes
+13 Jun 07:17:31 - [info] Stopping modified nodes
+13 Jun 07:17:31 - [info] Stopped modified nodes
+13 Jun 07:17:31 - [info] Updated flows
+13 Jun 07:17:31 - [info] Starting modified nodes
+13 Jun 07:17:31 - [info] Started modified nodes
+13 Jun 07:21:48 - [info] Stopping modified nodes
+13 Jun 07:21:48 - [info] Stopped modified nodes
+13 Jun 07:21:48 - [info] Updated flows
+13 Jun 07:21:48 - [info] Starting modified nodes
+13 Jun 07:21:48 - [info] Started modified nodes
+13 Jun 07:30:46 - [info] Stopping modified nodes
+13 Jun 07:30:46 - [info] Stopped modified nodes
+13 Jun 07:30:46 - [info] Updated flows
+13 Jun 07:30:46 - [info] Starting modified nodes
+13 Jun 07:30:46 - [info] Started modified nodes
+13 Jun 07:32:15 - [info] Stopping modified nodes
+13 Jun 07:32:15 - [info] Stopped modified nodes
+13 Jun 07:32:15 - [info] Updated flows
+13 Jun 07:32:15 - [info] Starting modified nodes
+13 Jun 07:32:15 - [info] Started modified nodes
+13 Jun 07:45:02 - [info] Stopping modified nodes
+13 Jun 07:45:02 - [info] Stopped modified nodes
+13 Jun 07:45:02 - [info] Updated flows
+13 Jun 07:45:02 - [info] Starting modified nodes
+13 Jun 07:45:02 - [info] Started modified nodes
+14 Jun 12:52:50 - [info] Stopping modified nodes
+14 Jun 12:52:50 - [info] Stopped modified nodes
+14 Jun 12:52:50 - [info] Updated flows
+14 Jun 12:52:50 - [info] Starting modified nodes
+14 Jun 12:52:50 - [info] Started modified nodes
+14 Jun 14:43:56 - [info] Stopping modified nodes
+14 Jun 14:43:56 - [info] Stopped modified nodes
+14 Jun 14:43:56 - [info] Updated flows
+14 Jun 14:43:56 - [info] Starting modified nodes
+14 Jun 14:43:56 - [info] Started modified nodes
+14 Jun 15:04:42 - [info] Stopping modified nodes
+14 Jun 15:04:42 - [info] Stopped modified nodes
+14 Jun 15:04:42 - [info] Updated flows
+14 Jun 15:04:42 - [info] Starting modified nodes
+14 Jun 15:04:42 - [info] Started modified nodes
+14 Jun 15:41:37 - [info] Stopping modified nodes
+14 Jun 15:41:37 - [info] Stopped modified nodes
+14 Jun 15:41:37 - [info] Updated flows
+14 Jun 15:41:37 - [info] Starting modified nodes
+14 Jun 15:41:37 - [info] Started modified nodes
+14 Jun 15:58:53 - [info] Stopping modified nodes
+14 Jun 15:58:53 - [info] Stopped modified nodes
+14 Jun 15:58:53 - [info] Updated flows
+14 Jun 15:58:53 - [info] Starting modified nodes
+14 Jun 15:58:53 - [info] Started modified nodes
+14 Jun 15:58:56 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+14 Jun 15:58:59 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+14 Jun 15:58:59 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+14 Jun 15:58:59 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+14 Jun 15:58:59 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+14 Jun 15:58:59 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+14 Jun 16:01:52 - [info] Stopping modified nodes
+14 Jun 16:01:52 - [info] Stopped modified nodes
+14 Jun 16:01:52 - [info] Updated flows
+14 Jun 16:01:52 - [info] Starting modified nodes
+14 Jun 16:01:52 - [info] Started modified nodes
+14 Jun 16:26:30 - [info] Stopping flows
+14 Jun 16:26:30 - [info] Stopped flows
+14 Jun 16:26:38 - [info] 
+
+Welcome to Node-RED
+===================
+
+14 Jun 16:26:38 - [info] Node-RED version: v3.0.2
+14 Jun 16:26:38 - [info] Node.js  version: v16.20.0
+14 Jun 16:26:38 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+14 Jun 16:26:39 - [info] Loading palette nodes
+14 Jun 16:26:40 - [info] Settings file  : /data/settings.js
+14 Jun 16:26:40 - [info] Context store  : 'default' [module=memory]
+14 Jun 16:26:40 - [info] User directory : /data
+14 Jun 16:26:40 - [warn] Projects disabled : editorTheme.projects.enabled=false
+14 Jun 16:26:40 - [info] Flows file     : /data/flows.json
+14 Jun 16:26:40 - [info] Server now running at http://127.0.0.1:1880/
+14 Jun 16:26:40 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+14 Jun 16:26:40 - [info] Starting flows
+14 Jun 16:26:40 - [info] Started flows
+14 Jun 16:26:40 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+14 Jun 16:31:22 - [info] Stopping flows
+14 Jun 16:31:22 - [info] Stopped flows
+14 Jun 16:31:31 - [info] 
+
+Welcome to Node-RED
+===================
+
+14 Jun 16:31:31 - [info] Node-RED version: v3.0.2
+14 Jun 16:31:31 - [info] Node.js  version: v16.20.0
+14 Jun 16:31:31 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+14 Jun 16:31:31 - [info] Loading palette nodes
+14 Jun 16:31:32 - [info] Settings file  : /data/settings.js
+14 Jun 16:31:32 - [info] Context store  : 'default' [module=memory]
+14 Jun 16:31:32 - [info] User directory : /data
+14 Jun 16:31:32 - [warn] Projects disabled : editorTheme.projects.enabled=false
+14 Jun 16:31:32 - [info] Flows file     : /data/flows.json
+14 Jun 16:31:32 - [info] Server now running at http://127.0.0.1:1880/
+14 Jun 16:31:32 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+14 Jun 16:31:32 - [info] Starting flows
+14 Jun 16:31:32 - [info] Started flows
+14 Jun 16:31:32 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+14 Jun 16:39:39 - [info] Stopping flows
+14 Jun 16:39:39 - [info] Stopped flows
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+Error loading settings file: /data/settings.js
+/data/settings.js:150
+    uiPort: process.env.PORT || 1880,
+    ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1124:15)
+    at Module._compile (node:internal/modules/cjs/loader:1160:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Module.require (node:internal/modules/cjs/loader:1098:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:140:20)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+14 Jun 16:44:24 - [info] 
+
+Welcome to Node-RED
+===================
+
+14 Jun 16:44:24 - [info] Node-RED version: v3.0.2
+14 Jun 16:44:24 - [info] Node.js  version: v16.20.0
+14 Jun 16:44:24 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+14 Jun 16:44:24 - [info] Loading palette nodes
+14 Jun 16:44:25 - [info] Settings file  : /data/settings.js
+14 Jun 16:44:25 - [info] Context store  : 'default' [module=memory]
+14 Jun 16:44:25 - [info] User directory : /data
+14 Jun 16:44:25 - [warn] Projects disabled : editorTheme.projects.enabled=false
+14 Jun 16:44:25 - [info] Flows file     : /data/flows.json
+14 Jun 16:44:25 - [info] Server now running at http://127.0.0.1:1880/
+14 Jun 16:44:25 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+14 Jun 16:44:25 - [info] Starting flows
+14 Jun 16:44:25 - [info] Started flows
+14 Jun 16:44:25 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+15 Jun 17:17:20 - [info] Stopping modified nodes
+15 Jun 17:17:20 - [info] Stopped modified nodes
+15 Jun 17:17:20 - [info] Updated flows
+15 Jun 17:17:20 - [info] Starting modified nodes
+15 Jun 17:17:20 - [info] Started modified nodes
+17 Jun 03:22:33 - [info] Stopping modified nodes
+17 Jun 03:22:33 - [info] Stopped modified nodes
+17 Jun 03:22:33 - [info] Updated flows
+17 Jun 03:22:33 - [info] Starting modified nodes
+17 Jun 03:22:33 - [info] Started modified nodes
+17 Jun 03:27:05 - [info] Stopping modified nodes
+17 Jun 03:27:05 - [info] Stopped modified nodes
+17 Jun 03:27:05 - [info] Updated flows
+17 Jun 03:27:05 - [info] Starting modified nodes
+17 Jun 03:27:05 - [info] Started modified nodes
+17 Jun 03:28:11 - [info] Stopping modified nodes
+17 Jun 03:28:11 - [info] Stopped modified nodes
+17 Jun 03:28:11 - [info] Updated flows
+17 Jun 03:28:11 - [info] Starting modified nodes
+17 Jun 03:28:11 - [info] Started modified nodes
+17 Jun 03:53:26 - [info] Stopping modified nodes
+17 Jun 03:53:26 - [info] Stopped modified nodes
+17 Jun 03:53:26 - [info] Updated flows
+17 Jun 03:53:26 - [info] Starting modified nodes
+17 Jun 03:53:26 - [info] Started modified nodes
+17 Jun 03:53:46 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:30:30 - [info] Stopping modified nodes
+17 Jun 15:30:30 - [info] Stopped modified nodes
+17 Jun 15:30:30 - [info] Updated flows
+17 Jun 15:30:30 - [info] Starting modified nodes
+17 Jun 15:30:30 - [info] Started modified nodes
+17 Jun 15:31:02 - [info] Stopping modified nodes
+17 Jun 15:31:02 - [info] Stopped modified nodes
+17 Jun 15:31:02 - [info] Updated flows
+17 Jun 15:31:02 - [info] Starting modified nodes
+17 Jun 15:31:02 - [info] Started modified nodes
+17 Jun 15:35:19 - [info] Stopping modified nodes
+17 Jun 15:35:19 - [info] Stopped modified nodes
+17 Jun 15:35:19 - [info] Updated flows
+17 Jun 15:35:19 - [info] Starting modified nodes
+17 Jun 15:35:19 - [info] Started modified nodes
+17 Jun 15:35:46 - [info] Stopping modified nodes
+17 Jun 15:35:46 - [info] Stopped modified nodes
+17 Jun 15:35:46 - [info] Updated flows
+17 Jun 15:35:46 - [info] Starting modified nodes
+17 Jun 15:35:46 - [info] Started modified nodes
+17 Jun 15:36:32 - [info] Stopping modified nodes
+17 Jun 15:36:32 - [info] Stopped modified nodes
+17 Jun 15:36:32 - [info] Updated flows
+17 Jun 15:36:32 - [info] Starting modified nodes
+17 Jun 15:36:32 - [info] Started modified nodes
+17 Jun 15:40:03 - [info] Stopping modified nodes
+17 Jun 15:40:03 - [info] Stopped modified nodes
+17 Jun 15:40:03 - [info] Updated flows
+17 Jun 15:40:03 - [info] Starting modified nodes
+17 Jun 15:40:03 - [info] Started modified nodes
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:40:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:46:10 - [info] Stopping modified nodes
+17 Jun 15:46:10 - [info] Stopped modified nodes
+17 Jun 15:46:10 - [info] Updated flows
+17 Jun 15:46:10 - [info] Starting modified nodes
+17 Jun 15:46:10 - [info] Started modified nodes
+17 Jun 15:47:37 - [info] Stopping modified nodes
+17 Jun 15:47:37 - [info] Stopped modified nodes
+17 Jun 15:47:37 - [info] Updated flows
+17 Jun 15:47:37 - [info] Starting modified nodes
+17 Jun 15:47:37 - [info] Started modified nodes
+17 Jun 15:47:39 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:47:40 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:47:40 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:47:40 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:47:40 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:47:40 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:47:40 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'length')
+17 Jun 15:48:26 - [info] Stopping modified nodes
+17 Jun 15:48:26 - [info] Stopped modified nodes
+17 Jun 15:48:26 - [info] Updated flows
+17 Jun 15:48:26 - [info] Starting modified nodes
+17 Jun 15:48:26 - [info] Started modified nodes
+17 Jun 15:49:42 - [info] Stopping modified nodes
+17 Jun 15:49:42 - [info] Stopped modified nodes
+17 Jun 15:49:42 - [info] Updated flows
+17 Jun 15:49:42 - [info] Starting modified nodes
+17 Jun 15:49:42 - [info] Started modified nodes
+17 Jun 15:52:37 - [info] Stopping modified nodes
+17 Jun 15:52:37 - [info] Stopped modified nodes
+17 Jun 15:52:37 - [info] Updated flows
+17 Jun 15:52:37 - [info] Starting modified nodes
+17 Jun 15:52:37 - [info] Started modified nodes
+17 Jun 15:53:08 - [info] Stopping modified nodes
+17 Jun 15:53:08 - [info] Stopped modified nodes
+17 Jun 15:53:08 - [info] Updated flows
+17 Jun 15:53:08 - [info] Starting modified nodes
+17 Jun 15:53:08 - [info] Started modified nodes
+17 Jun 15:54:03 - [info] Stopping modified nodes
+17 Jun 15:54:03 - [info] Stopped modified nodes
+17 Jun 15:54:03 - [info] Updated flows
+17 Jun 15:54:03 - [info] Starting modified nodes
+17 Jun 15:54:03 - [info] Started modified nodes
+17 Jun 15:54:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:06 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:07 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:07 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:07 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:07 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:33 - [info] Stopping modified nodes
+17 Jun 15:54:33 - [info] Stopped modified nodes
+17 Jun 15:54:33 - [info] Updated flows
+17 Jun 15:54:33 - [info] Starting modified nodes
+17 Jun 15:54:33 - [info] Started modified nodes
+17 Jun 15:54:36 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:36 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:37 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:37 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:37 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:37 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:54:37 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+17 Jun 15:55:07 - [info] Stopping modified nodes
+17 Jun 15:55:07 - [info] Stopped modified nodes
+17 Jun 15:55:07 - [info] Updated flows
+17 Jun 15:55:07 - [info] Starting modified nodes
+17 Jun 15:55:07 - [info] Started modified nodes
+17 Jun 15:55:21 - [info] Stopping modified nodes
+17 Jun 15:55:21 - [info] Stopped modified nodes
+17 Jun 15:55:21 - [info] Updated flows
+17 Jun 15:55:21 - [info] Starting modified nodes
+17 Jun 15:55:21 - [info] Started modified nodes
+17 Jun 15:57:31 - [info] Stopping modified nodes
+17 Jun 15:57:31 - [info] Stopped modified nodes
+17 Jun 15:57:31 - [info] Updated flows
+17 Jun 15:57:31 - [info] Starting modified nodes
+17 Jun 15:57:31 - [info] Started modified nodes
+17 Jun 15:59:16 - [info] Stopping modified nodes
+17 Jun 15:59:16 - [info] Stopped modified nodes
+17 Jun 15:59:16 - [info] Updated flows
+17 Jun 15:59:16 - [info] Starting modified nodes
+17 Jun 15:59:16 - [info] Started modified nodes
+17 Jun 16:03:47 - [info] Stopping modified nodes
+17 Jun 16:03:47 - [info] Stopped modified nodes
+17 Jun 16:03:47 - [info] Updated flows
+17 Jun 16:03:47 - [info] Starting modified nodes
+17 Jun 16:03:47 - [info] Started modified nodes
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+[
+  { id: 'bf6dc985a6437b4df4eqna', name: 'Rack 3 Water' },
+  { id: 'bfe85a818a75648a29zffe', name: 'Rack 2 Light' },
+  { id: 'bfb01b4529be3ed5f0q4qk', name: 'Rack 3 Light' },
+  { id: 'bf1a17265640b62287pdh9', name: 'Rack 1 Water' },
+  { id: 'bf0f226c1b67ca0956izof', name: 'Rack 1 Light' },
+  { id: 'bf22bde1e0846f9e67h9ct', name: 'Rack 2 Water' },
+  { id: 'bff9d26de8724c6dbdwges', name: 'Strawberry Rack 1 Light' }
+]
+17 Jun 16:05:03 - [info] Stopping modified nodes
+17 Jun 16:05:03 - [info] Stopped modified nodes
+17 Jun 16:05:03 - [info] Updated flows
+17 Jun 16:05:03 - [info] Starting modified nodes
+17 Jun 16:05:03 - [info] Started modified nodes
+17 Jun 16:10:25 - [info] Stopping modified nodes
+17 Jun 16:10:25 - [info] Stopped modified nodes
+17 Jun 16:10:25 - [info] Updated flows
+17 Jun 16:10:25 - [info] Starting modified nodes
+17 Jun 16:10:25 - [info] Started modified nodes
+17 Jun 16:14:15 - [info] Stopping modified nodes
+17 Jun 16:14:15 - [info] Stopped modified nodes
+17 Jun 16:14:15 - [info] Updated flows
+17 Jun 16:14:15 - [info] Starting modified nodes
+17 Jun 16:14:15 - [info] Started modified nodes
+17 Jun 16:20:51 - [info] Stopping modified nodes
+17 Jun 16:20:51 - [info] Stopped modified nodes
+17 Jun 16:20:51 - [info] Updated flows
+17 Jun 16:20:51 - [info] Starting modified nodes
+17 Jun 16:20:51 - [info] Started modified nodes
+17 Jun 16:21:39 - [info] Stopping modified nodes
+17 Jun 16:21:39 - [info] Stopped modified nodes
+17 Jun 16:21:39 - [info] Updated flows
+17 Jun 16:21:39 - [info] Starting modified nodes
+17 Jun 16:21:39 - [info] Started modified nodes
+17 Jun 16:21:53 - [info] Stopping modified nodes
+17 Jun 16:21:53 - [info] Stopped modified nodes
+17 Jun 16:21:53 - [info] Updated flows
+17 Jun 16:21:53 - [info] Starting modified nodes
+17 Jun 16:21:53 - [info] Started modified nodes
+17 Jun 16:23:33 - [info] Stopping modified nodes
+17 Jun 16:23:33 - [info] Stopped modified nodes
+17 Jun 16:23:33 - [info] Updated flows
+17 Jun 16:23:33 - [info] Starting modified nodes
+17 Jun 16:23:33 - [info] Started modified nodes
+17 Jun 16:24:46 - [info] Stopping modified nodes
+17 Jun 16:24:46 - [info] Stopped modified nodes
+17 Jun 16:24:46 - [info] Updated flows
+17 Jun 16:24:46 - [info] Starting modified nodes
+17 Jun 16:24:46 - [info] Started modified nodes
+17 Jun 16:25:10 - [info] Stopping modified nodes
+17 Jun 16:25:10 - [info] Stopped modified nodes
+17 Jun 16:25:10 - [info] Updated flows
+17 Jun 16:25:10 - [info] Starting modified nodes
+17 Jun 16:25:10 - [info] Started modified nodes
+17 Jun 16:55:37 - [info] Stopping modified nodes
+17 Jun 16:55:37 - [info] Stopped modified nodes
+17 Jun 16:55:37 - [info] Updated flows
+17 Jun 16:55:37 - [info] Starting modified nodes
+17 Jun 16:55:37 - [info] Started modified nodes
+17 Jun 16:57:22 - [info] Stopping modified nodes
+17 Jun 16:57:22 - [info] Stopped modified nodes
+17 Jun 16:57:22 - [info] Updated flows
+17 Jun 16:57:22 - [info] Starting modified nodes
+17 Jun 16:57:22 - [info] Started modified nodes
+17 Jun 16:59:01 - [info] Stopping modified nodes
+17 Jun 16:59:01 - [info] Stopped modified nodes
+17 Jun 16:59:01 - [info] Updated flows
+17 Jun 16:59:01 - [info] Starting modified nodes
+17 Jun 16:59:01 - [info] Started modified nodes
+17 Jun 17:05:47 - [info] Stopping modified nodes
+17 Jun 17:05:47 - [info] Stopped modified nodes
+17 Jun 17:05:47 - [info] Updated flows
+17 Jun 17:05:47 - [info] Starting modified nodes
+17 Jun 17:05:47 - [info] Started modified nodes
+17 Jun 17:10:57 - [info] Stopping modified nodes
+17 Jun 17:10:57 - [info] Stopped modified nodes
+17 Jun 17:10:57 - [info] Updated flows
+17 Jun 17:10:57 - [info] Starting modified nodes
+17 Jun 17:10:57 - [info] Started modified nodes
+17 Jun 17:29:43 - [info] Stopping modified nodes
+17 Jun 17:29:43 - [info] Stopped modified nodes
+17 Jun 17:29:43 - [info] Updated flows
+17 Jun 17:29:43 - [info] Starting modified nodes
+17 Jun 17:29:43 - [info] Started modified nodes
+17 Jun 17:37:33 - [info] Stopping modified nodes
+17 Jun 17:37:33 - [info] Stopped modified nodes
+17 Jun 17:37:33 - [info] Updated flows
+17 Jun 17:37:33 - [info] Starting modified nodes
+17 Jun 17:37:33 - [info] Started modified nodes
+17 Jun 17:37:49 - [info] Stopping modified nodes
+17 Jun 17:37:49 - [info] Stopped modified nodes
+17 Jun 17:37:49 - [info] Updated flows
+17 Jun 17:37:49 - [info] Starting modified nodes
+17 Jun 17:37:49 - [info] Started modified nodes
+17 Jun 17:37:53 - [error] [function:Call Get Device Specifications API] TypeError: Cannot read properties of undefined (reading 'toString')
+17 Jun 17:39:10 - [info] Stopping modified nodes
+17 Jun 17:39:10 - [info] Stopped modified nodes
+17 Jun 17:39:10 - [info] Updated flows
+17 Jun 17:39:10 - [info] Starting modified nodes
+17 Jun 17:39:10 - [info] Started modified nodes
+17 Jun 17:39:18 - [info] Stopping modified nodes
+17 Jun 17:39:18 - [info] Stopped modified nodes
+17 Jun 17:39:18 - [info] Updated flows
+17 Jun 17:39:18 - [info] Starting modified nodes
+17 Jun 17:39:18 - [info] Started modified nodes
+17 Jun 17:39:58 - [info] Stopping modified nodes
+17 Jun 17:39:58 - [info] Stopped modified nodes
+17 Jun 17:39:58 - [info] Updated flows
+17 Jun 17:39:58 - [info] Starting modified nodes
+17 Jun 17:39:58 - [info] Started modified nodes
+17 Jun 17:42:06 - [info] Stopping modified nodes
+17 Jun 17:42:06 - [info] Stopped modified nodes
+17 Jun 17:42:06 - [info] Updated flows
+17 Jun 17:42:06 - [info] Starting modified nodes
+17 Jun 17:42:06 - [info] Started modified nodes
+17 Jun 17:42:33 - [info] Stopping modified nodes
+17 Jun 17:42:33 - [info] Stopped modified nodes
+17 Jun 17:42:33 - [info] Updated flows
+17 Jun 17:42:33 - [info] Starting modified nodes
+17 Jun 17:42:33 - [info] Started modified nodes
+17 Jun 17:43:09 - [info] Stopping modified nodes
+17 Jun 17:43:09 - [info] Stopped modified nodes
+17 Jun 17:43:09 - [info] Updated flows
+17 Jun 17:43:09 - [info] Starting modified nodes
+17 Jun 17:43:09 - [info] Started modified nodes
+17 Jun 17:43:36 - [info] Stopping modified nodes
+17 Jun 17:43:36 - [info] Stopped modified nodes
+17 Jun 17:43:36 - [info] Updated flows
+17 Jun 17:43:36 - [info] Starting modified nodes
+17 Jun 17:43:36 - [info] Started modified nodes
+17 Jun 17:51:28 - [info] Stopping modified nodes
+17 Jun 17:51:28 - [info] Stopped modified nodes
+17 Jun 17:51:28 - [info] Updated flows
+17 Jun 17:51:28 - [info] Starting modified nodes
+17 Jun 17:51:28 - [info] Started modified nodes
+17 Jun 18:00:04 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+18 Jun 06:09:02 - [info] Stopping modified nodes
+18 Jun 06:09:02 - [info] Stopped modified nodes
+18 Jun 06:09:02 - [info] Updated flows
+18 Jun 06:09:02 - [info] Starting modified nodes
+18 Jun 06:09:02 - [info] Started modified nodes
+18 Jun 06:09:43 - [info] Stopping modified nodes
+18 Jun 06:09:43 - [info] Stopped modified nodes
+18 Jun 06:09:43 - [info] Updated flows
+18 Jun 06:09:43 - [info] Starting modified nodes
+18 Jun 06:09:43 - [info] Started modified nodes
+18 Jun 06:29:42 - [info] Stopping modified nodes
+18 Jun 06:29:42 - [info] Stopped modified nodes
+18 Jun 06:29:42 - [info] Updated flows
+18 Jun 06:29:42 - [info] Starting modified nodes
+18 Jun 06:29:42 - [info] Started modified nodes
+18 Jun 06:30:45 - [info] Stopping modified nodes
+18 Jun 06:30:45 - [info] Stopped modified nodes
+18 Jun 06:30:45 - [info] Updated flows
+18 Jun 06:30:45 - [info] Starting modified nodes
+18 Jun 06:30:45 - [info] Started modified nodes
+18 Jun 06:35:03 - [info] Stopping modified nodes
+18 Jun 06:35:03 - [info] Stopped modified nodes
+18 Jun 06:35:03 - [info] Updated flows
+18 Jun 06:35:03 - [info] Starting modified nodes
+18 Jun 06:35:03 - [info] Started modified nodes
+18 Jun 06:57:39 - [info] Stopping modified nodes
+18 Jun 06:57:39 - [info] Stopped modified nodes
+18 Jun 06:57:39 - [info] Updated flows
+18 Jun 06:57:39 - [info] Starting modified nodes
+18 Jun 06:57:39 - [info] Started modified nodes
+18 Jun 06:58:03 - [info] Stopping modified nodes
+18 Jun 06:58:03 - [info] Stopped modified nodes
+18 Jun 06:58:03 - [info] Updated flows
+18 Jun 06:58:03 - [info] Starting modified nodes
+18 Jun 06:58:03 - [info] Started modified nodes
+18 Jun 07:22:44 - [info] Stopping modified nodes
+18 Jun 07:22:44 - [info] Stopped modified nodes
+18 Jun 07:22:44 - [info] Updated flows
+18 Jun 07:22:44 - [info] Starting modified nodes
+18 Jun 07:22:44 - [info] Started modified nodes
+18 Jun 07:24:23 - [info] Stopping modified nodes
+18 Jun 07:24:23 - [info] Stopped modified nodes
+18 Jun 07:24:23 - [info] Updated flows
+18 Jun 07:24:23 - [info] Starting modified nodes
+18 Jun 07:24:23 - [info] Started modified nodes
+18 Jun 07:25:33 - [info] Stopping modified nodes
+18 Jun 07:25:33 - [info] Stopped modified nodes
+18 Jun 07:25:33 - [info] Updated flows
+18 Jun 07:25:33 - [info] Starting modified nodes
+18 Jun 07:25:33 - [info] Started modified nodes
+18 Jun 07:26:25 - [info] Stopping modified nodes
+18 Jun 07:26:25 - [info] Stopped modified nodes
+18 Jun 07:26:25 - [info] Updated flows
+18 Jun 07:26:25 - [info] Starting modified nodes
+18 Jun 07:26:25 - [info] Started modified nodes
+18 Jun 07:27:28 - [info] Stopping modified nodes
+18 Jun 07:27:28 - [info] Stopped modified nodes
+18 Jun 07:27:28 - [info] Updated flows
+18 Jun 07:27:28 - [info] Starting modified nodes
+18 Jun 07:27:28 - [info] Started modified nodes
+18 Jun 07:27:35 - [info] Stopping modified nodes
+18 Jun 07:27:35 - [info] Stopped modified nodes
+18 Jun 07:27:35 - [info] Updated flows
+18 Jun 07:27:35 - [info] Starting modified nodes
+18 Jun 07:27:35 - [info] Started modified nodes
+18 Jun 07:28:42 - [info] Stopping modified nodes
+18 Jun 07:28:42 - [info] Stopped modified nodes
+18 Jun 07:28:42 - [info] Updated flows
+18 Jun 07:28:42 - [info] Starting modified nodes
+18 Jun 07:28:42 - [info] Started modified nodes
+18 Jun 07:29:28 - [info] Stopping modified nodes
+18 Jun 07:29:28 - [info] Stopped modified nodes
+18 Jun 07:29:28 - [info] Updated flows
+18 Jun 07:29:28 - [info] Starting modified nodes
+18 Jun 07:29:28 - [info] Started modified nodes
+19 Jun 00:19:58 - [info] Stopping modified nodes
+19 Jun 00:19:58 - [info] Stopped modified nodes
+19 Jun 00:19:58 - [info] Updated flows
+19 Jun 00:19:58 - [info] Starting modified nodes
+19 Jun 00:19:58 - [info] Started modified nodes
+19 Jun 00:21:19 - [info] Stopping modified nodes
+19 Jun 00:21:19 - [info] Stopped modified nodes
+19 Jun 00:21:19 - [info] Updated flows
+19 Jun 00:21:19 - [info] Starting modified nodes
+19 Jun 00:21:19 - [info] Started modified nodes
+19 Jun 00:23:26 - [info] Stopping modified nodes
+19 Jun 00:23:26 - [info] Stopped modified nodes
+19 Jun 00:23:26 - [info] Updated flows
+19 Jun 00:23:26 - [info] Starting modified nodes
+19 Jun 00:23:26 - [info] Started modified nodes
+19 Jun 03:25:14 - [info] Stopping modified nodes
+19 Jun 03:25:14 - [info] Stopped modified nodes
+19 Jun 03:25:14 - [info] Updated flows
+19 Jun 03:25:14 - [info] Starting modified nodes
+19 Jun 03:25:14 - [info] Started modified nodes
+19 Jun 03:26:26 - [info] Stopping modified nodes
+19 Jun 03:26:26 - [info] Stopped modified nodes
+19 Jun 03:26:26 - [info] Updated flows
+19 Jun 03:26:26 - [info] Starting modified nodes
+19 Jun 03:26:26 - [info] Started modified nodes
+19 Jun 05:26:23 - [info] Stopping modified nodes
+19 Jun 05:26:23 - [info] Stopped modified nodes
+19 Jun 05:26:23 - [info] Updated flows
+19 Jun 05:26:23 - [info] Starting modified nodes
+19 Jun 05:26:23 - [info] Started modified nodes
+19 Jun 05:26:29 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'forEach')
+19 Jun 09:51:42 - [info] Stopping modified nodes
+19 Jun 09:51:42 - [info] Stopped modified nodes
+19 Jun 09:51:42 - [info] Updated flows
+19 Jun 09:51:42 - [info] Starting modified nodes
+19 Jun 09:51:42 - [info] Started modified nodes
+19 Jun 09:56:11 - [info] Stopping modified nodes
+19 Jun 09:56:11 - [info] Stopped modified nodes
+19 Jun 09:56:11 - [info] Updated flows
+19 Jun 09:56:11 - [info] Starting modified nodes
+19 Jun 09:56:11 - [info] Started modified nodes

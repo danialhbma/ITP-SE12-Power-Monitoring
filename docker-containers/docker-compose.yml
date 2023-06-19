@@ -35,8 +35,18 @@ services:
       - DOCKER_INFLUXDB_INIT_ORG=my-org
       - DOCKER_INFLUXDB_INIT_BUCKET=my-bucket
 
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana-data:/var/lib/grafana
+
 volumes:
   mosquitto-data:
   mosquitto-log:
   node-red-data:
   influxdb-storage:
+  grafana-data:
