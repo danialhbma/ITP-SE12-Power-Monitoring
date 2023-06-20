@@ -11,13 +11,10 @@ class Wifi:
     # function to connect to router
     def connect_wifi(self):
         wifiCfg.doConnect(self.__ssid, self.__pwd)
-
-    # function to reconnect to router
-    def reconnect_wifi(self):
-        wifiCfg.reconnect()
+        return self.__is_connected_wifi()
     
     # check if device is connected to router
-    def is_connected_wifi(self):
+    def __is_connected_wifi(self):
         return wifiCfg.wlan_sta.isconnected()
     
     # function to disconnect from router

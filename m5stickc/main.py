@@ -76,31 +76,33 @@ if len(current) == 0:
 
 lcd.clear()
 
-# initialise Wi-Fi
+# initialise Wi-Fi and publisher
 wifi = Wifi()
-wifi.connect_wifi()
-
-# initialise publisher
 m5mqtt = Publisher(current)
-m5mqtt.connect_mqtt()
-wait(3)
+success = False
 
-# if wifi is not connected, deep sleep and try again in 5 mins
-if not wifi.is_connected_wifi() or m5mqtt is None:
-    M5TextBox(0, 0, "wifi disconnected", lcd.FONT_Default, 0xFFFFFF, rotate = 0)
-    deep_sleep(300 * 1000)
+# connect to Wi-Fi and mqtt publisher if both objects exist
+if wifi is not None and m5mqtt is not None:
+    is_connected_wifi = wifi.connect_wifi()
+    m5mqtt.connect_mqtt()
+    wait(3)
 
-# initialise selected sensor object and proceed to collect and publish data
-else:
-    if current[-5:] == "water":
-        sensor = WaterFlow()
-        sensor.read_and_publish_data(m5mqtt, current[0:5])
-    elif current[-5:] == "/tvoc":
-        sensor = TvocTemp()
-        sensor.read_and_publish_data(m5mqtt, current[0:5])
-    elif current[-5:] == "light":
-        sensor = Light()
-        sensor.read_and_publish_data(m5mqtt, current[0:5])
+    # initialise sensor if Wi-Fi is connected
+    if is_connected_wifi:
+        if current[-5:] == "water":
+            sensor = WaterFlow()
+        elif current[-5:] == "/tvoc":
+            sensor = TvocTemp()
+        elif current[-5:] == "light":
+            sensor = Light()
+
+        # publish data if sensor object exists
+        if sensor is not None:
+            sensor.read_and_publish_data(m5mqtt, current[0:5])
+            success = True
         
-# deep sleep and wait for next cycle
-deep_sleep(1800 * 1000)
+# wait for next cycle in 30 mins if all operations success, else reattempt in 5 mins
+if success:
+    deep_sleep(1800 * 1000)
+else:
+    deep_sleep(300 * 1000)
