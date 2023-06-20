@@ -100,6 +100,7 @@ if wifi is not None and m5mqtt is not None:
         if sensor is not None:
             sensor.read_and_publish_data(m5mqtt, current[0:5])
             success = True
+            wait(2)
         
 # wait for next cycle in 30 mins if all operations success, else reattempt in 5 mins
 if success:
