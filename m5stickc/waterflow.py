@@ -13,4 +13,3 @@ class WaterFlow(SensorInterface):
 
         # publish MQTT messages
         publisher.publish_mqtt(topic = rack + "/water", data = self.__adc_pin.read())
-        wait(2)

@@ -15,5 +15,4 @@ class Light(SensorInterface):
 
         # publish MQTT messages
         publisher.publish_mqtt(topic = rack + "/light", data = self.__light.analogValue)
-        wait(2)
     

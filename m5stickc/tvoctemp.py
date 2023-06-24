@@ -19,5 +19,4 @@ class TvocTemp(SensorInterface):
         publisher.publish_mqtt(topic = rack + "/temperature", data = self.__hat_env.temperature)
         publisher.publish_mqtt(topic = rack + "/humidity", data = self.__hat_env.humidity)
         publisher.publish_mqtt(topic = rack + "/co2", data = self.__tvoc.eCO2)
-        wait(2)
-    
+        
