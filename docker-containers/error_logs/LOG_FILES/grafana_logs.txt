@@ -1,19 +1,3 @@
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.799288659Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-mysql-pl.php status=302 remote_addr=35.198.244.252 time_ms=24 duration=24.504358ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79052206Z level=info msg="Request Completed" method=GET path=/editor-4.4.0-en.php status=302 remote_addr=35.198.244.252 time_ms=0 duration=254.61µs size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79085299Z level=info msg="Request Completed" method=GET path=/editor-4.3.1-mysql-cs.php status=302 remote_addr=35.198.244.252 time_ms=0 duration=258.72µs size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79117936Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-de.php status=302 remote_addr=35.198.244.252 time_ms=0 duration=246.54µs size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79187272Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-mysql-en.php status=302 remote_addr=35.198.244.252 time_ms=21 duration=21.087289ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79240357Z level=info msg="Request Completed" method=GET path=/editor-4.3.1-de.php status=302 remote_addr=35.198.244.252 time_ms=17 duration=17.834909ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.7930941Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-cs.php status=302 remote_addr=35.198.244.252 time_ms=16 duration=16.816229ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.793732949Z level=info msg="Request Completed" method=POST path=/cgi-bin/mainfunction.cgi status=302 remote_addr=35.198.244.252 time_ms=2 duration=2.48465ms size=0 referer= handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79441955Z level=info msg="Request Completed" method=GET path=/editor-4.2.5.php status=302 remote_addr=35.198.244.252 time_ms=0 duration=225.471µs size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.794100479Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-mysql-de.php status=302 remote_addr=35.198.244.252 time_ms=0 duration=295.17µs size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.794668369Z level=info msg="Request Completed" method=GET path=/editor-4.4.0-de.php status=302 remote_addr=35.198.244.252 time_ms=19 duration=19.005248ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.795098859Z level=info msg="Request Completed" method=GET path=/admin/log/error.log status=302 remote_addr=35.198.244.252 time_ms=19 duration=19.259638ms size=29 referer= handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.79557768Z level=info msg="Request Completed" method=GET path=/editor-4.2.5-pl.php status=302 remote_addr=35.198.244.252 time_ms=17 duration=17.087378ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.795762599Z level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=35.198.244.252 time_ms=14 duration=14.544469ms size=29 referer= handler=/
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.795958429Z level=info msg="Request Completed" method=GET path=/editor-4.3.1.php status=302 remote_addr=35.198.244.252 time_ms=32 duration=32.079457ms size=29 referer=http://35.198.233.52:3000 handler=notfound
-logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.796405809Z level=info msg="Request Completed" method=GET path=/editor-4.2.5-mysql.php status=302 remote_addr=35.198.244.252 time_ms=27 duration=27.264268ms size=29 referer=http://35.198.233.52:3000 handler=notfound
 logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.796814959Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-sk.php status=302 remote_addr=35.198.244.252 time_ms=20 duration=20.816758ms size=29 referer=http://35.198.233.52:3000 handler=notfound
 logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.803465489Z level=info msg="Request Completed" method=GET path=/editor-4.3.0-pl.php status=302 remote_addr=35.198.244.252 time_ms=5 duration=5.87957ms size=29 referer=http://35.198.233.52:3000 handler=notfound
 logger=context userId=0 orgId=0 uname= t=2023-06-23T22:08:27.796961819Z level=info msg="Request Completed" method=GET path=/editor-4.3.1-mysql-de.php status=302 remote_addr=35.198.244.252 time_ms=27 duration=27.460988ms size=29 referer=http://35.198.233.52:3000 handler=notfound
@@ -998,3 +982,19 @@ logger=plugins.update.checker t=2023-06-24T05:50:32.109931076Z level=info msg="U
 logger=cleanup t=2023-06-24T06:00:31.531420427Z level=info msg="Completed cleanup jobs" duration=1.02993ms
 logger=grafana.update.checker t=2023-06-24T06:00:31.659172036Z level=info msg="Update check succeeded" duration=11.990699ms
 logger=plugins.update.checker t=2023-06-24T06:00:32.102417518Z level=info msg="Update check succeeded" duration=247.916712ms
+logger=context userId=0 orgId=0 uname= t=2023-06-24T06:08:54.678959797Z level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=167.99.187.121 time_ms=0 duration=489.69µs size=29 referer= handler=/
+logger=cleanup t=2023-06-24T06:10:31.540744818Z level=info msg="Completed cleanup jobs" duration=9.94691ms
+logger=grafana.update.checker t=2023-06-24T06:10:31.727799571Z level=info msg="Update check succeeded" duration=80.789494ms
+logger=plugins.update.checker t=2023-06-24T06:10:32.101584308Z level=info msg="Update check succeeded" duration=246.556927ms
+logger=cleanup t=2023-06-24T06:20:31.531662664Z level=info msg="Completed cleanup jobs" duration=899.36µs
+logger=grafana.update.checker t=2023-06-24T06:20:31.667799122Z level=info msg="Update check succeeded" duration=20.085729ms
+logger=plugins.update.checker t=2023-06-24T06:20:32.106151542Z level=info msg="Update check succeeded" duration=251.246815ms
+logger=cleanup t=2023-06-24T06:30:31.531947912Z level=info msg="Completed cleanup jobs" duration=955.82µs
+logger=grafana.update.checker t=2023-06-24T06:30:31.661022461Z level=info msg="Update check succeeded" duration=13.342119ms
+logger=plugins.update.checker t=2023-06-24T06:30:32.068523443Z level=info msg="Update check succeeded" duration=214.222953ms
+logger=cleanup t=2023-06-24T06:40:31.531793465Z level=info msg="Completed cleanup jobs" duration=1.08024ms
+logger=grafana.update.checker t=2023-06-24T06:40:31.663795819Z level=info msg="Update check succeeded" duration=16.824899ms
+logger=plugins.update.checker t=2023-06-24T06:40:32.071596858Z level=info msg="Update check succeeded" duration=216.324212ms
+logger=cleanup t=2023-06-24T06:50:31.531528573Z level=info msg="Completed cleanup jobs" duration=1.50196ms
+logger=grafana.update.checker t=2023-06-24T06:50:31.663470184Z level=info msg="Update check succeeded" duration=15.650559ms
+logger=plugins.update.checker t=2023-06-24T06:50:32.097069737Z level=info msg="Update check succeeded" duration=242.229441ms

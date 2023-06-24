@@ -29,3 +29,11 @@ Cron is a time-based job scheduling system in Unix-like operating systems. It al
 	* The expression above also redirects the output from OpenWeatherMapAPIClient.py to output.log, this is mainly for debugging and is not mandatory. 
 2. crontab -l 
 	* View CRON jobs scheduled	
+
+## InfluxDB backups
+Use the influx backup command to back up data and metadata stored in InfluxDB. InfluxDB copies all data and metadata to a set of files stored in a specified directory on your local filesystem.
+1. cd into InfluxDB docker image shell
+	* sudo docker exec -it <container id> /bin/bash
+	* e.g., docker exec -it 85467b4a3382 /bin/bash
+2. influx backup <backup-path>
+
