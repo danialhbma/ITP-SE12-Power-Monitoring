@@ -30,10 +30,23 @@ Cron is a time-based job scheduling system in Unix-like operating systems. It al
 2. crontab -l 
 	* View CRON jobs scheduled	
 
-## InfluxDB backups
+# InfluxDB Backups & Restore
 Use the influx backup command to back up data and metadata stored in InfluxDB. InfluxDB copies all data and metadata to a set of files stored in a specified directory on your local filesystem.
 1. cd into InfluxDB docker image shell
 	* sudo docker exec -it <container id> /bin/bash
 	* e.g., docker exec -it 85467b4a3382 /bin/bash
-2. influx backup <backup-path>
+2. influx backup <path_to_backup>
+	* stores backup files (tar.gz) in the specified path
+3. influx restore <path_to_backup>
+
+## Manually Trigger InfluxDB Backup
+The influx_db_backup.sh bash script is used to create an InfluxDB backup. 
+* You can manually trigger a backup by running the bash script ./influx_db_backup.sh
+* InfluxDB backups exists as tar.gz files, and can be used to restore a database.
+* The bash script will also copy the backup files into the InfluxDB directory. Easier way to access and view / analyze files as required. 
+
+## Automatic Scheduling of Backups
+As of writing a backup of the InfluxDB database is created every Sunday at 23:59 (SG Time). This is achieved by scheduling a CRONJOB using the expression below 
+* 59 23 * * 0 ./influx_db_backup.sh
+* e.g, 59 23  * * 0 cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && sudo ./influx_db_backup.sh >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/backup-logs.txt 2>&1
 

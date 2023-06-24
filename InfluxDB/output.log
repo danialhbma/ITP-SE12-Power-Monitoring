@@ -1,3 +1,11 @@
 {'weather_main': 'Clouds', 'temperature': 31.36, 'feels_like': 38.36, 'pressure': 1007, 'humidity': 72, 'temp_min': 29.4, 'temp_max': 33.89, 'wind_speed': 4.12, 'wind_deg': 220, 'cloudiness': 75}
 {'weather_main': 'Clouds', 'temperature': 30.15, 'feels_like': 37.15, 'pressure': 1007, 'humidity': 79, 'temp_min': 29.4, 'temp_max': 31.53, 'wind_speed': 4.47, 'wind_deg': 194, 'cloudiness': 65}
 {'weather_main': 'Clouds', 'temperature': 31.91, 'feels_like': 38.91, 'pressure': 1007, 'humidity': 68, 'temp_min': 29.03, 'temp_max': 33.97, 'wind_speed': 4.63, 'wind_deg': 160, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 31.98, 'feels_like': 38.98, 'pressure': 1006, 'humidity': 72, 'temp_min': 28.87, 'temp_max': 33.97, 'wind_speed': 3.94, 'wind_deg': 185, 'cloudiness': 46}
+{'weather_main': 'Rain', 'temperature': 31.22, 'feels_like': 38.22, 'pressure': 1006, 'humidity': 71, 'temp_min': 28.87, 'temp_max': 33.89, 'wind_speed': 2.57, 'wind_deg': 220, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 31.28, 'feels_like': 38.28, 'pressure': 1007, 'humidity': 73, 'temp_min': 28.87, 'temp_max': 33.33, 'wind_speed': 2.57, 'wind_deg': 220, 'cloudiness': 40}
+{'weather_main': 'Rain', 'temperature': 30.28, 'feels_like': 37.28, 'pressure': 1007, 'humidity': 76, 'temp_min': 28.86, 'temp_max': 31.75, 'wind_speed': 3.09, 'wind_deg': 200, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 29.94, 'feels_like': 36.66, 'pressure': 1007, 'humidity': 77, 'temp_min': 26.86, 'temp_max': 31.75, 'wind_speed': 3.09, 'wind_deg': 200, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 28.91, 'feels_like': 34.07, 'pressure': 1007, 'humidity': 78, 'temp_min': 27.03, 'temp_max': 30.42, 'wind_speed': 2.57, 'wind_deg': 80, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 29.11, 'feels_like': 35.74, 'pressure': 1007, 'humidity': 83, 'temp_min': 27.86, 'temp_max': 30.57, 'wind_speed': 2.23, 'wind_deg': 168, 'cloudiness': 45}
+{'weather_main': 'Clouds', 'temperature': 28.4, 'feels_like': 33.3, 'pressure': 1007, 'humidity': 81, 'temp_min': 27.03, 'temp_max': 29.86, 'wind_speed': 2.57, 'wind_deg': 80, 'cloudiness': 75}
