@@ -34,4 +34,4 @@ else
 fi
 
 # Copy the files from docker image and into local machine
-sudo docker cp $container_id:$backup_directory .
+sudo docker cp $container_id:$backup_directory "./influxdb_backups"

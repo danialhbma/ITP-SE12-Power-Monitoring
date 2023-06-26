@@ -1,12 +1,12 @@
 {
   "manifestVersion": 2,
   "kv": {
-    "fileName": "20230624T113801Z.bolt.gz",
-    "size": 10528,
+    "fileName": "20230625T155902Z.bolt.gz",
+    "size": 9843,
     "compression": 1
   },
   "sql": {
-    "fileName": "20230624T113801Z.sqlite.gz",
+    "fileName": "20230625T155902Z.sqlite.gz",
     "size": 3451,
     "compression": 1
   },
@@ -32,8 +32,8 @@
                 {
                   "id": 39,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.39.tar.gz",
-                  "size": 6514,
+                  "fileName": "20230625T155902Z.39.tar.gz",
+                  "size": 8770,
                   "compression": 1
                 }
               ]
@@ -64,8 +64,8 @@
                 {
                   "id": 36,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.36.tar.gz",
-                  "size": 6321,
+                  "fileName": "20230625T155902Z.36.tar.gz",
+                  "size": 8790,
                   "compression": 1
                 }
               ]
@@ -114,6 +114,7 @@
               "id": 23,
               "startTime": "2023-06-17T00:00:00Z",
               "endTime": "2023-06-18T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
               "shards": []
             },
             {
@@ -124,7 +125,7 @@
                 {
                   "id": 27,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.27.tar.gz",
+                  "fileName": "20230625T155902Z.27.tar.gz",
                   "size": 383,
                   "compression": 1
                 }
@@ -138,7 +139,7 @@
                 {
                   "id": 28,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.28.tar.gz",
+                  "fileName": "20230625T155902Z.28.tar.gz",
                   "size": 345,
                   "compression": 1
                 }
@@ -152,7 +153,7 @@
                 {
                   "id": 43,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.43.tar.gz",
+                  "fileName": "20230625T155902Z.43.tar.gz",
                   "size": 340,
                   "compression": 1
                 }
@@ -178,7 +179,7 @@
                 {
                   "id": 46,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.46.tar.gz",
+                  "fileName": "20230625T155902Z.46.tar.gz",
                   "size": 349,
                   "compression": 1
                 }
@@ -188,6 +189,12 @@
               "id": 47,
               "startTime": "2023-06-24T00:00:00Z",
               "endTime": "2023-06-25T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 48,
+              "startTime": "2023-06-25T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
               "shards": []
             }
           ],
@@ -216,8 +223,8 @@
                 {
                   "id": 40,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.40.tar.gz",
-                  "size": 4361,
+                  "fileName": "20230625T155902Z.40.tar.gz",
+                  "size": 6015,
                   "compression": 1
                 }
               ]
@@ -248,8 +255,8 @@
                 {
                   "id": 38,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.38.tar.gz",
-                  "size": 8732,
+                  "fileName": "20230625T155902Z.38.tar.gz",
+                  "size": 11469,
                   "compression": 1
                 }
               ]
@@ -280,8 +287,8 @@
                 {
                   "id": 41,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.41.tar.gz",
-                  "size": 2073,
+                  "fileName": "20230625T155902Z.41.tar.gz",
+                  "size": 2304,
                   "compression": 1
                 }
               ]
@@ -312,8 +319,8 @@
                 {
                   "id": 37,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.37.tar.gz",
-                  "size": 2956,
+                  "fileName": "20230625T155902Z.37.tar.gz",
+                  "size": 3160,
                   "compression": 1
                 }
               ]
@@ -362,7 +369,7 @@
                 {
                   "id": 16,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.16.tar.gz",
+                  "fileName": "20230625T155902Z.16.tar.gz",
                   "size": 16702,
                   "compression": 1
                 }
@@ -376,8 +383,8 @@
                 {
                   "id": 33,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.33.tar.gz",
-                  "size": 10928,
+                  "fileName": "20230625T155902Z.33.tar.gz",
+                  "size": 13264,
                   "compression": 1
                 }
               ]
@@ -408,7 +415,7 @@
                 {
                   "id": 42,
                   "shardOwners": [],
-                  "fileName": "20230624T113801Z.42.tar.gz",
+                  "fileName": "20230625T155902Z.42.tar.gz",
                   "size": 624,
                   "compression": 1
                 }

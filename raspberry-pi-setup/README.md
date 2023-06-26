@@ -4,7 +4,7 @@ Guide on how to set up docker, InfluxDB Server and InfluxDB Client in Raspberry 
 * https://drive.google.com/file/d/1nNXnO_8uUGSDsxkIZ_KqTpx-6qSINLRP/view?usp=share_link
 
 ## Installing Docker
-1. Sudo apt install docker-io -y && sudo apt install docker-compose -y
+1. Sudo apt install docker.io -y && sudo apt install docker-compose -y
 2. sudo docker run hello-world
 	* Verification step, hello-world image should be puled and executed.
 
