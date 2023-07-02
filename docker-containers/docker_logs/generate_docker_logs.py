@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 import subprocess
 import os
 import datetime
+import pytz
 
 DESTINATION_FOLDER = "LOG_FILES"
 LOG_LIMIT = "1000" # Modify this to increase length of log messages
@@ -41,13 +43,13 @@ def parse_mqtt_logs(container_name):
     file_path = os.path.join(".", DESTINATION_FOLDER, file_name)
     with open(file_path, 'r') as file:
         lines = file.readlines()
-
+   
     for line in lines:
         timestamp, message = line.split(": ", 1)
         timestamp = timestamp.strip()
         dt = datetime.datetime.fromtimestamp(int(timestamp))
-        dt_utc = dt.replace(tzinfo=datetime.timezone.utc)
-        dt_local = dt_utc.astimezone()
+        dt_utc = pytz.utc.localize(dt)
+        dt_local = dt_utc.astimezone(pytz.timezone('Asia/Singapore'))
         formatted_date = dt_local.strftime('%d-%m-%Y %H:%M:%S')
         log = f"{formatted_date}: {message}"
         log_messages.append(log)
@@ -67,4 +69,5 @@ for container_id, container_name in containers:
     run_docker_logs(container_id, container_name)
     if "mosquitto" in container_name:
       	parse_mqtt_logs(container_name)
+    print(f"Generated Logs for {container_name}")
 
