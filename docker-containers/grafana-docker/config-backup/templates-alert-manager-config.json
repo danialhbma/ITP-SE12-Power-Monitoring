@@ -1,0 +1,140 @@
+{
+    "template_files": {
+      "Telegram Template": "{{ define \"Telegram\" }}\n{{ if .Alerts.Firing }}\nNumber of Alerts: {{ len .Alerts.Firing }}{{ range .Alerts.Firing }}{{ if .Annotations }}\n\nAlert Summary: {{ .Annotations.summary }}\nDescription: {{ .Annotations.description }}\n{{ range .Labels.SortedPairs }}{{ if and (ne .Name \"alertname\") (ne .Name \"grafana_folder\") (ne .Name \"device_id\") (ne .Name \"device_name\") }}{{ .Name }}: {{ .Value }}\n{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}\n\n"
+    },
+    "template_file_provenances": {},
+    "alertmanager_config": {
+      "route": {
+        "receiver": "RP Farm Telegram Group Chat & Channel",
+        "routes": [
+          {
+            "receiver": "RP Farm Telegram Group Chat & Channel",
+            "object_matchers": [
+              [
+                "type",
+                "=",
+                "farm co2  level"
+              ]
+            ],
+            "continue": true,
+            "group_wait": "30s",
+            "group_interval": "30s",
+            "repeat_interval": "30m"
+          },
+          {
+            "receiver": "RP Farm Telegram Group Chat & Channel",
+            "object_matchers": [
+              [
+                "type",
+                "=",
+                "farm temperature"
+              ]
+            ],
+            "continue": true,
+            "group_wait": "30s",
+            "group_interval": "30s",
+            "repeat_interval": "30m"
+          },
+          {
+            "receiver": "RP Farm Telegram Group Chat & Channel",
+            "object_matchers": [
+              [
+                "type",
+                "=",
+                "water flow rate"
+              ]
+            ],
+            "continue": true,
+            "repeat_interval": "30m"
+          },
+          {
+            "receiver": "RP Farm Telegram Group Chat & Channel",
+            "object_matchers": [
+              [
+                "type",
+                "=",
+                "grow light power consumption"
+              ]
+            ],
+            "group_wait": "30s",
+            "group_interval": "30s",
+            "repeat_interval": "9999d"
+          },
+          {
+            "receiver": "RP Farm Telegram Group Chat & Channel",
+            "object_matchers": [
+              [
+                "type",
+                "=",
+                "water pump power consumption"
+              ]
+            ],
+            "group_wait": "30s",
+            "group_interval": "30s",
+            "repeat_interval": "1h"
+          }
+        ],
+        "group_wait": "10s",
+        "group_interval": "10s",
+        "repeat_interval": "4h"
+      },
+      "templates": [
+        "Telegram Template"
+      ],
+      "receivers": [
+        {
+          "name": "RP Farm Telegram Group Chat & Channel",
+          "grafana_managed_receiver_configs": [
+            {
+              "uid": "fa63d054-6a42-4029-9d70-3bb294a1f0c2",
+              "name": "RP Farm Telegram Group Chat & Channel",
+              "type": "telegram",
+              "disableResolveMessage": true,
+              "settings": {
+                "chatid": "-944799166",
+                "disable_notification": true,
+                "parse_mode": "HTML",
+                "message": "{{template \"Telegram\" .}}"
+              },
+              "secureFields": {
+                "bottoken": true
+              }
+            },
+            {
+              "uid": "da4074ea-ab35-4ef6-a533-f9e31d9a307a",
+              "name": "RP Farm Telegram Group Chat & Channel",
+              "type": "telegram",
+              "disableResolveMessage": true,
+              "settings": {
+                "chatid": "-1001904737030",
+                "disable_notification": false,
+                "message": "{{template \"Telegram\" .}}",
+                "parse_mode": "HTML"
+              },
+              "secureFields": {
+                "bottoken": true
+              }
+            }
+          ]
+        },
+        {
+          "name": "RP Farm Telegram Channel Bot",
+          "grafana_managed_receiver_configs": [
+            {
+              "uid": "c26cd8a7-95ea-4c35-97e4-433aff48db5a",
+              "name": "RP Farm Telegram Channel Bot",
+              "type": "telegram",
+              "disableResolveMessage": false,
+              "settings": {
+                "chatid": "-1001904737030",
+                "disable_notification": false
+              },
+              "secureFields": {
+                "bottoken": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }

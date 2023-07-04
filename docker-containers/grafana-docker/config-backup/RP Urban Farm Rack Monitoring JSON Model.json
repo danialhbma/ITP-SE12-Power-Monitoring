@@ -1,0 +1,812 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 4,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+        },
+        "description": "statistics of all sensors installed on rack 1:\n- CO2\n- Humidity\n- Temperature\n- Light\n- Water\n- Light Power Consumption\n- Water Pump Power Consumption",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack1_co2 value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "CO2"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#73BF69",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack1_humidity value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Humidity (x10)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "purple",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack1_temperature value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Temperature (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack1_light value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Light"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "orange",
+                    "mode": "shades"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack1_water value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Water Flow Rate"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-blue",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rack_1_Light value {device_id=\"bf0f226c1b67ca0956izof\", device_name=\"Rack 1 Light\", type=\"cur_power\", unit=\"W\"}"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Light Power Consumption"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "yellow",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rack_1_Water value {device_id=\"bf1a17265640b62287pdh9\", device_name=\"Rack 1 Water\", type=\"cur_power\", unit=\"W\"}"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Water Pump Power Consumption (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "blue",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 6,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+            },
+            "query": "f1 = \r\n  from(bucket: \"CO2\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_co2\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n\r\nf2 = \r\n  from(bucket: \"Humidity\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_humidity\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 10.0 }))\r\n\r\nf3 = \r\n  from(bucket: \"Temperature\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_temperature\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 20.0 }))\r\n\r\nf4 = \r\n  from(bucket: \"Light\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_light\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n\r\nf5 = \r\n  from(bucket: \"Water\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_water\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n\r\nf6 = \r\n  from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_1_Light\" or r[\"_measurement\"] == \"Rack_1_Water\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({\r\n      r with\r\n      _value: if r[\"_measurement\"] == \"Rack_1_Water\" then r._value * 20.0 else r._value\r\n    }))\r\n\r\nunion(tables: [f1, f2, f3, f4, f5, f6])",
+            "refId": "A"
+          }
+        ],
+        "title": "Rack 1 Stats",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+        },
+        "description": "statistics of all sensors installed on rack 2:\n- CO2\n- Humidity\n- Temperature\n- Light Power Consumption\n- Water Pump Power Consumption",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack2_co2 value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "CO2"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack2_humidity value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Humidity (x10)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "purple",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack2_temperature value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Temperature (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rack_2_Light value {device_id=\"bfe85a818a75648a29zffe\", device_name=\"Rack 2 Light\", type=\"cur_power\", unit=\"W\"}"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Light Power Consumption"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "yellow",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rack_2_Water value {device_id=\"bf22bde1e0846f9e67h9ct\", device_name=\"Rack 2 Water\", type=\"cur_power\", unit=\"W\"}"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Water Pump Power Consumption (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "blue",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+            },
+            "query": "f1 = \r\n  from(bucket: \"CO2\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack2_co2\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n\r\nf2 = \r\n  from(bucket: \"Humidity\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack2_humidity\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 10.0 }))\r\n\r\nf3 = \r\n  from(bucket: \"Temperature\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack2_temperature\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 20.0 }))\r\n\r\nf4 = \r\n  from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_2_Light\" or r[\"_measurement\"] == \"Rack_2_Water\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({\r\n      r with\r\n      _value: if r[\"_measurement\"] == \"Rack_2_Water\" then r._value * 20.0 else r._value\r\n    }))\r\n\r\nunion(tables: [f1, f2, f3, f4])",
+            "refId": "A"
+          }
+        ],
+        "title": "Rack 2 Stats",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+        },
+        "description": "statistics of all sensors installed on rack 3:\n- CO2\n- Humidity\n- Temperature\n- Light Power Consumption\n- Water Pump Power Consumption",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack3_co2 value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "CO2"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack3_humidity value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Humidity (x10)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "purple",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack3_temperature value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Temperature (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rack_3_Light value {device_id=\"bfb01b4529be3ed5f0q4qk\", device_name=\"Rack 3 Light\", type=\"cur_power\", unit=\"W\"}"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Light Power Consumption"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "yellow",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rack_3_Water value {device_id=\"bf6dc985a6437b4df4eqna\", device_name=\"Rack 3 Water\", type=\"cur_power\", unit=\"W\"}"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Water Pump Power Consumption (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "blue",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 8
+        },
+        "id": 4,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+            },
+            "query": "f1 = \r\n  from(bucket: \"CO2\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack3_co2\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n\r\nf2 = \r\n  from(bucket: \"Humidity\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack3_humidity\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 10.0 }))\r\n\r\nf3 = \r\n  from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_3_Light\" or r[\"_measurement\"] == \"Rack_3_Water\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({\r\n      r with\r\n      _value: if r[\"_measurement\"] == \"Rack_3_Water\" then r._value * 20.0 else r._value\r\n    }))\r\n\r\nunion(tables: [f1, f2, f3])",
+            "refId": "A"
+          }
+        ],
+        "title": "Rack 3 Stats",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+        },
+        "description": "statistics of all sensors installed on rack 4:\n- CO2\n- Humidity\n- Temperature",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack4_co2 value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "CO2"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack4_humidity value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Humidity (x10)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "purple",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "rack4_temperature value"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Temperature (x20)"
+                },
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 8
+        },
+        "id": 5,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+            },
+            "query": "f1 = \r\n  from(bucket: \"CO2\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack4_co2\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n\r\nf2 = \r\n  from(bucket: \"Humidity\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack4_humidity\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 10.0 }))\r\n\r\nf3 = \r\n  from(bucket: \"Temperature\")\r\n    |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n    |> filter(fn: (r) => r[\"_measurement\"] == \"rack4_temperature\")\r\n    |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n    |> map(fn: (r) => ({ r with _value: float(v: r._value) * 20.0 }))\r\n\r\nunion(tables: [f1, f2, f3])",
+            "refId": "A"
+          }
+        ],
+        "title": "Rack 4 Stats",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+        },
+        "gridPos": {
+          "h": 17,
+          "w": 24,
+          "x": 0,
+          "y": 16
+        },
+        "id": 1,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<img src=\"https://drive.google.com/uc?id=1eW5JqxND3CJamB7iA0XaRVa_OR1sdAOd\" width=\"65%\" height=\"100%\" style =\"display: block; margin-left: auto; margin-right: auto; margin-top: auto;\"></img>",
+          "mode": "markdown"
+        },
+        "pluginVersion": "10.0.0",
+        "title": "Deployment Layout",
+        "type": "text"
+      }
+    ],
+    "refresh": "",
+    "schemaVersion": 38,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "RP Urban Farm Rack Monitoring",
+    "uid": "d6b3f41e-5896-492d-8416-8261ecaa33ee",
+    "version": 13,
+    "weekStart": ""
+  }

@@ -5,3 +5,6 @@
 4. visit publicly hosted grafana website 
 	* username and password will both be admin on first login
 	* following first login, a prompt will appear allowing you to change password
+
+# Configuration Backup
+A backup of all Grafana configurations can be found in the config-backup directory. 
