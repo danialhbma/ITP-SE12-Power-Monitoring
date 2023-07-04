@@ -1,0 +1,1833 @@
+{
+	"annotations": {
+		"list": [{
+			"builtIn": 1,
+			"datasource": {
+				"type": "grafana",
+				"uid": "-- Grafana --"
+			},
+			"enable": true,
+			"hide": true,
+			"iconColor": "rgba(0, 211, 255, 1)",
+			"name": "Annotations & Alerts",
+			"type": "dashboard"
+		}]
+	},
+	"description": "24-Hour Dashboard for RP Farm Monitoring",
+	"editable": true,
+	"fiscalYearStartMonth": 0,
+	"graphTooltip": 0,
+	"id": 2,
+	"links": [],
+	"liveNow": false,
+	"panels": [{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Most recent temperature readings obtained from growing racks 1 to 4.",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "continuous-GrYlRd"
+					},
+					"mappings": [],
+					"max": 25,
+					"min": 15,
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "#EAB839",
+								"value": 20
+							},
+							{
+								"color": "red",
+								"value": 25
+							}
+						]
+					},
+					"unit": "celsius"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 1 Temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 2 Temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 3 Temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 4 Temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 4"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 6,
+				"w": 13,
+				"x": 0,
+				"y": 0
+			},
+			"id": 14,
+			"options": {
+				"orientation": "auto",
+				"reduceOptions": {
+					"calcs": [
+						"lastNotNull"
+					],
+					"fields": "",
+					"values": false
+				},
+				"showThresholdLabels": false,
+				"showThresholdMarkers": false,
+				"text": {}
+			},
+			"pluginVersion": "10.0.0",
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Temperature\")\r\n  |> range(start: -24h)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_temperature\" or r[\"_measurement\"] == \"rack2_temperature\" or r[\"_measurement\"] == \"rack3_temperature\" or r[\"_measurement\"] == \"rack4_temperature\")\r\n  |> last()\r\n  |> map(fn: (r) => ({\r\n       _measurement:\r\n         if r[\"_measurement\"] == \"rack1_temperature\" then \"Rack 1 Temperature\"\r\n         else if r[\"_measurement\"] == \"rack2_temperature\" then \"Rack 2 Temperature\"\r\n         else if r[\"_measurement\"] == \"rack3_temperature\" then \"Rack 3 Temperature\"\r\n         else if r[\"_measurement\"] == \"rack4_temperature\" then \"Rack 4 Temperature\"\r\n         else \"Unknown\",\r\n       _value: r[\"_value\"],\r\n       _time: r[\"_time\"],\r\n       _field: r[\"_field\"]\r\n     }))\r\n\r\n",
+				"refId": "A"
+			}],
+			"title": "Grow Rack Temperatures",
+			"type": "gauge"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Most recent humidity levels obtained from growing racks 1 to 4.\n",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"fixedColor": "blue",
+						"mode": "fixed"
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+							"color": "green",
+							"value": null
+						}]
+					},
+					"unit": "humidity"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 1 Humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 2 Humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 3 Humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 4 Humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 4"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 3,
+				"w": 11,
+				"x": 13,
+				"y": 0
+			},
+			"id": 17,
+			"options": {
+				"colorMode": "value",
+				"graphMode": "area",
+				"justifyMode": "auto",
+				"orientation": "auto",
+				"reduceOptions": {
+					"calcs": [
+						"lastNotNull"
+					],
+					"fields": "",
+					"values": false
+				},
+				"textMode": "auto"
+			},
+			"pluginVersion": "10.0.0",
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Humidity\")\r\n  |> range(start: -24h)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_humidity\" or r[\"_measurement\"] == \"rack2_humidity\" or r[\"_measurement\"] == \"rack3_humidity\" or r[\"_measurement\"] == \"rack4_humidity\")\r\n  |> last()\r\n  |> map(fn: (r) => ({\r\n       _measurement:\r\n         if r[\"_measurement\"] == \"rack1_humidity\" then \"Rack 1 Humidity\"\r\n         else if r[\"_measurement\"] == \"rack2_humidity\" then \"Rack 2 Humidity\"\r\n         else if r[\"_measurement\"] == \"rack3_humidity\" then \"Rack 3 Humidity\"\r\n         else if r[\"_measurement\"] == \"rack4_humidity\" then \"Rack 4 Humidity\"\r\n         else \"Unknown\",\r\n       _value: r[\"_value\"],\r\n       _time: r[\"_time\"],\r\n       _field: r[\"_field\"]\r\n     }))\r\n",
+				"refId": "A"
+			}],
+			"title": "Grow Rack Humidity Levels",
+			"type": "stat"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Most recent CO2 ppm readings for growing racks 1 to 4.",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"fixedColor": "blue",
+						"mode": "thresholds"
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "#EAB839",
+								"value": 1000
+							},
+							{
+								"color": "#E24D42",
+								"value": 5000
+							}
+						]
+					},
+					"unit": "ppm"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 1 CO2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 2 CO2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 3 CO2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 4 CO2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 4"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 3,
+				"w": 11,
+				"x": 13,
+				"y": 3
+			},
+			"id": 18,
+			"options": {
+				"colorMode": "value",
+				"graphMode": "area",
+				"justifyMode": "auto",
+				"orientation": "auto",
+				"reduceOptions": {
+					"calcs": [
+						"lastNotNull"
+					],
+					"fields": "",
+					"values": false
+				},
+				"textMode": "auto"
+			},
+			"pluginVersion": "10.0.0",
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"CO2\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_co2\" or r[\"_measurement\"] == \"rack2_co2\" or r[\"_measurement\"] == \"rack3_co2\" or r[\"_measurement\"] == \"rack4_co2\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({\r\n       _measurement:\r\n         if r[\"_measurement\"] == \"rack1_co2\" then \"Rack 1 CO2\"\r\n         else if r[\"_measurement\"] == \"rack2_co2\" then \"Rack 2 CO2\"\r\n         else if r[\"_measurement\"] == \"rack3_co2\" then \"Rack 3 CO2\"\r\n         else if r[\"_measurement\"] == \"rack4_co2\" then \"Rack 4 CO2\"\r\n         else \"Unknown\",\r\n       _value: r[\"_value\"],\r\n       _time: r[\"_time\"],\r\n       _field: r[\"_field\"]\r\n     }))\r\n",
+				"refId": "A"
+			}],
+			"title": "CO2 Level",
+			"type": "stat"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Grow light operational hours (in green) determined whenever Tuya Sensors have a reading greater than 5 W.",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"custom": {
+						"fillOpacity": 100,
+						"lineWidth": 0,
+						"spanNulls": true
+					},
+					"decimals": 0,
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "#454546a3",
+								"value": null
+							},
+							{
+								"color": "#37872D",
+								"value": 5
+							}
+						]
+					},
+					"unit": "watt"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_1_Light value {device_id=\"bf0f226c1b67ca0956izof\", device_name=\"Rack 1 Light\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_2_Light value {device_id=\"bfe85a818a75648a29zffe\", device_name=\"Rack 2 Light\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_3_Light value {device_id=\"bfb01b4529be3ed5f0q4qk\", device_name=\"Rack 3 Light\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 5,
+				"w": 24,
+				"x": 0,
+				"y": 6
+			},
+			"id": 15,
+			"options": {
+				"alignValue": "center",
+				"legend": {
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"mergeValues": false,
+				"rowHeight": 0.85,
+				"showValue": "never",
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_1_Light\" or r[\"_measurement\"] == \"Rack_2_Light\" or r[\"_measurement\"] == \"Rack_3_Light\")\r\n  |> aggregateWindow(every: 60m, fn: mean, createEmpty: false)\r\n",
+				"refId": "A"
+			}],
+			"title": "Grow Light Operational Hours",
+			"type": "state-timeline"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Water pump status active (blue) determined whenever Tuya Sensors record a reading > 5W.",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"custom": {
+						"fillOpacity": 90,
+						"lineWidth": 1
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "#000000",
+								"value": null
+							},
+							{
+								"color": "blue",
+								"value": 5
+							}
+						]
+					},
+					"unit": "watt"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_1_Water value {device_id=\"bf1a17265640b62287pdh9\", device_name=\"Rack 1 Water\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_2_Water value {device_id=\"bf22bde1e0846f9e67h9ct\", device_name=\"Rack 2 Water\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_3_Water value {device_id=\"bf6dc985a6437b4df4eqna\", device_name=\"Rack 3 Water\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 4,
+				"w": 24,
+				"x": 0,
+				"y": 11
+			},
+			"id": 16,
+			"options": {
+				"colWidth": 0.9,
+				"legend": {
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"rowHeight": 0.9,
+				"showValue": "never",
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_1_Water\" or r[\"_measurement\"] == \"Rack_2_Water\" or r[\"_measurement\"] == \"Rack_3_Water\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+				"refId": "A"
+			}],
+			"title": "Water Pump Status",
+			"type": "status-history"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Farm temperature collected using ENVHat Sensors",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					},
+					"unit": "celsius"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "rack1_temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1 Temperature"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack2_temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2 Temperature"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack3_temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3 Temperature"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack4_temperature value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 4 Temperature"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 0,
+				"y": 15
+			},
+			"id": 6,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Temperature\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_temperature\" or r[\"_measurement\"] == \"rack2_temperature\" or r[\"_measurement\"] == \"rack3_temperature\" or r[\"_measurement\"] == \"rack4_temperature\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n",
+				"refId": "A"
+			}],
+			"title": "Farm Temperature Overview",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Outdoor Temperature obtained via OpenWeatherMap API",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					},
+					"unit": "celsius"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "feels_like"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Feels Like"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "temp_max"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Max Temp"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "temp_min"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Min Temp"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "temperature"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Temperature"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 12,
+				"y": 15
+			},
+			"id": 3,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"WeatherAPI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"External Weather Conditions\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"temperature\" or r[\"_field\"] == \"temp_max\" or r[\"_field\"] == \"temp_min\" or r[\"_field\"] == \"feels_like\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n",
+				"refId": "A"
+			}],
+			"title": "Outdoor Temperature",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Humidity level collected from ENVHat Sensor",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+							"color": "green",
+							"value": null
+						}]
+					},
+					"unit": "humidity"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "rack1_humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1 Humidity"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack2_humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2 Humidity"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack3_humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3 Humidity"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack4_humidity value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 4 Humidity"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 0,
+				"y": 22
+			},
+			"id": 5,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Humidity\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_humidity\" or r[\"_measurement\"] == \"rack2_humidity\" or r[\"_measurement\"] == \"rack3_humidity\" or r[\"_measurement\"] == \"rack4_humidity\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n",
+				"refId": "A"
+			}],
+			"title": "Farm Humidity Overview",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Outdoor Humidity collected via OpenWeatherMap API",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 1,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineStyle": {
+							"fill": "solid"
+						},
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"displayName": "Outdoor Humidity",
+					"mappings": [],
+					"max": 100,
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 100
+							}
+						]
+					},
+					"unit": "humidity"
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 12,
+				"y": 22
+			},
+			"id": 1,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"WeatherAPI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"External Weather Conditions\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"humidity\")\r\n  |> filter(fn: (r) => r[\"location\"] == \"Woodlands\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)",
+				"refId": "A"
+			}],
+			"title": "Outdoor Humidity Levels",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Power consumption for farm grow lights collected using Tuya Sockets",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					},
+					"unit": "watt"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_1_Light value {device_id=\"bf0f226c1b67ca0956izof\", device_name=\"Rack 1 Light\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1 Power Consumption"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_2_Light value {device_id=\"bfe85a818a75648a29zffe\", device_name=\"Rack 2 Light\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2 Power Consumption"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_3_Light value {device_id=\"bfb01b4529be3ed5f0q4qk\", device_name=\"Rack 3 Light\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3 Power Consumption"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack 1 Power Consumption"
+						},
+						"properties": [{
+							"id": "color",
+							"value": {
+								"fixedColor": "green",
+								"mode": "fixed"
+							}
+						}]
+					},
+					{
+						"__systemRef": "hideSeriesFrom",
+						"matcher": {
+							"id": "byNames",
+							"options": {
+								"mode": "exclude",
+								"names": [
+									"Rack 1 Power Consumption"
+								],
+								"prefix": "All except:",
+								"readOnly": true
+							}
+						},
+						"properties": [{
+							"id": "custom.hideFrom",
+							"value": {
+								"legend": false,
+								"tooltip": false,
+								"viz": true
+							}
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 0,
+				"y": 29
+			},
+			"id": 8,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_1_Light\" or r[\"_measurement\"] == \"Rack_2_Light\" or r[\"_measurement\"] == \"Rack_3_Light\")\r\n  |> aggregateWindow(every: 60m, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+				"refId": "A"
+			}],
+			"title": "Grow light Power Consumption Overview",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Rack 1 grow light intensity",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"displayName": "Light Intensity",
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					}
+				},
+				"overrides": [{
+					"matcher": {
+						"id": "byName",
+						"options": "Light Intensity"
+					},
+					"properties": [{
+						"id": "color",
+						"value": {
+							"fixedColor": "green",
+							"mode": "fixed"
+						}
+					}]
+				}]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 12,
+				"y": 29
+			},
+			"id": 7,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Light\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_light\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+				"refId": "A"
+			}],
+			"title": "Rack 1 Grow Light Intensity",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Water Pump Power Consumption Collected using Tuya Sockets",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+							"color": "green",
+							"value": null
+						}]
+					},
+					"unit": "watt"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_1_Water value {device_id=\"bf1a17265640b62287pdh9\", device_name=\"Rack 1 Water\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1 Water Pump Power Consumption"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_2_Water value {device_id=\"bf22bde1e0846f9e67h9ct\", device_name=\"Rack 2 Water\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2 Water Pump Power Consumption"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Rack_3_Water value {device_id=\"bf6dc985a6437b4df4eqna\", device_name=\"Rack 3 Water\", type=\"cur_power\", unit=\"W\"}"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3 Water Pump Power Consumption"
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 0,
+				"y": 36
+			},
+			"id": 9,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Power Consumption\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Rack_3_Water\" or r[\"_measurement\"] == \"Rack_2_Water\" or r[\"_measurement\"] == \"Rack_1_Water\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n",
+				"refId": "A"
+			}],
+			"title": "Water Pump Power Consumption Overview",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Rack 1 water flow rate data collected",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "linear",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"displayName": "Water Flow Rate",
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					}
+				},
+				"overrides": [{
+					"matcher": {
+						"id": "byName",
+						"options": "Water Flow Rate"
+					},
+					"properties": [{
+						"id": "color",
+						"value": {
+							"fixedColor": "super-light-blue",
+							"mode": "fixed"
+						}
+					}]
+				}]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 12,
+				"x": 12,
+				"y": 36
+			},
+			"id": 10,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"Water\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_water\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+				"refId": "A"
+			}],
+			"title": "Rack 1 Water Flow Rate",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Farm CO2 readings from SGP30 sensors",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "linear",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					},
+					"unit": "ppm"
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "rack1_co2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 1 CO2 Level"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack2_co2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 2 CO2 Level"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack3_co2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3 CO2 Level"
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "rack4_co2 value"
+						},
+						"properties": [{
+							"id": "displayName",
+							"value": "Rack 3 CO2 Level"
+						}]
+					},
+					{
+						"__systemRef": "hideSeriesFrom",
+						"matcher": {
+							"id": "byNames",
+							"options": {
+								"mode": "exclude",
+								"names": [
+									"Rack 3 CO2 Level"
+								],
+								"prefix": "All except:",
+								"readOnly": true
+							}
+						},
+						"properties": [{
+							"id": "custom.hideFrom",
+							"value": {
+								"legend": false,
+								"tooltip": false,
+								"viz": true
+							}
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 8,
+				"x": 0,
+				"y": 43
+			},
+			"id": 11,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"CO2\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"rack1_co2\" or r[\"_measurement\"] == \"rack2_co2\" or r[\"_measurement\"] == \"rack3_co2\" or r[\"_measurement\"] == \"rack4_co2\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n",
+				"refId": "A"
+			}],
+			"title": "Farm CO2 Levels",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Outdoor cloud conditions retrieved from OpenWeatherMap API",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"fixedColor": "blue",
+						"mode": "fixed"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "linear",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"displayName": "Cloudiness",
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					},
+					"unit": "percent"
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 8,
+				"x": 8,
+				"y": 43
+			},
+			"id": 2,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"WeatherAPI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"External Weather Conditions\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"cloudiness\")\r\n  |> filter(fn: (r) => r[\"location\"] == \"Woodlands\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)",
+				"refId": "A"
+			}],
+			"title": "Outdoor Cloudiness",
+			"type": "timeseries"
+		},
+		{
+			"datasource": {
+				"type": "influxdb",
+				"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+			},
+			"description": "Outdoor atmospheric pressure obtained from OpenWeatherMap API",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "palette-classic"
+					},
+					"custom": {
+						"axisCenteredZero": false,
+						"axisColorMode": "text",
+						"axisLabel": "",
+						"axisPlacement": "auto",
+						"barAlignment": 0,
+						"drawStyle": "line",
+						"fillOpacity": 0,
+						"gradientMode": "none",
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						},
+						"lineInterpolation": "smooth",
+						"lineWidth": 1,
+						"pointSize": 5,
+						"scaleDistribution": {
+							"type": "linear"
+						},
+						"showPoints": "auto",
+						"spanNulls": false,
+						"stacking": {
+							"group": "A",
+							"mode": "none"
+						},
+						"thresholdsStyle": {
+							"mode": "off"
+						}
+					},
+					"displayName": "Atmospheric Pressure",
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					}
+				},
+				"overrides": [{
+						"matcher": {
+							"id": "byName",
+							"options": "wind_deg {location=\"Woodlands\", source=\"OpenWeatherMap\"}"
+						},
+						"properties": [{
+							"id": "color",
+							"value": {
+								"fixedColor": "red",
+								"mode": "fixed"
+							}
+						}]
+					},
+					{
+						"matcher": {
+							"id": "byName",
+							"options": "Atmospheric Pressure"
+						},
+						"properties": [{
+							"id": "color",
+							"value": {
+								"fixedColor": "red",
+								"mode": "fixed"
+							}
+						}]
+					}
+				]
+			},
+			"gridPos": {
+				"h": 7,
+				"w": 8,
+				"x": 16,
+				"y": 43
+			},
+			"id": 4,
+			"options": {
+				"legend": {
+					"calcs": [],
+					"displayMode": "list",
+					"placement": "bottom",
+					"showLegend": true
+				},
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [{
+				"datasource": {
+					"type": "influxdb",
+					"uid": "d4311848-4e92-43a6-a074-002e5b15cec7"
+				},
+				"query": "from(bucket: \"WeatherAPI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"External Weather Conditions\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"wind_deg\")\r\n  |> filter(fn: (r) => r[\"location\"] == \"Woodlands\")\r\n  |> aggregateWindow(every: 30m, fn: mean, createEmpty: false)\r\n  |",
+				"refId": "A"
+			}],
+			"title": "Outdoor Atmospheric Pressure",
+			"type": "timeseries"
+		}
+	],
+	"refresh": "",
+	"schemaVersion": 38,
+	"style": "dark",
+	"tags": [],
+	"templating": {
+		"list": []
+	},
+	"time": {
+		"from": "now-24h",
+		"to": "now"
+	},
+	"timepicker": {},
+	"timezone": "",
+	"title": "RP Urban Farm Monitoring System",
+	"uid": "b7aa1be7-0b68-4112-b51a-41896aab5a0d",
+	"version": 10,
+	"weekStart": ""
+}

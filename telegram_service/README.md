@@ -17,5 +17,10 @@ Follow the documentation below to add Telegram as a Contact Point and how alerts
 2. Grafana Alerts: https://grafana.com/docs/grafana/latest/alerting/
 
 # Telegram Python Set Up
-1. pip install python-telegram-bot
+1. pip install python-telegram-bot.
+2. Create and add TELEGRAM_API_TOKEN, CHAT_ID and CHANNEL_ID into .env file.
+3. pip install python-dotenv
+4. run TelegramService.py, if valid telegran API token, chat and channel ID exists in .env file, a 'hello' will be sent to the group chat.
 
+# System Monitoring Agent
+The System Monitoring Agent, is a routine systems check for cpu load, memory (RAM) usage, network traffic and disk usage. It is scheduled to run at hourly intervals. It uses Telegram Service, to notify end-users if abnormal system status is detected i.e., high cpu / network load or disk usage.
