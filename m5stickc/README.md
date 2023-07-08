@@ -1,5 +1,5 @@
 # M5StickC
-- [Materials Used](#materials-used)
+- [Devices Used](#materials-used)
 - [M5StickC Setup](#m5stickc-setup)
     - [Install FTDI Driver](#install-ftdi-driver)
     - [Firmware Burning](#firmware-burning)
