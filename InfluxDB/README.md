@@ -48,7 +48,7 @@ The **influx_db_backup.sh** bash script is used to create an InfluxDB backup.
 * The bash script will also copy the backup files into the InfluxDB directory. Easier way to access and view / analyze files as required. 
 
 ## Automatic Scheduling of Backups
-As of writing a backup of the InfluxDB database is created every Sunday at 23:59 (SG Time). This is achieved by scheduling a CRONJOB using the expression below 
-* 59 23 * * 0 ./influx_db_backup.sh
+As of writing a backup of the InfluxDB database is created daily at 2359 (SG Time). This is achieved by scheduling a CRONJOB using the expression below 
+* 59 23 * * * path to influx_db_backup.sh
 * e.g, ``59 23  * * * cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && sudo ./influx_db_backup.sh >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/influxdb_backups/backup-logs.txt 2>&1``
 
