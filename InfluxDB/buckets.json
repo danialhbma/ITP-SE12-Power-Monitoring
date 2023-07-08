@@ -1,11 +1,7 @@
 [
     {
-      "name": "Grow_Light_Power_Consumption",
-      "description": "Bucket for tracking power consumption from grow lights."
-    },
-    {
-      "name": "Aircon_Power_Consumption",
-      "description": "Bucket for tracking power consumption from Aircon."
+      "name": "Power Consumption",
+      "description": "Bucket for tracking power consumption of grow lights and water pumps."
     },
     {
       "name": "Growlight_Brightness",
@@ -28,12 +24,8 @@
       "description": "Bucket for CO2 Levels."
     },
     {
-      "name": "Water_Flow",
+      "name": "Water",
       "description": "Bucket for tracking water flow rate"
     },
-    {
-      "name": "Waterpump_Power_Consumption",
-      "description": "Bucket for tracking power consumption from water pump."
-    }
 ]
   

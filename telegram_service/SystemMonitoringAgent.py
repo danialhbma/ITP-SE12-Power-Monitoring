@@ -49,29 +49,39 @@ class SystemMonitoringAgent:
     def generate_system_report(self):
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         n = 1
-        system_report = f"System Health Report: {current_time}\n"
-        if self.cpu_load > 5:
+        system_report = "******************************************************\n"
+        system_report += f"System Health Report: {current_time}\n"
+        if self.cpu_load > 80:
+            # CPU load deemed to be high if > 80%
             system_report += f"({n}) System Detected High CPU load\n"
             system_report += f"\tCPU Load: {self.cpu_load}%\n"
             n+=1
-        if self.memory_usage.percent > 5:
+        if self.memory_usage.percent > 80:
+            # RAM load deemed to be high > 80%
             system_report += f"({n}) System Detected High RAM usage\n"
             system_report += f"\tMemory Usage: {round(self.memory_usage.used / (1024 ** 3), 2)} GB / {round(self.memory_usage.total / (1024 ** 3), 2)} GB ({self.memory_usage.percent}%)\n"
             n+=1
-        if self.network_traffic.bytes_sent > 5 or self.network_traffic.bytes_recv > 5:
+
+        if self.network_traffic.bytes_sent / (1024 ** 2) > 16000 or self.network_traffic.bytes_recv / (1024 ** 2) > 16000:
+            # Network traffic deemed to be high if 1.6GB i.e., 80% of what E2-medium machines support (2gb)
             system_report += f"({n}) System Detected High Network Traffic usage\n"
             system_report += f"\tNetwork Traffic: Sent = {round(self.network_traffic.bytes_sent / (1024 ** 2), 2)} MB, Received = {round(self.network_traffic.bytes_recv / (1024 ** 2), 2)} MB\n"
             n+=1
-    
+
         for partition, usage in self.disk_usage.items():
-            if usage['percentage'] > 5:
+            if usage['percentage'] > 80:
+	    # Disk space low if disk usage > 80%
                 system_report += f"({n}) Low Disk Space Detected \n"
                 system_report += f"\t{partition} - Used: {usage['used']} GB / Total: {usage['total']} GB ({usage['percentage']}%)\n"
                 n+=1
+        if (n == 1):
+            system_report += f"System OK. No abnormal status detected.\n"
+        system_report += "******************************************************\n"
         print(system_report)
         return system_report
 
 async def main():
+    # Loading of telegram api keys and chat id from environment
     load_dotenv()
     try:
         TELEGRAM_API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
@@ -83,7 +93,7 @@ async def main():
     except ValueError as e:
         print(f"Error: {e}")
         sys.exit(1)
-
+    # Initializing Telegram client, generating and sending system health report
     tele_client = TelegramService(TELEGRAM_API_TOKEN, CHAT_ID)
     system_monitor = SystemMonitoringAgent()
     message = system_monitor.monitor_system()
