@@ -12,7 +12,7 @@
    - [Run in App Mode](#run-in-app-mode)
      
 ## Devices Used
-| Device Used | Link to Purchase | 
+| Device Used | Link | 
 | --- | --- |
 | M5Stick C | https://shop.m5stack.com/products/stick-c |
 | Temperature Sensor | https://shop.m5stack.com/products/m5stickc-env-hat-sht30-bmp280-bmm150 |
@@ -143,4 +143,4 @@ The M5Stick should be switched to App Mode prior to deployment and configured ba
 
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/7de86174-70ca-4fb6-affe-2453c347d803)
 
-6. The M5Stick is now deployed
+6. The M5Stick is now deployed successfully
