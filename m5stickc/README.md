@@ -7,6 +7,7 @@
    - [Install VSCode and M5Stack Extension](#install-vscode-and-m5stack-extension)
    - [Set M5StickC to USB Mode](#set-m5stickc-to-usb-mode)
    - [Test M5StickC Setup](#test-m5stickc-setup)
+- [Project Codes](#project-codes)
 - [Running Project Codes in M5StickC](#running-project-codes-in-m5stickc)
    - [Load Codes into M5StickC](#load-codes-into-m5stickc)
    - [Run in App Mode](#run-in-app-mode)
@@ -114,6 +115,20 @@ M5Led.on()
 
 3. If the M5StickC LED lights up, installation and setup is successful
 
+## Project Codes
+This section briefly describes each code file in this repository
+
+| Code File | Description | 
+| --- | --- |
+| main.py | Allow user to select a sensor and a rack, connects to Wi-Fi and MQTT, reads sensor data, publishes it, and then goes into deep sleep until the next cycle |
+| sensorinterface.py | Standardise all sensor operations and force read/publish | 
+| publisher.py | Handles connection to MQTT broker and publishing | 
+| wifi.py | Handles connection to wifi | 
+| light.py | Retrieves data from light sensor and sends data via MQTT | 
+| tvoctemp.py | Retrieves data from temperature and CO2 sensors and sends data via MQTT | 
+| waterflow.py | Retrieves data from water sensor and sends data via MQTT | 
+
+
 ## Running Project Codes in M5StickC
 ### Load Codes into M5StickC
 1. Connect the M5StickC to computer via a USB Type-C Cable
@@ -144,3 +159,4 @@ The M5Stick should be switched to App Mode prior to deployment and configured ba
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/7de86174-70ca-4fb6-affe-2453c347d803)
 
 6. The M5Stick is now deployed successfully
+
