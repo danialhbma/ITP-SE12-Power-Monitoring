@@ -11,15 +11,19 @@ If setting up Eclispe-Mosquitto docker image for the first time perform steps (1
 	* ``gcloud compute firewall-rules create allow-mqtt-websocket --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:9001 --source-ranges=0.0.0.0/0``
 3. ``gcloud compute firewall-rules list``
 	* Verifies firewall configured correctly, ports 1883 and 9001 should allow TCP connections
-4. create the mosquitto.conf file if not already created.
+4. to use authentication when connecting to broker, a password file must be created. replace <path_to_passwd_file> and <username> with the actual pathname and username used:
+    1. add a user to the password file: `` sudo mosquitto_passwd -c <path_to_passwd_file> <username> ``
+    2. you will be prompted to enter a password for the user
+    3. after reentering the password, the password file will be successfully created
+6. create the mosquitto.conf file if not already created. replace <path_to_passwd_file> with the actual pathname used:
 	* file should contain the following lines:
 	* listener 1883
-	* listener 9001
 	* allow_anonymous false
-5. ``sudo docker-compose up``
+ 	* password_file <path_to_passwd_file>
+7. ``sudo docker-compose up``
 	* starts eclipse-mosquitto docker container
-6. To verify that MQTT broker is correctly configured, open two new terminals, one will serve as a publisher and the other will serve as subscriber. 
-	* ``mosquitto_sub -h <ip address of cloud instance> -p 1883 -t <topic_name>``
-	* ``mosquitto_pub -h <ip_address of cloud instance> -p 1883 -t <topic_name> -m "Hello, MQTT!"``
+8. To verify that MQTT broker is correctly configured, open two new terminals, one will serve as a publisher and the other will serve as subscriber. 
+	* ``mosquitto_sub -h <ip address of cloud instance> -p 1883 -t <topic_name> -u <username> -P <password>``
+	* ``mosquitto_pub -h <ip_address of cloud instance> -p 1883 -t <topic_name> -u <username> -P <password> -m "Hello, MQTT!"``
 	* You should see "Hello, MQTT!" in the CLI that is the subcriber
 
