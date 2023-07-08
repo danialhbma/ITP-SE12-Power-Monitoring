@@ -19,7 +19,7 @@
 | USB Type-C Cable | - |
 
 ## M5StickC Setup
-This guide is based on the official M5Stack tutorial: https://docs.m5stack.com/en/quick_start/m5stickc/mpy
+This is the initial setup required when using new M5StickC devices. The guide is based on the official M5Stack tutorial: https://docs.m5stack.com/en/quick_start/m5stickc/mpy
 
 ### Install FTDI Driver
 The FTDI USB Serial Port driver helps operating systems communicate with USB Serial Port devices, which will be needed
@@ -97,17 +97,30 @@ The m5stack extension is required to code using Visual Studio Code IDE
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/e5c09bfc-841b-4b31-9467-5485c328e6ea)
 
 ### Test M5StickC Setup
-1. To test the installation and setup, replace main.py with the following code
+1. To test the installation and setup, replace main.py with the following code:
 ```
 from m5stack import *
 from m5ui import *
 from uiflow import *
 
 M5Led.on()
-
 ```
 
 2. Click the Run button > Select Run in M5Stack
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/9ec1abbf-03ef-46e8-8413-72c42e23e4ce)
 
 3. If the M5StickC LED lights up, installation and setup is successful
+
+## Running Project Codes in M5StickC
+### Load Codes into M5StickC
+1. Connect the M5StickC to computer via a USB Type-C Cable
+2. [Set M5StickC to USB Mode if you haven't done so](#set-m5stickc-to-usb-mode)
+3. After adding M5StickC in VSCode, press the Upload button > Upload all Python code files from this repository into the main folder:
+--- to add img ---
+   
+4. The files should look like this:
+--- to add img ---
+   
+### Run in App Mode
+Since the M5StickC will be put to sleep to conserve power, the codes must be run in **app mode**, or the code will stop after running once.
+
