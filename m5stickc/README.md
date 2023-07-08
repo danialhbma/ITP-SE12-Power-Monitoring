@@ -7,6 +7,9 @@
    - [Install VSCode and M5Stack Extension](#install-vscode-and-m5stack-extension)
    - [Set M5StickC to USB Mode](#set-m5stickc-to-usb-mode)
    - [Test M5StickC Setup](#test-m5stickc-setup)
+- [Running Project Codes in M5StickC](#running-project-codes-in-m5stickc)
+   - [Load Codes into M5StickC](#load-codes-into-m5stickc)
+   - [Run in App Mode](#run-in-app-mode)
      
 ## Devices Used
 | Device Used | Link to Purchase | 
