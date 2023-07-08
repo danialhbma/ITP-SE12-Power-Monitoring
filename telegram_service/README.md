@@ -17,12 +17,21 @@ Follow the documentation below to add Telegram as a Contact Point and how alerts
 2. Grafana Alerts: https://grafana.com/docs/grafana/latest/alerting/
 
 # Telegram Python Set Up
-1. pip install python-telegram-bot.
-2. Create and add TELEGRAM_API_TOKEN, CHAT_ID and CHANNEL_ID into .env file.
-3. pip install python-dotenv
+1. ``pip install python-telegram-bot.``
+2. **Create a file named .env and place your telegram api token, channel id and chat id into the .env file**
+	* TELEGRAM_API_TOKEN = "YOUR_API_TOKEN"
+	* CHAT_ID = "YOUR_CHAT_ID"
+	* CHANNEL_ID = "YOUR_CHANNEL_ID"
+3. ``pip install python-dotenv``
 4. run TelegramService.py, if valid telegran API token, chat and channel ID exists in .env file, a 'hello' will be sent to the group chat.
+	* ``python3 TelegramService.py`` 
 
 # System Monitoring Agent
-The System Monitoring Agent, is a routine systems check for cpu load, memory (RAM) usage, network traffic and more importantly disk usage. It is scheduled to run at 2359 daily using the CRON expression below.
-* 59 23 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/telegram_service && python3 SystemMonitoringAgent.py >> monitoring_reports.txt 2>&1
- 
+The System Monitoring Agent, is a routine systems check for cpu load, memory (RAM) usage, network traffic and more importantly disk usage. Follow the instructions below to perform Systems check. 
+1. cd into telegram_service folder
+2. ``pip install psutil``
+3. ``pip install python-dotenv``
+4. ``python3 SystemMonitoringAgent.py``
+
+This script has been scheduled to run at 2359 daily using the CRON expression below.
+* ``59 23 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/telegram_service && python3 SystemMonitoringAgent.py >> monitoring_reports.txt 2>&1``

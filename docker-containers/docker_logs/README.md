@@ -1,11 +1,12 @@
 # Manually Retrieve Docker Logs
 Execute these commands in instance shell.
-1. sudo docker ps
+1. ``sudo docker ps``
 	* Obtain containter ID
-2. sudo docker log <container id> > <output_filename.txt>
+2. sudo docker log *container id* > output_filename.txt
 	* Redirects output from log to an output file 
+		* e.g., ``sudo docker logs 85467b4a3382 > influx_logs.txt``
 	* For docker containers that don't out to stdout i.e., output to stderr instead (eclipse-mqtt) use
-		* e.g., sudo docker logs aaaf5cdb5264 > mqtt_logs.txt 2>&1 instead 
+		* e.g., ``sudo docker logs aaaf5cdb5264 > mqtt_logs.txt 2>&1`` instead 
 3. cat output.txt
 
 # Automatically Retrieve Docker Logs
