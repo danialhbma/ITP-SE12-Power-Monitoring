@@ -8,7 +8,7 @@
    - [Set M5StickC to USB Mode](#set-m5stickc-to-usb-mode)
    - [Test M5StickC Setup](#test-m5stickc-setup)
      
-## Materials Used
+## Devices Used
 | Device Used | Link to Purchase | 
 | --- | --- |
 | M5Stick C | https://shop.m5stack.com/products/stick-c |
@@ -122,5 +122,22 @@ M5Led.on()
 --- to add img ---
    
 ### Run in App Mode
-Since the M5StickC will be put to sleep to conserve power, the codes must be run in **app mode**, or the code will stop after running once.
+The M5Stick should be switched to App Mode prior to deployment and configured based on the sensors connected.
+1. Connect all desired sensors 
+2. Press and hold the power button on the left side of the device to power on/restart
+3. When the M5StickC powers up, quickly press the right button to switch to App mode
+4. Use the right button to scroll down and the middle button to select the corresponding option on the UI based on the sensors connected:
 
+| Option | Sensors Connected | 
+| --- | --- |
+| Water | Water Flow Sensor | 
+| TVOC/Temp | CO2 and Temperature Sensor | 
+| Light | Light Sensor | 
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/ff5dab08-151f-4a19-8c86-097adc46e9bc)
+
+5. Select the coresponding rack
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/7de86174-70ca-4fb6-affe-2453c347d803)
+
+6. The M5Stick is now deployed
