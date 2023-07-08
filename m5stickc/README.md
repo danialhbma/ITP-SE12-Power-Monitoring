@@ -15,11 +15,12 @@ This guide is based on the official M5Stack tutorial: https://docs.m5stack.com/e
 The FTDI USB Serial Port driver helps operating systems communicate with USB Serial Port devices, which will be needed
 1. Install the FTDI driver based on operating system: https://ftdichip.com/drivers/vcp-drivers/
 2. For Windows users: Install the driver file directly in Device Manager. Installing by running the executable driver file might not work properly.
+
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/2d5306f7-a931-42d2-817f-9fec8e78ed74)
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/597c1d81-8fc9-4b77-a101-1b655d681aeb)
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/c69396c3-428a-4b4e-92b1-0da780bf9d5b)
 
-3. For MacOS users: Tick the following options when installing
+4. For MacOS users: Tick the following options when installing
 System Preferences > Security and Privacy > General > Allow downloadable apps from the following locations > App Store and Approved Developer Options
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/e291130b-5801-4876-a256-21de9c2674c4)
 
