@@ -60,6 +60,43 @@ System Preferences > Security and Privacy > General > Allow downloadable apps fr
 8. Firmware burned successfully
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/cbc45844-ed7b-460d-9b23-0cbfc8726cba)
 
+# Using Visual Studio Code and MicroPython for Development
+## Install Visual Studio Code and M5Stack Extension
+The m5stack extension is required to code using Visual Studio Code IDE
 
+1. Install Visual Studio Code IDE from https://code.visualstudio.com/
+2. Launch Visual Studio Code
+3. Navigate to Extensions > Search "m5stack" > Click Install
+![install vscode ext](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/c091d58b-ae97-487d-9f9b-3da15ef5ff0e)
 
+## Set M5StickC to USB Mode
+1. Connect the M5StickC to computer via a USB Type-C Cable
+2. Press and hold the power button on the left side of the device to power on/restart
+3. When the M5StickC powers up, quickly press the right button to switch to USB mode
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/5bd2a63e-83b5-4772-9ccf-bbb4785188b2)
 
+## Connect to M5Stick in Visual Studio Code IDE
+1. In the bottom left corner of VSCode IDE, click Add M5Stack
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/2540b724-6208-4e34-a623-b3d8bbb96c5f)
+
+2. Select the corresponding device port
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/2b606a68-24dd-46d8-882e-ffe91e8a77de)
+
+3. If the device is successfully added, you should be able to view the device files in the left menu under M5Stack Device:
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/e5c09bfc-841b-4b31-9467-5485c328e6ea)
+
+## Test M5StickC Setup
+1. To test the installation and setup, replace main.py with the following code
+```
+from m5stack import *
+from m5ui import *
+from uiflow import *
+
+M5Led.on()
+
+```
+
+2. Click the Run button > Select Run in M5Stack
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/9ec1abbf-03ef-46e8-8413-72c42e23e4ce)
+
+3. If the M5StickC LED lights up, installation and setup is successful
