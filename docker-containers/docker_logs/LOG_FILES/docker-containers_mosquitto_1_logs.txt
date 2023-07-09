@@ -1,894 +1,3 @@
-07-07-2023 04:30:00: New connection from 210.10.3.237:19088 on port 1883.
-07-07-2023 04:30:00: New client connected from 210.10.3.237:19088 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 04:35:27: New connection from 210.10.3.237:19091 on port 1883.
-07-07-2023 04:35:27: New client connected from 210.10.3.237:19091 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 04:37:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 04:42:15: New connection from 210.10.3.237:19092 on port 1883.
-07-07-2023 04:42:15: New client connected from 210.10.3.237:19092 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 04:43:03: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 04:46:58: New connection from 210.10.3.237:19093 on port 1883.
-07-07-2023 04:46:58: New client connected from 210.10.3.237:19093 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 04:49:07: New connection from 210.10.3.237:19094 on port 1883.
-07-07-2023 04:49:08: New client connected from 210.10.3.237:19094 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 04:49:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 04:51:13: New connection from 210.10.3.237:19095 on port 1883.
-07-07-2023 04:51:13: New client connected from 210.10.3.237:19095 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 04:54:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 04:56:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 04:58:51: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 04:59:14: New connection from 65.49.1.24:33938 on port 1883.
-07-07-2023 04:59:14: Client MqttClient disconnected, not authorised.
-07-07-2023 04:59:55: New connection from 210.10.3.237:19096 on port 1883.
-07-07-2023 04:59:55: New client connected from 210.10.3.237:19096 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:05:21: New connection from 210.10.3.237:19097 on port 1883.
-07-07-2023 05:05:21: New client connected from 210.10.3.237:19097 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 05:07:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:12:08: New connection from 210.10.3.237:19284 on port 1883.
-07-07-2023 05:12:08: New client connected from 210.10.3.237:19284 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:12:57: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 05:16:53: New connection from 210.10.3.237:19286 on port 1883.
-07-07-2023 05:16:53: New client connected from 210.10.3.237:19286 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:19:06: New connection from 210.10.3.237:19287 on port 1883.
-07-07-2023 05:19:06: New client connected from 210.10.3.237:19287 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 05:19:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:21:09: New connection from 210.10.3.237:19288 on port 1883.
-07-07-2023 05:21:09: New client connected from 210.10.3.237:19288 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:24:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:26:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 05:28:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:29:52: New connection from 210.10.3.237:19289 on port 1883.
-07-07-2023 05:29:52: New client connected from 210.10.3.237:19289 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:35:14: New connection from 210.10.3.237:19291 on port 1883.
-07-07-2023 05:35:14: New client connected from 210.10.3.237:19291 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 05:37:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:42:02: New connection from 210.10.3.237:19292 on port 1883.
-07-07-2023 05:42:02: New client connected from 210.10.3.237:19292 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:42:51: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 05:46:52: New connection from 210.10.3.237:19293 on port 1883.
-07-07-2023 05:46:52: New client connected from 210.10.3.237:19293 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:49:04: New connection from 210.10.3.237:19294 on port 1883.
-07-07-2023 05:49:04: New client connected from 210.10.3.237:19294 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 05:49:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:51:05: New connection from 210.10.3.237:19295 on port 1883.
-07-07-2023 05:51:05: New client connected from 210.10.3.237:19295 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 05:54:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:56:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 05:58:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 05:59:45: New connection from 210.10.3.237:19296 on port 1883.
-07-07-2023 05:59:45: New client connected from 210.10.3.237:19296 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:05:08: New connection from 210.10.3.237:19299 on port 1883.
-07-07-2023 06:05:08: New client connected from 210.10.3.237:19299 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 06:07:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:11:56: New connection from 210.10.3.237:19300 on port 1883.
-07-07-2023 06:11:56: New client connected from 210.10.3.237:19300 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:12:45: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 06:16:48: New connection from 210.10.3.237:19301 on port 1883.
-07-07-2023 06:16:48: New client connected from 210.10.3.237:19301 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:19:01: New connection from 210.10.3.237:19302 on port 1883.
-07-07-2023 06:19:01: New client connected from 210.10.3.237:19302 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 06:19:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:21:01: New connection from 210.10.3.237:19303 on port 1883.
-07-07-2023 06:21:01: New client connected from 210.10.3.237:19303 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:24:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:26:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 06:28:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:29:41: New connection from 210.10.3.237:19304 on port 1883.
-07-07-2023 06:29:41: New client connected from 210.10.3.237:19304 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:35:02: New connection from 210.10.3.237:19305 on port 1883.
-07-07-2023 06:35:02: New client connected from 210.10.3.237:19305 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 06:37:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:41:50: New connection from 210.10.3.237:19306 on port 1883.
-07-07-2023 06:41:50: New client connected from 210.10.3.237:19306 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:42:39: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 06:46:42: New connection from 210.10.3.237:19307 on port 1883.
-07-07-2023 06:46:42: New client connected from 210.10.3.237:19307 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:48:54: New connection from 210.10.3.237:19308 on port 1883.
-07-07-2023 06:48:54: New client connected from 210.10.3.237:19308 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 06:49:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:50:55: New connection from 210.10.3.237:19309 on port 1883.
-07-07-2023 06:50:56: New client connected from 210.10.3.237:19309 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 06:54:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:56:27: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 06:58:33: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 06:59:36: New connection from 210.10.3.237:19311 on port 1883.
-07-07-2023 06:59:36: New client connected from 210.10.3.237:19311 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:04:56: New connection from 210.10.3.237:19312 on port 1883.
-07-07-2023 07:04:56: New client connected from 210.10.3.237:19312 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 07:07:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:11:42: New connection from 210.10.3.237:19313 on port 1883.
-07-07-2023 07:11:42: New client connected from 210.10.3.237:19313 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:12:33: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 07:16:40: New connection from 210.10.3.237:19314 on port 1883.
-07-07-2023 07:16:40: New client connected from 210.10.3.237:19314 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:18:47: New connection from 210.10.3.237:19315 on port 1883.
-07-07-2023 07:18:47: New client connected from 210.10.3.237:19315 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 07:19:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:20:52: New connection from 210.10.3.237:19316 on port 1883.
-07-07-2023 07:20:52: New client connected from 210.10.3.237:19316 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:24:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:26:21: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 07:28:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:29:31: New connection from 210.10.3.237:19319 on port 1883.
-07-07-2023 07:29:31: New client connected from 210.10.3.237:19319 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:34:50: New connection from 210.10.3.237:19320 on port 1883.
-07-07-2023 07:34:50: New client connected from 210.10.3.237:19320 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 07:37:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:41:36: New connection from 210.10.3.237:19321 on port 1883.
-07-07-2023 07:41:36: New client connected from 210.10.3.237:19321 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:42:27: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 07:46:34: New connection from 210.10.3.237:19322 on port 1883.
-07-07-2023 07:46:34: New client connected from 210.10.3.237:19322 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:48:43: New connection from 210.10.3.237:19323 on port 1883.
-07-07-2023 07:48:43: New client connected from 210.10.3.237:19323 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 07:49:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:50:47: New connection from 210.10.3.237:19324 on port 1883.
-07-07-2023 07:50:47: New client connected from 210.10.3.237:19324 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 07:54:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:56:21: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 07:58:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 07:59:26: New connection from 210.10.3.237:19325 on port 1883.
-07-07-2023 07:59:26: New client connected from 210.10.3.237:19325 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:04:45: New connection from 210.10.3.237:19326 on port 1883.
-07-07-2023 08:04:45: New client connected from 210.10.3.237:19326 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 08:07:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:11:31: New connection from 210.10.3.237:19327 on port 1883.
-07-07-2023 08:11:31: New client connected from 210.10.3.237:19327 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:12:21: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 08:16:31: New connection from 210.10.3.237:19328 on port 1883.
-07-07-2023 08:16:31: New client connected from 210.10.3.237:19328 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:18:43: New connection from 210.10.3.237:19329 on port 1883.
-07-07-2023 08:18:43: New client connected from 210.10.3.237:19329 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 08:19:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:20:46: New connection from 210.10.3.237:19330 on port 1883.
-07-07-2023 08:20:46: New client connected from 210.10.3.237:19330 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:24:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:26:21: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 08:28:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:29:22: New connection from 210.10.3.237:19331 on port 1883.
-07-07-2023 08:29:22: New client connected from 210.10.3.237:19331 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:34:40: New connection from 210.10.3.237:19332 on port 1883.
-07-07-2023 08:34:40: New client connected from 210.10.3.237:19332 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 08:36:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:41:24: New connection from 210.10.3.237:19333 on port 1883.
-07-07-2023 08:41:24: New client connected from 210.10.3.237:19333 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:42:15: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 08:46:28: New connection from 210.10.3.237:19334 on port 1883.
-07-07-2023 08:46:28: New client connected from 210.10.3.237:19334 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:48:37: New connection from 210.10.3.237:19335 on port 1883.
-07-07-2023 08:48:37: New client connected from 210.10.3.237:19335 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 08:49:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:50:43: New connection from 210.10.3.237:19336 on port 1883.
-07-07-2023 08:50:43: New client connected from 210.10.3.237:19336 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 08:54:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:56:15: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 08:58:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 08:59:16: New connection from 210.10.3.237:19338 on port 1883.
-07-07-2023 08:59:16: New client connected from 210.10.3.237:19338 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:04:33: New connection from 210.10.3.237:19339 on port 1883.
-07-07-2023 09:04:33: New client connected from 210.10.3.237:19339 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 09:06:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:11:16: New connection from 210.10.3.237:19340 on port 1883.
-07-07-2023 09:11:16: New client connected from 210.10.3.237:19340 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:12:09: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 09:16:25: New connection from 210.10.3.237:19341 on port 1883.
-07-07-2023 09:16:26: New client connected from 210.10.3.237:19341 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:18:34: New connection from 210.10.3.237:19342 on port 1883.
-07-07-2023 09:18:34: New client connected from 210.10.3.237:19342 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 09:18:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:20:38: New connection from 210.10.3.237:19343 on port 1883.
-07-07-2023 09:20:38: New client connected from 210.10.3.237:19343 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:24:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:26:09: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 09:28:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:29:10: New connection from 210.10.3.237:19344 on port 1883.
-07-07-2023 09:29:10: New client connected from 210.10.3.237:19344 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:34:27: New connection from 210.10.3.237:19345 on port 1883.
-07-07-2023 09:34:27: New client connected from 210.10.3.237:19345 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 09:36:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:41:10: New connection from 210.10.3.237:19532 on port 1883.
-07-07-2023 09:41:10: New client connected from 210.10.3.237:19532 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:42:03: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 09:46:22: New connection from 210.10.3.237:19533 on port 1883.
-07-07-2023 09:46:22: New client connected from 210.10.3.237:19533 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:48:30: New connection from 210.10.3.237:19534 on port 1883.
-07-07-2023 09:48:30: New client connected from 210.10.3.237:19534 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 09:48:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:50:33: New connection from 210.10.3.237:19535 on port 1883.
-07-07-2023 09:50:33: New client connected from 210.10.3.237:19535 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 09:53:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:56:09: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 09:58:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 09:59:04: New connection from 210.10.3.237:19536 on port 1883.
-07-07-2023 09:59:04: New client connected from 210.10.3.237:19536 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:04:22: New connection from 210.10.3.237:19537 on port 1883.
-07-07-2023 10:04:22: New client connected from 210.10.3.237:19537 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 10:06:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:11:05: New connection from 210.10.3.237:19538 on port 1883.
-07-07-2023 10:11:05: New client connected from 210.10.3.237:19538 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:11:57: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 10:16:17: New connection from 210.10.3.237:19539 on port 1883.
-07-07-2023 10:16:17: New client connected from 210.10.3.237:19539 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:18:23: New connection from 210.10.3.237:19540 on port 1883.
-07-07-2023 10:18:23: New client connected from 210.10.3.237:19540 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 10:18:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:20:27: New connection from 210.10.3.237:19541 on port 1883.
-07-07-2023 10:20:27: New client connected from 210.10.3.237:19541 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:23:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:25:57: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 10:28:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:28:57: New connection from 210.10.3.237:19542 on port 1883.
-07-07-2023 10:28:57: New client connected from 210.10.3.237:19542 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:34:16: New connection from 210.10.3.237:19543 on port 1883.
-07-07-2023 10:34:16: New client connected from 210.10.3.237:19543 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 10:36:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:41:01: New connection from 210.10.3.237:19544 on port 1883.
-07-07-2023 10:41:01: New client connected from 210.10.3.237:19544 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:41:51: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 10:46:13: New connection from 210.10.3.237:19545 on port 1883.
-07-07-2023 10:46:13: New client connected from 210.10.3.237:19545 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:48:24: New connection from 210.10.3.237:19546 on port 1883.
-07-07-2023 10:48:24: New client connected from 210.10.3.237:19546 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 10:48:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:50:24: New connection from 210.10.3.237:19547 on port 1883.
-07-07-2023 10:50:24: New client connected from 210.10.3.237:19547 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 10:53:51: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:55:57: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 10:58:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 10:58:51: New connection from 210.10.3.237:19549 on port 1883.
-07-07-2023 10:58:51: New client connected from 210.10.3.237:19549 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:04:10: New connection from 210.10.3.237:19550 on port 1883.
-07-07-2023 11:04:10: New client connected from 210.10.3.237:19550 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 11:06:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:10:55: New connection from 210.10.3.237:19551 on port 1883.
-07-07-2023 11:10:55: New client connected from 210.10.3.237:19551 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:11:45: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 11:16:09: New connection from 210.10.3.237:19552 on port 1883.
-07-07-2023 11:16:09: New client connected from 210.10.3.237:19552 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:18:27: New connection from 210.10.3.237:19553 on port 1883.
-07-07-2023 11:18:27: New client connected from 210.10.3.237:19553 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 11:18:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:20:28: New connection from 210.10.3.237:19554 on port 1883.
-07-07-2023 11:20:28: New client connected from 210.10.3.237:19554 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:23:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:26:03: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 11:28:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:28:46: New connection from 210.10.3.237:19555 on port 1883.
-07-07-2023 11:28:46: New client connected from 210.10.3.237:19555 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:34:04: New connection from 210.10.3.237:19556 on port 1883.
-07-07-2023 11:34:04: New client connected from 210.10.3.237:19556 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 11:36:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:40:48: New connection from 210.10.3.237:19557 on port 1883.
-07-07-2023 11:40:48: New client connected from 210.10.3.237:19557 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:41:39: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 11:46:06: New connection from 210.10.3.237:19558 on port 1883.
-07-07-2023 11:46:06: New client connected from 210.10.3.237:19558 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:48:23: New connection from 210.10.3.237:19559 on port 1883.
-07-07-2023 11:48:23: New client connected from 210.10.3.237:19559 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 11:48:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:50:25: New connection from 210.10.3.237:19560 on port 1883.
-07-07-2023 11:50:25: New client connected from 210.10.3.237:19560 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 11:53:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:55:57: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 11:58:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 11:58:41: New connection from 210.10.3.237:19561 on port 1883.
-07-07-2023 11:58:41: New client connected from 210.10.3.237:19561 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:03:57: New connection from 210.10.3.237:19562 on port 1883.
-07-07-2023 12:03:57: New client connected from 210.10.3.237:19562 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 12:06:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:10:42: New connection from 210.10.3.237:19563 on port 1883.
-07-07-2023 12:10:42: New client connected from 210.10.3.237:19563 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:11:33: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 12:16:01: New connection from 210.10.3.237:19564 on port 1883.
-07-07-2023 12:16:01: New client connected from 210.10.3.237:19564 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:18:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:18:22: New connection from 210.10.3.237:19565 on port 1883.
-07-07-2023 12:18:22: New client connected from 210.10.3.237:19565 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 12:20:20: New connection from 210.10.3.237:19566 on port 1883.
-07-07-2023 12:20:20: New client connected from 210.10.3.237:19566 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:23:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:25:57: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 12:27:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:28:36: New connection from 210.10.3.237:19567 on port 1883.
-07-07-2023 12:28:36: New client connected from 210.10.3.237:19567 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:33:51: New connection from 210.10.3.237:19568 on port 1883.
-07-07-2023 12:33:51: New client connected from 210.10.3.237:19568 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 12:36:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:40:37: New connection from 210.10.3.237:19569 on port 1883.
-07-07-2023 12:40:37: New client connected from 210.10.3.237:19569 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:41:27: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 12:45:57: New connection from 210.10.3.237:19570 on port 1883.
-07-07-2023 12:45:57: New client connected from 210.10.3.237:19570 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:48:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:48:18: New connection from 210.10.3.237:19571 on port 1883.
-07-07-2023 12:48:18: New client connected from 210.10.3.237:19571 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 12:50:18: New connection from 210.10.3.237:19572 on port 1883.
-07-07-2023 12:50:18: New client connected from 210.10.3.237:19572 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 12:53:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:55:57: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 12:57:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 12:58:30: New connection from 210.10.3.237:19573 on port 1883.
-07-07-2023 12:58:30: New client connected from 210.10.3.237:19573 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:03:45: New connection from 210.10.3.237:19574 on port 1883.
-07-07-2023 13:03:45: New client connected from 210.10.3.237:19574 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 13:06:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:10:33: New connection from 210.10.3.237:19575 on port 1883.
-07-07-2023 13:10:33: New client connected from 210.10.3.237:19575 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:11:21: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 13:15:53: New connection from 210.10.3.237:19576 on port 1883.
-07-07-2023 13:15:53: New client connected from 210.10.3.237:19576 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:18:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:18:14: New connection from 210.10.3.237:19577 on port 1883.
-07-07-2023 13:18:14: New client connected from 210.10.3.237:19577 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 13:20:12: New connection from 210.10.3.237:19578 on port 1883.
-07-07-2023 13:20:12: New client connected from 210.10.3.237:19578 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:23:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:25:51: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 13:27:51: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:28:25: New connection from 210.10.3.237:19579 on port 1883.
-07-07-2023 13:28:25: New client connected from 210.10.3.237:19579 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:33:38: New connection from 210.10.3.237:19580 on port 1883.
-07-07-2023 13:33:38: New client connected from 210.10.3.237:19580 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 13:36:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:40:26: New connection from 210.10.3.237:19581 on port 1883.
-07-07-2023 13:40:26: New client connected from 210.10.3.237:19581 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:41:15: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 13:45:48: New connection from 210.10.3.237:19582 on port 1883.
-07-07-2023 13:45:48: New client connected from 210.10.3.237:19582 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:48:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:48:13: New connection from 210.10.3.237:19583 on port 1883.
-07-07-2023 13:48:13: New client connected from 210.10.3.237:19583 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 13:50:10: New connection from 210.10.3.237:19584 on port 1883.
-07-07-2023 13:50:10: New client connected from 210.10.3.237:19584 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 13:53:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:55:51: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 13:57:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 13:58:21: New connection from 210.10.3.237:19585 on port 1883.
-07-07-2023 13:58:21: New client connected from 210.10.3.237:19585 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:03:31: New connection from 210.10.3.237:19586 on port 1883.
-07-07-2023 14:03:31: New client connected from 210.10.3.237:19586 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 14:05:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:10:20: New connection from 210.10.3.237:19587 on port 1883.
-07-07-2023 14:10:20: New client connected from 210.10.3.237:19587 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:11:09: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 14:15:44: New connection from 210.10.3.237:19588 on port 1883.
-07-07-2023 14:15:44: New client connected from 210.10.3.237:19588 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:17:57: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:18:09: New connection from 210.10.3.237:19589 on port 1883.
-07-07-2023 14:18:09: New client connected from 210.10.3.237:19589 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 14:20:11: New connection from 210.10.3.237:19590 on port 1883.
-07-07-2023 14:20:11: New client connected from 210.10.3.237:19590 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:23:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:25:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 14:27:51: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:28:15: New connection from 210.10.3.237:19591 on port 1883.
-07-07-2023 14:28:16: New client connected from 210.10.3.237:19591 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:33:24: New connection from 210.10.3.237:19592 on port 1883.
-07-07-2023 14:33:24: New client connected from 210.10.3.237:19592 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 14:35:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:40:13: New connection from 210.10.3.237:19593 on port 1883.
-07-07-2023 14:40:13: New client connected from 210.10.3.237:19593 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:41:03: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 14:45:40: New connection from 210.10.3.237:19780 on port 1883.
-07-07-2023 14:45:40: New client connected from 210.10.3.237:19780 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:47:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:48:02: New connection from 210.10.3.237:19781 on port 1883.
-07-07-2023 14:48:03: New client connected from 210.10.3.237:19781 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 14:50:04: New connection from 210.10.3.237:19782 on port 1883.
-07-07-2023 14:50:04: New client connected from 210.10.3.237:19782 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 14:53:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:55:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 14:57:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 14:58:11: New connection from 210.10.3.237:19783 on port 1883.
-07-07-2023 14:58:11: New client connected from 210.10.3.237:19783 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:03:19: New connection from 210.10.3.237:19784 on port 1883.
-07-07-2023 15:03:19: New client connected from 210.10.3.237:19784 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 15:05:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:10:07: New connection from 210.10.3.237:19785 on port 1883.
-07-07-2023 15:10:07: New client connected from 210.10.3.237:19785 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:10:57: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 15:15:42: New connection from 210.10.3.237:19786 on port 1883.
-07-07-2023 15:15:42: New client connected from 210.10.3.237:19786 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:17:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:18:08: New connection from 210.10.3.237:19787 on port 1883.
-07-07-2023 15:18:08: New client connected from 210.10.3.237:19787 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 15:20:05: New connection from 210.10.3.237:19788 on port 1883.
-07-07-2023 15:20:05: New client connected from 210.10.3.237:19788 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:23:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:25:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 15:27:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:28:10: New connection from 210.10.3.237:19789 on port 1883.
-07-07-2023 15:28:11: New client connected from 210.10.3.237:19789 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:33:16: New connection from 210.10.3.237:19790 on port 1883.
-07-07-2023 15:33:16: New client connected from 210.10.3.237:19790 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 15:35:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:40:03: New connection from 210.10.3.237:19791 on port 1883.
-07-07-2023 15:40:03: New client connected from 210.10.3.237:19791 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:40:51: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 15:45:39: New connection from 210.10.3.237:19792 on port 1883.
-07-07-2023 15:45:39: New client connected from 210.10.3.237:19792 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:47:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:48:08: New connection from 210.10.3.237:19793 on port 1883.
-07-07-2023 15:48:08: New client connected from 210.10.3.237:19793 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 15:50:08: New connection from 210.10.3.237:19794 on port 1883.
-07-07-2023 15:50:08: New client connected from 210.10.3.237:19794 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 15:53:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:55:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 15:57:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 15:58:06: New connection from 210.10.3.237:19795 on port 1883.
-07-07-2023 15:58:06: New client connected from 210.10.3.237:19795 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:03:12: New connection from 210.10.3.237:19796 on port 1883.
-07-07-2023 16:03:12: New client connected from 210.10.3.237:19796 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 16:05:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:09:57: New connection from 210.10.3.237:19797 on port 1883.
-07-07-2023 16:09:57: New client connected from 210.10.3.237:19797 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:10:45: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 16:15:38: New connection from 210.10.3.237:19798 on port 1883.
-07-07-2023 16:15:39: New client connected from 210.10.3.237:19798 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:17:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:18:08: New connection from 210.10.3.237:19799 on port 1883.
-07-07-2023 16:18:08: New client connected from 210.10.3.237:19799 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 16:20:04: New connection from 210.10.3.237:19800 on port 1883.
-07-07-2023 16:20:05: New client connected from 210.10.3.237:19800 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:23:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:25:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 16:27:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:28:02: New connection from 210.10.3.237:19801 on port 1883.
-07-07-2023 16:28:02: New client connected from 210.10.3.237:19801 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:33:08: New connection from 210.10.3.237:19802 on port 1883.
-07-07-2023 16:33:08: New client connected from 210.10.3.237:19802 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 16:35:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:39:51: New connection from 210.10.3.237:19803 on port 1883.
-07-07-2023 16:39:51: New client connected from 210.10.3.237:19803 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:40:45: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 16:45:36: New connection from 210.10.3.237:19804 on port 1883.
-07-07-2023 16:45:36: New client connected from 210.10.3.237:19804 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:47:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:48:06: New connection from 210.10.3.237:19805 on port 1883.
-07-07-2023 16:48:06: New client connected from 210.10.3.237:19805 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 16:50:02: New connection from 210.10.3.237:19806 on port 1883.
-07-07-2023 16:50:02: New client connected from 210.10.3.237:19806 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 16:53:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:55:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 16:57:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 16:58:02: New connection from 210.10.3.237:19807 on port 1883.
-07-07-2023 16:58:02: New client connected from 210.10.3.237:19807 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:03:03: New connection from 210.10.3.237:19808 on port 1883.
-07-07-2023 17:03:03: New client connected from 210.10.3.237:19808 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 17:05:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:09:45: New connection from 210.10.3.237:19809 on port 1883.
-07-07-2023 17:09:45: New client connected from 210.10.3.237:19809 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:10:39: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 17:15:35: New connection from 210.10.3.237:19810 on port 1883.
-07-07-2023 17:15:35: New client connected from 210.10.3.237:19810 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:17:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:18:05: New connection from 210.10.3.237:19811 on port 1883.
-07-07-2023 17:18:05: New client connected from 210.10.3.237:19811 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 17:20:00: New connection from 210.10.3.237:19812 on port 1883.
-07-07-2023 17:20:00: New client connected from 210.10.3.237:19812 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:23:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:25:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 17:27:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:27:59: New connection from 210.10.3.237:19813 on port 1883.
-07-07-2023 17:27:59: New client connected from 210.10.3.237:19813 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:32:59: New connection from 210.10.3.237:19814 on port 1883.
-07-07-2023 17:32:59: New client connected from 210.10.3.237:19814 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 17:35:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:39:39: New connection from 210.10.3.237:19815 on port 1883.
-07-07-2023 17:39:39: New client connected from 210.10.3.237:19815 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:40:33: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 17:45:33: New connection from 210.10.3.237:19816 on port 1883.
-07-07-2023 17:45:33: New client connected from 210.10.3.237:19816 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:47:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:48:08: New connection from 210.10.3.237:19817 on port 1883.
-07-07-2023 17:48:08: New client connected from 210.10.3.237:19817 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 17:50:01: New connection from 210.10.3.237:19818 on port 1883.
-07-07-2023 17:50:01: New client connected from 210.10.3.237:19818 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 17:53:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:55:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 17:57:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 17:57:57: New connection from 210.10.3.237:19819 on port 1883.
-07-07-2023 17:57:57: New client connected from 210.10.3.237:19819 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:02:52: New connection from 210.10.3.237:19820 on port 1883.
-07-07-2023 18:02:52: New client connected from 210.10.3.237:19820 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 18:05:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:09:34: New connection from 210.10.3.237:19821 on port 1883.
-07-07-2023 18:09:34: New client connected from 210.10.3.237:19821 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:10:27: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 18:15:31: New connection from 210.10.3.237:19822 on port 1883.
-07-07-2023 18:15:31: New client connected from 210.10.3.237:19822 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:17:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:18:07: New connection from 210.10.3.237:19823 on port 1883.
-07-07-2023 18:18:07: New client connected from 210.10.3.237:19823 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 18:20:01: New connection from 210.10.3.237:19824 on port 1883.
-07-07-2023 18:20:01: New client connected from 210.10.3.237:19824 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:23:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:25:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 18:27:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:27:55: New connection from 210.10.3.237:19825 on port 1883.
-07-07-2023 18:27:55: New client connected from 210.10.3.237:19825 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:32:49: New connection from 210.10.3.237:19826 on port 1883.
-07-07-2023 18:32:49: New client connected from 210.10.3.237:19826 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 18:35:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:39:30: New connection from 210.10.3.237:19827 on port 1883.
-07-07-2023 18:39:30: New client connected from 210.10.3.237:19827 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:40:27: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 18:45:32: New connection from 210.10.3.237:19828 on port 1883.
-07-07-2023 18:45:32: New client connected from 210.10.3.237:19828 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:47:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:48:05: New connection from 210.10.3.237:19829 on port 1883.
-07-07-2023 18:48:05: New client connected from 210.10.3.237:19829 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 18:50:01: New connection from 210.10.3.237:19831 on port 1883.
-07-07-2023 18:50:01: New client connected from 210.10.3.237:19831 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 18:53:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:55:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 18:57:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 18:57:52: New connection from 210.10.3.237:19833 on port 1883.
-07-07-2023 18:57:52: New client connected from 210.10.3.237:19833 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:02:44: New connection from 210.10.3.237:19834 on port 1883.
-07-07-2023 19:02:44: New client connected from 210.10.3.237:19834 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 19:05:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:09:24: New connection from 210.10.3.237:19835 on port 1883.
-07-07-2023 19:09:24: New client connected from 210.10.3.237:19835 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:10:21: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 19:15:30: New connection from 210.10.3.237:19836 on port 1883.
-07-07-2023 19:15:30: New client connected from 210.10.3.237:19836 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:17:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:18:07: New connection from 210.10.3.237:19837 on port 1883.
-07-07-2023 19:18:07: New client connected from 210.10.3.237:19837 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 19:20:03: New connection from 210.10.3.237:19838 on port 1883.
-07-07-2023 19:20:03: New client connected from 210.10.3.237:19838 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:23:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:25:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 19:27:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:27:48: New connection from 210.10.3.237:19839 on port 1883.
-07-07-2023 19:27:48: New client connected from 210.10.3.237:19839 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:32:39: New connection from 210.10.3.237:19840 on port 1883.
-07-07-2023 19:32:39: New client connected from 210.10.3.237:19840 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 19:35:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:39:19: New connection from 210.10.3.237:20028 on port 1883.
-07-07-2023 19:39:19: New client connected from 210.10.3.237:20028 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:40:15: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 19:45:28: New connection from 210.10.3.237:20029 on port 1883.
-07-07-2023 19:45:28: New client connected from 210.10.3.237:20029 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:46:57: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:48:07: New connection from 210.10.3.237:20030 on port 1883.
-07-07-2023 19:48:07: New client connected from 210.10.3.237:20030 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 19:50:02: New connection from 210.10.3.237:20031 on port 1883.
-07-07-2023 19:50:02: New client connected from 210.10.3.237:20031 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 19:53:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:55:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 19:57:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 19:57:44: New connection from 210.10.3.237:20032 on port 1883.
-07-07-2023 19:57:44: New client connected from 210.10.3.237:20032 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:02:33: New connection from 210.10.3.237:20033 on port 1883.
-07-07-2023 20:02:33: New client connected from 210.10.3.237:20033 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 20:05:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:09:16: New connection from 210.10.3.237:20034 on port 1883.
-07-07-2023 20:09:16: New client connected from 210.10.3.237:20034 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:10:09: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 20:15:25: New connection from 210.10.3.237:20035 on port 1883.
-07-07-2023 20:15:25: New client connected from 210.10.3.237:20035 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:16:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:18:06: New connection from 210.10.3.237:20036 on port 1883.
-07-07-2023 20:18:06: New client connected from 210.10.3.237:20036 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 20:19:54: New connection from 210.10.3.237:20037 on port 1883.
-07-07-2023 20:19:54: New client connected from 210.10.3.237:20037 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:23:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:25:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 20:27:33: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:27:40: New connection from 210.10.3.237:20038 on port 1883.
-07-07-2023 20:27:40: New client connected from 210.10.3.237:20038 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:32:27: New connection from 210.10.3.237:20039 on port 1883.
-07-07-2023 20:32:28: New client connected from 210.10.3.237:20039 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 20:35:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:39:11: New connection from 210.10.3.237:20040 on port 1883.
-07-07-2023 20:39:11: New client connected from 210.10.3.237:20040 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:40:03: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 20:45:21: New connection from 210.10.3.237:20041 on port 1883.
-07-07-2023 20:45:21: New client connected from 210.10.3.237:20041 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:46:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:48:06: New connection from 210.10.3.237:20042 on port 1883.
-07-07-2023 20:48:06: New client connected from 210.10.3.237:20042 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 20:49:52: New connection from 210.10.3.237:20044 on port 1883.
-07-07-2023 20:49:52: New client connected from 210.10.3.237:20044 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 20:52:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:55:45: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 20:57:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 20:57:37: New connection from 210.10.3.237:20045 on port 1883.
-07-07-2023 20:57:37: New client connected from 210.10.3.237:20045 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:02:22: New connection from 210.10.3.237:20046 on port 1883.
-07-07-2023 21:02:22: New client connected from 210.10.3.237:20046 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 21:05:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:09:05: New connection from 210.10.3.237:20047 on port 1883.
-07-07-2023 21:09:05: New client connected from 210.10.3.237:20047 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:09:57: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 21:15:18: New connection from 210.10.3.237:20048 on port 1883.
-07-07-2023 21:15:18: New client connected from 210.10.3.237:20048 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:16:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:18:03: New connection from 210.10.3.237:20050 on port 1883.
-07-07-2023 21:18:03: New client connected from 210.10.3.237:20050 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 21:19:50: New connection from 210.10.3.237:20051 on port 1883.
-07-07-2023 21:19:50: New client connected from 210.10.3.237:20051 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:22:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:25:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 21:27:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:27:35: New connection from 210.10.3.237:20052 on port 1883.
-07-07-2023 21:27:35: New client connected from 210.10.3.237:20052 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:32:17: New connection from 210.10.3.237:20053 on port 1883.
-07-07-2023 21:32:17: New client connected from 210.10.3.237:20053 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 21:35:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:38:59: New connection from 210.10.3.237:20054 on port 1883.
-07-07-2023 21:38:59: New client connected from 210.10.3.237:20054 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:39:51: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 21:45:14: New connection from 210.10.3.237:20055 on port 1883.
-07-07-2023 21:45:14: New client connected from 210.10.3.237:20055 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:46:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:48:02: New connection from 210.10.3.237:20056 on port 1883.
-07-07-2023 21:48:02: New client connected from 210.10.3.237:20056 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 21:49:52: New connection from 210.10.3.237:20057 on port 1883.
-07-07-2023 21:49:52: New client connected from 210.10.3.237:20057 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 21:52:51: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:55:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 21:57:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 21:57:31: New connection from 210.10.3.237:20058 on port 1883.
-07-07-2023 21:57:31: New client connected from 210.10.3.237:20058 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:02:12: New connection from 210.10.3.237:20059 on port 1883.
-07-07-2023 22:02:12: New client connected from 210.10.3.237:20059 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 22:05:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:08:54: New connection from 210.10.3.237:20060 on port 1883.
-07-07-2023 22:08:54: New client connected from 210.10.3.237:20060 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:09:45: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 22:15:11: New connection from 210.10.3.237:20061 on port 1883.
-07-07-2023 22:15:12: New client connected from 210.10.3.237:20061 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:16:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:18:01: New connection from 210.10.3.237:20062 on port 1883.
-07-07-2023 22:18:01: New client connected from 210.10.3.237:20062 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 22:19:50: New connection from 210.10.3.237:20063 on port 1883.
-07-07-2023 22:19:50: New client connected from 210.10.3.237:20063 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:22:51: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:25:39: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 22:27:26: New connection from 210.10.3.237:20064 on port 1883.
-07-07-2023 22:27:26: New client connected from 210.10.3.237:20064 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:27:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:32:06: New connection from 210.10.3.237:20065 on port 1883.
-07-07-2023 22:32:06: New client connected from 210.10.3.237:20065 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 22:35:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:38:47: New connection from 210.10.3.237:20066 on port 1883.
-07-07-2023 22:38:47: New client connected from 210.10.3.237:20066 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:39:39: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 22:45:10: New connection from 210.10.3.237:20067 on port 1883.
-07-07-2023 22:45:10: New client connected from 210.10.3.237:20067 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:46:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:47:57: New connection from 210.10.3.237:20068 on port 1883.
-07-07-2023 22:47:57: New client connected from 210.10.3.237:20068 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 22:49:51: New connection from 210.10.3.237:20069 on port 1883.
-07-07-2023 22:49:51: New client connected from 210.10.3.237:20069 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:52:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 22:55:33: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 22:57:22: New connection from 210.10.3.237:20070 on port 1883.
-07-07-2023 22:57:22: New client connected from 210.10.3.237:20070 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 22:57:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:02:00: New connection from 210.10.3.237:20071 on port 1883.
-07-07-2023 23:02:01: New client connected from 210.10.3.237:20071 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 23:04:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:08:40: New connection from 210.10.3.237:20072 on port 1883.
-07-07-2023 23:08:40: New client connected from 210.10.3.237:20072 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:09:39: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 23:15:06: New connection from 210.10.3.237:20073 on port 1883.
-07-07-2023 23:15:06: New client connected from 210.10.3.237:20073 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:16:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:17:51: New connection from 210.10.3.237:20074 on port 1883.
-07-07-2023 23:17:51: New client connected from 210.10.3.237:20074 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 23:19:47: New connection from 210.10.3.237:20075 on port 1883.
-07-07-2023 23:19:47: New client connected from 210.10.3.237:20075 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:22:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:25:27: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 23:27:18: New connection from 210.10.3.237:20077 on port 1883.
-07-07-2023 23:27:18: New client connected from 210.10.3.237:20077 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:27:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:31:55: New connection from 210.10.3.237:20078 on port 1883.
-07-07-2023 23:31:55: New client connected from 210.10.3.237:20078 as rack1/water (p2, c1, k300, u'admin').
-07-07-2023 23:34:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:38:35: New connection from 210.10.3.237:20079 on port 1883.
-07-07-2023 23:38:35: New client connected from 210.10.3.237:20079 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:39:33: Client rack1/water has exceeded timeout, disconnecting.
-07-07-2023 23:45:08: New connection from 210.10.3.237:20080 on port 1883.
-07-07-2023 23:45:08: New client connected from 210.10.3.237:20080 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:46:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:47:50: New connection from 210.10.3.237:20081 on port 1883.
-07-07-2023 23:47:50: New client connected from 210.10.3.237:20081 as rack1/light (p2, c1, k300, u'admin').
-07-07-2023 23:49:41: New connection from 210.10.3.237:20082 on port 1883.
-07-07-2023 23:49:42: New client connected from 210.10.3.237:20082 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:52:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-07-07-2023 23:55:27: Client rack1/light has exceeded timeout, disconnecting.
-07-07-2023 23:57:14: New connection from 210.10.3.237:20084 on port 1883.
-07-07-2023 23:57:14: New client connected from 210.10.3.237:20084 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-07-07-2023 23:57:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:01:50: New connection from 210.10.3.237:20085 on port 1883.
-08-07-2023 00:01:50: New client connected from 210.10.3.237:20085 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 00:04:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:08:29: New connection from 210.10.3.237:20086 on port 1883.
-08-07-2023 00:08:29: New client connected from 210.10.3.237:20086 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:09:27: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 00:15:06: New connection from 210.10.3.237:20087 on port 1883.
-08-07-2023 00:15:06: New client connected from 210.10.3.237:20087 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:16:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:17:46: New connection from 210.10.3.237:20089 on port 1883.
-08-07-2023 00:17:46: New client connected from 210.10.3.237:20089 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 00:19:43: New connection from 210.10.3.237:20276 on port 1883.
-08-07-2023 00:19:43: New client connected from 210.10.3.237:20276 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:22:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:25:21: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 00:27:09: New connection from 210.10.3.237:20277 on port 1883.
-08-07-2023 00:27:09: New client connected from 210.10.3.237:20277 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:27:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:31:44: New connection from 210.10.3.237:20278 on port 1883.
-08-07-2023 00:31:44: New client connected from 210.10.3.237:20278 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 00:34:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:38:23: New connection from 210.10.3.237:20279 on port 1883.
-08-07-2023 00:38:23: New client connected from 210.10.3.237:20279 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:39:21: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 00:45:01: New connection from 210.10.3.237:20280 on port 1883.
-08-07-2023 00:45:01: New client connected from 210.10.3.237:20280 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:46:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:47:46: New connection from 210.10.3.237:20281 on port 1883.
-08-07-2023 00:47:46: New client connected from 210.10.3.237:20281 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 00:49:39: New connection from 210.10.3.237:20282 on port 1883.
-08-07-2023 00:49:39: New client connected from 210.10.3.237:20282 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:52:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 00:55:21: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 00:57:03: New connection from 210.10.3.237:20283 on port 1883.
-08-07-2023 00:57:03: New client connected from 210.10.3.237:20283 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 00:57:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:01:39: New connection from 210.10.3.237:20284 on port 1883.
-08-07-2023 01:01:39: New client connected from 210.10.3.237:20284 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 01:04:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:08:17: New connection from 210.10.3.237:20286 on port 1883.
-08-07-2023 01:08:17: New client connected from 210.10.3.237:20286 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:09:15: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 01:14:57: New connection from 210.10.3.237:20287 on port 1883.
-08-07-2023 01:14:57: New client connected from 210.10.3.237:20287 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:15:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:17:45: New connection from 210.10.3.237:20288 on port 1883.
-08-07-2023 01:17:45: New client connected from 210.10.3.237:20288 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 01:19:36: New connection from 210.10.3.237:20289 on port 1883.
-08-07-2023 01:19:36: New client connected from 210.10.3.237:20289 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:22:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:25:21: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 01:27:00: New connection from 210.10.3.237:20290 on port 1883.
-08-07-2023 01:27:00: New client connected from 210.10.3.237:20290 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:27:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:31:33: New connection from 210.10.3.237:20291 on port 1883.
-08-07-2023 01:31:33: New client connected from 210.10.3.237:20291 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 01:34:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:38:11: New connection from 210.10.3.237:20292 on port 1883.
-08-07-2023 01:38:11: New client connected from 210.10.3.237:20292 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:39:09: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 01:44:55: New connection from 210.10.3.237:20293 on port 1883.
-08-07-2023 01:44:55: New client connected from 210.10.3.237:20293 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:45:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:47:40: New connection from 210.10.3.237:20294 on port 1883.
-08-07-2023 01:47:40: New client connected from 210.10.3.237:20294 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 01:49:35: New connection from 210.10.3.237:20295 on port 1883.
-08-07-2023 01:49:35: New client connected from 210.10.3.237:20295 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:52:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 01:55:15: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 01:56:54: New connection from 210.10.3.237:20296 on port 1883.
-08-07-2023 01:56:54: New client connected from 210.10.3.237:20296 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 01:57:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:01:29: New connection from 210.10.3.237:20297 on port 1883.
-08-07-2023 02:01:29: New client connected from 210.10.3.237:20297 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 02:02:08: New connection from 167.94.146.59:35782 on port 1883.
-08-07-2023 02:02:08: Client CENSYS disconnected, not authorised.
-08-07-2023 02:04:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:08:04: New connection from 210.10.3.237:20298 on port 1883.
-08-07-2023 02:08:04: New client connected from 210.10.3.237:20298 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:09:03: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 02:14:52: New connection from 210.10.3.237:20299 on port 1883.
-08-07-2023 02:14:52: New client connected from 210.10.3.237:20299 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:15:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:17:40: New connection from 210.10.3.237:20300 on port 1883.
-08-07-2023 02:17:40: New client connected from 210.10.3.237:20300 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 02:19:33: New connection from 210.10.3.237:20301 on port 1883.
-08-07-2023 02:19:33: New client connected from 210.10.3.237:20301 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:22:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:25:15: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 02:26:51: New connection from 210.10.3.237:20302 on port 1883.
-08-07-2023 02:26:51: New client connected from 210.10.3.237:20302 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:27:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:31:23: New connection from 210.10.3.237:20303 on port 1883.
-08-07-2023 02:31:23: New client connected from 210.10.3.237:20303 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 02:34:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:37:59: New connection from 210.10.3.237:20305 on port 1883.
-08-07-2023 02:38:00: New client connected from 210.10.3.237:20305 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:38:57: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 02:44:47: New connection from 210.10.3.237:20307 on port 1883.
-08-07-2023 02:44:47: New client connected from 210.10.3.237:20307 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:45:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:47:35: New connection from 210.10.3.237:20308 on port 1883.
-08-07-2023 02:47:35: New client connected from 210.10.3.237:20308 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 02:49:31: New connection from 210.10.3.237:20309 on port 1883.
-08-07-2023 02:49:31: New client connected from 210.10.3.237:20309 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:52:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 02:55:09: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 02:56:48: New connection from 210.10.3.237:20310 on port 1883.
-08-07-2023 02:56:48: New client connected from 210.10.3.237:20310 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 02:57:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:01:15: New connection from 210.10.3.237:20311 on port 1883.
-08-07-2023 03:01:15: New client connected from 210.10.3.237:20311 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 03:04:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:07:53: New connection from 210.10.3.237:20312 on port 1883.
-08-07-2023 03:07:53: New client connected from 210.10.3.237:20312 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:08:51: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 03:14:43: New connection from 210.10.3.237:20313 on port 1883.
-08-07-2023 03:14:43: New client connected from 210.10.3.237:20313 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:15:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:17:27: New connection from 210.10.3.237:20314 on port 1883.
-08-07-2023 03:17:27: New client connected from 210.10.3.237:20314 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 03:19:25: New connection from 210.10.3.237:20315 on port 1883.
-08-07-2023 03:19:25: New client connected from 210.10.3.237:20315 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:22:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:24:57: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 03:26:42: New connection from 210.10.3.237:20316 on port 1883.
-08-07-2023 03:26:42: New client connected from 210.10.3.237:20316 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:27:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:31:09: New connection from 210.10.3.237:20317 on port 1883.
-08-07-2023 03:31:09: New client connected from 210.10.3.237:20317 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 03:34:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:37:46: New connection from 210.10.3.237:20319 on port 1883.
-08-07-2023 03:37:46: New client connected from 210.10.3.237:20319 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:38:45: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 03:44:38: New connection from 210.10.3.237:20320 on port 1883.
-08-07-2023 03:44:38: New client connected from 210.10.3.237:20320 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:45:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:47:21: New connection from 210.10.3.237:20321 on port 1883.
-08-07-2023 03:47:21: New client connected from 210.10.3.237:20321 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 03:49:20: New connection from 210.10.3.237:20322 on port 1883.
-08-07-2023 03:49:20: New client connected from 210.10.3.237:20322 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:52:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 03:54:57: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 03:56:36: New connection from 210.10.3.237:20323 on port 1883.
-08-07-2023 03:56:36: New client connected from 210.10.3.237:20323 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 03:56:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:01:02: New connection from 210.10.3.237:20324 on port 1883.
-08-07-2023 04:01:02: New client connected from 210.10.3.237:20324 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 04:04:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:07:40: New connection from 210.10.3.237:20326 on port 1883.
-08-07-2023 04:07:40: New client connected from 210.10.3.237:20326 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:08:39: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 04:14:35: New connection from 210.10.3.237:20327 on port 1883.
-08-07-2023 04:14:35: New client connected from 210.10.3.237:20327 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:15:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:17:13: New connection from 210.10.3.237:20328 on port 1883.
-08-07-2023 04:17:13: New client connected from 210.10.3.237:20328 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 04:19:16: New connection from 210.10.3.237:20329 on port 1883.
-08-07-2023 04:19:16: New client connected from 210.10.3.237:20329 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:22:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:24:51: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 04:26:30: New connection from 210.10.3.237:20330 on port 1883.
-08-07-2023 04:26:30: New client connected from 210.10.3.237:20330 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:26:51: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:30:55: New connection from 210.10.3.237:20331 on port 1883.
-08-07-2023 04:30:55: New client connected from 210.10.3.237:20331 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 04:34:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:37:32: New connection from 210.10.3.237:20332 on port 1883.
-08-07-2023 04:37:32: New client connected from 210.10.3.237:20332 as rack1/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:38:33: Client rack1/water has exceeded timeout, disconnecting.
-08-07-2023 04:44:30: New connection from 210.10.3.237:20333 on port 1883.
-08-07-2023 04:44:30: New client connected from 210.10.3.237:20333 as rack4/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:45:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:47:11: New connection from 210.10.3.237:20334 on port 1883.
-08-07-2023 04:47:11: New client connected from 210.10.3.237:20334 as rack1/light (p2, c1, k300, u'admin').
-08-07-2023 04:49:11: New connection from 210.10.3.237:20335 on port 1883.
-08-07-2023 04:49:11: New client connected from 210.10.3.237:20335 as rack2/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:52:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 04:54:45: Client rack1/light has exceeded timeout, disconnecting.
-08-07-2023 04:56:25: New connection from 210.10.3.237:20524 on port 1883.
-08-07-2023 04:56:25: New client connected from 210.10.3.237:20524 as rack3/temp/tvoc (p2, c1, k300, u'admin').
-08-07-2023 04:56:51: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
-08-07-2023 05:00:49: New connection from 210.10.3.237:20525 on port 1883.
-08-07-2023 05:00:49: New client connected from 210.10.3.237:20525 as rack1/water (p2, c1, k300, u'admin').
-08-07-2023 05:04:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
 08-07-2023 05:07:26: New connection from 210.10.3.237:20526 on port 1883.
 08-07-2023 05:07:26: New client connected from 210.10.3.237:20526 as rack1/temp/tvoc (p2, c1, k300, u'admin').
 08-07-2023 05:08:27: Client rack1/water has exceeded timeout, disconnecting.
@@ -998,3 +107,894 @@
 08-07-2023 07:56:01: New connection from 210.10.3.237:20569 on port 1883.
 08-07-2023 07:56:01: New client connected from 210.10.3.237:20569 as rack3/temp/tvoc (p2, c1, k300, u'admin').
 08-07-2023 07:56:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:00:18: New connection from 210.10.3.237:20570 on port 1883.
+08-07-2023 08:00:18: New client connected from 210.10.3.237:20570 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 08:03:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:06:52: New connection from 210.10.3.237:20571 on port 1883.
+08-07-2023 08:06:52: New client connected from 210.10.3.237:20571 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:07:57: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 08:14:13: New connection from 210.10.3.237:20572 on port 1883.
+08-07-2023 08:14:13: New client connected from 210.10.3.237:20572 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:14:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:16:45: New connection from 210.10.3.237:20573 on port 1883.
+08-07-2023 08:16:46: New client connected from 210.10.3.237:20573 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 08:18:48: New connection from 210.10.3.237:20574 on port 1883.
+08-07-2023 08:18:48: New client connected from 210.10.3.237:20574 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:21:51: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:24:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 08:25:55: New connection from 210.10.3.237:20575 on port 1883.
+08-07-2023 08:25:55: New client connected from 210.10.3.237:20575 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:26:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:30:14: New connection from 210.10.3.237:20576 on port 1883.
+08-07-2023 08:30:14: New client connected from 210.10.3.237:20576 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 08:33:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:36:46: New connection from 210.10.3.237:20577 on port 1883.
+08-07-2023 08:36:46: New client connected from 210.10.3.237:20577 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:37:51: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 08:44:10: New connection from 210.10.3.237:20578 on port 1883.
+08-07-2023 08:44:10: New client connected from 210.10.3.237:20578 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:44:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:46:45: New connection from 210.10.3.237:20579 on port 1883.
+08-07-2023 08:46:45: New client connected from 210.10.3.237:20579 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 08:48:45: New connection from 210.10.3.237:20580 on port 1883.
+08-07-2023 08:48:45: New client connected from 210.10.3.237:20580 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:51:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 08:54:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 08:55:50: New connection from 210.10.3.237:20581 on port 1883.
+08-07-2023 08:55:50: New client connected from 210.10.3.237:20581 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 08:56:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:00:08: New connection from 210.10.3.237:20582 on port 1883.
+08-07-2023 09:00:08: New client connected from 210.10.3.237:20582 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 09:03:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:06:39: New connection from 210.10.3.237:20583 on port 1883.
+08-07-2023 09:06:39: New client connected from 210.10.3.237:20583 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:07:45: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 09:14:06: New connection from 210.10.3.237:20584 on port 1883.
+08-07-2023 09:14:06: New client connected from 210.10.3.237:20584 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:14:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:16:44: New connection from 210.10.3.237:20585 on port 1883.
+08-07-2023 09:16:44: New client connected from 210.10.3.237:20585 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 09:18:41: New connection from 210.10.3.237:20772 on port 1883.
+08-07-2023 09:18:42: New client connected from 210.10.3.237:20772 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:21:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:24:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 09:25:47: New connection from 210.10.3.237:20773 on port 1883.
+08-07-2023 09:25:47: New client connected from 210.10.3.237:20773 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:26:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:30:02: New connection from 210.10.3.237:20774 on port 1883.
+08-07-2023 09:30:02: New client connected from 210.10.3.237:20774 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 09:33:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:36:33: New connection from 210.10.3.237:20775 on port 1883.
+08-07-2023 09:36:33: New client connected from 210.10.3.237:20775 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:37:33: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 09:44:07: New connection from 210.10.3.237:20776 on port 1883.
+08-07-2023 09:44:07: New client connected from 210.10.3.237:20776 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:44:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:46:44: New connection from 210.10.3.237:20777 on port 1883.
+08-07-2023 09:46:44: New client connected from 210.10.3.237:20777 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 09:48:39: New connection from 210.10.3.237:20778 on port 1883.
+08-07-2023 09:48:39: New client connected from 210.10.3.237:20778 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:51:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:54:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 09:55:43: New connection from 210.10.3.237:20779 on port 1883.
+08-07-2023 09:55:43: New client connected from 210.10.3.237:20779 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 09:56:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 09:59:57: New connection from 210.10.3.237:20780 on port 1883.
+08-07-2023 09:59:57: New client connected from 210.10.3.237:20780 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 10:03:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:06:28: New connection from 210.10.3.237:20781 on port 1883.
+08-07-2023 10:06:28: New client connected from 210.10.3.237:20781 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:07:33: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 10:14:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:14:06: New connection from 210.10.3.237:20782 on port 1883.
+08-07-2023 10:14:06: New client connected from 210.10.3.237:20782 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:16:45: New connection from 210.10.3.237:20783 on port 1883.
+08-07-2023 10:16:45: New client connected from 210.10.3.237:20783 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 10:18:36: New connection from 210.10.3.237:20784 on port 1883.
+08-07-2023 10:18:36: New client connected from 210.10.3.237:20784 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:21:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:24:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 10:25:41: New connection from 210.10.3.237:20785 on port 1883.
+08-07-2023 10:25:41: New client connected from 210.10.3.237:20785 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:26:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:29:53: New connection from 210.10.3.237:20787 on port 1883.
+08-07-2023 10:29:53: New client connected from 210.10.3.237:20787 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 10:33:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:36:26: New connection from 210.10.3.237:20788 on port 1883.
+08-07-2023 10:36:26: New client connected from 210.10.3.237:20788 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:37:27: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 10:44:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:44:05: New connection from 210.10.3.237:20789 on port 1883.
+08-07-2023 10:44:05: New client connected from 210.10.3.237:20789 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:46:48: New connection from 210.10.3.237:20790 on port 1883.
+08-07-2023 10:46:48: New client connected from 210.10.3.237:20790 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 10:48:36: New connection from 210.10.3.237:20791 on port 1883.
+08-07-2023 10:48:36: New client connected from 210.10.3.237:20791 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:51:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:54:27: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 10:55:38: New connection from 210.10.3.237:20792 on port 1883.
+08-07-2023 10:55:38: New client connected from 210.10.3.237:20792 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 10:56:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 10:59:47: New connection from 210.10.3.237:20793 on port 1883.
+08-07-2023 10:59:47: New client connected from 210.10.3.237:20793 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 11:03:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:06:23: New connection from 210.10.3.237:20794 on port 1883.
+08-07-2023 11:06:23: New client connected from 210.10.3.237:20794 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:07:21: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 11:13:57: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:14:01: New connection from 210.10.3.237:20795 on port 1883.
+08-07-2023 11:14:01: New client connected from 210.10.3.237:20795 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:16:51: New connection from 210.10.3.237:20796 on port 1883.
+08-07-2023 11:16:51: New client connected from 210.10.3.237:20796 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 11:18:36: New connection from 210.10.3.237:20797 on port 1883.
+08-07-2023 11:18:36: New client connected from 210.10.3.237:20797 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:21:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:24:27: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 11:25:33: New connection from 210.10.3.237:20798 on port 1883.
+08-07-2023 11:25:33: New client connected from 210.10.3.237:20798 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:26:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:29:42: New connection from 210.10.3.237:20799 on port 1883.
+08-07-2023 11:29:42: New client connected from 210.10.3.237:20799 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 11:33:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:36:17: New connection from 210.10.3.237:20800 on port 1883.
+08-07-2023 11:36:17: New client connected from 210.10.3.237:20800 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:37:21: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 11:43:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:43:57: New connection from 210.10.3.237:20801 on port 1883.
+08-07-2023 11:43:57: New client connected from 210.10.3.237:20801 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:46:47: New connection from 210.10.3.237:20802 on port 1883.
+08-07-2023 11:46:47: New client connected from 210.10.3.237:20802 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 11:48:35: New connection from 210.10.3.237:20803 on port 1883.
+08-07-2023 11:48:35: New client connected from 210.10.3.237:20803 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:51:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:54:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 11:55:28: New connection from 210.10.3.237:20804 on port 1883.
+08-07-2023 11:55:28: New client connected from 210.10.3.237:20804 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 11:56:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 11:59:36: New connection from 210.10.3.237:20805 on port 1883.
+08-07-2023 11:59:37: New client connected from 210.10.3.237:20805 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 12:03:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:06:11: New connection from 210.10.3.237:20806 on port 1883.
+08-07-2023 12:06:11: New client connected from 210.10.3.237:20806 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:07:15: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 12:13:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:13:56: New connection from 210.10.3.237:20807 on port 1883.
+08-07-2023 12:13:56: New client connected from 210.10.3.237:20807 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:16:44: New connection from 210.10.3.237:20808 on port 1883.
+08-07-2023 12:16:44: New client connected from 210.10.3.237:20808 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 12:18:34: New connection from 210.10.3.237:20809 on port 1883.
+08-07-2023 12:18:34: New client connected from 210.10.3.237:20809 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:21:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:24:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 12:25:23: New connection from 210.10.3.237:20810 on port 1883.
+08-07-2023 12:25:23: New client connected from 210.10.3.237:20810 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:26:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:29:30: New connection from 210.10.3.237:20811 on port 1883.
+08-07-2023 12:29:30: New client connected from 210.10.3.237:20811 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 12:32:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:36:05: New connection from 210.10.3.237:20812 on port 1883.
+08-07-2023 12:36:05: New client connected from 210.10.3.237:20812 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:37:09: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 12:43:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:44:05: New connection from 210.10.3.237:20813 on port 1883.
+08-07-2023 12:44:05: New client connected from 210.10.3.237:20813 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:46:41: New connection from 210.10.3.237:20811 on port 1883.
+08-07-2023 12:46:41: New client connected from 210.10.3.237:20811 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 12:48:31: New connection from 210.10.3.237:20814 on port 1883.
+08-07-2023 12:48:31: New client connected from 210.10.3.237:20814 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:51:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:54:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 12:55:18: New connection from 210.10.3.237:20815 on port 1883.
+08-07-2023 12:55:19: New client connected from 210.10.3.237:20815 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 12:56:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 12:59:27: New connection from 210.10.3.237:20816 on port 1883.
+08-07-2023 12:59:27: New client connected from 210.10.3.237:20816 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 13:02:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:06:00: New connection from 210.10.3.237:20817 on port 1883.
+08-07-2023 13:06:00: New client connected from 210.10.3.237:20817 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:07:03: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 13:13:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:14:03: New connection from 210.10.3.237:20818 on port 1883.
+08-07-2023 13:14:03: New client connected from 210.10.3.237:20818 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:16:45: New connection from 210.10.3.237:20819 on port 1883.
+08-07-2023 13:16:45: New client connected from 210.10.3.237:20819 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 13:18:33: New connection from 210.10.3.237:20820 on port 1883.
+08-07-2023 13:18:33: New client connected from 210.10.3.237:20820 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:21:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:24:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 13:25:16: New connection from 210.10.3.237:20821 on port 1883.
+08-07-2023 13:25:16: New client connected from 210.10.3.237:20821 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:26:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:29:23: New connection from 210.10.3.237:20822 on port 1883.
+08-07-2023 13:29:23: New client connected from 210.10.3.237:20822 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 13:32:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:35:55: New connection from 210.10.3.237:20823 on port 1883.
+08-07-2023 13:35:55: New client connected from 210.10.3.237:20823 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:36:57: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 13:43:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:44:00: New connection from 210.10.3.237:20824 on port 1883.
+08-07-2023 13:44:00: New client connected from 210.10.3.237:20824 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:46:41: New connection from 210.10.3.237:20825 on port 1883.
+08-07-2023 13:46:41: New client connected from 210.10.3.237:20825 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 13:48:32: New connection from 210.10.3.237:20826 on port 1883.
+08-07-2023 13:48:32: New client connected from 210.10.3.237:20826 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:51:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:54:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 13:55:14: New connection from 210.10.3.237:20827 on port 1883.
+08-07-2023 13:55:14: New client connected from 210.10.3.237:20827 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 13:56:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 13:59:17: New connection from 210.10.3.237:20828 on port 1883.
+08-07-2023 13:59:17: New client connected from 210.10.3.237:20828 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 14:02:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:05:49: New connection from 210.10.3.237:20829 on port 1883.
+08-07-2023 14:05:49: New client connected from 210.10.3.237:20829 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:06:51: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 14:13:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:13:59: New connection from 210.10.3.237:20830 on port 1883.
+08-07-2023 14:13:59: New client connected from 210.10.3.237:20830 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:16:40: New connection from 210.10.3.237:20831 on port 1883.
+08-07-2023 14:16:40: New client connected from 210.10.3.237:20831 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 14:18:34: New connection from 210.10.3.237:20832 on port 1883.
+08-07-2023 14:18:34: New client connected from 210.10.3.237:20832 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:21:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:24:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 14:25:10: New connection from 210.10.3.237:20833 on port 1883.
+08-07-2023 14:25:10: New client connected from 210.10.3.237:20833 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:26:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:29:11: New connection from 210.10.3.237:21020 on port 1883.
+08-07-2023 14:29:11: New client connected from 210.10.3.237:21020 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 14:32:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:35:43: New connection from 210.10.3.237:21021 on port 1883.
+08-07-2023 14:35:43: New client connected from 210.10.3.237:21021 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:36:45: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 14:43:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:43:57: New connection from 210.10.3.237:21022 on port 1883.
+08-07-2023 14:43:57: New client connected from 210.10.3.237:21022 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:46:40: New connection from 210.10.3.237:21023 on port 1883.
+08-07-2023 14:46:40: New client connected from 210.10.3.237:21023 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 14:48:29: New connection from 210.10.3.237:21024 on port 1883.
+08-07-2023 14:48:29: New client connected from 210.10.3.237:21024 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:51:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:54:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 14:55:05: New connection from 210.10.3.237:21025 on port 1883.
+08-07-2023 14:55:05: New client connected from 210.10.3.237:21025 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 14:56:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 14:59:06: New connection from 210.10.3.237:21026 on port 1883.
+08-07-2023 14:59:06: New client connected from 210.10.3.237:21026 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 15:02:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:05:37: New connection from 210.10.3.237:21027 on port 1883.
+08-07-2023 15:05:37: New client connected from 210.10.3.237:21027 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:06:45: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 15:13:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:13:54: New connection from 210.10.3.237:21028 on port 1883.
+08-07-2023 15:13:54: New client connected from 210.10.3.237:21028 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:16:43: New connection from 210.10.3.237:21029 on port 1883.
+08-07-2023 15:16:43: New client connected from 210.10.3.237:21029 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 15:18:29: New connection from 210.10.3.237:21030 on port 1883.
+08-07-2023 15:18:29: New client connected from 210.10.3.237:21030 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:21:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:24:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 15:25:08: New connection from 210.10.3.237:21031 on port 1883.
+08-07-2023 15:25:08: New client connected from 210.10.3.237:21031 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:26:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:29:05: New connection from 210.10.3.237:21032 on port 1883.
+08-07-2023 15:29:05: New client connected from 210.10.3.237:21032 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 15:32:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:35:33: New connection from 210.10.3.237:21033 on port 1883.
+08-07-2023 15:35:33: New client connected from 210.10.3.237:21033 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:36:39: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 15:43:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:43:54: New connection from 210.10.3.237:21034 on port 1883.
+08-07-2023 15:43:54: New client connected from 210.10.3.237:21034 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:46:42: New connection from 210.10.3.237:21035 on port 1883.
+08-07-2023 15:46:43: New client connected from 210.10.3.237:21035 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 15:48:26: New connection from 210.10.3.237:21036 on port 1883.
+08-07-2023 15:48:26: New client connected from 210.10.3.237:21036 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:51:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:54:21: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 15:55:03: New connection from 210.10.3.237:21037 on port 1883.
+08-07-2023 15:55:03: New client connected from 210.10.3.237:21037 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 15:56:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 15:58:59: New connection from 210.10.3.237:21038 on port 1883.
+08-07-2023 15:58:59: New client connected from 210.10.3.237:21038 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 16:02:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:05:27: New connection from 210.10.3.237:21039 on port 1883.
+08-07-2023 16:05:27: New client connected from 210.10.3.237:21039 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:06:33: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 16:13:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:13:50: New connection from 210.10.3.237:21040 on port 1883.
+08-07-2023 16:13:50: New client connected from 210.10.3.237:21040 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:16:40: New connection from 210.10.3.237:21041 on port 1883.
+08-07-2023 16:16:40: New client connected from 210.10.3.237:21041 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 16:18:25: New connection from 210.10.3.237:21042 on port 1883.
+08-07-2023 16:18:25: New client connected from 210.10.3.237:21042 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:21:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:24:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 16:24:59: New connection from 210.10.3.237:21043 on port 1883.
+08-07-2023 16:24:59: New client connected from 210.10.3.237:21043 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:26:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:28:54: New connection from 210.10.3.237:21044 on port 1883.
+08-07-2023 16:28:54: New client connected from 210.10.3.237:21044 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 16:32:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:35:20: New connection from 210.10.3.237:21045 on port 1883.
+08-07-2023 16:35:20: New client connected from 210.10.3.237:21045 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:36:27: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 16:42:57: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:43:47: New connection from 210.10.3.237:21046 on port 1883.
+08-07-2023 16:43:47: New client connected from 210.10.3.237:21046 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:46:39: New connection from 210.10.3.237:21047 on port 1883.
+08-07-2023 16:46:39: New client connected from 210.10.3.237:21047 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 16:48:22: New connection from 210.10.3.237:21048 on port 1883.
+08-07-2023 16:48:22: New client connected from 210.10.3.237:21048 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:51:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:54:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 16:54:56: New connection from 210.10.3.237:21049 on port 1883.
+08-07-2023 16:54:56: New client connected from 210.10.3.237:21049 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 16:55:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 16:58:49: New connection from 210.10.3.237:21050 on port 1883.
+08-07-2023 16:58:49: New client connected from 210.10.3.237:21050 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 17:02:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:05:15: New connection from 210.10.3.237:21051 on port 1883.
+08-07-2023 17:05:15: New client connected from 210.10.3.237:21051 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:06:27: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 17:12:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:13:45: New connection from 210.10.3.237:21052 on port 1883.
+08-07-2023 17:13:45: New client connected from 210.10.3.237:21052 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:16:37: New connection from 210.10.3.237:21053 on port 1883.
+08-07-2023 17:16:37: New client connected from 210.10.3.237:21053 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 17:18:21: New connection from 210.10.3.237:21054 on port 1883.
+08-07-2023 17:18:21: New client connected from 210.10.3.237:21054 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:21:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:24:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 17:24:53: New connection from 210.10.3.237:21056 on port 1883.
+08-07-2023 17:24:53: New client connected from 210.10.3.237:21056 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:25:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:28:44: New connection from 210.10.3.237:21057 on port 1883.
+08-07-2023 17:28:44: New client connected from 210.10.3.237:21057 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 17:32:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:35:15: New connection from 210.10.3.237:21058 on port 1883.
+08-07-2023 17:35:15: New client connected from 210.10.3.237:21058 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:36:21: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 17:42:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:43:43: New connection from 210.10.3.237:21059 on port 1883.
+08-07-2023 17:43:43: New client connected from 210.10.3.237:21059 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:46:39: New connection from 210.10.3.237:21060 on port 1883.
+08-07-2023 17:46:39: New client connected from 210.10.3.237:21060 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 17:48:23: New connection from 210.10.3.237:21061 on port 1883.
+08-07-2023 17:48:23: New client connected from 210.10.3.237:21061 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:51:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:54:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 17:54:50: New connection from 210.10.3.237:21062 on port 1883.
+08-07-2023 17:54:50: New client connected from 210.10.3.237:21062 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 17:55:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 17:58:37: New connection from 210.10.3.237:21063 on port 1883.
+08-07-2023 17:58:38: New client connected from 210.10.3.237:21063 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 18:02:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:05:11: New connection from 210.10.3.237:21064 on port 1883.
+08-07-2023 18:05:11: New client connected from 210.10.3.237:21064 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:06:09: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 18:12:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:13:42: New connection from 210.10.3.237:21065 on port 1883.
+08-07-2023 18:13:42: New client connected from 210.10.3.237:21065 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:16:34: New connection from 210.10.3.237:21066 on port 1883.
+08-07-2023 18:16:34: New client connected from 210.10.3.237:21066 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 18:18:22: New connection from 210.10.3.237:21067 on port 1883.
+08-07-2023 18:18:22: New client connected from 210.10.3.237:21067 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:21:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:24:09: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 18:24:48: New connection from 210.10.3.237:21068 on port 1883.
+08-07-2023 18:24:48: New client connected from 210.10.3.237:21068 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:25:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:28:30: New connection from 210.10.3.237:21069 on port 1883.
+08-07-2023 18:28:30: New client connected from 210.10.3.237:21069 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 18:32:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:35:05: New connection from 210.10.3.237:21070 on port 1883.
+08-07-2023 18:35:05: New client connected from 210.10.3.237:21070 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:36:09: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 18:42:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:43:39: New connection from 210.10.3.237:21071 on port 1883.
+08-07-2023 18:43:39: New client connected from 210.10.3.237:21071 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:46:37: New connection from 210.10.3.237:21072 on port 1883.
+08-07-2023 18:46:37: New client connected from 210.10.3.237:21072 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 18:48:26: New connection from 210.10.3.237:21073 on port 1883.
+08-07-2023 18:48:26: New client connected from 210.10.3.237:21073 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:51:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:54:15: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 18:54:44: New connection from 210.10.3.237:21074 on port 1883.
+08-07-2023 18:54:44: New client connected from 210.10.3.237:21074 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 18:56:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 18:58:27: New connection from 210.10.3.237:21075 on port 1883.
+08-07-2023 18:58:27: New client connected from 210.10.3.237:21075 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 19:02:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:05:00: New connection from 210.10.3.237:21076 on port 1883.
+08-07-2023 19:05:00: New client connected from 210.10.3.237:21076 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:06:03: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 19:12:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:13:38: New connection from 210.10.3.237:21077 on port 1883.
+08-07-2023 19:13:38: New client connected from 210.10.3.237:21077 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:16:33: New connection from 210.10.3.237:21078 on port 1883.
+08-07-2023 19:16:33: New client connected from 210.10.3.237:21078 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 19:18:24: New connection from 210.10.3.237:21079 on port 1883.
+08-07-2023 19:18:24: New client connected from 210.10.3.237:21079 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:21:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:24:09: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 19:24:40: New connection from 210.10.3.237:21080 on port 1883.
+08-07-2023 19:24:40: New client connected from 210.10.3.237:21080 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:26:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:28:23: New connection from 210.10.3.237:21081 on port 1883.
+08-07-2023 19:28:23: New client connected from 210.10.3.237:21081 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 19:31:22: New connection from 45.79.128.205:63934 on port 1883.
+08-07-2023 19:31:22: Client <unknown> disconnected due to protocol error.
+08-07-2023 19:32:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:34:55: New connection from 210.10.3.237:21268 on port 1883.
+08-07-2023 19:34:56: New client connected from 210.10.3.237:21268 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:35:57: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 19:42:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:43:37: New connection from 210.10.3.237:21269 on port 1883.
+08-07-2023 19:43:38: New client connected from 210.10.3.237:21269 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:46:31: New connection from 210.10.3.237:21270 on port 1883.
+08-07-2023 19:46:31: New client connected from 210.10.3.237:21270 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 19:48:26: New connection from 210.10.3.237:21271 on port 1883.
+08-07-2023 19:48:26: New client connected from 210.10.3.237:21271 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:51:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:54:09: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 19:54:37: New connection from 210.10.3.237:21272 on port 1883.
+08-07-2023 19:54:37: New client connected from 210.10.3.237:21272 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 19:56:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 19:58:18: New connection from 210.10.3.237:21273 on port 1883.
+08-07-2023 19:58:18: New client connected from 210.10.3.237:21273 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 20:02:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:04:50: New connection from 210.10.3.237:21275 on port 1883.
+08-07-2023 20:04:50: New client connected from 210.10.3.237:21275 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:05:57: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 20:12:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:13:36: New connection from 210.10.3.237:21276 on port 1883.
+08-07-2023 20:13:36: New client connected from 210.10.3.237:21276 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:16:30: New connection from 210.10.3.237:21277 on port 1883.
+08-07-2023 20:16:30: New client connected from 210.10.3.237:21277 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 20:18:21: New connection from 210.10.3.237:21278 on port 1883.
+08-07-2023 20:18:21: New client connected from 210.10.3.237:21278 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:21:15: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:24:03: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 20:24:30: New connection from 210.10.3.237:21281 on port 1883.
+08-07-2023 20:24:30: New client connected from 210.10.3.237:21281 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:25:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:28:12: New connection from 210.10.3.237:21283 on port 1883.
+08-07-2023 20:28:12: New client connected from 210.10.3.237:21283 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 20:32:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:34:45: New connection from 210.10.3.237:21284 on port 1883.
+08-07-2023 20:34:45: New client connected from 210.10.3.237:21284 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:35:51: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 20:42:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:43:33: New connection from 210.10.3.237:21285 on port 1883.
+08-07-2023 20:43:33: New client connected from 210.10.3.237:21285 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:46:29: New connection from 210.10.3.237:21286 on port 1883.
+08-07-2023 20:46:29: New client connected from 210.10.3.237:21286 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 20:48:19: New connection from 210.10.3.237:21287 on port 1883.
+08-07-2023 20:48:19: New client connected from 210.10.3.237:21287 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:51:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:54:03: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 20:54:26: New connection from 210.10.3.237:21288 on port 1883.
+08-07-2023 20:54:26: New client connected from 210.10.3.237:21288 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 20:55:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 20:58:06: New connection from 210.10.3.237:21289 on port 1883.
+08-07-2023 20:58:06: New client connected from 210.10.3.237:21289 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 21:02:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:04:40: New connection from 210.10.3.237:21290 on port 1883.
+08-07-2023 21:04:40: New client connected from 210.10.3.237:21290 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:05:45: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 21:12:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:13:30: New connection from 210.10.3.237:21291 on port 1883.
+08-07-2023 21:13:30: New client connected from 210.10.3.237:21291 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:16:27: New connection from 210.10.3.237:21292 on port 1883.
+08-07-2023 21:16:27: New client connected from 210.10.3.237:21292 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 21:18:21: New connection from 210.10.3.237:21293 on port 1883.
+08-07-2023 21:18:21: New client connected from 210.10.3.237:21293 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:21:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:24:03: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 21:24:21: New connection from 210.10.3.237:21294 on port 1883.
+08-07-2023 21:24:21: New client connected from 210.10.3.237:21294 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:25:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:28:00: New connection from 210.10.3.237:21295 on port 1883.
+08-07-2023 21:28:00: New client connected from 210.10.3.237:21295 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 21:31:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:34:35: New connection from 210.10.3.237:21296 on port 1883.
+08-07-2023 21:34:36: New client connected from 210.10.3.237:21296 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:35:39: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 21:42:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:43:26: New connection from 210.10.3.237:21297 on port 1883.
+08-07-2023 21:43:26: New client connected from 210.10.3.237:21297 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:46:22: New connection from 210.10.3.237:21298 on port 1883.
+08-07-2023 21:46:22: New client connected from 210.10.3.237:21298 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 21:48:17: New connection from 210.10.3.237:21299 on port 1883.
+08-07-2023 21:48:17: New client connected from 210.10.3.237:21299 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:51:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:53:57: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 21:54:16: New connection from 210.10.3.237:21300 on port 1883.
+08-07-2023 21:54:17: New client connected from 210.10.3.237:21300 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 21:55:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 21:57:55: New connection from 210.10.3.237:21301 on port 1883.
+08-07-2023 21:57:55: New client connected from 210.10.3.237:21301 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 22:01:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:04:31: New connection from 210.10.3.237:21302 on port 1883.
+08-07-2023 22:04:31: New client connected from 210.10.3.237:21302 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:05:33: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 22:12:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:13:24: New connection from 210.10.3.237:21303 on port 1883.
+08-07-2023 22:13:24: New client connected from 210.10.3.237:21303 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:16:14: New connection from 210.10.3.237:21304 on port 1883.
+08-07-2023 22:16:14: New client connected from 210.10.3.237:21304 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 22:18:10: New connection from 210.10.3.237:21305 on port 1883.
+08-07-2023 22:18:10: New client connected from 210.10.3.237:21305 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:21:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:23:51: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 22:24:12: New connection from 210.10.3.237:21306 on port 1883.
+08-07-2023 22:24:12: New client connected from 210.10.3.237:21306 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:25:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:27:49: New connection from 210.10.3.237:21307 on port 1883.
+08-07-2023 22:27:49: New client connected from 210.10.3.237:21307 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 22:31:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:34:23: New connection from 210.10.3.237:21308 on port 1883.
+08-07-2023 22:34:23: New client connected from 210.10.3.237:21308 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:35:27: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 22:42:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:43:21: New connection from 210.10.3.237:21310 on port 1883.
+08-07-2023 22:43:21: New client connected from 210.10.3.237:21310 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:46:15: New connection from 210.10.3.237:21311 on port 1883.
+08-07-2023 22:46:15: New client connected from 210.10.3.237:21311 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 22:48:06: New connection from 210.10.3.237:21312 on port 1883.
+08-07-2023 22:48:06: New client connected from 210.10.3.237:21312 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:50:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:53:51: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 22:54:07: New connection from 210.10.3.237:21313 on port 1883.
+08-07-2023 22:54:07: New client connected from 210.10.3.237:21313 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 22:55:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 22:57:44: New connection from 210.10.3.237:21314 on port 1883.
+08-07-2023 22:57:44: New client connected from 210.10.3.237:21314 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 23:01:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:04:16: New connection from 210.10.3.237:21316 on port 1883.
+08-07-2023 23:04:16: New client connected from 210.10.3.237:21316 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:05:21: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 23:11:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:13:18: New connection from 210.10.3.237:21317 on port 1883.
+08-07-2023 23:13:18: New client connected from 210.10.3.237:21317 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:16:14: New connection from 210.10.3.237:21318 on port 1883.
+08-07-2023 23:16:14: New client connected from 210.10.3.237:21318 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 23:18:03: New connection from 210.10.3.237:21319 on port 1883.
+08-07-2023 23:18:03: New client connected from 210.10.3.237:21319 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:20:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:23:51: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 23:24:01: New connection from 210.10.3.237:21320 on port 1883.
+08-07-2023 23:24:01: New client connected from 210.10.3.237:21320 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:25:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:27:38: New connection from 210.10.3.237:21321 on port 1883.
+08-07-2023 23:27:38: New client connected from 210.10.3.237:21321 as rack1/water (p2, c1, k300, u'admin').
+08-07-2023 23:31:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:34:10: New connection from 210.10.3.237:21322 on port 1883.
+08-07-2023 23:34:10: New client connected from 210.10.3.237:21322 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:35:09: Client rack1/water has exceeded timeout, disconnecting.
+08-07-2023 23:41:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:43:15: New connection from 210.10.3.237:21323 on port 1883.
+08-07-2023 23:43:15: New client connected from 210.10.3.237:21323 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:46:12: New connection from 210.10.3.237:21324 on port 1883.
+08-07-2023 23:46:12: New client connected from 210.10.3.237:21324 as rack1/light (p2, c1, k300, u'admin').
+08-07-2023 23:48:04: New connection from 210.10.3.237:21325 on port 1883.
+08-07-2023 23:48:04: New client connected from 210.10.3.237:21325 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:50:51: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:53:51: Client rack1/light has exceeded timeout, disconnecting.
+08-07-2023 23:53:57: New connection from 210.10.3.237:21326 on port 1883.
+08-07-2023 23:53:57: New client connected from 210.10.3.237:21326 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+08-07-2023 23:55:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+08-07-2023 23:57:32: New connection from 210.10.3.237:21327 on port 1883.
+08-07-2023 23:57:32: New client connected from 210.10.3.237:21327 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 00:01:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:04:06: New connection from 210.10.3.237:21329 on port 1883.
+09-07-2023 00:04:06: New client connected from 210.10.3.237:21329 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:05:09: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 00:11:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:13:11: New connection from 210.10.3.237:21516 on port 1883.
+09-07-2023 00:13:11: New client connected from 210.10.3.237:21516 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:16:08: New connection from 210.10.3.237:21517 on port 1883.
+09-07-2023 00:16:08: New client connected from 210.10.3.237:21517 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 00:18:00: New connection from 210.10.3.237:21518 on port 1883.
+09-07-2023 00:18:00: New client connected from 210.10.3.237:21518 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:20:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:23:45: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 00:23:52: New connection from 210.10.3.237:21519 on port 1883.
+09-07-2023 00:23:52: New client connected from 210.10.3.237:21519 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:25:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:27:26: New connection from 210.10.3.237:21520 on port 1883.
+09-07-2023 00:27:26: New client connected from 210.10.3.237:21520 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 00:31:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:34:03: New connection from 210.10.3.237:21521 on port 1883.
+09-07-2023 00:34:03: New client connected from 210.10.3.237:21521 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:35:03: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 00:41:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:43:07: New connection from 210.10.3.237:21522 on port 1883.
+09-07-2023 00:43:07: New client connected from 210.10.3.237:21522 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:46:03: New connection from 210.10.3.237:21523 on port 1883.
+09-07-2023 00:46:03: New client connected from 210.10.3.237:21523 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 00:47:52: New connection from 210.10.3.237:21524 on port 1883.
+09-07-2023 00:47:52: New client connected from 210.10.3.237:21524 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:50:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:53:39: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 00:53:48: New connection from 210.10.3.237:21525 on port 1883.
+09-07-2023 00:53:48: New client connected from 210.10.3.237:21525 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 00:55:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 00:57:20: New connection from 210.10.3.237:21526 on port 1883.
+09-07-2023 00:57:20: New client connected from 210.10.3.237:21526 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 01:01:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:03:58: New connection from 210.10.3.237:21527 on port 1883.
+09-07-2023 01:03:58: New client connected from 210.10.3.237:21527 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:04:57: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 01:11:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:13:02: New connection from 210.10.3.237:21529 on port 1883.
+09-07-2023 01:13:03: New client connected from 210.10.3.237:21529 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:16:01: New connection from 210.10.3.237:21531 on port 1883.
+09-07-2023 01:16:01: New client connected from 210.10.3.237:21531 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 01:17:53: New connection from 210.10.3.237:21532 on port 1883.
+09-07-2023 01:17:53: New client connected from 210.10.3.237:21532 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:20:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:23:39: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 01:23:45: New connection from 210.10.3.237:21533 on port 1883.
+09-07-2023 01:23:45: New client connected from 210.10.3.237:21533 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:25:33: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:27:15: New connection from 210.10.3.237:21534 on port 1883.
+09-07-2023 01:27:15: New client connected from 210.10.3.237:21534 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 01:31:21: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:33:52: New connection from 210.10.3.237:21535 on port 1883.
+09-07-2023 01:33:52: New client connected from 210.10.3.237:21535 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:34:51: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 01:41:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:42:59: New connection from 210.10.3.237:21536 on port 1883.
+09-07-2023 01:42:59: New client connected from 210.10.3.237:21536 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:45:59: New connection from 210.10.3.237:21537 on port 1883.
+09-07-2023 01:45:59: New client connected from 210.10.3.237:21537 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 01:47:51: New connection from 210.10.3.237:21538 on port 1883.
+09-07-2023 01:47:51: New client connected from 210.10.3.237:21538 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:50:39: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:53:33: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 01:53:41: New connection from 210.10.3.237:21540 on port 1883.
+09-07-2023 01:53:41: New client connected from 210.10.3.237:21540 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 01:55:27: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 01:57:09: New connection from 210.10.3.237:21541 on port 1883.
+09-07-2023 01:57:09: New client connected from 210.10.3.237:21541 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 02:01:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:03:45: New connection from 210.10.3.237:21542 on port 1883.
+09-07-2023 02:03:45: New client connected from 210.10.3.237:21542 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:04:45: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 02:11:21: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:12:56: New connection from 210.10.3.237:21543 on port 1883.
+09-07-2023 02:12:56: New client connected from 210.10.3.237:21543 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:15:57: New connection from 210.10.3.237:21544 on port 1883.
+09-07-2023 02:15:57: New client connected from 210.10.3.237:21544 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 02:17:46: New connection from 210.10.3.237:21545 on port 1883.
+09-07-2023 02:17:46: New client connected from 210.10.3.237:21545 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:20:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:23:33: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 02:23:36: New connection from 210.10.3.237:21546 on port 1883.
+09-07-2023 02:23:36: New client connected from 210.10.3.237:21546 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:25:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:27:03: New connection from 210.10.3.237:21547 on port 1883.
+09-07-2023 02:27:03: New client connected from 210.10.3.237:21547 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 02:31:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:33:40: New connection from 210.10.3.237:21548 on port 1883.
+09-07-2023 02:33:40: New client connected from 210.10.3.237:21548 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:34:39: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 02:35:48: New connection from 35.198.233.52:33180 on port 1883.
+09-07-2023 02:35:48: Client auto-4351BFCA-82D7-6113-5D3F-BFDB1524BF23 disconnected, not authorised.
+09-07-2023 02:41:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:42:53: New connection from 210.10.3.237:21549 on port 1883.
+09-07-2023 02:42:53: New client connected from 210.10.3.237:21549 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:45:51: New connection from 210.10.3.237:21550 on port 1883.
+09-07-2023 02:45:51: New client connected from 210.10.3.237:21550 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 02:47:43: New connection from 210.10.3.237:21551 on port 1883.
+09-07-2023 02:47:43: New client connected from 210.10.3.237:21551 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:50:33: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:53:27: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 02:53:37: New connection from 210.10.3.237:21552 on port 1883.
+09-07-2023 02:53:37: New client connected from 210.10.3.237:21552 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 02:55:21: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 02:56:55: New connection from 210.10.3.237:21553 on port 1883.
+09-07-2023 02:56:55: New client connected from 210.10.3.237:21553 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 03:01:15: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:03:34: New connection from 210.10.3.237:21554 on port 1883.
+09-07-2023 03:03:34: New client connected from 210.10.3.237:21554 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:04:33: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 03:11:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:12:48: New connection from 210.10.3.237:21555 on port 1883.
+09-07-2023 03:12:48: New client connected from 210.10.3.237:21555 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:15:47: New connection from 210.10.3.237:21556 on port 1883.
+09-07-2023 03:15:47: New client connected from 210.10.3.237:21556 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 03:17:38: New connection from 210.10.3.237:21557 on port 1883.
+09-07-2023 03:17:39: New client connected from 210.10.3.237:21557 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:20:27: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:23:21: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 03:23:31: New connection from 210.10.3.237:21558 on port 1883.
+09-07-2023 03:23:31: New client connected from 210.10.3.237:21558 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:25:15: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:26:49: New connection from 210.10.3.237:21559 on port 1883.
+09-07-2023 03:26:49: New client connected from 210.10.3.237:21559 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 03:31:09: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:33:40: New connection from 210.10.3.237:21560 on port 1883.
+09-07-2023 03:33:40: New client connected from 210.10.3.237:21560 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:34:27: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 03:41:15: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:42:43: New connection from 210.10.3.237:21561 on port 1883.
+09-07-2023 03:42:43: New client connected from 210.10.3.237:21561 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:45:39: New connection from 210.10.3.237:21562 on port 1883.
+09-07-2023 03:45:39: New client connected from 210.10.3.237:21562 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 03:47:32: New connection from 210.10.3.237:21563 on port 1883.
+09-07-2023 03:47:32: New client connected from 210.10.3.237:21563 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:50:21: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:53:15: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 03:53:24: New connection from 210.10.3.237:21564 on port 1883.
+09-07-2023 03:53:24: New client connected from 210.10.3.237:21564 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 03:55:09: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 03:56:41: New connection from 210.10.3.237:21565 on port 1883.
+09-07-2023 03:56:41: New client connected from 210.10.3.237:21565 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 04:01:03: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:03:32: New connection from 210.10.3.237:21567 on port 1883.
+09-07-2023 04:03:32: New client connected from 210.10.3.237:21567 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:04:15: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 04:11:09: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:12:37: New connection from 210.10.3.237:21568 on port 1883.
+09-07-2023 04:12:37: New client connected from 210.10.3.237:21568 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:15:38: New connection from 210.10.3.237:21569 on port 1883.
+09-07-2023 04:15:38: New client connected from 210.10.3.237:21569 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 04:17:27: New connection from 210.10.3.237:21570 on port 1883.
+09-07-2023 04:17:27: New client connected from 210.10.3.237:21570 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:20:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:23:15: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 04:23:17: New connection from 210.10.3.237:21571 on port 1883.
+09-07-2023 04:23:17: New client connected from 210.10.3.237:21571 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:25:03: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:26:35: New connection from 210.10.3.237:21573 on port 1883.
+09-07-2023 04:26:35: New client connected from 210.10.3.237:21573 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 04:30:57: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:33:27: New connection from 210.10.3.237:21574 on port 1883.
+09-07-2023 04:33:27: New client connected from 210.10.3.237:21574 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:34:09: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 04:41:03: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:42:33: New connection from 210.10.3.237:21575 on port 1883.
+09-07-2023 04:42:33: New client connected from 210.10.3.237:21575 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:45:38: New connection from 210.10.3.237:21576 on port 1883.
+09-07-2023 04:45:38: New client connected from 210.10.3.237:21576 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 04:47:22: New connection from 210.10.3.237:21577 on port 1883.
+09-07-2023 04:47:22: New client connected from 210.10.3.237:21577 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:50:09: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:53:12: New connection from 210.10.3.237:21764 on port 1883.
+09-07-2023 04:53:12: New client connected from 210.10.3.237:21764 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 04:53:15: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 04:54:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 04:56:31: New connection from 210.10.3.237:21765 on port 1883.
+09-07-2023 04:56:31: New client connected from 210.10.3.237:21765 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 05:00:51: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:03:21: New connection from 210.10.3.237:21766 on port 1883.
+09-07-2023 05:03:21: New client connected from 210.10.3.237:21766 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:04:09: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 05:10:57: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:12:28: New connection from 210.10.3.237:21767 on port 1883.
+09-07-2023 05:12:28: New client connected from 210.10.3.237:21767 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:15:35: New connection from 210.10.3.237:21768 on port 1883.
+09-07-2023 05:15:35: New client connected from 210.10.3.237:21768 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 05:17:17: New connection from 210.10.3.237:21769 on port 1883.
+09-07-2023 05:17:18: New client connected from 210.10.3.237:21769 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:20:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:23:07: New connection from 210.10.3.237:21772 on port 1883.
+09-07-2023 05:23:07: New client connected from 210.10.3.237:21772 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:23:09: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 05:24:57: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:26:24: New connection from 210.10.3.237:21775 on port 1883.
+09-07-2023 05:26:24: New client connected from 210.10.3.237:21775 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 05:30:45: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:33:15: New connection from 210.10.3.237:21776 on port 1883.
+09-07-2023 05:33:15: New client connected from 210.10.3.237:21776 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:34:03: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 05:40:51: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:42:24: New connection from 210.10.3.237:21777 on port 1883.
+09-07-2023 05:42:24: New client connected from 210.10.3.237:21777 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:45:28: New connection from 210.10.3.237:21778 on port 1883.
+09-07-2023 05:45:28: New client connected from 210.10.3.237:21778 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 05:47:13: New connection from 210.10.3.237:21779 on port 1883.
+09-07-2023 05:47:13: New client connected from 210.10.3.237:21779 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:50:03: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:53:01: New connection from 210.10.3.237:21780 on port 1883.
+09-07-2023 05:53:01: New client connected from 210.10.3.237:21780 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 05:53:03: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 05:54:51: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 05:56:18: New connection from 210.10.3.237:21781 on port 1883.
+09-07-2023 05:56:18: New client connected from 210.10.3.237:21781 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 06:00:39: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:03:09: New connection from 210.10.3.237:21782 on port 1883.
+09-07-2023 06:03:09: New client connected from 210.10.3.237:21782 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:03:51: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 06:06:06: New connection from 35.198.233.52:35450 on port 1883.
+09-07-2023 06:06:06: Client auto-992AD476-2855-2A59-E06F-B089BFC0C07E disconnected, not authorised.
+09-07-2023 06:06:18: New connection from 35.198.233.52:37408 on port 1883.
+09-07-2023 06:06:18: Client auto-1BED8379-088C-65E1-1987-DA00A0033A4A disconnected, not authorised.
+09-07-2023 06:06:34: New connection from 35.198.233.52:33200 on port 1883.
+09-07-2023 06:06:34: New client connected from 35.198.233.52:33200 as auto-F03D7FE1-5D60-C1FC-E182-4D7609F13441 (p2, c1, k60, u'admin').
+09-07-2023 06:07:22: Client auto-F03D7FE1-5D60-C1FC-E182-4D7609F13441 disconnected.
+09-07-2023 06:08:02: New connection from 35.198.233.52:51084 on port 1883.
+09-07-2023 06:08:02: New client connected from 35.198.233.52:51084 as auto-1C19C33D-17F4-E081-5BDA-016F0CC0A640 (p2, c1, k60, u'admin').
+09-07-2023 06:09:50: New connection from 35.198.233.52:42324 on port 1883.
+09-07-2023 06:09:50: New client connected from 35.198.233.52:42324 as auto-B425F11E-4A16-B447-C5FC-57AFEB0ABDF9 (p2, c1, k60, u'admin').
+09-07-2023 06:09:50: Client auto-B425F11E-4A16-B447-C5FC-57AFEB0ABDF9 disconnected.
+09-07-2023 06:09:59: New connection from 35.198.233.52:44716 on port 1883.
+09-07-2023 06:09:59: New client connected from 35.198.233.52:44716 as auto-D37B5900-DDF6-5D40-3082-C2210266B6D1 (p2, c1, k60, u'admin').
+09-07-2023 06:09:59: Client auto-D37B5900-DDF6-5D40-3082-C2210266B6D1 disconnected.
+09-07-2023 06:10:07: New connection from 35.198.233.52:48724 on port 1883.
+09-07-2023 06:10:07: New client connected from 35.198.233.52:48724 as auto-0F128FF0-8295-D172-C234-519EE63A960B (p2, c1, k60, u'admin').
+09-07-2023 06:10:07: Client auto-0F128FF0-8295-D172-C234-519EE63A960B disconnected.
+09-07-2023 06:10:45: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:12:21: New connection from 210.10.3.237:21786 on port 1883.
+09-07-2023 06:12:21: New client connected from 210.10.3.237:21786 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:15:23: New connection from 210.10.3.237:21787 on port 1883.
+09-07-2023 06:15:23: New client connected from 210.10.3.237:21787 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 06:17:11: New connection from 210.10.3.237:21788 on port 1883.
+09-07-2023 06:17:11: New client connected from 210.10.3.237:21788 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:19:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:22:57: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 06:22:57: New connection from 210.10.3.237:21789 on port 1883.
+09-07-2023 06:22:57: New client connected from 210.10.3.237:21789 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:24:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:26:13: New connection from 210.10.3.237:21790 on port 1883.
+09-07-2023 06:26:13: New client connected from 210.10.3.237:21790 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 06:30:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:33:03: New connection from 210.10.3.237:21791 on port 1883.
+09-07-2023 06:33:03: New client connected from 210.10.3.237:21791 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:33:51: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 06:40:39: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:42:18: New connection from 210.10.3.237:21793 on port 1883.
+09-07-2023 06:42:18: New client connected from 210.10.3.237:21793 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:45:15: New connection from 210.10.3.237:21794 on port 1883.
+09-07-2023 06:45:15: New client connected from 210.10.3.237:21794 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 06:47:07: New connection from 210.10.3.237:21795 on port 1883.
+09-07-2023 06:47:07: New client connected from 210.10.3.237:21795 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:49:57: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:50:07: Client auto-1C19C33D-17F4-E081-5BDA-016F0CC0A640 closed its connection.
+09-07-2023 06:52:51: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 06:52:54: New connection from 210.10.3.237:21796 on port 1883.
+09-07-2023 06:52:54: New client connected from 210.10.3.237:21796 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 06:54:45: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 06:56:06: New connection from 210.10.3.237:21797 on port 1883.
+09-07-2023 06:56:06: New client connected from 210.10.3.237:21797 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 07:00:33: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:02:56: New connection from 210.10.3.237:21798 on port 1883.
+09-07-2023 07:02:56: New client connected from 210.10.3.237:21798 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:03:45: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 07:10:33: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:12:15: New connection from 210.10.3.237:21799 on port 1883.
+09-07-2023 07:12:15: New client connected from 210.10.3.237:21799 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:15:11: New connection from 210.10.3.237:21807 on port 1883.
+09-07-2023 07:15:11: New client connected from 210.10.3.237:21807 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 07:16:32: New connection from 184.105.247.252:64248 on port 1883.
+09-07-2023 07:16:32: Client MqttClient disconnected, not authorised.
+09-07-2023 07:17:04: New connection from 210.10.3.237:21808 on port 1883.
+09-07-2023 07:17:04: New client connected from 210.10.3.237:21808 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:19:51: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:22:45: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 07:22:49: New connection from 210.10.3.237:21809 on port 1883.
+09-07-2023 07:22:50: New client connected from 210.10.3.237:21809 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:24:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:26:03: New connection from 210.10.3.237:21810 on port 1883.
+09-07-2023 07:26:03: New client connected from 210.10.3.237:21810 as rack1/water (p2, c1, k300, u'admin').
+09-07-2023 07:30:27: Client rack3/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:32:51: New connection from 210.10.3.237:21811 on port 1883.
+09-07-2023 07:32:51: New client connected from 210.10.3.237:21811 as rack1/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:33:39: Client rack1/water has exceeded timeout, disconnecting.
+09-07-2023 07:40:27: Client rack1/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:42:11: New connection from 210.10.3.237:21812 on port 1883.
+09-07-2023 07:42:11: New client connected from 210.10.3.237:21812 as rack4/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:45:05: New connection from 210.10.3.237:21813 on port 1883.
+09-07-2023 07:45:05: New client connected from 210.10.3.237:21813 as rack1/light (p2, c1, k300, u'admin').
+09-07-2023 07:47:01: New connection from 210.10.3.237:21814 on port 1883.
+09-07-2023 07:47:01: New client connected from 210.10.3.237:21814 as rack2/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:49:45: Client rack4/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:52:39: Client rack1/light has exceeded timeout, disconnecting.
+09-07-2023 07:52:45: New connection from 210.10.3.237:21815 on port 1883.
+09-07-2023 07:52:45: New client connected from 210.10.3.237:21815 as rack3/temp/tvoc (p2, c1, k300, u'admin').
+09-07-2023 07:54:39: Client rack2/temp/tvoc has exceeded timeout, disconnecting.
+09-07-2023 07:55:58: New connection from 210.10.3.237:21816 on port 1883.
+09-07-2023 07:55:58: New client connected from 210.10.3.237:21816 as rack1/water (p2, c1, k300, u'admin').

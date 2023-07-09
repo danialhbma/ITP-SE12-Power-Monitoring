@@ -756,3 +756,59 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 {'weather_main': 'Clouds', 'temperature': 31.21, 'feels_like': 37.86, 'pressure': 1009, 'humidity': 69, 'temp_min': 29.6, 'temp_max': 32.79, 'wind_speed': 7.2, 'wind_deg': 170, 'cloudiness': 40}
 {'weather_main': 'Rain', 'temperature': 31.21, 'feels_like': 38.21, 'pressure': 1008, 'humidity': 72, 'temp_min': 29.6, 'temp_max': 32.79, 'wind_speed': 3.83, 'wind_deg': 179, 'cloudiness': 24}
 {'weather_main': 'Rain', 'temperature': 30.16, 'feels_like': 36.2, 'pressure': 1009, 'humidity': 73, 'temp_min': 28.03, 'temp_max': 32.3, 'wind_speed': 4.63, 'wind_deg': 180, 'cloudiness': 40}
+{'weather_main': 'Clouds', 'temperature': 29.92, 'feels_like': 35.57, 'pressure': 1009, 'humidity': 73, 'temp_min': 28.03, 'temp_max': 31.12, 'wind_speed': 4.63, 'wind_deg': 180, 'cloudiness': 40}
+{'weather_main': 'Clouds', 'temperature': 29.86, 'feels_like': 36.17, 'pressure': 1009, 'humidity': 76, 'temp_min': 28.31, 'temp_max': 30.64, 'wind_speed': 3.6, 'wind_deg': 120, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 29.51, 'feels_like': 35.95, 'pressure': 1009, 'humidity': 79, 'temp_min': 27.76, 'temp_max': 30.64, 'wind_speed': 3.26, 'wind_deg': 143, 'cloudiness': 22}
+{'weather_main': 'Rain', 'temperature': 29.18, 'feels_like': 34.8, 'pressure': 1009, 'humidity': 78, 'temp_min': 27.76, 'temp_max': 30.08, 'wind_speed': 3.13, 'wind_deg': 110, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 29.21, 'feels_like': 35.57, 'pressure': 1010, 'humidity': 81, 'temp_min': 27.76, 'temp_max': 30.01, 'wind_speed': 3.86, 'wind_deg': 116, 'cloudiness': 79}
+{'weather_main': 'Clouds', 'temperature': 28.43, 'feels_like': 33.57, 'pressure': 1010, 'humidity': 82, 'temp_min': 26.03, 'temp_max': 29.4, 'wind_speed': 3.6, 'wind_deg': 130, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 28.17, 'feels_like': 32.53, 'pressure': 1010, 'humidity': 80, 'temp_min': 26.03, 'temp_max': 28.94, 'wind_speed': 3.6, 'wind_deg': 130, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.82, 'feels_like': 34.24, 'pressure': 1010, 'humidity': 80, 'temp_min': 26.03, 'temp_max': 29.99, 'wind_speed': 2.68, 'wind_deg': 130, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.6, 'feels_like': 35.27, 'pressure': 1012, 'humidity': 88, 'temp_min': 28.19, 'temp_max': 28.88, 'wind_speed': 3.18, 'wind_deg': 136, 'cloudiness': 96}
+{'weather_main': 'Clouds', 'temperature': 27.85, 'feels_like': 32.48, 'pressure': 1011, 'humidity': 85, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 3.09, 'wind_deg': 100, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.88, 'feels_like': 35.72, 'pressure': 1012, 'humidity': 86, 'temp_min': 27.64, 'temp_max': 28.88, 'wind_speed': 3.42, 'wind_deg': 139, 'cloudiness': 97}
+{'weather_main': 'Clouds', 'temperature': 28.31, 'feels_like': 33.06, 'pressure': 1011, 'humidity': 81, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 3.09, 'wind_deg': 100, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.57, 'feels_like': 34.97, 'pressure': 1011, 'humidity': 87, 'temp_min': 27.08, 'temp_max': 28.88, 'wind_speed': 3.62, 'wind_deg': 141, 'cloudiness': 98}
+{'weather_main': 'Rain', 'temperature': 28.17, 'feels_like': 32.69, 'pressure': 1011, 'humidity': 81, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 2.68, 'wind_deg': 150, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 28.55, 'feels_like': 35.11, 'pressure': 1011, 'humidity': 88, 'temp_min': 27.08, 'temp_max': 28.88, 'wind_speed': 3.25, 'wind_deg': 141, 'cloudiness': 98}
+{'weather_main': 'Rain', 'temperature': 27.84, 'feels_like': 32.45, 'pressure': 1010, 'humidity': 85, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 2.68, 'wind_deg': 130, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 28.56, 'feels_like': 34.32, 'pressure': 1010, 'humidity': 84, 'temp_min': 26.53, 'temp_max': 29.45, 'wind_speed': 3.06, 'wind_deg': 137, 'cloudiness': 99}
+{'weather_main': 'Clouds', 'temperature': 27.84, 'feels_like': 32.45, 'pressure': 1010, 'humidity': 85, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 2.24, 'wind_deg': 110, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.27, 'feels_like': 34.81, 'pressure': 1009, 'humidity': 91, 'temp_min': 26.53, 'temp_max': 28.88, 'wind_speed': 2.98, 'wind_deg': 149, 'cloudiness': 100}
+{'weather_main': 'Clouds', 'temperature': 27.84, 'feels_like': 32.3, 'pressure': 1009, 'humidity': 84, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 2.57, 'wind_deg': 110, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 27.5, 'feels_like': 32.63, 'pressure': 1009, 'humidity': 93, 'temp_min': 25.97, 'temp_max': 27.86, 'wind_speed': 2.54, 'wind_deg': 152, 'cloudiness': 100}
+{'weather_main': 'Clouds', 'temperature': 27.38, 'feels_like': 31.46, 'pressure': 1009, 'humidity': 87, 'temp_min': 25.02, 'temp_max': 27.92, 'wind_speed': 2.06, 'wind_deg': 100, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 27.5, 'feels_like': 32.63, 'pressure': 1009, 'humidity': 93, 'temp_min': 25.97, 'temp_max': 27.86, 'wind_speed': 2.77, 'wind_deg': 145, 'cloudiness': 100}
+{'weather_main': 'Clouds', 'temperature': 27.38, 'feels_like': 31.46, 'pressure': 1009, 'humidity': 87, 'temp_min': 25.02, 'temp_max': 27.92, 'wind_speed': 3.09, 'wind_deg': 140, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 27.01, 'feels_like': 31.2, 'pressure': 1009, 'humidity': 94, 'temp_min': 25.97, 'temp_max': 27.24, 'wind_speed': 2.38, 'wind_deg': 142, 'cloudiness': 98}
+{'weather_main': 'Clouds', 'temperature': 26.78, 'feels_like': 30.03, 'pressure': 1009, 'humidity': 89, 'temp_min': 25.02, 'temp_max': 27.92, 'wind_speed': 2.57, 'wind_deg': 150, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 27.22, 'feels_like': 31.99, 'pressure': 1010, 'humidity': 95, 'temp_min': 25.97, 'temp_max': 27.86, 'wind_speed': 1.95, 'wind_deg': 153, 'cloudiness': 95}
+{'weather_main': 'Clouds', 'temperature': 26.55, 'feels_like': 26.55, 'pressure': 1009, 'humidity': 91, 'temp_min': 25.02, 'temp_max': 27.86, 'wind_speed': 2.06, 'wind_deg': 30, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 27.76, 'feels_like': 32.84, 'pressure': 1010, 'humidity': 89, 'temp_min': 25.97, 'temp_max': 28.29, 'wind_speed': 2.02, 'wind_deg': 168, 'cloudiness': 99}
+{'weather_main': 'Clouds', 'temperature': 28.11, 'feels_like': 33.04, 'pressure': 1010, 'humidity': 84, 'temp_min': 25.02, 'temp_max': 28.94, 'wind_speed': 1.54, 'wind_deg': 40, 'cloudiness': 40}
+{'weather_main': 'Clouds', 'temperature': 28.31, 'feels_like': 34.55, 'pressure': 1010, 'humidity': 89, 'temp_min': 27.2, 'temp_max': 29.05, 'wind_speed': 2.39, 'wind_deg': 169, 'cloudiness': 97}
+{'weather_main': 'Clouds', 'temperature': 29.21, 'feels_like': 35.33, 'pressure': 1010, 'humidity': 80, 'temp_min': 27.76, 'temp_max': 30.05, 'wind_speed': 2.57, 'wind_deg': 130, 'cloudiness': 40}
+{'weather_main': 'Clouds', 'temperature': 29.22, 'feels_like': 36.22, 'pressure': 1010, 'humidity': 87, 'temp_min': 28.31, 'temp_max': 29.99, 'wind_speed': 2.91, 'wind_deg': 170, 'cloudiness': 99}
+{'weather_main': 'Clouds', 'temperature': 29.49, 'feels_like': 35.89, 'pressure': 1010, 'humidity': 79, 'temp_min': 28.79, 'temp_max': 30.05, 'wind_speed': 2.57, 'wind_deg': 80, 'cloudiness': 20}
+{'weather_main': 'Clouds', 'temperature': 29.6, 'feels_like': 36.6, 'pressure': 1011, 'humidity': 82, 'temp_min': 28.85, 'temp_max': 30.02, 'wind_speed': 2.98, 'wind_deg': 173, 'cloudiness': 99}
+{'weather_main': 'Clouds', 'temperature': 30.1, 'feels_like': 37.1, 'pressure': 1010, 'humidity': 80, 'temp_min': 28.85, 'temp_max': 31.03, 'wind_speed': 2.24, 'wind_deg': 340, 'cloudiness': 40}
+{'weather_main': 'Clouds', 'temperature': 30.24, 'feels_like': 37.24, 'pressure': 1010, 'humidity': 77, 'temp_min': 28.85, 'temp_max': 31.13, 'wind_speed': 3.22, 'wind_deg': 185, 'cloudiness': 99}
+Traceback (most recent call last):
+  File "/home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/OpenWeatherMapAPIClient.py", line 48, in <module>
+    open_weather_client.get_weather_information()
+  File "/home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/OpenWeatherMapAPIClient.py", line 25, in get_weather_information
+    self.data = response.json()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+{'weather_main': 'Rain', 'temperature': 29.67, 'feels_like': 36.41, 'pressure': 1009, 'humidity': 79, 'temp_min': 28.75, 'temp_max': 31.65, 'wind_speed': 6.17, 'wind_deg': 200, 'cloudiness': 40}
+{'weather_main': 'Clouds', 'temperature': 28.71, 'feels_like': 34.76, 'pressure': 1009, 'humidity': 84, 'temp_min': 26.57, 'temp_max': 32.23, 'wind_speed': 5.66, 'wind_deg': 170, 'cloudiness': 40}
+{'weather_main': 'Thunderstorm', 'temperature': 28.69, 'feels_like': 35.13, 'pressure': 1009, 'humidity': 86, 'temp_min': 25.86, 'temp_max': 31.75, 'wind_speed': 2.06, 'wind_deg': 200, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 28.31, 'feels_like': 33.79, 'pressure': 1009, 'humidity': 85, 'temp_min': 24.86, 'temp_max': 32.23, 'wind_speed': 2.06, 'wind_deg': 160, 'cloudiness': 75}
+{'weather_main': 'Rain', 'temperature': 29.43, 'feels_like': 35.72, 'pressure': 1008, 'humidity': 79, 'temp_min': 26.66, 'temp_max': 31.75, 'wind_speed': 3.47, 'wind_deg': 191, 'cloudiness': 96}
