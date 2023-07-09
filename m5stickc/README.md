@@ -1,5 +1,5 @@
 # M5StickC
-- [Devices Used](#materials-used)
+- [Devices Used](#devices-used)
 - [M5StickC Setup](#m5stickc-setup)
     - [Install FTDI Driver](#install-ftdi-driver)
     - [Firmware Burning](#firmware-burning)
@@ -7,6 +7,7 @@
    - [Install VSCode and M5Stack Extension](#install-vscode-and-m5stack-extension)
    - [Set M5StickC to USB Mode](#set-m5stickc-to-usb-mode)
    - [Test M5StickC Setup](#test-m5stickc-setup)
+- [Project Codes](#project-codes)
 - [Running Project Codes in M5StickC](#running-project-codes-in-m5stickc)
    - [Load Codes into M5StickC](#load-codes-into-m5stickc)
    - [Run in App Mode](#run-in-app-mode)
@@ -72,7 +73,8 @@ System Preferences > Security and Privacy > General > Allow downloadable apps fr
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/1b59332d-a4a2-4d40-b84c-6922549df465)
 
 8. Firmware burned successfully
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/cbc45844-ed7b-460d-9b23-0cbfc8726cba)
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/ed6d2e9d-664a-4b27-9a61-766ef5d70306)
+
 
 ## Visual Studio Code Setup
 ### Install VSCode and M5Stack Extension
@@ -94,10 +96,11 @@ The m5stack extension is required to code using Visual Studio Code IDE
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/2540b724-6208-4e34-a623-b3d8bbb96c5f)
 
 2. Select the corresponding device port
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/2b606a68-24dd-46d8-882e-ffe91e8a77de)
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/027f6a9f-51ac-412b-90e8-7905a9910b81)
+
 
 3. If the device is successfully added, you should be able to view the device files in the left menu under M5Stack Device:
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/e5c09bfc-841b-4b31-9467-5485c328e6ea)
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/2bcab7df-44de-40d7-a1d5-401947183725)
 
 ### Test M5StickC Setup
 1. To test the installation and setup, replace main.py with the following code:
@@ -110,19 +113,39 @@ M5Led.on()
 ```
 
 2. Click the Run button > Select Run in M5Stack
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/9ec1abbf-03ef-46e8-8413-72c42e23e4ce)
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/d2418ea7-da3a-4880-b790-647ab89d20a8)
 
-3. If the M5StickC LED lights up, installation and setup is successful
+3. If the M5StickC LED lights up as shown, installation and setup is successful
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/5509931c-d4fd-4149-8b00-7e6ff82f8974)
+
+## Project Codes
+This section briefly describes each code file in this repository
+
+| Code File | Description | 
+| --- | --- |
+| main.py | Allow user to select a sensor and a rack, connects to Wi-Fi and MQTT, reads sensor data, publishes it, and then goes into deep sleep until the next cycle |
+| sensorinterface.py | Standardise all sensor operations and force read/publish | 
+| publisher.py | Handles connection to MQTT broker and publishing | 
+| wifi.py | Handles connection to wifi | 
+| light.py | Retrieves data from light sensor and sends data via MQTT | 
+| tvoctemp.py | Retrieves data from temperature and CO2 sensors and sends data via MQTT | 
+| waterflow.py | Retrieves data from water sensor and sends data via MQTT | 
+
 
 ## Running Project Codes in M5StickC
 ### Load Codes into M5StickC
 1. Connect the M5StickC to computer via a USB Type-C Cable
 2. [Set M5StickC to USB Mode if you haven't done so](#set-m5stickc-to-usb-mode)
-3. After adding M5StickC in VSCode, press the Upload button > Upload all Python code files from this repository into the main folder:
---- to add img ---
+3. After adding M5StickC in VSCode, copy and paste the main.py codes into the device's main.py file. **Note: using the upload button for main.py might not work in overwriting the original main.py file** 
+4. Press the Upload button > Upload all Python code files (except main.py) from this repository into the main folder:
+![upload](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/07e41918-81f6-400c-b6da-35ebf0399042)
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/666cd8dc-ff00-44d5-ab9c-ba7fa56e5dbd)
+
    
-4. The files should look like this:
---- to add img ---
+5. The files should look like this:
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/3f9b2142-197c-464a-a251-e2f684f92611)
+
    
 ### Run in App Mode
 The M5Stick should be switched to App Mode prior to deployment and configured based on the sensors connected.
@@ -144,3 +167,4 @@ The M5Stick should be switched to App Mode prior to deployment and configured ba
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/91550661/7de86174-70ca-4fb6-affe-2453c347d803)
 
 6. The M5Stick is now deployed successfully
+

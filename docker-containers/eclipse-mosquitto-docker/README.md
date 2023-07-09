@@ -3,14 +3,14 @@ All steps performed in VM instance shell CLI.
 If setting up Eclispe-Mosquitto docker image for the first time perform steps (1) to (6). Else just run (1) and (5) if docker image not up. 
 
 1. cd to directory containing docker-compose.yml file
-	* docker-compose file used will use two ports, 1883 and 9001 for eclipse-mosquitto container image.
+	* docker-compose file used will use port 1883 for eclipse-mosquitto container image.
 	* Port 1883: This is the default port for MQTT communication. MQTT clients connect to the broker using this port to publish and subscribe to MQTT topics. It is a TCP-based port where MQTT messages are exchanged between clients and the MQTT broker. Port 1883 is used for native MQTT communication.
-	* Port 9001: This is the default port for MQTT over WebSocket. MQTT over WebSocket allows MQTT clients to establish a connection to the MQTT broker using a standard WebSocket connection. It enables MQTT communication over the web using a browser or WebSocket-capable client applications. Port 9001 is used for MQTT communication encapsulated within the WebSocket protocol.
+
 2. configure firewall rules
 	* ``gcloud compute firewall-rules create allow-mqtt --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:1883 --source-ranges=0.0.0.0/0``
-	* ``gcloud compute firewall-rules create allow-mqtt-websocket --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:9001 --source-ranges=0.0.0.0/0``
+
 3. ``gcloud compute firewall-rules list``
-	* Verifies firewall configured correctly, ports 1883 and 9001 should allow TCP connections
+	* Verifies firewall configured correctly, port 1883 should allow TCP connections
 4. to use authentication when connecting to broker, a password file must be created. replace <path_to_passwd_file> and <username> with the actual pathname and username used:
     1. add a user to the password file: `` sudo mosquitto_passwd -c <path_to_passwd_file> <username> ``
     2. you will be prompted to enter a password for the user
