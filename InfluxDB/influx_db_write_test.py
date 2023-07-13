@@ -21,6 +21,7 @@ sgp30_data = SGP30SensorData()
 envhat_data = ENVHatSensorData() 
 growlight_data = GrowLightsPowerUsageSensor()  
 aircon_data = AirconPowerUsageSensor() 
+
 client = InfluxDBWriter(bucket_name = BUCKET_NAME, url = URL, token = INFLUXDB_TOKEN, org = INFLUXDB_ORG)  # Instantiate InfluxDB client
 client.create_bucket(bucket_name = BUCKET_NAME , description = BUCKET_DESCRIPTION)
 print("Sending simulated data")
@@ -32,6 +33,12 @@ envhat_data.temperature = 17
 envhat_data.humidity = 50
 growlight_data.wattage = 300
 aircon_data.wattage = 1000
+
+# Popualte fileds based on simulated data above
+sgp30_data.fields = sgp30_data.set_fields()
+envhat_data.fields = envhat_data.set_fields()
+growlight_data.fields = growlight_data.set_fields()
+aircon_data.fields = aircon_data.set_fields()
 
 # Writing data points every 10s
 while True:

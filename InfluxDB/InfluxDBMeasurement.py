@@ -1,20 +1,20 @@
 from influxdb_client import Point
 from abc import ABC, abstractmethod
 
-class InfluxDBMeasurement():
+class InfluxDBMeasurement(ABC):
     """
     Abstract base class for representing sensor readings or api data.
     Subclasses must implement the `set_tags` and `set_fields` methods to set the tags and fields for the sensor data.
     Tags and fields are required to create a Point data-type (measuremebt) which will be inserted into InfluxDB.
     """
     @abstractmethod
-    def _set_tags(self) -> dict:
+    def set_tags(self) -> dict:
         # Creates a dictionary that contains all tags to identify this reading
         # e.g., self.tags = {"device": "Light Sensor 2"}
         pass
     
     @abstractmethod
-    def _set_fields(self) -> dict:
+    def set_fields(self) -> dict:
         # Creates a dictionary that contains all fields i.e., readings for a measurement
         # e.g., self.fields = {"temp": your_temp_reading, "humidity", "your_humidity_reading"}
         pass

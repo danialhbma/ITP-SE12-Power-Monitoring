@@ -5,10 +5,10 @@
 4. Copy the API token that @BotFather returns.
 5. Add the newly created bot to a group chat or channel.
 6. Retrieve the chat / channel ID by:
-	a) Send a message to the group chat / channel e.g., Hello
-	b) https://api.telegram.org/bot<API_TOKEN>/getUpdates
-	c) e.g., https://api.telegram.org/bot634XXXXXXXXXXXXXXXXXXXXXXXXXXWQ/getUpdates
-	d) chat id will look something like this: -944799166
+	* Send a message to the group chat / channel e.g., Hello
+	* https://api.telegram.org/bot<API_TOKEN>/getUpdates
+	* e.g., ``https://api.telegram.org/bot634XXXXXXXXXXXXXXXXXXXXXXXXXXWQ/getUpdates``
+	* chat id will look something like this: -944799166
 	
 # Configuring Telegram and Grafana
 The Telegram Bot and groups/channels created above can be used as a contact point for Grafana. i.e., Grafana can use them to send alerts. 

@@ -6,9 +6,17 @@ from DateRangeManager import DateRangeManager
 from influxdb_client.rest import ApiException
 import sys
 
+"""
+# TEST-SERVER
+URL = "http://34.126.186.57:8086/"
 INFLUXDB_TOKEN = "mKYgBymVSgv6nIXVwrWDV1ZO0uGH-tdRlvRZ_iljh9l_nm0P8f-B95jLJfuwWAhdEimGV-2XERd_kBcELYxenw=="
 INFLUXDB_ORG = "my-org"
-URL = "http://34.126.186.57:8086/"
+""" 
+
+# LIVE SERVER
+URL = "http://35.198.233.52:8086" 
+INFLUXDB_TOKEN= "n4fnErcu2V0FlN_SX6JV99UhxtsjSTV_CKA--mtv3AsVMlxG0rRx_lYyLZS03Iuc7SlmfG-kpLX9CHvwgTQBYw==" 
+INFLUXDB_ORG = "my-org"
 
 class InfluxDBReader:
     """Serves as a Read Gateway to InfluxDB buckets"""
@@ -37,7 +45,7 @@ class InfluxDBReader:
         # aggregate windows do not work on string literal types
         return query 
 
-    def _execute_query(self, query: str):
+    def execute_query(self, query: str):
         # Executes a Flux query to retrieve data from InfluxDB
         if query is None:
             print("Empty query detected")
@@ -77,7 +85,7 @@ class InfluxDBReader:
             return None
         
         query = self._create_generic_read_query(bucket_name, start, end, aggregate_window_interval)
-        return self._execute_query(query)
+        return self.execute_query(query)
         
     def query_result_to_dataframe(self, query_result) -> pd.DataFrame:
         """Converts Flux query results into a dataframe for easier manipulation"""
