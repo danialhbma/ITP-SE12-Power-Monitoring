@@ -7,7 +7,7 @@
 6. Retrieve the chat / channel ID by:
 	* Send a message to the group chat / channel (bot must be part of this group chat)
 	* **https://api.telegram.org/bot<API_TOKEN>/getUpdates**
-	* e.g., https://api.telegram.org/bot634XXXXXXXXXXXXXXXXXXXXXXXXXXWQ/getUpdates
+	* e.g., ``https://api.telegram.org/bot634XXXXXXXXXXXXXXXXXXXXXXXXXXWQ/getUpdates``
 	* chat id will look something like this: -944799166
 	
 # Configuring Telegram and Grafana

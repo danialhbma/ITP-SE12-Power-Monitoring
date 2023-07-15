@@ -7,7 +7,8 @@ Running python BucketCreator.py will create all the buckets listed in buckets.js
 Ignores if buckets already exists.
 
 Usage: 
-python BucketCreator.py 
+1. populate the buckets.json file with names and buckets to create.
+2. python BucketCreator.py 
 """
 
 # Instantiate InfluxDBWriter

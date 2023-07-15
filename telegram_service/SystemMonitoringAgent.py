@@ -81,20 +81,8 @@ class SystemMonitoringAgent:
         return system_report
 
 async def main():
-    # Loading of telegram api keys and chat id from environment
-    load_dotenv()
-    try:
-        TELEGRAM_API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
-        CHAT_ID = os.getenv("CHAT_ID")
-        if not TELEGRAM_API_TOKEN:
-            raise ValueError("TELEGRAM_API_TOKEN environment variable is missing")
-        if not CHAT_ID:
-            raise ValueError("CHAT_ID environment variable is missing")
-    except ValueError as e:
-        print(f"Error: {e}")
-        sys.exit(1)
-    # Initializing Telegram client, generating and sending system health report
-    tele_client = TelegramService(TELEGRAM_API_TOKEN, CHAT_ID)
+    tele_client = TelegramService()
+    tele_client.retrieve_token_from_environment()
     system_monitor = SystemMonitoringAgent()
     message = system_monitor.monitor_system()
     await tele_client.send_telegram_message(message)
