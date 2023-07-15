@@ -75,6 +75,12 @@ class DateRangeManager:
         except ValueError as e:
             print(f"Error creating time range: {e}")
             return None, None
+        
+    def nearest_hour(self, datetime_obj):
+        nearest_hour = datetime_obj.replace(minute = 0, second = 0, microsecond = 0)
+        print(nearest_hour.isoformat())
+
+
 
 def main():
     drm = DateRangeManager()
@@ -87,5 +93,6 @@ def main():
     print(drm.get_time_range("1f")) # invalid - 'f' not accepted unit
     print(drm.get_time_range("0.0d")) # invalid - floats not accepted 
     print(drm.get_time_range("-2d")) # invalid - negative
+
 if __name__ == "__main__":
     main()

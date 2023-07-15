@@ -9,38 +9,47 @@ INFLUXDB_ORG = "my-org"
 
 class GrowlightOnAlert(Alert):
     def __init__(self, alert_id, threshold:int, measurement_name):
-        super().__init__(alert_id=alert_id, evaluation_interval="1h", alert_group="Grow light On Alert")
+        # Alert used to determine time when growlight was switched o
+        super().__init__(alert_id=alert_id, evaluation_interval="1h", alert_group="Grow Light On Alert")
         self.threshold = threshold 
         self.measurement_name = measurement_name
         self.growlight_switched_on_query()
+    
+    def evaluate_alert(self, wattage:float) -> None:
+        # Sets the alert state based on wattage received 
+        if (wattage is None):
+            self.alert_state = AlertState.NODATA
+            return 
+        if (wattage >= threshold):
+            self.alert_state = AlertState.ALERTING
+        elif (wattage < threshold):
+            self.alert_state = AlertState.OK
+        else:
+            self.alert_state = AlertState.ERROR
 
-    def evaluate_alert(self, query_result) -> AlertState:
-        pass
-
-    def create_alert_message(self):
+    def create_alert_message(self, alert_state: AlertState):
         pass
     
+    def process_query_results(self, query_result):
+        pass 
+    
     def growlight_switched_on_query(self):
-        # Obtains the difference between the 2 latest data points
+        """ Retrieves the difference in wattage between the last two data points """
         date_range_manager = DateRangeManager()
-        start, end = date_range_manager.get_time_range("1d")
+        start, end = date_range_manager.get_time_range("2h")
         query = f'''from(bucket: "Power Consumption")
             |> range(start: {start}, stop:{end})
             |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
             |> difference(columns: ["_value"], keepFirst: true)
+            |> last()
             '''
         self.set_alert_query(query)
 
-    def get_wattage_difference(self):
-
-class GrowlightOffAlert(Alert):
-    def __init__(self, threshold):
-        self.threshold = threshold 
-    def evaluate_alert(self, query_result) -> AlertState:
-        pass 
-    def create_alert_message(self) -> AlertMessage:
-        pass
-
+class GrowlightOnAlertMessage(AlertMessage):
+    def __init__(self, alert_id, location):
+        super().__init__(message_id=f"M-{alert_id}")
+        self.location = location
+        
 def main():
     rack_1_on_alert = GrowlightOnAlert(1, 360, "Rack_1_Light")
     # rack_2_on_alert = GrowlightOnAlert(2, 350, "Rack_2_Light")

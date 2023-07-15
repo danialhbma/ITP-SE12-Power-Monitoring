@@ -21,10 +21,10 @@ class AlertState(Enum):
 class AlertMessage(ABC):
     def __init__(self, message_id):
         """Repreesentation of the alert message that will be sent via Telegram"""
-        self.alert_id = alert_id
         self.message_id = message_id
-        self.message = ""
-
+        self.summary = "Alert Summary: \n"
+        self.description = "Description: \n"
+  
     @abstractmethod
     def format_message(self) -> str:
          raise NotImplementedError(" Subclasses must override the 'format_message' method.")
@@ -42,7 +42,7 @@ class Alert(ABC):
         self.alert_group = alert_group 
         self.alert_state = AlertState.OK
         self.alert_query = ""
-        self.alert_message = "" 
+        self.alert_message = ""
        
     def set_alert_query(self, query:str):
         """This will be query used to query data source to retrieve values for evaluation"""
@@ -59,10 +59,17 @@ class Alert(ABC):
             self.alert_state = AlertState("ERROR")
             print(f"Invalid alert state provided: [{state}].")
 
+    @abstractmethod 
+    def process_query_results(self, query_result): 
+        """
+        Accepts database query results and processes them for the subclasses to perform alert evaluation.
+        """
+        pass
+
     @abstractmethod
     def evaluate_alert(self, query_result) -> AlertState:
-        """ 
-        Accepts database query results and performs evaluation (threshold analysis etc.) on the results. It should return an AlertState.
+        """
+        Accepts database parsed results and performs evaluation (threshold analysis etc.) on the results. It should return an AlertState.
         """
         raise NotImplementedError("Subclasses must override the 'evaluate_alert' method to perform alert evaluation and return an AlertState.")
     
@@ -70,7 +77,10 @@ class Alert(ABC):
     def create_alert_message(self) -> AlertMessage:
         raise NotImplementedError(" Subclasses must override the 'create_alert_message' method to create and return an AlertMessage.")
     
+  
+
     def print_alert_details(self):
+        """Logging function to print Alert Object information"""
         alert_details = f"Alert ID: {self.alert_id}\n" \
                         f"Evaluation Interval: {self.evaluation_interval}\n" \
                         f"Alert Group: {self.alert_group}\n" \
@@ -87,7 +97,6 @@ class TelegramAlertManager:
         self.db_read_client = db_read_client
 
     def execute_alert(self, alert_query):
-
         pass 
     
     def populate_message_list(self):
