@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
 import re
+import pytz
 
 class DateRangeManager:
     """Helper class used to manage datetime objects i.e., datetime validation and datetime window used in InfluxDB queries"""
@@ -80,8 +81,26 @@ class DateRangeManager:
         nearest_hour = datetime_obj.replace(minute = 0, second = 0, microsecond = 0)
         print(nearest_hour.isoformat())
 
+    def current_sg_time(self):
+        """Returns current time in SG - as YYYY-MM-DD HH:MM:SS"""
+        # Get the timezone for Singapore
+        sg_timezone = pytz.timezone('Asia/Singapore')
+        # Get the current time in Singapore
+        current_time_sg = datetime.now(sg_timezone)
+         # Format the time in a human-readable format
+        formatted_time = current_time_sg.strftime('%Y-%m-%d %H:%M:%S')
+        return formatted_time
 
-
+    def utc_to_sg_time(self, timestamp):
+        """Converts pd.dataframe time to SG time zone"""
+        # Get the timezone for Singapore
+        sg_timezone = pytz.timezone('Asia/Singapore')
+        # Convert the timestamp to Singapore time
+        sg_timestamp = timestamp.tz_convert(sg_timezone)
+        # Format the Singapore time in a desired format
+        formatted_time = sg_timestamp.strftime('%Y-%m-%d %H:%M:%S')
+        return formatted_time
+        
 def main():
     drm = DateRangeManager()
     print("{:<35} {}".format("start", "end")) # Formating of start and end headers

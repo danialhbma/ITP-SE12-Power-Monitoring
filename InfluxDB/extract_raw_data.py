@@ -11,7 +11,9 @@ URL = "http://35.198.233.52:8086"
 DATA_DIRECTORY = "data"
 buckets_with_30m_intervals = ["WeatherAPI","CO2", "Humidity", "Light", "Temperature", "Water"]
 buckets_with_1h_intervals = ["Power Consumption"]
-
+"""
+Helper script to retrieve bucket data as csv.
+"""
 if not os.path.exists(DATA_DIRECTORY):
     os.mkdir(DATA_DIRECTORY)
 

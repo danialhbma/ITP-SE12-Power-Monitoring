@@ -2,9 +2,11 @@ import requests.exceptions
 from influxdb_client import InfluxDBClient, QueryApi
 from datetime import datetime, timedelta, timezone
 import pandas as pd 
+import sys
+from InfluxDBDataFrameHandler import InfluxDBDataFrameHandler
 from DateRangeManager import DateRangeManager
 from influxdb_client.rest import ApiException
-import sys
+
 
 """
 # TEST-SERVER
@@ -89,23 +91,20 @@ class InfluxDBReader:
         
     def query_result_to_dataframe(self, query_result) -> pd.DataFrame:
         """Converts Flux query results into a dataframe for easier manipulation"""
-        data = []
-        exclude_keys = ['result', 'table', '_start', '_stop']
-        for table in query_result:
-            for record in table.records:
-                record_dict = record.values  # Access the record values
-                filtered_record = {k: v for k, v in record_dict.items() if k not in exclude_keys}
-                data.append(filtered_record)
-        if data:
-            return pd.DataFrame(data)
+        df_handler = InfluxDBDataFrameHandler()
+        df = df_handler.format_as_dataframe(query_result)
+        if not df.empty:
+            return df 
         else:
             return None
 
     def dataframe_to_csv(self, dataframe, output_path):
-        if dataframe is None:
-            print(f"Dataframe is empty for {output_path}")
-            return
-        dataframe.to_csv(output_path, index=False)
+        """Exports dataframe to csv file"""
+        df_handler = InfluxDBDataFrameHandler()
+        try: 
+             df = df_handler.export_as_csv(dataframe, output_path)
+        except ValueError as e:
+            print(f"Dataframe is empty: {e}")
 
 def main():
     # Example usage 

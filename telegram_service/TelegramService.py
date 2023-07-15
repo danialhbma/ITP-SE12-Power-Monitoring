@@ -35,7 +35,7 @@ class TelegramService:
             print(f"Error: {e}")
             sys.exit(1)
 
-    async def send_telegram_message(self, message):
+    async def send_telegram_message(self, message:str):
         """
         Sends a Telegram message.
 

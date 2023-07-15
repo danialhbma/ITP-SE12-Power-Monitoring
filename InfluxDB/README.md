@@ -1,8 +1,9 @@
 # InfluxDB 
+This directory contains helper classes and functions used to interact with InfluxDB Server.
 
 ## Mass create buckets
 1. Add bucket name and description to buckets.json
-2. ``python3 BucketCreator.py``
+2. ``python mass_create_buckets.py``
 	* Buckets that already exists will be ignored, buckets that do not exist will be created.
 
 ## Write Data To InfluxDB Server Using Python
@@ -26,7 +27,7 @@ To write data to an InfluxDB server using Python, you can use ``InfluxDBReader.p
 		* Examples of valid time_window and aggregate_window_intervals include: "30s" (30 seconds), "1h" (1 hour) etc.
 		* e.g., ``bucket_data = reader.read.from_bucket(Power Consumption, "30d", "1h")``, This query retrieves all measurements from the "Power Consumption" bucket for the past 30 days, and aggregates the data based on a 1-hour window.
 	4. The returned bucket_data will contain the queried data in the form of a FluxTable (list of tables). You can then further process the data by converting it into a pandas DataFrame using the **query_result_to_dataframe** method or export it to a CSV file using the **dataframe_to_csv** method of the InfluxDBReader class.
-* For code example see ``extract_raw_data.py``. 
+* For code usage example see ``extract_raw_data.py``. 
 
 ## OpenWeatherMapAPIClient
 Retrieves weather information from OpenWeatherMapAPI. Weather information is then written to InfluxDB server. This script will be scheduled via a CRON job and executed every 30 minutes. 
@@ -68,5 +69,3 @@ As of writing a backup of the InfluxDB database is created daily at 2359 (SG Tim
 * 59 23 * * * path to influx_db_backup.sh
 * e.g, ``59 23  * * * cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && sudo ./influx_db_backup.sh >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/influxdb_backups/backup-logs.txt 2>&1``
 
-## Read Data From InfluxDB Using Python
-Reading from InfluxDB can be achieved using the ``InfluxDBReader.py`` class. 
