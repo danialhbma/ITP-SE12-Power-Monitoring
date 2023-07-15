@@ -44,9 +44,20 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
 
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - '443:443'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl-certs:/etc/nginx/certs
+
 volumes:
   mosquitto-data:
   mosquitto-log:
   node-red-data:
   influxdb-storage:
   grafana-data:
+
