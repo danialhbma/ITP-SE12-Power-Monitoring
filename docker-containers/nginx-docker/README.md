@@ -6,7 +6,7 @@
 3. Ensure that the Grafana docker container is running:
 ``sudo docker ps``
 
-4. To verify that the reverse proxy has been set up, navigate to https://<public-ip-address> (e.g. https://35.198.233.52). You should see the Grafana login page.
+4. To verify that the reverse proxy has been set up, navigate to https://\<public-ip-address> (e.g. https://35.198.233.52). You should see the Grafana login page.
 
 # Generating Self-Signed SSL Certificates
 To use HTTPS, SSL certificates are needed. This section takes you through how to generate your own self-signed SSL certificates which will be used by NGINX
