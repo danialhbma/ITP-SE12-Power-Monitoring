@@ -10,9 +10,11 @@ from wifi import Wifi
 from waterflow import WaterFlow
 from tvoctemp import TvocTemp
 from light import Light
+from ambient import Ambient
+from clamp import Clamp
     
 # menu options
-sensorOptions = ["temp/tvoc", "light", "water"]
+sensorOptions = ["temp/tvoc", "light", "water", "ambient", "clamp"]
 rackOptions = ["rack1", "rack2", "rack3", "rack4"]
 selectedSensor = 0
 selectedRack = 0
@@ -95,6 +97,10 @@ if wifi is not None and m5mqtt is not None:
             sensor = TvocTemp()
         elif current[-5:] == "light":
             sensor = Light()
+        elif current[-5:] == "clamp":
+            sensor = Clamp()
+        else:
+            sensor = Ambient()
 
         # publish data if sensor object exists
         if sensor is not None:
