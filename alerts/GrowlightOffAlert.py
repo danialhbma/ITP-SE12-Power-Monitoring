@@ -54,7 +54,7 @@ class GrowlightOffAlert(Alert):
             This query allows alerts to be sent ONLY WHEN growlight is first turned on or off.
         """
         date_range_manager = DateRangeManager()
-        start, end = date_range_manager.get_time_range("3h")
+        start, end = date_range_manager.get_time_range("2h")
         query = f'''from(bucket: "Power Consumption")
             |> range(start: {start}, stop:{end})
             |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")

@@ -111,7 +111,8 @@ def main():
     # (1) Initialize reader, (2) invoke read_from_bucket(bucket_name, time_window, aggregation_window) 
     # Time window must be in the format of {lenght}{unit}. e.g., "1s", "30d", "24h", "7w", "30d"
     reader = InfluxDBReader()
-    co2_bucket = reader.read_from_bucket("CO2", "30d", "30m")
+    
+    co2_bucket = reader.read_from_bucket("CO2", "30d", "30m") 
     print(reader.query_result_to_dataframe(co2_bucket))
     humidity_bucket = reader.read_from_bucket("Humidity", "30d", "30m")
     print(reader.query_result_to_dataframe(humidity_bucket))
@@ -121,5 +122,6 @@ def main():
     print(reader.query_result_to_dataframe(power_consumption_bucket))
     temperature_bucket = reader.read_from_bucket("Temperature", "30d", "30m")
     print(reader.query_result_to_dataframe(temperature_bucket))
+
 if __name__ == "__main__":
     main()
