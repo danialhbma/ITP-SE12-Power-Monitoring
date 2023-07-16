@@ -5,8 +5,8 @@
 4. Copy the API token that @BotFather returns.
 5. Add the newly created bot to a group chat or channel.
 6. Retrieve the chat / channel ID by:
-	* Send a message to the group chat / channel e.g., Hello
-	* https://api.telegram.org/bot<API_TOKEN>/getUpdates
+	* Send a message to the group chat / channel (bot must be part of this group chat)
+	* **https://api.telegram.org/bot<API_TOKEN>/getUpdates**
 	* e.g., ``https://api.telegram.org/bot634XXXXXXXXXXXXXXXXXXXXXXXXXXWQ/getUpdates``
 	* chat id will look something like this: -944799166
 	
@@ -28,10 +28,11 @@ Follow the documentation below to add Telegram as a Contact Point and how alerts
 
 # System Monitoring Agent
 The System Monitoring Agent, is a routine systems check for cpu load, memory (RAM) usage, network traffic and more importantly disk usage. Follow the instructions below to perform Systems check. 
-1. cd into telegram_service folder
-2. ``pip install psutil``
-3. ``pip install python-dotenv``
-4. ``python3 SystemMonitoringAgent.py``
+1. Navigate to telegram_service directory
+2. Ensure that a .env file containing ``TELEGRAM_API_TOKEN``, ``CHAT_ID``, and ``CHANNEL_ID`` exists. 
+3. ``pip install psutil``
+4. ``pip install python-dotenv``
+5. ``python3 SystemMonitoringAgent.py``
 
-This script has been scheduled to run at 2359 daily using the CRON expression below.
+This script was been scheduled to run at 2359 daily using the CRON expression below.
 * ``59 23 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/telegram_service && python3 SystemMonitoringAgent.py >> monitoring_reports.txt 2>&1``
