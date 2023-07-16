@@ -55,15 +55,6 @@ class GrowlightOnAlert(Alert):
         """
         date_range_manager = DateRangeManager()
         start, end = date_range_manager.get_time_range("2h")
-        """
-        # archive
-        query = f'''from(bucket: "Power Consumption")
-            |> range(start: {start}, stop:{end})
-            |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
-            |> difference(columns: ["_value"], keepFirst: true)
-            |> last()
-            '''
-        """
         query = f'''from(bucket: "Power Consumption")
             |> range(start: {start}, stop:{end})
             |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
