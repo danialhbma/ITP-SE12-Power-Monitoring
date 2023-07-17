@@ -1,7 +1,13 @@
 import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr
+import os
+import sys 
+
+influxdb_path = os.path.abspath(os.path.join("..", "InfluxDB"))
+sys.path.append(influxdb_path)
 from InfluxDBReader import InfluxDBReader
+from InfluxDBDataFrameHandler import InfluxDBDataFrameHandler
 from InfluxDBMeasurement import InfluxDBMeasurement
 
 class CorrelationCalculator(InfluxDBMeasurement):

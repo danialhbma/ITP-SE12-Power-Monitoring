@@ -6,13 +6,13 @@ class InfluxDBDataFrameHandler:
 
     def format_as_dataframe(self, query_result) -> pd.DataFrame:
         """
-        Converts Flux query results into a dataframe for easier manipulation
+        Converts Flux query results into a DataFrame for easier manipulation.
 
         Args:
-            query_result: The query result object from InfluxDB
+            query_result: The query result object from InfluxDB.
 
         Returns:
-            pd.DataFrame: The formatted dataframe
+            pd.DataFrame: The formatted DataFrame.
         """
         data = []
         exclude_keys = ['result', 'table', '_start', '_stop']
@@ -25,20 +25,60 @@ class InfluxDBDataFrameHandler:
     
     def export_as_csv(self, dataframe, output_path):
         """
-        Exports dataframe to a CSV file
+        Exports DataFrame to a CSV file.
 
         Args:
-            dataframe: The dataframe to export
-            output_path: The path to save the CSV file
+            dataframe: The DataFrame to export.
+            output_path: The path to save the CSV file.
         """
         if dataframe.empty:
-            raise ValueError("Dataframe is empty")
+            raise ValueError("Dataframe is empty.")
         dataframe.to_csv(output_path, index=False)
 
     def get_value_and_formatted_time(self, dataframe) -> list:
+        """
+        Extracts the value, time, and measurement name from dataframe into a list.
+        Args:
+            dataframe: the dataframe to extract from.alerts
+        Retruns:
+            list: list containing values
+        """
         if dataframe.empty:
-            raise ValueError("Dataframe is empty")
+            raise ValueError("Dataframe is empty.")
 
         df = dataframe[["_value", "_time", "_measurement"]]
         df_list = df.values.tolist()
         return df_list
+    
+    def load_from_csv(self, file_path) -> pd.DataFrame:
+        """
+        Loads a DataFrame from a CSV file.
+
+        Args:
+            file_path: The path to the CSV file.
+
+        Returns:
+            pd.DataFrame: The loaded DataFrame.
+        """
+        try:
+            df = pd.read_csv(file_path)
+            return df
+        except FileNotFoundError as e:
+            raise FileNotFoundError(f"File not found at {file_path}.")
+    
+    def get_unique_values(self, df, column_name):
+        """
+        Extracts unique values from a specified column in a DataFrame.
+
+        Args:
+            df (pandas.DataFrame): The DataFrame containing the data.
+            column_name (str): The name of the column to extract unique values from.
+
+        Returns:
+            list: A list of unique values from the specified column.
+        """
+        unique_values = df[column_name].unique()
+        return unique_values.tolist()
+    
+    def get_slice(self, df, column_name):
+        return df[column_name]

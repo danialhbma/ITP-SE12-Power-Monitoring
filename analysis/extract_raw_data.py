@@ -21,16 +21,15 @@ reader = InfluxDBReader(url = URL, token = INFLUXDB_TOKEN, org = INFLUXDB_ORG)
 
 for bucket in buckets_with_30m_intervals:
     print(f"Retrieving data for {bucket}")
-    current_time = datetime.now().strftime("%Y%m%d%H%M%S")
-    file_path = os.path.join(DATA_DIRECTORY, f"{bucket}_{current_time}.csv") 
-    bucket_data = reader.read_from_bucket(bucket, "30d", "30m")
+    file_path = os.path.join(DATA_DIRECTORY, f"{bucket}.csv") 
+    bucket_data = reader.read_from_bucket(bucket, "45d", "30m") # Change window accordingly, it should cover the dates of all points of interest
     bucket_df = reader.query_result_to_dataframe(bucket_data)
     reader.dataframe_to_csv(bucket_df, file_path)
 
 for bucket in buckets_with_1h_intervals:
     print(f"Retrieving data for {bucket}")
     current_time = datetime.now().strftime("%Y%m%d%H%M%S")
-    file_path = os.path.join(DATA_DIRECTORY, f"{bucket}_{current_time}.csv")
-    bucket_data = reader.read_from_bucket(bucket, "30d", "1h")
+    file_path = os.path.join(DATA_DIRECTORY, f"{bucket}.csv")
+    bucket_data = reader.read_from_bucket(bucket, "45d", "1h") # Change window accordingly, it should cover the dates of all points of interest
     bucket_df = reader.query_result_to_dataframe(bucket_data)
     reader.dataframe_to_csv(bucket_df, file_path)

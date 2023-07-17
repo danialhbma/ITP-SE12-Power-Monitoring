@@ -109,9 +109,13 @@ class InfluxDBReader:
 def main():
     # Example usage 
     # (1) Initialize reader, (2) invoke read_from_bucket(bucket_name, time_window, aggregation_window) 
-    # Time window must be in the format of {lenght}{unit}. e.g., "1s", "30d", "24h", "7w", "30d"
-    reader = InfluxDBReader()
+    # time_window must be in the format of {lenght}{unit}. e.g., "1s", "30d", "24h", "7w", "30d"
+    # aggregation_window follows same format as time_window. It is used to aggregate data points.
+    # For most operations, your aggregation_window should be the same as the interval at which sensors send new data.
+
+    reader = InfluxDBReader() # Init db reader client
     
+    # Pulling actual data from influxdb buckets
     co2_bucket = reader.read_from_bucket("CO2", "30d", "30m") 
     print(reader.query_result_to_dataframe(co2_bucket))
     humidity_bucket = reader.read_from_bucket("Humidity", "30d", "30m")
@@ -122,6 +126,5 @@ def main():
     print(reader.query_result_to_dataframe(power_consumption_bucket))
     temperature_bucket = reader.read_from_bucket("Temperature", "30d", "30m")
     print(reader.query_result_to_dataframe(temperature_bucket))
-
 if __name__ == "__main__":
     main()

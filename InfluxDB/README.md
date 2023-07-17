@@ -36,16 +36,6 @@ Retrieves weather information from OpenWeatherMapAPI. Weather information is the
 3. ``pip3 install influxdb-client``
 4. ``python3 OpenWeatherMapAPIClient.py``
 
-## Creating CRON Jobs
-Cron is a time-based job scheduling system in Unix-like operating systems. It allows users to schedule and automate the execution of commands or scripts at specific intervals or times. Cron jobs are defined using a specific syntax known as cron expressions.
-1. crontab -e
-	* To schedule a CRON job that executes a script every 30 minutes, you can use the following CRON expression.
-	* */30 * * * * cd < path to folder containing script > && python3 < script name > 
-	* e.g., ``*/30 * * * *  cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && python3 OpenWeatherMapAPIClient.py  >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/output.log 2>&1``
-	* The expression above also redirects the output from OpenWeatherMapAPIClient.py to output.log, this is mainly for debugging and is not mandatory. 
-2. crontab -l 
-	* View CRON jobs scheduled	
-
 # InfluxDB Backups & Restore
 Use the influx backup command to back up data and metadata stored in InfluxDB. InfluxDB copies all data and metadata to a set of files stored in a specified directory on your local filesystem.
 1. cd into InfluxDB docker image shell
@@ -64,8 +54,6 @@ The **influx_db_backup.sh** bash script is used to create an InfluxDB backup.
 * InfluxDB backups exists as tar.gz files, and can be used to restore a database.
 * The bash script will also copy the backup files into the InfluxDB directory. Easier way to access and view / analyze files as required. 
 
-## Automatic Scheduling of Backups
-As of writing a backup of the InfluxDB database is created daily at 2359 (SG Time). This is achieved by scheduling a CRONJOB using the expression below 
-* 59 23 * * * path to influx_db_backup.sh
-* e.g, ``59 23  * * * cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && sudo ./influx_db_backup.sh >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/influxdb_backups/backup-logs.txt 2>&1``
-
+## Automating InfluxDB Backups
+The [influx_db_backup](../InfluxDB/influx_db_backup.sh) bash script automates retrieval of InfluxDB backups by entering the shell of the docker image and running the backup command. It also copies all backups to [influxdb_backups](../InfluxDB/influxdb_backups) folder for easier retrieval. This script was scheduled to run daily at 2359 using the CRON expression below.
+* ``59 23  * * * cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && sudo ./influx_db_backup.sh >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/influxdb_backups/backup-logs.txt 2>&1``
