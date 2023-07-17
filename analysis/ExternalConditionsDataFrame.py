@@ -8,7 +8,7 @@ from InfluxDBDataFrameHandler import InfluxDBDataFrameHandler
 from InfluxDBReader import InfluxDBReader
 
 DATA_DIRECTORY = "data"
-source = os.path.join(DATA_DIRECTORY, "WeatherAPI_20230716205358.csv") 
+
 
 class ExternalConditionsDataFrame(InfluxDBDataFrameHandler):
     def __init__(self, csv_file):

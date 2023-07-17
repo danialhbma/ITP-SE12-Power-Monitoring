@@ -1,8 +1,12 @@
-from InfluxDBReader import InfluxDBReader
 from datetime import datetime
 import os
 import sys
 
+
+influxdb_path = os.path.abspath(os.path.join("..", "InfluxDB"))
+sys.path.append(influxdb_path)
+from InfluxDBDataFrameHandler import InfluxDBDataFrameHandler
+from InfluxDBReader import InfluxDBReader
 
 INFLUXDB_TOKEN= "n4fnErcu2V0FlN_SX6JV99UhxtsjSTV_CKA--mtv3AsVMlxG0rRx_lYyLZS03Iuc7SlmfG-kpLX9CHvwgTQBYw==" 
 INFLUXDB_ORG = "my-org"
