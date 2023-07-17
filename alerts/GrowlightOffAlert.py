@@ -59,7 +59,7 @@ class GrowlightOffAlert(Alert):
             |> range(start: {start}, stop:{end})
             |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
             |> aggregateWindow(every: 1h, fn:mean, createEmpty: true)  
-            |> map(fn: (r) => ({{r with _value: if exists r._value then r._value else 0.0}}))
+            |> fill(column: "_value", usePrevious: true)
             |> difference(columns: ["_value"], keepFirst:false)
             |> first()
             '''

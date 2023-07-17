@@ -33,7 +33,7 @@ Examples:
 4. Run job daily at 2359: ``59 23  * * * hello_world.py``
 
 # Scheduled Cron Jobs
-The **crontab.txt** file provided contains the list of all scheduled cron jobs used in this project. Instead of providing the actual script itself, we are providing commands to change directory to location containing script before executing the script. This was done to as certain scripts require loading of environmental variables within the **.env** file that resides in the corresponding directory. We also redirected all outputs to an output file for debugging. Redirecting of output is not necessary but recommended as it facilitates debugging.
+The [crontab.txt](crontab.txt) file provided contains the list of all scheduled cron jobs used in this project. Instead of providing the actual script itself, we are providing commands to change directory to location containing script before executing the script. This was done to as certain scripts require loading of environmental variables within the **.env** file that resides in the corresponding directory. We also redirected all outputs to an output file for debugging. Redirecting of output is not necessary but recommended as it facilitates debugging.
 
 ## Retrieving External Weather Conditions from OpenWeatherMap 
 The [OpenWeatherMapAPIClient](../InfluxDB/OpenWeatherMapAPIClient.py) was designed to query OpenWeatherMapAPI to retrieve external weather conditions. We scheduled an API call to be made every 30 minutes using the CRON expression below. 
