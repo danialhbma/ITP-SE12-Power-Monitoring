@@ -1,283 +1,3 @@
-    at JSON.parse (<anonymous>)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-2 Jul 15:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 16:00:03 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 17:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 18:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-SyntaxError: Unexpected token u in JSON at position 1
-    at JSON.parse (<anonymous>)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-SyntaxError: Unexpected token @ in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token t in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-2 Jul 19:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 20:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 21:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 22:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-2 Jul 23:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 00:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 01:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 02:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 03:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 04:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 04:00:05 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 05:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 06:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 07:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 08:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-SyntaxError: Unexpected token @ in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token u in JSON at position 1
-    at JSON.parse (<anonymous>)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-SyntaxError: Unexpected token t in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-3 Jul 09:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 10:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 11:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 12:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 13:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 14:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 15:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 16:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 17:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 18:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 19:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 20:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 21:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 22:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-3 Jul 23:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 00:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 01:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 02:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-SyntaxError: Unexpected token u in JSON at position 1
-    at JSON.parse (<anonymous>)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-SyntaxError: Unexpected token @ in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token t in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-4 Jul 03:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 04:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 05:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 06:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 07:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 08:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 09:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 10:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 11:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 12:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 13:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 14:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 15:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 16:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-SyntaxError: Unexpected token @ in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token u in JSON at position 1
-    at JSON.parse (<anonymous>)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-SyntaxError: Unexpected token t in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-4 Jul 17:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 18:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 19:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 20:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 21:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 22:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-4 Jul 23:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 00:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 01:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 02:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 03:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 04:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 05:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 06:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 07:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 08:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 09:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-SyntaxError: Unexpected token t in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token @ in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token u in JSON at position 1
-    at JSON.parse (<anonymous>)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-5 Jul 10:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 11:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 12:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 13:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 14:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 15:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 16:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 17:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 18:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 19:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 20:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 21:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 22:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-5 Jul 23:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-6 Jul 00:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
-SyntaxError: Unexpected token @ in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-SyntaxError: Unexpected token t in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
-    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
-    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
-    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
-    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
-    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
 SyntaxError: Unexpected token u in JSON at position 1
     at JSON.parse (<anonymous>)
     at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
@@ -998,3 +718,283 @@ SyntaxError: Unexpected token t in JSON at position 0
     at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
     at IncomingMessage.emit (node:events:525:35)
     at endReadableNT (node:internal/streams/readable:1358:12)
+15 Jul 16:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 17:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 18:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 19:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 20:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 21:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 22:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+15 Jul 23:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 00:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 01:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 02:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 03:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 04:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 05:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 06:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 07:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+SyntaxError: Unexpected token u in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+SyntaxError: Unexpected token t in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+SyntaxError: Unexpected token @ in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+16 Jul 08:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 09:00:00 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 10:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 11:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+SyntaxError: Unexpected token u in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+SyntaxError: Unexpected token t in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+SyntaxError: Unexpected token @ in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+16 Jul 12:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 13:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 14:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 15:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 16:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 17:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 18:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 19:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 20:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 21:00:02 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 22:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+16 Jul 23:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 00:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 01:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 02:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 03:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 04:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 05:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 06:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 07:00:03 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+SyntaxError: Unexpected token t in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+SyntaxError: Unexpected token @ in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:160:10)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:83:15)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+SyntaxError: Unexpected token u in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at parse (/usr/src/node-red/node_modules/body-parser/lib/types/json.js:89:19)
+    at /usr/src/node-red/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/usr/src/node-red/node_modules/raw-body/index.js:231:16)
+    at done (/usr/src/node-red/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/usr/src/node-red/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+17 Jul 08:00:01 - [error] [function:Filter Out Details] TypeError: Cannot read properties of undefined (reading 'logs')
+17 Jul 08:10:51 - [info] [mqtt-broker:Google Cloud Broker] Disconnected from broker: mqtt://35.198.233.52:1883
+17 Jul 08:11:06 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+17 Jul 08:19:55 - [info] Stopping flows
+17 Jul 08:19:55 - [info] Stopped flows
+17 Jul 08:19:58 - [info] 
+
+Welcome to Node-RED
+===================
+
+17 Jul 08:19:58 - [info] Node-RED version: v3.0.2
+17 Jul 08:19:58 - [info] Node.js  version: v16.20.0
+17 Jul 08:19:58 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+17 Jul 08:19:59 - [info] Loading palette nodes
+17 Jul 08:20:00 - [info] Settings file  : /data/settings.js
+17 Jul 08:20:00 - [info] Context store  : 'default' [module=memory]
+17 Jul 08:20:00 - [info] User directory : /data
+17 Jul 08:20:00 - [warn] Projects disabled : editorTheme.projects.enabled=false
+17 Jul 08:20:00 - [info] Flows file     : /data/flows.json
+17 Jul 08:20:00 - [info] Server now running at http://127.0.0.1:1880/
+17 Jul 08:20:00 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+17 Jul 08:20:00 - [info] Starting flows
+17 Jul 08:20:00 - [info] Started flows
+17 Jul 08:20:00 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+17 Jul 08:21:18 - [info] [mqtt-broker:Google Cloud Broker] Disconnected from broker: mqtt://35.198.233.52:1883
+17 Jul 08:21:18 - [info] Stopping flows
+17 Jul 08:21:18 - [info] Stopped flows
+17 Jul 08:21:20 - [info] 
+
+Welcome to Node-RED
+===================
+
+17 Jul 08:21:20 - [info] Node-RED version: v3.0.2
+17 Jul 08:21:20 - [info] Node.js  version: v16.20.0
+17 Jul 08:21:20 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+17 Jul 08:21:21 - [info] Loading palette nodes
+17 Jul 08:21:22 - [info] Settings file  : /data/settings.js
+17 Jul 08:21:22 - [info] Context store  : 'default' [module=memory]
+17 Jul 08:21:22 - [info] User directory : /data
+17 Jul 08:21:22 - [warn] Projects disabled : editorTheme.projects.enabled=false
+17 Jul 08:21:22 - [info] Flows file     : /data/flows.json
+17 Jul 08:21:22 - [info] Server now running at http://127.0.0.1:1880/
+17 Jul 08:21:22 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+17 Jul 08:21:22 - [info] Starting flows
+17 Jul 08:21:22 - [info] Started flows
+17 Jul 08:21:22 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+17 Jul 08:23:50 - [info] Stopping flows
+17 Jul 08:23:50 - [info] Stopped flows
+17 Jul 08:23:53 - [info] 
+
+Welcome to Node-RED
+===================
+
+17 Jul 08:23:53 - [info] Node-RED version: v3.0.2
+17 Jul 08:23:53 - [info] Node.js  version: v16.20.0
+17 Jul 08:23:53 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+17 Jul 08:23:54 - [info] Loading palette nodes
+17 Jul 08:23:55 - [info] Settings file  : /data/settings.js
+17 Jul 08:23:55 - [info] Context store  : 'default' [module=memory]
+17 Jul 08:23:55 - [info] User directory : /data
+17 Jul 08:23:55 - [warn] Projects disabled : editorTheme.projects.enabled=false
+17 Jul 08:23:55 - [info] Flows file     : /data/flows.json
+17 Jul 08:23:55 - [info] Server now running at http://127.0.0.1:1880/
+17 Jul 08:23:55 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+17 Jul 08:23:55 - [info] Starting flows
+17 Jul 08:23:55 - [info] Started flows
+17 Jul 08:23:55 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
+17 Jul 08:27:03 - [info] [mqtt-broker:Google Cloud Broker] Disconnected from broker: mqtt://35.198.233.52:1883
+17 Jul 08:27:03 - [info] Stopping flows
+17 Jul 08:27:03 - [info] Stopped flows
+17 Jul 08:27:06 - [info] 
+
+Welcome to Node-RED
+===================
+
+17 Jul 08:27:06 - [info] Node-RED version: v3.0.2
+17 Jul 08:27:06 - [info] Node.js  version: v16.20.0
+17 Jul 08:27:06 - [info] Linux 5.10.0-23-cloud-amd64 x64 LE
+17 Jul 08:27:07 - [info] Loading palette nodes
+17 Jul 08:27:08 - [info] Settings file  : /data/settings.js
+17 Jul 08:27:08 - [info] Context store  : 'default' [module=memory]
+17 Jul 08:27:08 - [info] User directory : /data
+17 Jul 08:27:08 - [warn] Projects disabled : editorTheme.projects.enabled=false
+17 Jul 08:27:08 - [info] Flows file     : /data/flows.json
+17 Jul 08:27:08 - [info] Server now running at http://127.0.0.1:1880/
+17 Jul 08:27:08 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+17 Jul 08:27:08 - [info] Starting flows
+17 Jul 08:27:08 - [info] Started flows
+17 Jul 08:27:08 - [info] [mqtt-broker:Google Cloud Broker] Connected to broker: mqtt://35.198.233.52:1883
