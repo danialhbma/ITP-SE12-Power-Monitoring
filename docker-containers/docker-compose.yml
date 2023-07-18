@@ -43,7 +43,6 @@ services:
       - '3000:3000'
     volumes:
       - grafana-data:/var/lib/grafana
-      - ./grafana.ini:/etc/grafana/grafana.ini
 
   nginx:
     image: nginx:latest
