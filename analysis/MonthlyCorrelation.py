@@ -1,4 +1,4 @@
-from CorrelationCalculator import CorrelationCalculator
+from CorrelationCalculator import CorrelationCalculator, CorrelationPlotter
 
 # Define the bucket configurations
 bucket_configs = [
@@ -29,3 +29,5 @@ for bucket_config in bucket_configs:
 
 calculator.calculate_historical_correlations(result)
 calculator.print_historical_correlations()
+plotter = CorrelationPlotter(calculator.correlations)
+plotter.plot_correlation_matrix("Monthly corrleation")

@@ -7,9 +7,6 @@ sys.path.append(influxdb_path)
 from InfluxDBDataFrameHandler import InfluxDBDataFrameHandler
 from InfluxDBReader import InfluxDBReader
 
-DATA_DIRECTORY = "data"
-
-
 class ExternalConditionsDataFrame(InfluxDBDataFrameHandler):
     def __init__(self, csv_file):
         self.dataframe = self.load_from_csv(csv_file)

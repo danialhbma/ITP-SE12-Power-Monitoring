@@ -32,7 +32,7 @@ async def main():
     telegram_alert_manager.sort_alert_by_states()
     telegram_alert_manager.group_messages(telegram_alert_manager.alerting_list) # using self.alerting_list since we do not want to send out nodata alerts
     telegram_alert_manager.print_alert_list_details()
-    await telegram_alert_manager.send_message_in_groups()
+    # await telegram_alert_manager.send_message_in_groups()
     
 if __name__ == "__main__":
     asyncio.run(main())

@@ -45,11 +45,22 @@ class TelegramService:
         bot = telegram.Bot(token=self.api_token)
         await bot.send_message(chat_id=self.chat_id, text=message)
 
+    async def send_pdf(self, pdf_path):
+        try:
+            bot = telegram.Bot(token=self.api_token)
+            with open(pdf_path, 'rb') as file:
+                await bot.send_document(chat_id=self.chat_id, document=file)
+        except FileNotFoundError as e:
+            print(f"Error: File not found - {pdf_path}")
+        except Exception as e:
+            print(f"Error: {e}")
+
 async def main():
     # Initialize and load tele_client using API keys stored in .env file
     tele_client = TelegramService()
     tele_client.retrieve_token_from_environment()  
     await tele_client.send_telegram_message("Hello World")
-
+    await tele_client.send_pdf("Yap Ping 2101074 Mid Way Reflection.pdf")
+    
 if __name__ == "__main__":
     asyncio.run(main())

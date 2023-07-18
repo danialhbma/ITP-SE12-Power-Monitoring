@@ -56,6 +56,16 @@ class GrowlightOffAlert(Alert):
         date_range_manager = DateRangeManager()
         start, end = date_range_manager.get_time_range("2h")
         query = f'''from(bucket: "Power Consumption")
+                |> range(start: {start}, stop: {end})
+                |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({{ r with _value: if exists r["_value"] then r["_value"] else 0.0 }}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                '''
+        """
+        query = f'''from(bucket: "Power Consumption")
             |> range(start: {start}, stop:{end})
             |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
             |> aggregateWindow(every: 1h, fn:mean, createEmpty: true)  
@@ -63,7 +73,9 @@ class GrowlightOffAlert(Alert):
             |> difference(columns: ["_value"], keepFirst:false)
             |> first()
             '''
+        """
         self.set_alert_query(query)
+
 
     def _create_alert_message(self, alert_state: AlertState, time, exception=""):
         # Creates alert message object
