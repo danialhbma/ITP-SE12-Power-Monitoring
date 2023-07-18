@@ -1,0 +1,365 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Sensorsr to DB",
+        "disabled": false,
+        "info": "Sends data from sensors publishing data via MQTT to InfluxDB"
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "67b27a2b37705f56",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "rack1 topics",
+        "topic": "rack1/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dcf74a14a6c5b190",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "77206d24a11788d0"
+            ]
+        ]
+    },
+    {
+        "id": "77206d24a11788d0",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "reformat msg",
+        "func": "// Split the msg.topic based on '/'\nvar topicParts = msg.topic.split('/');\n\n// Extract the different parts of the topic\n// E.g. 'rack1' and 'temperature'\nvar rack = topicParts[0]\nvar typeOfData = topicParts[topicParts.length - 1];\n\n// Combine the extracted parts to form influxDB measurement\n// E.g. 'rack1_temperature'\nvar myMeasurement = rack + '_' + typeOfData\n\n// Convert msg payload from string to float\nvar newMsg = {\n    payload: parseFloat(msg.payload)\n};\n\nnewMsg.topic = typeOfData\nnewMsg.measurement = myMeasurement\n\n// Send the message to InfluxDB\nreturn newMsg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "e641d875fee60868",
+                "0e1cda2f6a7c35d1"
+            ]
+        ]
+    },
+    {
+        "id": "630df4b9daf8c6b2",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "04d549fdfe279be2",
+        "name": "CO2 Bucket",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "CO2",
+        "x": 757.0000267028809,
+        "y": 209.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "daa6d721987bae27",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "04d549fdfe279be2",
+        "name": "Temperature Bucket",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Temperature",
+        "x": 787.0000267028809,
+        "y": 349.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "611f388db1d9f053",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "04d549fdfe279be2",
+        "name": "Humidity Bucket",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Humidity",
+        "x": 767.0000267028809,
+        "y": 249.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "86336915a3584365",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "04d549fdfe279be2",
+        "name": "Light Bucket",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Light",
+        "x": 756.0000534057617,
+        "y": 295.9999809265137,
+        "wires": []
+    },
+    {
+        "id": "f7634fd3cb196fda",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "rack2 topics",
+        "topic": "rack2/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dcf74a14a6c5b190",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "77206d24a11788d0"
+            ]
+        ]
+    },
+    {
+        "id": "3672c4e022e3f274",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "rack3 topics",
+        "topic": "rack3/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dcf74a14a6c5b190",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "77206d24a11788d0"
+            ]
+        ]
+    },
+    {
+        "id": "d554f1700ac9b710",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "rack4 topics",
+        "topic": "rack4/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dcf74a14a6c5b190",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "77206d24a11788d0"
+            ]
+        ]
+    },
+    {
+        "id": "e641d875fee60868",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "co2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "humidity",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "light",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "water",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ambient",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "630df4b9daf8c6b2"
+            ],
+            [
+                "611f388db1d9f053"
+            ],
+            [
+                "86336915a3584365"
+            ],
+            [
+                "daa6d721987bae27"
+            ],
+            [
+                "75382625ddd157db"
+            ],
+            [
+                "86b960cd85f9c1fc"
+            ]
+        ],
+        "info": "sorts msg to corresponding buckets based on the msg topic"
+    },
+    {
+        "id": "0e1cda2f6a7c35d1",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug sensor data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e782ea59280d4907",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get sensor data from broker",
+        "info": "test\n",
+        "x": 160,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "75382625ddd157db",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "04d549fdfe279be2",
+        "name": "Water Bucket",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Water",
+        "x": 760,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "86b960cd85f9c1fc",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "04d549fdfe279be2",
+        "name": "Ambient Bucket",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Test",
+        "x": 760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "dcf74a14a6c5b190",
+        "type": "mqtt-broker",
+        "name": "Google Cloud Broker",
+        "broker": "35.198.233.52",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "04d549fdfe279be2",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "Google Cloud DB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://35.198.233.52:8086/",
+        "rejectUnauthorized": true
+    }
+]
