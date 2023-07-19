@@ -80,5 +80,10 @@ class InfluxDBDataFrameHandler:
         unique_values = df[column_name].unique()
         return unique_values.tolist()
     
+    def get_measurements_in_bucket(self, dataframe):
+        measurements = dataframe["_measurement"].unique()
+        return measurements
+    
     def get_slice(self, df, column_name):
         return df[column_name]
+    

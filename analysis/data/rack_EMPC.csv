@@ -1,0 +1,28 @@
+Device Name,Estimated Power Consumption,Rack No,Plant Type,Growth
+Rack 1 Light,0,1,lettuce,new
+Rack 1 Timer,0,1,lettuce,new
+Rack 1 Water,0,1,lettuce,new
+Rack 2 Light,0,2,lettuce & sorrel,growing
+Rack 2 Timer,0,2,lettuce & sorrel,growing
+Rack 2 Water,0,2,lettuce & sorrel,growing
+Rack 3 Light,0,3,strawberry,growing
+Rack 3 Timer,0,3,strawberry,growing
+Rack 3 Water,0,3,strawberry,growing
+Rack 4 Light,0,4,strawberry,growing
+Rack 4 Timer,0,4,strawberry,growing
+Rack 4 Water,0,4,strawberry,growing
+Rack 5 Light,0,5,strawberry,growing
+Rack 5 Timer,0,5,strawberry,growing
+Rack 5 Water,0,5,strawberry,growing
+Rack 6 Light,0,6,basil,new
+Rack 6 Timer,0,6,basil,new
+Rack 6 Water,0,6,basil,new
+Rack 7 Light,0,7,strawberry,growing
+Rack 7 Timer,0,7,strawberry,growing
+Rack 7 Water,0,7,strawberry,growing
+Rack 8 Light,0,8,empty,empty
+Rack 8 Timer,0,8,empty,empty
+Rack 8 Water,0,8,empty,empty
+Rack 9 Light,0,9,strawberry,growing
+Rack 9 Timer,0,9,strawberry,growing
+Rack 9 Water,0,9,strawberry,growing

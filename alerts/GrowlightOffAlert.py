@@ -64,21 +64,10 @@ class GrowlightOffAlert(Alert):
                 |> difference(columns: ["_value"], keepFirst: false)
                 |> first()
                 '''
-        """
-        query = f'''from(bucket: "Power Consumption")
-            |> range(start: {start}, stop:{end})
-            |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
-            |> aggregateWindow(every: 1h, fn:mean, createEmpty: true)  
-            |> fill(column: "_value", usePrevious: true)
-            |> difference(columns: ["_value"], keepFirst:false)
-            |> first()
-            '''
-        """
         self.set_alert_query(query)
 
-
     def _create_alert_message(self, alert_state: AlertState, time, exception=""):
-        # Creates alert message object
+        """ Creates alert message object """
         alert_message = GrowlightOffAlertMessage(self.alert_id, self.measurement_name)
         alert_message.format_message(alert_state, time, exception)
         return alert_message

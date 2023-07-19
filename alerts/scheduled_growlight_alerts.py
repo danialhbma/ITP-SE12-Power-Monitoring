@@ -28,6 +28,7 @@ async def main():
     telegram_alert_manager.add_alert(rack_1_off_alert)
     telegram_alert_manager.add_alert(rack_2_off_alert)
     telegram_alert_manager.add_alert(rack_3_off_alert)
+    
     telegram_alert_manager.execute_alerts()
     telegram_alert_manager.sort_alert_by_states()
     telegram_alert_manager.group_messages(telegram_alert_manager.alerting_list) # using self.alerting_list since we do not want to send out nodata alerts
