@@ -21,19 +21,22 @@ TelegramAlertManager: Class responsible for managing a list of alerts, executing
 """
 
 class AlertState(Enum):
-    """ Alerts may exists in one of the following states 
-    OK (no action needed), ALERTING (send telegram alert) and NODATA (no data received)"""
+    """ 
+    Alerts may exists in one of the following states 
+    OK (no action needed), ALERTING (send telegram alert) and NODATA (no data received)
+    """
     OK = "OK"
     ALERTING = "ALERTING"
     NODATA = "NODATA"
     ERROR = "ERROR"
 
-class AlertMessage(ABC):
+class AlertMessage():
     def __init__(self, message_id):
         """Repreesentation of the alert message that will be sent via Telegram"""
         self.message_id = message_id
         self.summary = "Alert Summary: "
         self.description = "Description: "
+        self.message = ""
   
     @abstractmethod
     def format_message(self) -> str:
@@ -60,7 +63,7 @@ class Alert(ABC):
         self.alert_query = query
     
     def set_alert_message(self, alert_message: AlertMessage):
-        self.alert_message = AlertMessage 
+        self.alert_message = alert_message
 
     def update_alert_state(self, state:str):
         """Updates the alert state"""
@@ -79,7 +82,8 @@ class Alert(ABC):
 
     @abstractmethod
     def _create_alert_message(self) -> AlertMessage:
-        raise NotImplementedError(" Subclasses must override the 'create_alert_message' method to create and return an AlertMessage.")
+        """Creates an empty alert message"""
+        raise NotImplementedError("Subclasses must override the 'evaluation' method to perform alert evaluation and return an AlertState.")
     
     def print_alert_details(self):
         """Logging function to print Alert Object information"""
@@ -87,8 +91,12 @@ class Alert(ABC):
                         f"Evaluation Interval: {self.evaluation_interval}\n" \
                         f"Alert Group: {self.alert_group}\n" \
                         f"Alert State: {self.alert_state}\n" \
-                        f"Alert Query: {self.alert_query}\n"\
-                        f"{self.alert_message.message}\n"
+                        f"Alert Query: {self.alert_query}\n"
+        try:
+            alert_details += f"{self.alert_message.message}\n"
+        except AttributeError as e:
+            print(f"AlertMessageObject not created: {e}")
+
         print(alert_details)
 
 class TelegramAlertManager:
@@ -175,11 +183,10 @@ class TelegramAlertManager:
         count = alert_group_message.count(subtring)
         return count
 
-
     async def send_message_in_groups(self, alert_group_messages=None):
+        """Sends all messages in an alert_group"""
         if alert_group_messages is None:
             alert_group_messages = self.alert_group_messages
-
         
         for alert_group in alert_group_messages.keys():
             title = f"Alert Group: {alert_group}\n\n"

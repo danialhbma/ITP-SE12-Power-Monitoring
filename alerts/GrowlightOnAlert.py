@@ -60,14 +60,14 @@ class GrowlightOnAlert(Alert):
                 |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
                 |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
                 |> fill(column: "_value", usePrevious: true)
-                |> map(fn: (r) => ({{ r with _value: if exists r["_value"] then r["_value"] else 0.0 }}))
+                |> map(fn: (r) => ({{ r with _value: if exists r["_value"] then r["_value"] else 0.0}}))
                 |> difference(columns: ["_value"], keepFirst: false)
                 |> first()
                 '''
         self.set_alert_query(query)
 
     def _create_alert_message(self, alert_state: AlertState, time, exception=""):
-        # Creates alert message object
+        """ Creates alert message object """
         alert_message = GrowlightOnAlertMessage(self.alert_id, self.measurement_name)
         alert_message.format_message(alert_state, time, exception)
         return alert_message
