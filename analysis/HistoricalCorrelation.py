@@ -26,4 +26,4 @@ calculator.calculate_historical_correlations(result)
 calculator.print_historical_correlations()
 
 plotter = CorrelationPlotter(calculator.correlations)
-plotter.plot_correlation_matrix("Historical Correlation")
+plotter.plot_correlation_matrix("Historical Weather data vs Historical Farm Power Consumption")

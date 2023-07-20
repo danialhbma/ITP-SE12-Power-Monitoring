@@ -15,132 +15,68 @@ URL = "http://35.198.233.52:8086"
 INFLUXDB_TOKEN= "n4fnErcu2V0FlN_SX6JV99UhxtsjSTV_CKA--mtv3AsVMlxG0rRx_lYyLZS03Iuc7SlmfG-kpLX9CHvwgTQBYw==" 
 INFLUXDB_ORG = "my-org"
 
-
 # Output directory for plots
 OUTPUT_DIRECTORY = "results"
 
 class CorrelationPlotter():
-    """Class responsible for parsing the correlations dictionary that CorrelationCalculator will provide"""
+    """Converts a correlation matrix into a heatmap"""
     def __init__(self, correlations:dict):
-        """Assumes the correlations dictionary follows the format of {var 1 vs var 2}: {correlation_score}"""
         self.correlations = correlations
-        
+
     def create_correlation_matrix(self):
-        variables = list(set([key.split(' vs ')[0] for key in self.correlations]))
-
-        # Create an empty correlation matrix
-        correlation_matrix = np.zeros((len(variables), len(variables)))
-
-        # Populate the correlation matrix
+        self.labels = self.get_labels()
+        correlation_matrix = np.zeros((len(self.labels), len(self.labels)))
         for key, value in self.correlations.items():
             var1, var2 = key.split(' vs ')
-            i = variables.index(var1)
-            j = variables.index(var2)
+            i = self.labels.index(var1)
+            j = self.labels.index(var2)
             correlation_matrix[i, j] = value
         return correlation_matrix
-    
-    def plot_correlation_matrix(self, title="Correlation Matrix"):
-        # Create correlation matrix
-        self.correlation_matrix = self.create_correlation_matrix()
 
-        # Get the number of variables
+    def plot_heatmap(self, ax, fontsize=12):
         num_variables = self.correlation_matrix.shape[0]
+        heatmap = ax.imshow(self.correlation_matrix, cmap='coolwarm')
+        cbar = plt.colorbar(heatmap, ax=ax, shrink=0.6, aspect=30, pad=0.02)
+        ax.set_xticks(np.arange(num_variables))
+        ax.set_yticks(np.arange(num_variables))
+        ax.set_xticklabels(np.arange(num_variables) + 1, ha='right', fontsize=fontsize)
+        ax.set_yticklabels(np.arange(num_variables) + 1, fontsize=fontsize)
+        ax.set_aspect('equal')
 
-        # Generate tick labels based on the variable indices
-        tick_labels = self.get_labels()
+        # Add correlation values to the heatmap
+        for i in range(num_variables):
+            for j in range(num_variables):
+                text = ax.text(j, i, np.round(self.correlation_matrix[i, j], 2),
+                               ha="center", va="center", color="black", fontsize=fontsize-2)
 
-        # Create the figure and axes
-        fig, axs = plt.subplots(nrows=2, gridspec_kw={'height_ratios': [10, 1]}, figsize=(8, 10))
-
-        # Create the heatmap
-        heatmap = axs[0].imshow(self.correlation_matrix, cmap='coolwarm')
-
-        # Add colorbar
-        cbar = plt.colorbar(heatmap, ax=axs[0], shrink=0.6, aspect=30, pad=0.02)
-
-        # Set tick labels and positions
-        axs[0].set_xticks(np.arange(num_variables))
-        axs[0].set_yticks(np.arange(num_variables))
-        axs[0].set_xticklabels(np.arange(num_variables) + 1, rotation=45, ha='right')
-        axs[0].set_yticklabels(np.arange(num_variables) + 1)
-
-        # Center the heatmap
-        axs[0].set_aspect('equal')
-
-        # Set title
-        axs[0].set_title(title)
-
-        # Create a table for variable legend
+    def plot_table(self, ax, fontsize=12):
         table_data = [['ID', 'Variable']]
-        for i, var in enumerate(tick_labels):
-            table_data.append([f"G{i + 1}", var])
-
-        # Define table properties
-        table = axs[1].table(cellText=table_data, colLabels=None, cellLoc='center', loc='center', bbox=[0, 0, 1, 1])
-
-        # Set table properties
+        for i, var in enumerate(self.labels):
+            table_data.append([f"{i + 1}", var])
+        table = ax.table(cellText=table_data, cellLoc='center', loc='center', bbox=[0, 0, 1, 1], colWidths=[0.1, 0.9])
         table.auto_set_font_size(False)
-        table.set_fontsize(12)
-        table.scale(1, 1.5)  # Adjust the scale to change the row height
-
-        # Set cell alignment and borders
+        table.set_fontsize(fontsize)
         for key, cell in table.get_celld().items():
             if key[0] == 0:  # Header cells
                 cell.set_text_props(weight='bold', ha='center')
                 cell.set_edgecolor('black')
-                cell.set_linewidth(1)
+                cell.set_linewidth(2)
             else:  # Data cells
                 cell.set_edgecolor('gray')
-                cell.set_linewidth(0.5)
+                cell.set_linewidth(1.5)
+        ax.axis('off')
 
-        # Hide ticks and labels for table
-        axs[1].axis('off')
-        output_path = os.path.join(OUTPUT_DIRECTORY, title)
-        plt.savefig(output_path)
-
-    """
-    def plot_correlation_matrix(self, title="correlations"):
-        # Create correlation matrix
+    def plot_correlation_matrix(self, title="Correlation Matrix", fontsize=12):
         self.correlation_matrix = self.create_correlation_matrix()
-
-        # Get the number of variables
-        num_variables = self.correlation_matrix.shape[0]
-
-        # Generate tick labels based on the variable indices
-        tick_labels = self.get_labels()
-
-        # Create the figure and axes
-        fig, ax = plt.subplots()
-
-        # Create the heatmap
-        heatmap = ax.imshow(self.correlation_matrix, cmap='coolwarm')
-
-        # Add colorbar
-        cbar = plt.colorbar(heatmap)
-
-        # Set tick labels and positions
-        ax.set_xticks(np.arange(num_variables))
-        ax.set_xticklabels(tick_labels, rotation=45, ha="right")  # Rotate x-axis tick labels
-
-        # Add padding between each label
-        ax.set_yticks(np.arange(num_variables))
-        ax.set_yticklabels(tick_labels)
-
-        # Center the heatmap
-        ax.set_aspect('equal')
-
-        # Set title
-        ax.set_title(title)
-
-        # Adjust subplot parameters for a tight layout
-        fig.tight_layout(pad=2.0)
-
-        # Display the plot
+        fig, axs = plt.subplots(nrows=2, gridspec_kw={'height_ratios': [8, 1]}, figsize=(8, 10))
+        axs[0].set_title(title)
+        self.plot_heatmap(axs[0], fontsize)
+        self.plot_table(axs[1], fontsize)
+        plt.tight_layout()  # Adjust subplot parameters to give specified padding.
         output_path = os.path.join(OUTPUT_DIRECTORY, title)
         plt.savefig(output_path)
-    """
+
     def get_labels(self):
-        # Extracts labels from the correlation dictionary
         variables = set()
         for key in self.correlations.keys():
             var1, var2 = key.split(' vs ')
@@ -148,6 +84,14 @@ class CorrelationPlotter():
             variables.add(var2)
         return sorted(variables)
 
+    
+def set_dynamic_title(self, ax, title, fontsize):
+    # Calculate the appropriate font size based on the length of the title text
+    title_fontsize = min(16, max(10, fontsize - 2 * len(title)))
+
+    # Set the title with the dynamic font size
+    ax.set_title(title, fontsize=title_fontsize)
+    
 class CorrelationCalculator():
     """
     Determines correlation between variables.

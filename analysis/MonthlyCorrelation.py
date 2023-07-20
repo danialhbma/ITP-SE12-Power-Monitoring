@@ -4,17 +4,17 @@ from CorrelationCalculator import CorrelationCalculator, CorrelationPlotter
 bucket_configs = [
     {
         'bucket_name': 'Temperature',
-        'time_frame': '16d',
+        'time_frame': '30d',
         'time_interval': '30m'
     },
     {
         'bucket_name': 'Power Consumption',
-        'time_frame': '16d',
+        'time_frame': '30d',
         'time_interval': '1h'
     },
         {
         'bucket_name': 'WeatherAPI',
-        'time_frame': '16d',
+        'time_frame': '30d',
         'time_interval': '30m'
     },
     # Add more bucket configurations if needed
@@ -30,4 +30,4 @@ for bucket_config in bucket_configs:
 calculator.calculate_historical_correlations(result)
 calculator.print_historical_correlations()
 plotter = CorrelationPlotter(calculator.correlations)
-plotter.plot_correlation_matrix("Monthly corrleation")
+plotter.plot_correlation_matrix("WeatherAPI, Farm Temperature & Farm Power Consumption")

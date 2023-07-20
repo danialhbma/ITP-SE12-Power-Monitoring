@@ -26,3 +26,4 @@
 59 23 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/docker-containers/docker_logs && python3 generate_docker_logs.py  >> /home/yappi/ITP-SE12-Power-Monitoring/docker-containers/docker_logs/output.txt
 59 23 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/telegram_service && python3 SystemMonitoringAgent.py >> monitoring_reports.txt 2>&1
 5 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output.txt
+* */6 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_data_gap_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/data_gap_output.txt

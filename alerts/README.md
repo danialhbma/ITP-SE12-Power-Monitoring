@@ -18,9 +18,9 @@ The alerting system for the grow lights operates based on the principle that ale
 * Rack 3 +270W (ON), -270W (OFF)
 
 ## Data Gap Alerts
-A data gap refers to the absence of a data point in our InfluxDB server. There can be various reasons for data gaps, such as sensor disconnection, network instability, or API timeouts. To ensure the effectiveness of recovery mechanisms like automatic network reconnect, we have set up Data Gap alerts. These alerts notify us whenever the data gap exceeds a specified threshold (default: 0.3) i.e., 30%. 
+A data gap refers to the absence of a data point in our InfluxDB server. There can be various reasons for data gaps, such as sensor disconnection, network instability, or API timeouts. To ensure the effectiveness of recovery mechanisms like automatic network reconnect, we have set up Data Gap alerts. These alerts notify us whenever the data gap exceeds a specified threshold (**default: 0.3**) i.e., 30%. 
 
-The alert mechanism works by retrieving all the data points within a specified time range (default: 6 hours) from the database. An aggregation operation is then performed with a specified interval (default: 30 minutes), and the *createEmpty* parameter is set to true. This ensures that missing time points are populated with **none** values.
+The alert mechanism works by retrieving all the data points within a specified time range (**default: 6 hours**) from the database. An aggregation operation is then performed with a specified interval (**default: 30 minutes**), and the *createEmpty* parameter is set to true. This ensures that missing time points are populated with **none** values.
 
 During the processing of the query result, the data is read into a dataframe, and the **none** values are transformed into **NaN** (Not a Number) values. The number of NaN fields is then compared to the total number of fields retrieved to calculate the data gap percentage. This percentage is evaluated against the data gap threshold to determine whether an alert needs to be sent out.
 
@@ -31,3 +31,6 @@ During the processing of the query result, the data is read into a dataframe, an
 # CRON Expression
 The ``scheduled_growlight_alerts.py``, was configured to be evaluated at the 5th minute of every hour. This 5 minute buffer was incorporated to ensure sensors would have enough time to write new data to database i.e., network latency buffer.
 * ``5 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output.txt`` 
+
+The ``scheduled_data_gap_alerts.py`` was configured to be evaluated every 6 hours. 
+* ``** */6 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_data_gap_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/data_gap_output.txt``
