@@ -205,3 +205,26 @@ class CorrelationCalculator():
     def print_correlations(self):
         for key, correlation in self.correlations.items():
             print(f'{key}: {correlation}')
+    
+    ''' function to remove all weak correlation result so as to not clutter the heatmap'''
+    def remove_weak_correlation(self, threshold=0.4, target_variable='Daily Farm Power Consumption'):
+        # Find the variables involved in keys with strong relation to the target_variable
+        strong_target_variables = set()
+        for key, value in self.correlations.items():
+            if (target_variable in key) and not ((value > -threshold and value < 0) or (value > 0 and value < threshold)):
+                var1, var2 = key.split(' vs ')
+                strong_target_variables.add(var1)
+                strong_target_variables.add(var2)
+
+        # Create a new dictionary to store the filtered correlations
+        filtered_correlations = {}
+
+        # Iterate through the correlations dictionary and filter out weak correlations
+        for key, value in self.correlations.items():
+            var1, var2 = key.split(' vs ')
+            if (var1 in strong_target_variables and var2 in strong_target_variables):
+                filtered_correlations[key] = value
+
+        # Update the correlations dictionary with the filtered correlations
+        self.correlations = filtered_correlations
+        return self.correlations
