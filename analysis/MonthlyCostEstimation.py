@@ -315,6 +315,6 @@ def get_total_edpc():
 # check if csv files exists
 if os.path.isfile(PREDICTIONS_CSV) & os.path.isfile(RACK_EMPC_CSV):
     calculate_cost()
-    # get_total_edpc()
+    get_total_edpc()
 else:
     print("CSV files doesn't exist")
