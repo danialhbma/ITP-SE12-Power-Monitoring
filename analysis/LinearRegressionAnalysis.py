@@ -10,9 +10,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 TIMEZONE = timezone('Asia/Singapore')
+# CSV paths
 PC_CSV = 'analysis/data/Power Consumption.csv'
 MODEL_PATH = 'analysis/model/pc_linear_regression_model.pkl'
+PREDICTIONS_CSV = 'analysis/data/monthly_predictions.csv'
 
+''' data_preprocessing function is used to process the 
+    csv file and handle any missing data accordingly '''
 def data_preprocessing(csv_file):
     # Read the CSV file and handle any missing values
     power_consumption = pd.read_csv(csv_file)
@@ -63,6 +67,9 @@ def data_preprocessing(csv_file):
 
     return processed_data
 
+''' get_daily_values function is used to split the dataframe based
+    on the device type (Light, Timer & Water), calculate
+    their daily values and combine them back into 1 dataframe'''
 def get_daily_values(dataframe):
     # Get daily power consumption for each device in Watts (W)
     # Convert _time column to datetime
@@ -93,6 +100,8 @@ def get_daily_values(dataframe):
 
     return merged_daily
 
+''' data_preparation function is used to prepare the necessary 
+    variables (x, y) for linear regression model training'''
 def data_preparation(dataframe):
     # Get the daily average dataframe
     averaged_dataframe = get_daily_values(dataframe)
@@ -119,6 +128,8 @@ def data_preparation(dataframe):
 
     return x_train, x_test, y_train, y_test, features
 
+''' model_training function is used to train new model or 
+    retrain a model whenever needed'''
 def model_training(x_train, x_test, y_train, y_test):
     # Use this method whenever model needs to be refitted or if model doesn't exists
     # Create instance of LinearRegression class
@@ -131,7 +142,7 @@ def model_training(x_train, x_test, y_train, y_test):
     y_pred = model.predict(x_test)
 
     # Save the model to a file
-    joblib.dump(model, 'analysis/model/pc_linear_regression_model.pkl')
+    joblib.dump(model, MODEL_PATH)
 
     # # Evaluate the model's performance
     # mse = mean_squared_error(y_test, y_pred)
@@ -152,6 +163,9 @@ def model_training(x_train, x_test, y_train, y_test):
     # plt.title("Residual Analysis")
     # plt.show()
 
+''' formatted_test_model_predictions function is used to test out
+    the predictions of model and display it a formatted dataframe
+    for readability'''
 def formatted_test_model_predictions(model, x_test):
     # This is to view the model predictions on x_test in a readable format (Maps the predictions to respective device, day and month)
     # sort the x_test by the 'day of month' and 'month' column
@@ -186,6 +200,8 @@ def formatted_test_model_predictions(model, x_test):
 
     return result_df
 
+''' get_monthly_predictions function is used to predict the daily
+    values of each device for the entire month'''
 def get_monthly_predictions(model, features):
     # Get the current month and year
     current_month = datetime.now().month
@@ -233,8 +249,11 @@ def get_monthly_predictions(model, features):
     monthly_predictions_df = format_dataframe(predictions_df)
 
     # export the dataframe as a csv
-    monthly_predictions_df.to_csv('analysis/data/monthly_predictions.csv', index=False)
+    monthly_predictions_df.to_csv(PREDICTIONS_CSV, index=False)
 
+    print('monthly_predictions.csv created')
+
+''' format_dataframe function is used to format the dataframe for readability'''
 def format_dataframe(df):
     # Create a list to store the device names, day_of_month and month
     device_names = []
@@ -267,8 +286,9 @@ if os.path.isfile(PC_CSV):
     x_train, x_test, y_train, y_test, features = data_preparation(processed_data)
     # Check if the model exists
     if os.path.isfile(MODEL_PATH):
-        get_monthly_predictions('analysis/model/pc_linear_regression_model.pkl', features)
+        get_monthly_predictions(MODEL_PATH, features)
     else:
         model_training(x_train, x_test, y_train, y_test)
+        get_monthly_predictions(MODEL_PATH, features)
 else:
     print("CSV file doesn't exist")    

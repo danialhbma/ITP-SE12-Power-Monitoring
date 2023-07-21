@@ -148,26 +148,30 @@ class CorrelationCalculator():
         return averages
  
     def process_weatherapi_dataframe(self, bucket_dataframe):
-        selected_fields = ['temp_max', 'temp_min', 'temperature']
+        # Get the indexes of rows where 'weather_main' is in the '_field' column
+        rows_to_drop = bucket_dataframe[bucket_dataframe['_field'].str.contains('weather_main')].index
+
+        # Drop the rows with the specified indexes
+        filtered_dataframe = bucket_dataframe.drop(index=rows_to_drop)
+        
         averages = {}
 
         # Convert '_time' column to datetime type
-        bucket_dataframe['_time'] = pd.to_datetime(bucket_dataframe['_time'])
+        filtered_dataframe['_time'] = pd.to_datetime(filtered_dataframe['_time'])
 
-        # Calculate daily average values for each selected weather field
-        for field in selected_fields:
-            field_data = bucket_dataframe[bucket_dataframe['_field'] == field]
-            daily_averages = field_data.groupby(bucket_dataframe['_time'].dt.date)['_value'].mean().values.astype(float)
+        # Calculate daily average values for each remaining weather field
+        for field in filtered_dataframe['_field'].unique():
+            field_data = filtered_dataframe[filtered_dataframe['_field'] == field]
+            daily_averages = field_data.groupby(filtered_dataframe['_time'].dt.date)['_value'].mean().values.astype(float)
             averages[field] = daily_averages
 
         return averages
-
 
     def process_dataframe(self, bucket_name, bucket_dataframe):
         # Convert '_time' column to datetime type
         bucket_dataframe['_time'] = pd.to_datetime(bucket_dataframe['_time'])
 
-        # Combine all values from different measurements into one array
+        # Combine all values from different measurements into one list
         combined_values = bucket_dataframe.groupby(bucket_dataframe['_time'].dt.date)['_value'].apply(list).values.tolist()
 
         # Calculate the average for each date
@@ -182,7 +186,7 @@ class CorrelationCalculator():
         """Returns a correlation key - keys will be in the format of variable_1 vs variable_2"""
         return f'{variable_1} vs {variable_2}' 
 
-    def calculate_historical_correlations(self, data_array) -> dict: 
+    def calculate_correlations(self, data_array) -> dict: 
         """
         Creates and returns a correlations dictionary.
         {var1 vs var2}:{correlation}
@@ -198,6 +202,6 @@ class CorrelationCalculator():
         self.correlations = correlations
         return self.correlations
 
-    def print_historical_correlations(self):
+    def print_correlations(self):
         for key, correlation in self.correlations.items():
             print(f'{key}: {correlation}')
