@@ -3,7 +3,6 @@ import calendar
 import datetime
 import os
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 
 # Paths
 PREDICTIONS_CSV = 'analysis/data/monthly_predictions.csv'
@@ -82,7 +81,7 @@ def get_other_empc():
     # Indoor aircon unit
     indoor_aircon_empc = INDOOR_AIRCON_FAN * 24 * num_days 
     # Outdoor aircon unit
-    outdoor_aircon_empc = (((OUTDOOR_AIRCON_COOLING_MAX + OUTDOOR_AIRCON_COOLING_MIN)/2) + ((OUTDOOR_AIRCON_COMPRESSOR_MAX + OUTDOOR_AIRCON_COMPRESSOR_NORM)/2) + OUTDOOR_AIRCON_FAN) * 24 * num_days 
+    outdoor_aircon_empc = (((OUTDOOR_AIRCON_COOLING_MAX + OUTDOOR_AIRCON_COOLING_MIN)/2) + OUTDOOR_AIRCON_COMPRESSOR_NORM + OUTDOOR_AIRCON_FAN) * 24 * num_days  
     # to be updated once more data for ambient comes in
     ceiling_light_empc = CEILING_LIGHT_POWER * NO_OF_LIGHTS * 1 * num_days
 
@@ -152,7 +151,8 @@ def plot_bar_chart(df, y_col, title, file_name):
     df['Plant Type'] = df['Plant Type'].fillna('')
 
     # Create a new column with the label
-    df['Label'] = df.apply(lambda row: f"{row['Consumer']} ({row['Plant Type']})" if row['Plant Type'] else row['Consumer'], axis=1)
+    df['Label'] = df['Consumer']
+    # df['Label'] = df.apply(lambda row: f"{row['Consumer']} ({row['Plant Type']})" if row['Plant Type'] else row['Consumer'], axis=1)
     
     # Plotting chart
     plt.figure(figsize=(10, 6))
@@ -277,12 +277,12 @@ def get_rack_monthly_edpc():
 def get_other_edpc():
     # edpc based on each device's specifications, operating hours and number of days
 
-    # Indoor aircon unit (operating input + indoor fan motor)
-    indoor_aircon_edpc = 120 * 24
-    # Outdoor aircon unit (compressor + outdoor fan motor)
-    outdoor_aircon_edpc = (((4795 + 855)/2) + ((3040 + 2820)/2) + 85) * 24 
+    # Indoor aircon unit
+    indoor_aircon_edpc = INDOOR_AIRCON_FAN * 24
+    # Outdoor aircon unit
+    outdoor_aircon_edpc = (((OUTDOOR_AIRCON_COOLING_MAX + OUTDOOR_AIRCON_COOLING_MIN)/2) + OUTDOOR_AIRCON_COMPRESSOR_NORM + OUTDOOR_AIRCON_FAN) * 24
     # to be updated once more data for ambient comes in
-    ceiling_light_edpc = 36 * 6 * 1
+    ceiling_light_edpc = CEILING_LIGHT_POWER * NO_OF_LIGHTS * 1
 
     return indoor_aircon_edpc, outdoor_aircon_edpc, ceiling_light_edpc
 
