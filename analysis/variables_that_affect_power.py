@@ -97,14 +97,12 @@ def generate_pie_chart(estimated_power_dict, filename):
     plt.title(filename, pad=40)
     
     plt.pie(data,
-            labels = labels,
+            labels=['']*len(labels),
             autopct = lambda x: f'{x:.2f}%\n({(x/100)*sum(data):.2f} kWh)',
-            pctdistance = 1.2,
-            labeldistance=1.4,
-            textprops={'horizontalalignment': 'center',
-                       'verticalalignment':'top'})
+            pctdistance = 1.2)
     
-    plt.legend(loc='lower right',
+    plt.legend(labels=labels,
+            loc='lower right',
                bbox_to_anchor=(1, 0),
                title='Variables')
     
