@@ -32,7 +32,7 @@ class DataGapAlert(Alert):
         # Retrieve list of measurements in bucket
         measurements = df['_measurement'].unique()
         for measurement in measurements:
-            if measurement == "rack_3_Light" or measurement == "rack_3_Water":
+            if measurement == "Rack_3_Light" or measurement == "Rack_3_Water":
                 # Rack_3_Light uses the small tuya socket which only sends data when there are changes in power consumption.
                 # Excluded from data gap analysis. 
                 continue

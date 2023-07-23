@@ -54,6 +54,12 @@ System monitoring plays a vital role in cloud deployments, ensuring the health a
 ## Threshold Analysis & Telegram Alerts
 Grafana was configured to detect and alert abnormal conditions such as high temperature, high CO2 levels, and disrupted water flow rates. However, we encountered difficulties when setting up alerts to notify whenever the grow lights switched on or off. To overcome this challenge, we developed our own Python-based solution called [Telegram Alert Module](../alerts/TelegramAlertModule.py). This module offers a customized alert system that integrates with our existing infrastructure. It utilizes several key components, including our custom [InfluxDB Reader](../InfluxDB/InfluxDBReader.py), [DateRangeManager](../InfluxDB/DateRangeManager.py) and [DataFrameHandler](../InfluxDB/InfluxDBDataFrameHandler.py) classes to directly query InfluxDB database, to retrieve data stored and to perform threshold analysis. It also uses [TelegramService](../telegram_service/TelegramService.py) to send out telegram alerts. 
 
+We also created our own data gap alerts that would send out an alert whenever data gaps exceeded a certain threshold. 
+
 ###  Grow light Alerts 
 Grow light alerts were scheduled to run at the 5th minute of every hour using the CRON exrpession below. 
 * ``5 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output.txt``
+
+### Data Gap Alerts
+Data gap alerts were scheduled to run every 6 hours using the CRON expression below.
+* ``*/6 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_data_gap_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/data_gap_output.txt``

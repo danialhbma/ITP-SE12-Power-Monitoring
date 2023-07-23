@@ -1,0 +1,14 @@
+Consumer,Plant Type,Estimated Power Consumption (kWh),Cost ($),Label
+Rack 1,lettuce,170.14,49.31,Rack 1
+Rack 2,lettuce & sorrel,150.22,43.53,Rack 2
+Rack 3,strawberry,125.18,36.28,Rack 3
+Rack 4,strawberry,125.18,36.28,Rack 4
+Rack 5,strawberry,125.18,36.28,Rack 5
+Rack 6,basil,170.14,49.31,Rack 6
+Rack 7,strawberry,125.18,36.28,Rack 7
+Rack 8,empty,0.0,0.0,Rack 8
+Rack 9,strawberry,125.18,36.28,Rack 9
+Indoor Aircon Unit 1,,89.28,25.87,Indoor Aircon Unit 1
+Indoor Aircon Unit 2,,89.28,25.87,Indoor Aircon Unit 2
+Outdoor Aircon Unit 1,,4263.12,1235.45,Outdoor Aircon Unit 1
+Ceiling Lights,,6.7,1.94,Ceiling Lights
