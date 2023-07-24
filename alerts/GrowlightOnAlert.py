@@ -3,7 +3,7 @@ from DateRangeManager import DateRangeManager
 import pandas as pd  
 
 class GrowlightOnAlert(Alert):
-    def __init__(self, alert_id, threshold:int, measurement_name):
+    def __init__(self, alert_id:str, threshold:int, measurement_name:int):
         # Alert used to determine time when growlight was switched o
         super().__init__(alert_id=alert_id, evaluation_interval="1h", alert_group="Grow Light On Alert")
         self.threshold = threshold 
@@ -11,7 +11,7 @@ class GrowlightOnAlert(Alert):
         self.growlight_switched_on_query()
         self.drm = DateRangeManager()
 
-    def _evaluate_alert(self, wattage) -> AlertState:
+    def _evaluate_alert(self, wattage:int) -> AlertState:
         """ Sets the alert state based on wattage received 
             e.g, if wattage >= 390 W, growlight recently switched on -> send on alert
             if wattage difference ~ 0.98, no change in growlight state i.e., ON-ON-ON, off-off-off, no need to send alert
@@ -66,7 +66,7 @@ class GrowlightOnAlert(Alert):
                 '''
         self.set_alert_query(query)
 
-    def _create_alert_message(self, alert_state: AlertState, time, exception=""):
+    def _create_alert_message(self, alert_state: AlertState, time, exception="") -> AlertMessage:
         """ Creates alert message object """
         alert_message = GrowlightOnAlertMessage(self.alert_id, self.measurement_name)
         alert_message.format_message(alert_state, time, exception)
