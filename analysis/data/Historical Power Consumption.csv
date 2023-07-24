@@ -1,0 +1,9 @@
+_time,_value,_field,_measurement,month,year
+2023-07-14 19:00:00+00:00,13189.2,total_power_consumption,Power Consumption,1,2023
+2023-07-14 19:00:00+00:00,11700.0,total_power_consumption,Power Consumption,10,2022
+2023-07-14 19:00:00+00:00,11913.5,total_power_consumption,Power Consumption,11,2022
+2023-07-14 19:00:00+00:00,14899.9,total_power_consumption,Power Consumption,12,2022
+2023-07-14 19:00:00+00:00,13357.1,total_power_consumption,Power Consumption,2,2023
+2023-07-14 19:00:00+00:00,17601.1,total_power_consumption,Power Consumption,3,2023
+2023-07-14 19:00:00+00:00,26743.5,total_power_consumption,Power Consumption,4,2023
+2023-07-14 19:00:00+00:00,17928.3,total_power_consumption,Power Consumption,5,2023

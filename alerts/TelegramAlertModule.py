@@ -43,7 +43,7 @@ class AlertMessage():
          raise NotImplementedError(" Subclasses must override the 'format_message' method.")
     
 class Alert(ABC):
-    def __init__(self, alert_id, evaluation_interval, alert_group, active_state = True):
+    def __init__(self, alert_id, evaluation_interval, alert_group):
         """
         alert_id: alert name
         evaluation_interval: at which minute / hour should this alert be triggered
