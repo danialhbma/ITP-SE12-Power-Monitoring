@@ -33,7 +33,7 @@ def calculate():
         current_power_consumption = get_water_power_consumption(pc_data_dict) + current_purple_racklight_power + current_white_racklight_power + aircon_power_consumption
         
         # get difference in power consumption
-        difference = result - current_power_consumption
+        difference = round(result - current_power_consumption, 2)
         
     else:
         result = None
