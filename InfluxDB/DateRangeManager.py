@@ -76,7 +76,7 @@ class DateRangeManager:
         except ValueError as e:
             print(f"Error creating time range: {e}")
             return None, None
-        
+    
     def nearest_hour(self, datetime_obj):
         nearest_hour = datetime_obj.replace(minute = 0, second = 0, microsecond = 0)
         print(nearest_hour.isoformat())
@@ -100,7 +100,16 @@ class DateRangeManager:
         # Format the Singapore time in a desired format
         formatted_time = sg_timestamp.strftime('%Y-%m-%d %H:%M:%S')
         return formatted_time
-        
+    
+    def get_time_minus_window(self, window:str):
+        """Returns UTC timestamp by subtracting the specified time window from the current UTC time"""
+        try:
+            current_utc_time = datetime.now(timezone.utc)
+            time_delta = self._parse_window(window)
+            return current_utc_time - time_delta
+        except ValueError as e:
+            print(f"Error getting UTC timestamp after subtracting window {window}: {e}") 
+
 def main():
     drm = DateRangeManager()
     print("{:<35} {}".format("start", "end")) # Formating of start and end headers

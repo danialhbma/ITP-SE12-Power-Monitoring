@@ -119,7 +119,7 @@ class DataGapAlertMessage(AlertMessage):
 
         elif alert_state == AlertState.NODATA:
             self.summary += f"Unable to retrieve data from {self.measurement_name}"
-            self.description += f"Failed to retrieve growlight power consumption from {self.measurement_name} at {time}."
+            self.description += f"Failed to retrieve data from {self.measurement_name} at {time}."
 
         else:
             self.summary += f"Encountered error while executing - [{self.message_id}]."
