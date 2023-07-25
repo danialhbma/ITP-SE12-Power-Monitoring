@@ -1,8 +1,5 @@
 from flask import Flask, request, jsonify
-import pandas as pd
-import os
-from collections import defaultdict
-from analysis.calculate_power_consumption import *
+from analysis.calculate_power_consumption import * 
 
 app = Flask(__name__)
 
