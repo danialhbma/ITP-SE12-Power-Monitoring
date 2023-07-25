@@ -1,17 +1,19 @@
 from flask import Flask, request, jsonify
-from analysis.calculate_power_consumption import * 
+from calculate_power_consumption import * 
 
 app = Flask(__name__)
 
 @app.route("/calculate", methods=["POST"])
 def calculate():
+    pc_path = "Power Consumption.csv"
+
     # get user inputs
-    num_of_purple_led_racks = request.json["num_of_purple_led_racks"]
-    num_of_white_led_racks = request.json["num_of_white_led_racks"]
+    num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
+    num_of_white_led_racks = int(request.json["num_of_white_led_racks"])
     aircon_cooling_capacity = request.json["aircon_cooling_capacity"]
-    aircon_number_of_hours_ran = request.json["aircon_number_of_hours_ran"]
+    aircon_number_of_hours_ran = request.json["aircon_usage_per_day"]
     
-    pc_data_dict, number_of_days_observed = get_pc_data()
+    pc_data_dict, number_of_days_observed = get_pc_data(pc_path)
     if pc_data_dict is not None:
         # get estimated power consumption based on user inputs
         water_power_consumption = get_water_power_consumption(pc_data_dict,
@@ -27,7 +29,8 @@ def calculate():
         result = water_power_consumption + purple_led_power_consumption + white_led_power_consumption + aircon_power_consumption
         
         # get current power consumption based on default values
-        current_power_consumption = get_water_power_consumption(pc_data_dict) + get_racklight_power_consumption(pc_data_dict) + aircon_power_consumption
+        current_purple_racklight_power, current_white_racklight_power = get_racklight_power_consumption(pc_data_dict)
+        current_power_consumption = get_water_power_consumption(pc_data_dict) + current_purple_racklight_power + current_white_racklight_power + aircon_power_consumption
         
         # get difference in power consumption
         difference = result - current_power_consumption

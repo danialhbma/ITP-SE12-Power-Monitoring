@@ -1,7 +1,8 @@
 version: '3'
 services:
   web:
-    build: .
+    build:
+      context: .
     container_name: api
     ports:
       - '8080:8080'
