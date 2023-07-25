@@ -7,6 +7,5 @@ services:
       - '8080:8080'
     volumes:
       - .:/app
-    working_dir: /app
-    command: python app/calculator_app.py
+    command: python calculator_app.py
 
