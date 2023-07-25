@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    container_name: api
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
+    command: python calculator_app.py
+
