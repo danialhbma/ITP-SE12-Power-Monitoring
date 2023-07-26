@@ -9,9 +9,10 @@ DESCRIBE CONTENT IN THIS DIRECTORY
 5. pip install scikit-learn
 6. pip install pandas
 7. pip install pytz
+8. pip install numpy
 
 ## Linear Regression Models
-The linear regression model is used to predict the daily power consumption for the entire current month of each device of the racks that were monitored which is Rack 1, Rack 2 & Rack 3.
+The ``LinearRegressionAnalysis.py`` is used to predict the daily power consumption for the entire current month of each device of the racks that were monitored which is Rack 1, Rack 2 & Rack 3.
 
 ### **How to use**
 Before training the model, we need to preprocess and prepare the dataset first. So, these are the steps taken:
@@ -38,7 +39,7 @@ Then, after these steps, we can proceed with the model training and the monthly 
 
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/1acd815b-48f0-430e-8e65-de2dcfa96c77)
 
-The model_training method takes in x_train, y_train, x_test & y_test variables as its parameters. Then, it will create an instance of the LinearRegression class from sklearn.linear_model and use the x_train & y_train to fit the model. Lastly, it will save the model made into a file for other uses like get_monthly_predictions
+The model_training method takes in x_train, y_train, x_test & y_test variables as its parameters. Then, it will create an instance of the LinearRegression class from sklearn.linear_model and use the x_train & y_train to fit the model. Lastly, it will save the model made into a file for other uses like get_monthly_predictions.
 
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/df900d63-2d9a-4112-88bc-5a05586bc0ce)
 
@@ -46,6 +47,33 @@ The get_monthly_predictions method uses this model to predict the daily power co
 
 ![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/563b4788-c432-455c-a9ee-262a510f690e)
 
-### Historical Correlation
+## Historical Correlation
+The ``HistoricalCorrelation.py`` is used to calculate the correlation between 2 buckets - Historical Power Consumption & Historical Weather Data and produce a heatmap to represent the result. It uses the CorrleationCalculator & CorrelationPlotter classes from the ``CorrelationCalculator.py`` to do this.
+
+### **How to use**
+Inside ``HistoricalCorrelation.py``, we define the buckets that we want to read from as the bucket_configs variable.
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/ab7944fd-3f4c-4052-9985-3e43c628eb33)
+
+Then, we create an instance of the CorrelationCalculator and call the read_data_from_bucket method and pass the bucket_configs as its parameter.
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/f2dbe580-b1d7-449d-859d-0d2f041193b0)
+
+The read_data_from_bucket method will process each bucket as a dataframe and process the dataframe based on the bucket as some buckets only have monthly data while others have daily data and to calculate correlation, each variable needs to have the same amount of data points. Hence, the different processing of each bucket.
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/66207f72-9899-4f63-b6ad-910564f7ffa1)
+
+The output from read_data_from_bucket method will be passed to the calculate_correlations method which will correlate each variable in the output against each other including itself and store the result into a dictionary in this format -  "variable 1 vs variable 2" : result. Then, we create an instance of CorrelationPlotter and call the plot_correlation_matrix method to produce the heatmap for our correlation result.
+
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/122025e1-47bd-483a-8c29-4cd89b738d08)
+
+## Monthly Correlation
+The ``MonthlyCorrelation.py`` works similarly to ``HistoricalCorrelation.py`` but it produces 2 types of heatmap instead - 1 heatmap represents the correlation of WeatherAPI bucket and Internal Farm Conditions bucket (Temperature & Humidity) and the other heatmap represents only the strong correlation between the WeatherAPI bucket, Internal Farm Conditions bucket (Temperature & Humidity) and power consumption (which is a CSV file). 
+
+Inside ``MonthlyCorrelation.py``, we made 2 functions - Correlate_ExtCond_To_IntCond and Correlate_ExtCond_To_IntCond_To_FPC which differentiates the 2 heatmaps. The Correlate_ExtCond_To_IntCond works exactly the same as in ``HistoricalCorrelation.py`` where it will process the bucket_configs and then, calculate the correlation and produce the heatmap.
+
+But for the Correlate_ExtCond_To_IntCond_To_FPC, it has additional steps which are to read the CSV file and store the power consumption value into the output of read_data_from_bucket method. Then, it will calculate the correlation and remove any weak correlation of those variables against power consumption based on the threshold (0 < 0.4 for positive relationship & -0.4 > 0 for negative relationship). Once we remove the weak correlation, we will produce the heatmap.
+
+Threshold is based on https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/11-correlation-and-regression
 
 ## Cost Efficiency
