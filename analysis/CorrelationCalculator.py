@@ -53,9 +53,16 @@ class CorrelationPlotter():
         table_data = [['ID', 'Variable']]
         for i, var in enumerate(self.labels):
             table_data.append([f"{i + 1}", var])
-        table = ax.table(cellText=table_data, cellLoc='center', loc='center', bbox=[0, 0, 1, 1], colWidths=[0.1, 0.9])
+
+        # Calculate cell size based on the number of variables
+        cell_size = max(0.1, len(self.labels) / 100)
+
+        table = ax.table(cellText=table_data, cellLoc='center', loc='center', bbox=[0, 0, 1, 1], colWidths=[cell_size, 1-cell_size])
         table.auto_set_font_size(False)
-        table.set_fontsize(fontsize)
+        
+        # Adjust font size based on the number of variables
+        table.set_fontsize(max(6, fontsize - len(self.labels) / 10))
+
         for key, cell in table.get_celld().items():
             if key[0] == 0:  # Header cells
                 cell.set_text_props(weight='bold', ha='center')
@@ -68,14 +75,14 @@ class CorrelationPlotter():
 
     def plot_correlation_matrix(self, title="Correlation Matrix", fontsize=12):
         self.correlation_matrix = self.create_correlation_matrix()
-        fig, axs = plt.subplots(nrows=2, gridspec_kw={'height_ratios': [8, 1]}, figsize=(8, 10))
+        fig, axs = plt.subplots(nrows=2, gridspec_kw={'height_ratios': [8, 2]}, figsize=(8, 12))
         axs[0].set_title(title)
         self.plot_heatmap(axs[0], fontsize)
         self.plot_table(axs[1], fontsize)
         plt.tight_layout()  # Adjust subplot parameters to give specified padding.
         output_path = os.path.join(OUTPUT_DIRECTORY, title)
         plt.savefig(output_path)
-
+    
     def get_labels(self):
         variables = set()
         for key in self.correlations.keys():
@@ -84,7 +91,11 @@ class CorrelationPlotter():
             variables.add(var2)
         return sorted(variables)
 
-    
+    def add_description_to_plot(self, axes, description):
+        axes.text(0.5, 0.5, description, wrap=True, ha='center', va='center', fontsize=10)
+        axes.axis('off')
+        return axes
+
 def set_dynamic_title(self, ax, title, fontsize):
     # Calculate the appropriate font size based on the length of the title text
     title_fontsize = min(16, max(10, fontsize - 2 * len(title)))
@@ -200,6 +211,7 @@ class CorrelationCalculator():
                 key = self.format_correlation_key(variable1_name, variable2_name)
                 correlations[key] = correlation
         self.correlations = correlations
+
         return self.correlations
 
     def print_correlations(self):
@@ -215,7 +227,7 @@ class CorrelationCalculator():
                 var1, var2 = key.split(' vs ')
                 strong_target_variables.add(var1)
                 strong_target_variables.add(var2)
-
+      
         # Create a new dictionary to store the filtered correlations
         filtered_correlations = {}
 

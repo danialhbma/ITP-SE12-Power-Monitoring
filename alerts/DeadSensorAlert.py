@@ -6,9 +6,9 @@ from datetime import datetime
 class DeadSensorAlert(Alert):
     def __init__(self, alert_id:str, bucket_name:str, alert_evaluation_group:str="Dead Sensor Alert", threshold:str="6h"):
         """
-        Attempts to retrieve all measurements in a bucket, to determine what the most recent data point is.
-        Sends an alert if the time when last data received was is below the threshold. 
-        A Sensor is deemed to be "dead" if its last data sent out exceeds the threshold.
+        This alert monitors all measurements in a specific InfluxDB bucket, keeping track of the timestamps of their most recent data points.
+        An alert is issued if the latest data point of a measurement is older than the specified threshold. 
+        Hence, a sensor is classified as 'dead' if it hasn't transmitted any data within the defined threshold period.
         """
         super().__init__(alert_id=alert_id, evaluation_interval="6h", alert_group=alert_evaluation_group)
         self.bucket_name = bucket_name

@@ -4,13 +4,14 @@ import pandas as pd
 
 class DataGapAlert(Alert):
     """
-        DataGapAlert will be sent if one or more measurement(s) within a bucket exceeds the data gap threshold.
-        Args:
-            alert_id (str): The ID of the alert.
-            threshold_percent (float): The threshold percentage for data gap. Defaults to 0.3 i.e, canot have more than 0.3 or 30% missing data
-            bucket_name (str): The name of the InfluxDB bucket. 
-            evaluation_interval (str, optional): The time window used for the query. Defaults to "6h".
-            aggregate_window_interval (str, optional): The window used for aggregation. Defaults to "30m".
+    DataGapAlert is activated when one or more measurements within an InfluxDB bucket show data gaps that exceed a predefined threshold.
+    
+    Args:
+        alert_id (str): The identifier for the alert.
+        threshold_percent (float): The data gap threshold expressed as a percentage. Default is 0.3, indicating that more than 30% missing data in the measurement will trigger the alert.
+        bucket_name (str): The name of the InfluxDB bucket where the measurements are stored.
+        evaluation_interval (str, optional): The time window used for the query to assess data gaps. Defaults to "6h".
+        aggregate_window_interval (str, optional): The window period over which the data is aggregated for analysis. Defaults to "30m".
     """
     def __init__(self, alert_id: str, bucket_name: str, data_gap_threshold: float = 0.3, evaluation_interval: str = "6h", aggregate_window_interval: str = "30m"):
         super().__init__(alert_id, evaluation_interval=evaluation_interval, alert_group=alert_id)

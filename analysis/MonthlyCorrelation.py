@@ -60,10 +60,10 @@ def Correlate_ExtCond_To_IntCond_To_FPC(result):
 
     calculator.calculate_correlations(result)
     # calculator.print_correlations()
-    calculator.remove_weak_correlation()
+    # calculator.remove_weak_correlation()
 
     plotter = CorrelationPlotter(calculator.correlations)
-    plotter.plot_correlation_matrix("WeatherAPI & Farm Conditions & Farm Power Consumption")
+    plotter.plot_correlation_matrix("Correlation between farm environmental conditions to estimated power consumption")
 
 # Create an instance of the CorrelationCalculator
 calculator = CorrelationCalculator(bucket_configs)
@@ -72,5 +72,5 @@ calculator = CorrelationCalculator(bucket_configs)
 for bucket_config in bucket_configs:
     result = calculator.read_data_from_bucket(bucket_config)
 
-Correlate_ExtCond_To_IntCond(result)
+# Correlate_ExtCond_To_IntCond(result)
 Correlate_ExtCond_To_IntCond_To_FPC(result)
