@@ -17,7 +17,7 @@ def convert_images_to_pdf(image_directory, output_pdf_name=None):
     # Save the PDF file with a dynamic name including the current month and full year - can always change format 
     current_month = datetime.now().strftime("%B")
     current_year = datetime.now().strftime("%Y")
-    pdf_output_name = f"Analysis_{current_month}_{current_year}.pdf"
+    pdf_output_name = f"Estimation_Analysis_{current_month}_{current_year}.pdf"
     pdf_output_path = os.path.join(reports_directory, pdf_output_name)
 
     # Initialize the canvas for PDF generation with A4 size and the correct output file name - can always change format 
@@ -29,37 +29,77 @@ def convert_images_to_pdf(image_directory, output_pdf_name=None):
     image_files.sort()
     page_width, page_height = A4
 
-    # Loop through the image files and add them to the PDF
+    # List to store image files to include in "Analysis_Month_Year.pdf"
+    analysis_images = []
+
+    # Loop through the image files and categorize them
     for image_file in image_files:
-        image_path = os.path.join(image_directory, image_file)
-        img = Image.open(image_path)
-        img_width, img_height = img.size
+        if "Variables that Affect Monthly Power Consumption - Average Capacity" in image_file or \
+           "Variables that Affect Monthly Power Consumption - Max Capacity" in image_file:
+            # This report will include only the data that we collected 
+            analysis_images.append(image_file)
+        else:
+            # Everything else will be under the prediction/estimation report
+            img_path = os.path.join(image_directory, image_file)
+            img = Image.open(img_path)
+            img_width, img_height = img.size
 
-        width_ratio = page_width / img_width
-        height_ratio = page_height / img_height
-        scaling_factor = min(width_ratio, height_ratio)
+            width_ratio = page_width / img_width
+            height_ratio = page_height / img_height
+            scaling_factor = min(width_ratio, height_ratio)
 
-        scaled_width = img_width * scaling_factor
-        scaled_height = img_height * scaling_factor
+            scaled_width = img_width * scaling_factor
+            scaled_height = img_height * scaling_factor
 
-        x_offset = (page_width - scaled_width) / 2
-        y_offset = (page_height - scaled_height) / 2
+            x_offset = (page_width - scaled_width) / 2
+            y_offset = (page_height - scaled_height) / 2
 
-        c.drawInlineImage(img, x_offset, y_offset, width=scaled_width, height=scaled_height)
+            c.drawInlineImage(img, x_offset, y_offset, width=scaled_width, height=scaled_height)
 
-        # Add a new page for the next image
-        c.showPage()
+            # Add a new page for the next image
+            c.showPage()
 
-        # Print the name of the image that was included in the PDF - validation
-        print(f"Included image: {image_file}")
+            # validation
+            print(f"Included image: {image_file}")
 
-    # Save the PDF file with a dynamic name including the current month
-    current_month = datetime.now().strftime("%B")
-    script_directory = os.path.dirname(os.path.abspath(__file__))
-    pdf_output_path = os.path.join(script_directory, "reports", f"Analysis_{current_month}_{current_year}.pdf")
+    # Save the "Estimation_Analysis_Month_Year.pdf" file
     c.save()
 
+    # Print the location where the PDF file was saved
     print(f"PDF file saved at: {pdf_output_path}")
+
+    # If any analysis images are found, create a new PDF with only those images
+    if analysis_images:
+        # Create a new PDF for "Analysis_Month_Year.pdf"
+        analysis_pdf_output_name = f"Analysis_{current_month}_{current_year}.pdf"
+        analysis_pdf_output_path = os.path.join(reports_directory, analysis_pdf_output_name)
+        c_analysis = canvas.Canvas(analysis_pdf_output_path, pagesize=A4)
+
+        for analysis_image in analysis_images:
+            img_path = os.path.join(image_directory, analysis_image)
+            img = Image.open(img_path)
+            img_width, img_height = img.size
+
+            width_ratio = page_width / img_width
+            height_ratio = page_height / img_height
+            scaling_factor = min(width_ratio, height_ratio)
+
+            scaled_width = img_width * scaling_factor
+            scaled_height = img_height * scaling_factor
+
+            x_offset = (page_width - scaled_width) / 2
+            y_offset = (page_height - scaled_height) / 2
+
+            c_analysis.drawInlineImage(img, x_offset, y_offset, width=scaled_width, height=scaled_height)
+
+            c_analysis.showPage()
+
+            # validation
+            print(f"Included image in Analysis: {analysis_image}")
+
+        c_analysis.save()
+
+        print(f"PDF file for Analysis saved at: {analysis_pdf_output_path}")
 
 if __name__ == "__main__":
     image_directory = "results"
