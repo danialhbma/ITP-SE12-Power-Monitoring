@@ -108,3 +108,11 @@ System Health Report: 2023-07-25 23:59:03
 System OK. No abnormal status detected.
 ******************************************************
 
+******************************************************
+System Health Report: 2023-07-26 23:59:02
+(1) System Detected High CPU load
+	CPU Load: 90.4%
+(2) Low Disk Space Detected 
+	/dev/sda1 - Used: 7.38 GB / Total: 9.62 GB (80.9%)
+******************************************************
+

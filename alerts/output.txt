@@ -21232,3 +21232,2211 @@ Alert Query: from(bucket: "Power Consumption")
 Alert Summary: Unable to retrieve data from Rack 3 Growlight
 Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 01:05:02.
 
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T16:05:01.726504+00:00, stop: 2023-07-25T18:05:01.726510+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T16:05:01.726533+00:00, stop: 2023-07-25T18:05:01.726533+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T16:05:01.726543+00:00, stop: 2023-07-25T18:05:01.726544+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 02:05:01.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T16:05:01.726554+00:00, stop: 2023-07-25T18:05:01.726555+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T16:05:01.726563+00:00, stop: 2023-07-25T18:05:01.726564+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T16:05:01.726571+00:00, stop: 2023-07-25T18:05:01.726572+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 02:05:01.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T17:05:02.034303+00:00, stop: 2023-07-25T19:05:02.034309+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T17:05:02.034333+00:00, stop: 2023-07-25T19:05:02.034334+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T17:05:02.034344+00:00, stop: 2023-07-25T19:05:02.034344+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 03:05:02.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T17:05:02.034355+00:00, stop: 2023-07-25T19:05:02.034355+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T17:05:02.034363+00:00, stop: 2023-07-25T19:05:02.034364+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T17:05:02.034371+00:00, stop: 2023-07-25T19:05:02.034372+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 03:05:02.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T18:05:01.472804+00:00, stop: 2023-07-25T20:05:01.472810+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T18:05:01.472834+00:00, stop: 2023-07-25T20:05:01.472835+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T18:05:01.472845+00:00, stop: 2023-07-25T20:05:01.472846+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 04:05:01.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T18:05:01.472856+00:00, stop: 2023-07-25T20:05:01.472857+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T18:05:01.472865+00:00, stop: 2023-07-25T20:05:01.472866+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T18:05:01.472874+00:00, stop: 2023-07-25T20:05:01.472874+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 04:05:01.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T19:05:01.731391+00:00, stop: 2023-07-25T21:05:01.731396+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T19:05:01.731422+00:00, stop: 2023-07-25T21:05:01.731422+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T19:05:01.731432+00:00, stop: 2023-07-25T21:05:01.731433+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 05:05:01.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T19:05:01.731443+00:00, stop: 2023-07-25T21:05:01.731444+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T19:05:01.731453+00:00, stop: 2023-07-25T21:05:01.731453+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T19:05:01.731460+00:00, stop: 2023-07-25T21:05:01.731461+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 05:05:01.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T20:05:01.746584+00:00, stop: 2023-07-25T22:05:01.746590+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T20:05:01.746628+00:00, stop: 2023-07-25T22:05:01.746629+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T20:05:01.746650+00:00, stop: 2023-07-25T22:05:01.746651+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 06:05:01.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T20:05:01.746671+00:00, stop: 2023-07-25T22:05:01.746672+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T20:05:01.746690+00:00, stop: 2023-07-25T22:05:01.746691+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T20:05:01.746709+00:00, stop: 2023-07-25T22:05:01.746710+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 06:05:01.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T21:05:01.951451+00:00, stop: 2023-07-25T23:05:01.951456+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T21:05:01.951478+00:00, stop: 2023-07-25T23:05:01.951478+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Growlight switched on.
+Description: Rack 2 Growlight switched on at 2023-07-26 07:00:00.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T21:05:01.951488+00:00, stop: 2023-07-25T23:05:01.951489+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Growlight switched on.
+Description: Rack 3 Growlight switched on at 2023-07-26 07:00:00.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T21:05:01.951499+00:00, stop: 2023-07-25T23:05:01.951499+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T21:05:01.951508+00:00, stop: 2023-07-25T23:05:01.951508+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T21:05:01.951516+00:00, stop: 2023-07-25T23:05:01.951516+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T22:05:01.732360+00:00, stop: 2023-07-26T00:05:01.732365+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Growlight switched on.
+Description: Rack 1 Growlight switched on at 2023-07-26 08:00:00.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T22:05:01.732387+00:00, stop: 2023-07-26T00:05:01.732388+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T22:05:01.732398+00:00, stop: 2023-07-26T00:05:01.732398+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T22:05:01.732408+00:00, stop: 2023-07-26T00:05:01.732408+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T22:05:01.732416+00:00, stop: 2023-07-26T00:05:01.732417+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T22:05:01.732424+00:00, stop: 2023-07-26T00:05:01.732424+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T23:05:02.281823+00:00, stop: 2023-07-26T01:05:02.281829+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T23:05:02.281852+00:00, stop: 2023-07-26T01:05:02.281852+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T23:05:02.281862+00:00, stop: 2023-07-26T01:05:02.281862+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T23:05:02.281873+00:00, stop: 2023-07-26T01:05:02.281874+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T23:05:02.281882+00:00, stop: 2023-07-26T01:05:02.281882+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-25T23:05:02.281890+00:00, stop: 2023-07-26T01:05:02.281890+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T00:05:02.366212+00:00, stop: 2023-07-26T02:05:02.366216+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T00:05:02.366238+00:00, stop: 2023-07-26T02:05:02.366239+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T00:05:02.366249+00:00, stop: 2023-07-26T02:05:02.366250+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T00:05:02.366260+00:00, stop: 2023-07-26T02:05:02.366260+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T00:05:02.366268+00:00, stop: 2023-07-26T02:05:02.366269+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T00:05:02.366276+00:00, stop: 2023-07-26T02:05:02.366277+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T01:05:01.655929+00:00, stop: 2023-07-26T03:05:01.655934+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T01:05:01.655957+00:00, stop: 2023-07-26T03:05:01.655957+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T01:05:01.655967+00:00, stop: 2023-07-26T03:05:01.655968+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T01:05:01.655979+00:00, stop: 2023-07-26T03:05:01.655979+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T01:05:01.655988+00:00, stop: 2023-07-26T03:05:01.655988+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T01:05:01.655997+00:00, stop: 2023-07-26T03:05:01.655997+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T02:05:02.070180+00:00, stop: 2023-07-26T04:05:02.070187+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T02:05:02.070222+00:00, stop: 2023-07-26T04:05:02.070224+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T02:05:02.070245+00:00, stop: 2023-07-26T04:05:02.070246+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Growlight switched on.
+Description: Rack 3 Growlight switched on at 2023-07-26 12:00:00.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T02:05:02.070266+00:00, stop: 2023-07-26T04:05:02.070267+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T02:05:02.070296+00:00, stop: 2023-07-26T04:05:02.070298+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T02:05:02.070319+00:00, stop: 2023-07-26T04:05:02.070320+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T03:05:01.831982+00:00, stop: 2023-07-26T05:05:01.831986+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T03:05:01.832007+00:00, stop: 2023-07-26T05:05:01.832007+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T03:05:01.832017+00:00, stop: 2023-07-26T05:05:01.832018+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T03:05:01.832028+00:00, stop: 2023-07-26T05:05:01.832028+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T03:05:01.832037+00:00, stop: 2023-07-26T05:05:01.832037+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T03:05:01.832045+00:00, stop: 2023-07-26T05:05:01.832045+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T04:05:01.854474+00:00, stop: 2023-07-26T06:05:01.854479+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T04:05:01.854502+00:00, stop: 2023-07-26T06:05:01.854503+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T04:05:01.854513+00:00, stop: 2023-07-26T06:05:01.854513+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T04:05:01.854525+00:00, stop: 2023-07-26T06:05:01.854525+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T04:05:01.854534+00:00, stop: 2023-07-26T06:05:01.854534+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T04:05:01.854542+00:00, stop: 2023-07-26T06:05:01.854543+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T05:05:01.833783+00:00, stop: 2023-07-26T07:05:01.833788+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T05:05:01.833812+00:00, stop: 2023-07-26T07:05:01.833813+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T05:05:01.833823+00:00, stop: 2023-07-26T07:05:01.833823+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T05:05:01.833834+00:00, stop: 2023-07-26T07:05:01.833835+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T05:05:01.833843+00:00, stop: 2023-07-26T07:05:01.833843+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T05:05:01.833851+00:00, stop: 2023-07-26T07:05:01.833851+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T06:05:01.872011+00:00, stop: 2023-07-26T08:05:01.872017+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T06:05:01.872041+00:00, stop: 2023-07-26T08:05:01.872042+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T06:05:01.872051+00:00, stop: 2023-07-26T08:05:01.872051+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T06:05:01.872062+00:00, stop: 2023-07-26T08:05:01.872063+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T06:05:01.872071+00:00, stop: 2023-07-26T08:05:01.872071+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T06:05:01.872079+00:00, stop: 2023-07-26T08:05:01.872080+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T07:05:02.346567+00:00, stop: 2023-07-26T09:05:02.346572+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T07:05:02.346594+00:00, stop: 2023-07-26T09:05:02.346595+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T07:05:02.346605+00:00, stop: 2023-07-26T09:05:02.346606+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T07:05:02.346616+00:00, stop: 2023-07-26T09:05:02.346616+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T07:05:02.346625+00:00, stop: 2023-07-26T09:05:02.346625+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T07:05:02.346633+00:00, stop: 2023-07-26T09:05:02.346633+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T08:05:01.687166+00:00, stop: 2023-07-26T10:05:01.687172+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T08:05:01.687207+00:00, stop: 2023-07-26T10:05:01.687208+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T08:05:01.687227+00:00, stop: 2023-07-26T10:05:01.687228+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T08:05:01.687250+00:00, stop: 2023-07-26T10:05:01.687251+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T08:05:01.687270+00:00, stop: 2023-07-26T10:05:01.687271+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T08:05:01.687288+00:00, stop: 2023-07-26T10:05:01.687289+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T09:05:02.395879+00:00, stop: 2023-07-26T11:05:02.395883+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T09:05:02.395906+00:00, stop: 2023-07-26T11:05:02.395907+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T09:05:02.395917+00:00, stop: 2023-07-26T11:05:02.395917+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T09:05:02.395927+00:00, stop: 2023-07-26T11:05:02.395928+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T09:05:02.395936+00:00, stop: 2023-07-26T11:05:02.395937+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Growlight switched off.
+Description: Rack 2 Growlight switched off at 2023-07-26 19:00:00.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T09:05:02.395945+00:00, stop: 2023-07-26T11:05:02.395945+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T10:05:01.830916+00:00, stop: 2023-07-26T12:05:01.830921+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T10:05:01.830944+00:00, stop: 2023-07-26T12:05:01.830945+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T10:05:01.830955+00:00, stop: 2023-07-26T12:05:01.830955+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T10:05:01.830966+00:00, stop: 2023-07-26T12:05:01.830966+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Growlight switched off.
+Description: Rack 1 Growlight switched off at 2023-07-26 20:00:00.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T10:05:01.830975+00:00, stop: 2023-07-26T12:05:01.830975+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T10:05:01.830983+00:00, stop: 2023-07-26T12:05:01.830984+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T11:05:01.892690+00:00, stop: 2023-07-26T13:05:01.892696+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T11:05:01.892722+00:00, stop: 2023-07-26T13:05:01.892723+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T11:05:01.892733+00:00, stop: 2023-07-26T13:05:01.892733+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 21:05:01.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T11:05:01.892745+00:00, stop: 2023-07-26T13:05:01.892745+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T11:05:01.892753+00:00, stop: 2023-07-26T13:05:01.892754+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.NODATA
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T11:05:01.892761+00:00, stop: 2023-07-26T13:05:01.892762+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Unable to retrieve data from Rack 3 Growlight
+Description: Failed to retrieve growlight power consumption from Rack 3 Growlight at 2023-07-26 21:05:01.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T12:05:01.831510+00:00, stop: 2023-07-26T14:05:01.831515+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T12:05:01.831538+00:00, stop: 2023-07-26T14:05:01.831539+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T12:05:01.831549+00:00, stop: 2023-07-26T14:05:01.831549+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Growlight switched on.
+Description: Rack 3 Growlight switched on at 2023-07-26 22:00:00.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T12:05:01.831560+00:00, stop: 2023-07-26T14:05:01.831560+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T12:05:01.831569+00:00, stop: 2023-07-26T14:05:01.831569+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T12:05:01.831577+00:00, stop: 2023-07-26T14:05:01.831577+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T13:05:01.982527+00:00, stop: 2023-07-26T15:05:01.982532+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T13:05:01.982555+00:00, stop: 2023-07-26T15:05:01.982556+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T13:05:01.982566+00:00, stop: 2023-07-26T15:05:01.982566+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T13:05:01.982577+00:00, stop: 2023-07-26T15:05:01.982577+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T13:05:01.982586+00:00, stop: 2023-07-26T15:05:01.982586+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.ALERTING
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T13:05:01.982594+00:00, stop: 2023-07-26T15:05:01.982594+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Growlight switched off.
+Description: Rack 3 Growlight switched off at 2023-07-26 23:00:00.
+
+Alert ID: Rack 1 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T14:05:02.518274+00:00, stop: 2023-07-26T16:05:02.518281+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T14:05:02.518318+00:00, stop: 2023-07-26T16:05:02.518319+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light On Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light On Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T14:05:02.518341+00:00, stop: 2023-07-26T16:05:02.518342+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0}))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light On Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 1 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T14:05:02.518364+00:00, stop: 2023-07-26T16:05:02.518365+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_1_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 1 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 2 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T14:05:02.518387+00:00, stop: 2023-07-26T16:05:02.518388+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_2_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 2 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
+Alert ID: Rack 3 Grow light Off Alert
+Evaluation Interval: 1h
+Alert Group: Grow Light Off Alert
+Alert State: AlertState.OK
+Alert Query: from(bucket: "Power Consumption")
+                |> range(start: 2023-07-26T14:05:02.518405+00:00, stop: 2023-07-26T16:05:02.518406+00:00)
+                |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
+                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> fill(column: "_value", usePrevious: true)
+                |> map(fn: (r) => ({ r with _value: if exists r["_value"] then r["_value"] else 0.0 }))
+                |> difference(columns: ["_value"], keepFirst: false)
+                |> first()
+                
+Alert Summary: Rack 3 Grow light Off Alert - OK
+Description: Alert will only fire when growlight is first switched on or first switched off.
+
