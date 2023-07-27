@@ -5,8 +5,8 @@ from pytz import timezone
 
 # Constants
 TIMEZONE = timezone('Etc/GMT+8')
-PC_PATH = "analysis/data/Power Consumption.csv"
-TEMP_PATH = "analysis/data/WeatherAPI.csv"
+PC_PATH = "data/Power Consumption.csv"
+TEMP_PATH = "data/WeatherAPI.csv"
 
 # Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898
