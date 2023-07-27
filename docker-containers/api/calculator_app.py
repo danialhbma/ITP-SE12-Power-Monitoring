@@ -3,37 +3,80 @@ from calculate_power_consumption import *
 
 app = Flask(__name__)
 
-@app.route("/calculate", methods=["POST"])
-def calculate():
+# calculates power consumption for 1 rack
+@app.route("/rack_calculator", methods=["POST"])
+def rack_calculator():
     pc_path = "Power Consumption.csv"
-
-    # get user inputs
-    num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
-    num_of_white_led_racks = int(request.json["num_of_white_led_racks"])
-    aircon_cooling_capacity = request.json["aircon_cooling_capacity"]
-    aircon_number_of_hours_ran = request.json["aircon_usage_per_day"]
+    pc_data = get_pc_data(pc_path)
     
-    pc_data_dict, number_of_days_observed = get_pc_data(pc_path)
-    if pc_data_dict is not None:
-        # get estimated power consumption based on user inputs
-        water_power_consumption = get_water_power_consumption(pc_data_dict,
-                                                            num_of_purple_led_racks + num_of_white_led_racks)
-        purple_led_power_consumption, white_led_power_consumption = get_racklight_power_consumption(pc_data_dict,
-                                                                                                    num_of_purple_led_racks,
-                                                                                                    num_of_white_led_racks)
-        if aircon_cooling_capacity == 'Average':
-            aircon_power_consumption = get_avg_aircon_power(number_of_days_observed, aircon_number_of_hours_ran)
+    if pc_data is not None:  
+        # get user inputs
+        colour_of_led = int(request.json["colour_of_led"])
+        led_usage_hours = int(request.json["led_usage_hours"])
+        num_of_days_ran = request.json["num_of_days_ran"]
+
+        light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+        
+        purple_led_on_power, purple_led_off_power, white_led_on_power, white_led_off_power = get_racklight_power_consumption(light_mean_dict,
+                                                                                                                            num_of_days_ran,
+                                                                                                                            led_usage_hours,
+                                                                                                                            led_usage_hours,
+                                                                                                                            1, 1)
+        
+        # return power consumption based on selected led colour
+        if colour_of_led == "Purple":
+            result = purple_led_on_power + purple_led_off_power
         else:
-            aircon_power_consumption = get_max_aircon_power(number_of_days_observed, aircon_number_of_hours_ran)
+            result = white_led_on_power + white_led_off_power
+            
+    else:
+        result = None
         
-        result = water_power_consumption + purple_led_power_consumption + white_led_power_consumption + aircon_power_consumption
+    # Return result to client
+    return jsonify({"result": result})
+
+# calculate power consumption of container for 1 month if conditions are altered
+@app.route("/container_calculator", methods=["POST"])
+def container_calculator():
+    pc_path = "Power Consumption.csv"
+    pc_data = get_pc_data(pc_path)
+    
+    if pc_data is not None:
+        # get user inputs
+        num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
+        purple_led_usage_hours = int(request.json["purple_led_usage_hours"])
+        num_of_white_led_racks = int(request.json["num_of_white_led_racks"])
+        white_led_usage_hours = request.json["white_led_usage_hours"]
+        water_pump_usage = request.json["water_pump_usage"]
+        aircon_usage = request.json["aircon_usage"]
+        num_aircon_units = request.json["num_aircon_units"]
         
-        # get current power consumption based on default values
-        current_purple_racklight_power, current_white_racklight_power = get_racklight_power_consumption(pc_data_dict)
-        current_power_consumption = get_water_power_consumption(pc_data_dict) + current_purple_racklight_power + current_white_racklight_power + aircon_power_consumption
+        # get days in current month 
+        days_in_month = get_days_in_month()
+        light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
         
-        # get difference in power consumption
-        difference = round(result - current_power_consumption, 2)
+        # get water pump power consumption
+        simulated_water_power = get_water_power_consumption(water_mean, days_in_month, water_pump_usage, num_of_purple_led_racks + num_of_white_led_racks)
+        current_water_power = get_water_power_consumption(water_mean, days_in_month)
+        
+        # get rack light power consumption
+        simulated_purple_led_on_power, simulated_purple_led_off_power, simulated_white_led_on_power, simulated_white_led_off_power = get_racklight_power_consumption(light_mean_dict,
+                                                                                                                            days_in_month,
+                                                                                                                            purple_led_usage_hours,
+                                                                                                                            white_led_usage_hours, 
+                                                                                                                            num_of_purple_led_racks,
+                                                                                                                            num_of_white_led_racks)
+        simulated_light_power = simulated_purple_led_on_power + simulated_purple_led_off_power + simulated_white_led_on_power + simulated_white_led_off_power
+        purple_led_on, purple_led_off, white_led_on, white_led_off = get_racklight_power_consumption(light_mean_dict, days_in_month)
+        current_light_power = purple_led_on + purple_led_off + white_led_on + white_led_off
+        
+        # get aircon power consumption
+        simulated_aircon_power = get_aircon_power_consumption(days_in_month, aircon_usage, num_aircon_units)
+        current_aircon_power = get_aircon_power_consumption(days_in_month)
+        
+        result = simulated_water_power + simulated_light_power + simulated_aircon_power
+        current_power_consumption = current_water_power + current_light_power
+        difference = result - current_power_consumption + current_aircon_power
         
     else:
         result = None

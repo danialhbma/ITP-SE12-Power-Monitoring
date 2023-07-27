@@ -33,25 +33,28 @@ def generate_pie_chart(estimated_power_dict, filename):
     plt.savefig(OUTPUT_ANALYSIS_IMG_PATH + filename, bbox_inches='tight')
 
 # check if csv files exists
-pc_data_dict, number_of_days_observed = get_pc_data()
-if pc_data_dict is not None:
+pc_data = get_pc_data()
+if pc_data is not None:
+    days_in_month = get_days_in_month()
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+    
+    print("Estimated Power Consumption for 1 Container in July")
+    water_power = get_water_power_consumption(water_mean, days_in_month)
+    
     # store estimdated power consumption in dictionary
-    estimated_pc_dict = {}
-    purple_racklight, white_racklight = get_racklight_power_consumption(pc_data_dict,
-                                                                        NUM_OF_PURPLE_LED_RACKS,
-                                                                        NUM_OF_WHITE_LED_RACKS)
-    estimated_pc_dict['Water'] = get_water_power_consumption(pc_data_dict,
-                                                             NUM_OF_PURPLE_LED_RACKS + NUM_OF_WHITE_LED_RACKS)
-    estimated_pc_dict['Purple LED Rack Lights'] = purple_racklight
-    estimated_pc_dict['White LED Rack Lights'] = white_racklight
-    estimated_pc_dict['Aircon (Average Capacity)'] = get_avg_aircon_power(number_of_days_observed)
+    estimated_power_dict = {}
+    estimated_power_dict['Water'] = get_water_power_consumption(water_mean, days_in_month)
+    purple_led_on_power, purple_led_off_power, white_led_on_power, white_led_off_power = get_racklight_power_consumption(light_mean_dict, days_in_month)
     
-    # generate charts for both average and max capacity
-    generate_pie_chart(estimated_pc_dict, 'Variables that Affect Monthly Power Consumption - Average Capacity')
+    estimated_power_dict['Purple LED On'] = purple_led_on_power
+    estimated_power_dict['Purple LED Off'] = purple_led_off_power
+    estimated_power_dict['White LED On'] = white_led_on_power
+    estimated_power_dict['White LED Off'] = white_led_off_power
     
-    estimated_pc_dict.pop("Aircon (Average Capacity)", None)
-    estimated_pc_dict['Aircon (Max Capacity)'] = get_max_aircon_power(number_of_days_observed)
-    generate_pie_chart(estimated_pc_dict, 'Variables that Affect Monthly Power Consumption - Max Capacity')
+    estimated_power_dict['Aircon'] = get_aircon_power_consumption(days_in_month)
+    
+    # generate charts 
+    generate_pie_chart(estimated_power_dict, 'Variables that Affect Monthly Power Consumption')
 
 else:
     print("File does not exist.")
