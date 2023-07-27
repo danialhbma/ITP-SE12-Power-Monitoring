@@ -8,11 +8,11 @@ app = Flask(__name__)
 def rack_calculator():
     pc_path = "Power Consumption.csv"
     pc_data = get_pc_data(pc_path)
-    
+    print(pc_data)
     if pc_data is not None:  
         # get user inputs
-        colour_of_led = int(request.json["colour_of_led"])
-        led_usage_hours = int(request.json["led_usage_hours"])
+        colour_of_led = request.json["colour_of_led"]
+        led_usage_hours = request.json["led_usage_hours"]
         num_of_days_ran = request.json["num_of_days_ran"]
 
         light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
@@ -30,7 +30,7 @@ def rack_calculator():
             result = white_led_on_power + white_led_off_power
             
     else:
-        result = None
+        result = "Error"
         
     # Return result to client
     return jsonify({"result": result})
@@ -44,7 +44,7 @@ def container_calculator():
     if pc_data is not None:
         # get user inputs
         num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
-        purple_led_usage_hours = int(request.json["purple_led_usage_hours"])
+        purple_led_usage_hours = request.json["purple_led_usage_hours"]
         num_of_white_led_racks = int(request.json["num_of_white_led_racks"])
         white_led_usage_hours = request.json["white_led_usage_hours"]
         water_pump_usage = request.json["water_pump_usage"]
@@ -79,8 +79,8 @@ def container_calculator():
         difference = result - current_power_consumption + current_aircon_power
         
     else:
-        result = None
-        difference = None
+        result = "Error"
+        difference = "Error"
         
     # Return result to client
     return jsonify({
