@@ -64,12 +64,12 @@ def container_calculator():
         # purple led
         num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
         purple_led_usage_hours = request.json["purple_led_usage_hours"]
-        purple_led_wattage = request.json(["purple_led_wattage"])
+        purple_led_wattage = int(request.json["purple_led_wattage"])
         
         # white led
         num_of_white_led_racks = int(request.json["num_of_white_led_racks"])
         white_led_usage_hours = request.json["white_led_usage_hours"]
-        white_led_wattage = request.json(["white_led_wattage"])
+        white_led_wattage = int(request.json["white_led_wattage"])
         
         # water pump
         water_usage_hours = request.json["water_usage_hours"]
@@ -77,8 +77,8 @@ def container_calculator():
         
         # aircon
         aircon_usage = request.json["aircon_usage_hours"]
-        num_aircon_units = request.json["num_aircon_units"]
-        aircon_wattage = request.json["aircon_wattage"]
+        num_aircon_units = int(request.json["num_aircon_units"])
+        aircon_wattage = int(request.json["aircon_wattage"])
         
         # get days in current month 
         days_in_month = get_days_in_month()
