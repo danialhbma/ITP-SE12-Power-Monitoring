@@ -76,7 +76,7 @@ def container_calculator():
         
         result = simulated_water_power + simulated_light_power + simulated_aircon_power
         current_power_consumption = current_water_power + current_light_power
-        difference = result - current_power_consumption + current_aircon_power
+        difference = result - current_power_consumption
         
     else:
         result = "Error"
