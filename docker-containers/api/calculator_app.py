@@ -139,7 +139,7 @@ def container_calculator():
         result = simulated_water_power + simulated_light_power + simulated_aircon_power
         current_power_consumption = current_water_power + current_light_power + current_aircon_power
         
-        difference = result - current_power_consumption
+        difference = round(result - current_power_consumption, 2)
         
         # calculate cost
         if cost_per_kwh > 0:
