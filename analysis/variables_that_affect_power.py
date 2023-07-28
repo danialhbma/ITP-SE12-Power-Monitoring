@@ -4,7 +4,7 @@ import numpy as np
 from calculate_power_consumption import *
 
 # constants
-OUTPUT_ANALYSIS_IMG_PATH = "analysis/results/"
+OUTPUT_ANALYSIS_IMG_PATH = "./results/"
 
 # function that generates a pie chart using the estimated power consumption and saves as png file
 def generate_pie_chart(estimated_power_dict, filename): 

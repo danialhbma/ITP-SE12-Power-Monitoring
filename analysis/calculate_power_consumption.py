@@ -5,7 +5,7 @@ from pytz import timezone
 import calendar
 from datetime import datetime
 
-PC_PATH = "analysis/data/Power Consumption.csv"
+PC_PATH = "./data/Power Consumption.csv"
 
 # Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898
@@ -138,6 +138,15 @@ def get_aircon_power_consumption(days_ran,
                                 total_watts = INDOOR_FAN + COOLING + COMPRESSOR + OUTDOOR_FAN):
     return round((total_watts * days_ran * num_of_hours_ran / 1000) * num_of_units, 2)
 
+# function that calculates the average power consumption of the air conditioner at normal cooling capacity
+# assumption: aircon runs for 24 hours a day for the specified number of days
+def get_avg_aircon_power(number_of_days,
+                         number_of_hours_ran = WHOLE_DAY):
+    avg_outdoor_cooling = (OUTDOOR_COOLING_MIN + OUTDOOR_COOLING_MAX)/2
+    indoor = INDOOR_FAN * NUM_OF_INDOOR_UNITS
+    outdoor = avg_outdoor_cooling + OUTDOOR_COMPRESSOR_NORM + OUTDOOR_FAN
+    return round((indoor + outdoor) * number_of_days * number_of_hours_ran / 1000, 2)
+=======
 # returns cost of running appliance based on the given power (in kwh) used and cost per kwh
 def calculate_cost(power_used, cost_per_kwh = POWER_COST_PER_KWH):
     return round(power_used  * cost_per_kwh, 2)

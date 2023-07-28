@@ -31,3 +31,16 @@ To restrict access from your publicly hosted node-red image, you can set login c
 	* **uncomment out the adminAuth: {} section**
 	* replace password with your desired password
 	* see https://nodered.org/docs/user-guide/runtime/securing-node-red for more information
+
+# Settings For Tuya Node-RED Flow
+You will need to modify the ``setting.js`` in Node-RED data directory.
+1. ``sudo docker ps``
+	* copy the container-id for the node-red container
+2. ``docker exec -it <container-id> /bin/bash``
+	* access node red container shell
+3. ``cd /data``
+	- This is where the ``settings.js`` is.
+4. ``nano settings.js``
+	- Now add ``hmacSHA256: require('crypto-js/hmac-sha256')`` in functionGlobalContext.
+![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/c4020f93-109f-42e8-8a38-3ebdb66560ce)
+5. Save the changes and exit.
