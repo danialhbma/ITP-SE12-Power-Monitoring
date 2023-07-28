@@ -140,5 +140,5 @@ def get_aircon_power_consumption(days_ran,
 
 # returns cost of running appliance based on the given power (in kwh) used and cost per kwh
 def calculate_cost(power_used, cost_per_kwh = POWER_COST_PER_KWH):
-    return power_used  * cost_per_kwh
+    return round(power_used  * cost_per_kwh, 2)
     
