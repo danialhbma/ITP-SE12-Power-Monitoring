@@ -90,3 +90,95 @@ Alert Query:
 Alert Summary: Sensors used to update Light are working as intended.
 Description: All measurements in Light have data points sent after 2023-07-26 09:59:02.698221+00:00
 
+Alert ID: CO2 Sensor (SGP30) - Dead Sensor Alert
+Evaluation Interval: 6h
+Alert Group: Dead Sensor Alert
+Alert State: AlertState.ALERTING
+Alert Query: 
+        from(bucket: "CO2")
+        |> range(start: -365d)
+        |> filter(fn: (r) => r["_measurement"] != "" and r["_field"] != "weather_main")
+        |> group(columns: ["_measurement"], mode:"by")  
+        |> last()  
+        
+Alert Summary: Sensors failed to send data to - CO2 bucket.
+Description: Please check the status of the sensors for the following measurement(s):
+(1) rack4_co2: Last data received at 2023-07-20 13:42:01
+
+
+Alert ID: Water Flow Sensor (SEN0217) - Dead Sensor Alert
+Evaluation Interval: 6h
+Alert Group: Dead Sensor Alert
+Alert State: AlertState.OK
+Alert Query: 
+        from(bucket: "Water")
+        |> range(start: -365d)
+        |> filter(fn: (r) => r["_measurement"] != "" and r["_field"] != "weather_main")
+        |> group(columns: ["_measurement"], mode:"by")  
+        |> last()  
+        
+Alert Summary: Sensors used to update Water are working as intended.
+Description: All measurements in Water have data points sent after 2023-07-27 09:59:02.224773+00:00
+
+Alert ID: Temperature Sensor (Env Hat) - Dead Sensor Alert
+Evaluation Interval: 6h
+Alert Group: Dead Sensor Alert
+Alert State: AlertState.ALERTING
+Alert Query: 
+        from(bucket: "Temperature")
+        |> range(start: -365d)
+        |> filter(fn: (r) => r["_measurement"] != "" and r["_field"] != "weather_main")
+        |> group(columns: ["_measurement"], mode:"by")  
+        |> last()  
+        
+Alert Summary: Sensors failed to send data to - Temperature bucket.
+Description: Please check the status of the sensors for the following measurement(s):
+(1) rack4_temperature: Last data received at 2023-07-20 13:42:00
+
+
+Alert ID: Humidity Sensor (Env Hat) - Dead Sensor Alert
+Evaluation Interval: 6h
+Alert Group: Dead Sensor Alert
+Alert State: AlertState.ALERTING
+Alert Query: 
+        from(bucket: "Humidity")
+        |> range(start: -365d)
+        |> filter(fn: (r) => r["_measurement"] != "" and r["_field"] != "weather_main")
+        |> group(columns: ["_measurement"], mode:"by")  
+        |> last()  
+        
+Alert Summary: Sensors failed to send data to - Humidity bucket.
+Description: Please check the status of the sensors for the following measurement(s):
+(1) rack4_humidity: Last data received at 2023-07-20 13:42:00
+
+
+Alert ID: Ambient Light Sensor (SEN0390) - Dead Sensor Alert
+Evaluation Interval: 6h
+Alert Group: Dead Sensor Alert
+Alert State: AlertState.ALERTING
+Alert Query: 
+        from(bucket: "Ambient")
+        |> range(start: -365d)
+        |> filter(fn: (r) => r["_measurement"] != "" and r["_field"] != "weather_main")
+        |> group(columns: ["_measurement"], mode:"by")  
+        |> last()  
+        
+Alert Summary: Sensors failed to send data to - Ambient bucket.
+Description: Please check the status of the sensors for the following measurement(s):
+(1) rack1_ambient: Last data received at 2023-07-24 22:00:57
+
+
+Alert ID: M5 Light Unit - Dead Sensor Alert
+Evaluation Interval: 6h
+Alert Group: Dead Sensor Alert
+Alert State: AlertState.OK
+Alert Query: 
+        from(bucket: "Light")
+        |> range(start: -365d)
+        |> filter(fn: (r) => r["_measurement"] != "" and r["_field"] != "weather_main")
+        |> group(columns: ["_measurement"], mode:"by")  
+        |> last()  
+        
+Alert Summary: Sensors used to update Light are working as intended.
+Description: All measurements in Light have data points sent after 2023-07-27 09:59:02.224813+00:00
+

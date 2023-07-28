@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from collections import defaultdict
 
-PC_PATH = "analysis/data/Power Consumption.csv"
+PC_PATH = "./data/Power Consumption.csv"
 
 RACKS = ["Rack_1", "Rack_2", "Rack_3"] # racks observed
 POWER_READ_INTERVAL = 1  # in hours

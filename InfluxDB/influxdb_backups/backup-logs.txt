@@ -2531,3 +2531,118 @@ Backup directory created successfully.
 2023/07/26 15:59:02 INFO: Backing up TSM for shard 137
 2023/07/26 15:59:02 WARN: Shard 137 removed during backup
 Backup created successfully.
+Container ID: 85467b4a3382
+influxdb_backup_20230727235901
+Backup directory created successfully.
+2023/07/27 15:59:01 INFO: Downloading metadata snapshot
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 123
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 140
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 108
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 121
+2023/07/27 15:59:02 WARN: Shard 121 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 139
+2023/07/27 15:59:02 WARN: Shard 139 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 39
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 52
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 67
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 82
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 114
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 132
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 36
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 54
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 69
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 84
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 116
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 134
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 73
+2023/07/27 15:59:02 WARN: Shard 73 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 74
+2023/07/27 15:59:02 WARN: Shard 74 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 75
+2023/07/27 15:59:02 WARN: Shard 75 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 76
+2023/07/27 15:59:02 WARN: Shard 76 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 77
+2023/07/27 15:59:02 WARN: Shard 77 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 78
+2023/07/27 15:59:02 WARN: Shard 78 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 79
+2023/07/27 15:59:02 WARN: Shard 79 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 88
+2023/07/27 15:59:02 WARN: Shard 88 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 89
+2023/07/27 15:59:02 WARN: Shard 89 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 90
+2023/07/27 15:59:02 WARN: Shard 90 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 91
+2023/07/27 15:59:02 WARN: Shard 91 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 109
+2023/07/27 15:59:02 WARN: Shard 109 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 110
+2023/07/27 15:59:02 WARN: Shard 110 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 111
+2023/07/27 15:59:02 WARN: Shard 111 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 122
+2023/07/27 15:59:02 WARN: Shard 122 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 124
+2023/07/27 15:59:02 WARN: Shard 124 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 125
+2023/07/27 15:59:02 WARN: Shard 125 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 126
+2023/07/27 15:59:02 WARN: Shard 126 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 127
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 128
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 129
+2023/07/27 15:59:02 WARN: Shard 129 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 141
+2023/07/27 15:59:02 WARN: Shard 141 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 142
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 143
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 40
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 51
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 66
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 81
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 113
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 131
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 38
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 55
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 70
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 85
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 117
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 135
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 41
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 56
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 71
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 86
+2023/07/27 15:59:02 WARN: Shard 86 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 118
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 136
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 107
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 120
+2023/07/27 15:59:02 WARN: Shard 120 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 138
+2023/07/27 15:59:02 WARN: Shard 138 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 37
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 53
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 68
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 83
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 115
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 133
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 16
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 33
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 50
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 65
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 80
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 112
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 130
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 42
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 57
+2023/07/27 15:59:02 WARN: Shard 57 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 72
+2023/07/27 15:59:02 WARN: Shard 72 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 87
+2023/07/27 15:59:02 WARN: Shard 87 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 119
+2023/07/27 15:59:02 WARN: Shard 119 removed during backup
+2023/07/27 15:59:02 INFO: Backing up TSM for shard 137
+Backup created successfully.

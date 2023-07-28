@@ -1,0 +1,1168 @@
+{
+  "manifestVersion": 2,
+  "kv": {
+    "fileName": "20230727T155901Z.bolt.gz",
+    "size": 10906,
+    "compression": 1
+  },
+  "sql": {
+    "fileName": "20230727T155901Z.sqlite.gz",
+    "size": 3451,
+    "compression": 1
+  },
+  "buckets": [
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "5d9b9835ce511fc0",
+      "bucketName": "Ambient",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 123,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 123,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.123.tar.gz",
+                  "size": 17368,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 140,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 140,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.140.tar.gz",
+                  "size": 2655,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "78c6549586c7e41f",
+      "bucketName": "Historical Weather Data",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 108,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 108,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.108.tar.gz",
+                  "size": 38312,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 121,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 139,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": []
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "7eb37e1ae324281e",
+      "bucketName": "Humidity",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 39,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 39,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.39.tar.gz",
+                  "size": 6297,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 52,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 52,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.52.tar.gz",
+                  "size": 6331,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 67,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 67,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.67.tar.gz",
+                  "size": 6484,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 82,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 82,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.82.tar.gz",
+                  "size": 5742,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 114,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 114,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.114.tar.gz",
+                  "size": 5927,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 132,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 132,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.132.tar.gz",
+                  "size": 4587,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "7f7c7b66a62f752a",
+      "bucketName": "Power Consumption",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 36,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 36,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.36.tar.gz",
+                  "size": 6605,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 54,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 54,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.54.tar.gz",
+                  "size": 6656,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 69,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 69,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.69.tar.gz",
+                  "size": 6706,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 84,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 84,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.84.tar.gz",
+                  "size": 6831,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 116,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 116,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.116.tar.gz",
+                  "size": 6888,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 134,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 134,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.134.tar.gz",
+                  "size": 7367,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "b18865a1288731cc",
+      "bucketName": "_monitoring",
+      "description": "System bucket for monitoring logs",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 604800000000000,
+          "shardGroupDuration": 86400000000000,
+          "shardGroups": [
+            {
+              "id": 73,
+              "startTime": "2023-07-04T00:00:00Z",
+              "endTime": "2023-07-05T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 74,
+              "startTime": "2023-07-05T00:00:00Z",
+              "endTime": "2023-07-06T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 75,
+              "startTime": "2023-07-06T00:00:00Z",
+              "endTime": "2023-07-07T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 76,
+              "startTime": "2023-07-07T00:00:00Z",
+              "endTime": "2023-07-08T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 77,
+              "startTime": "2023-07-08T00:00:00Z",
+              "endTime": "2023-07-09T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 78,
+              "startTime": "2023-07-09T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 79,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-11T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 88,
+              "startTime": "2023-07-11T00:00:00Z",
+              "endTime": "2023-07-12T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 89,
+              "startTime": "2023-07-12T00:00:00Z",
+              "endTime": "2023-07-13T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 90,
+              "startTime": "2023-07-13T00:00:00Z",
+              "endTime": "2023-07-14T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 91,
+              "startTime": "2023-07-14T00:00:00Z",
+              "endTime": "2023-07-15T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 109,
+              "startTime": "2023-07-15T00:00:00Z",
+              "endTime": "2023-07-16T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 110,
+              "startTime": "2023-07-16T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 111,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-18T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 122,
+              "startTime": "2023-07-18T00:00:00Z",
+              "endTime": "2023-07-19T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 124,
+              "startTime": "2023-07-19T00:00:00Z",
+              "endTime": "2023-07-20T00:00:00Z",
+              "deletedAt": "0001-01-01T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 125,
+              "startTime": "2023-07-20T00:00:00Z",
+              "endTime": "2023-07-21T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 126,
+              "startTime": "2023-07-21T00:00:00Z",
+              "endTime": "2023-07-22T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 127,
+              "startTime": "2023-07-22T00:00:00Z",
+              "endTime": "2023-07-23T00:00:00Z",
+              "shards": [
+                {
+                  "id": 127,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.127.tar.gz",
+                  "size": 347,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 128,
+              "startTime": "2023-07-23T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 128,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.128.tar.gz",
+                  "size": 389,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 129,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-25T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 141,
+              "startTime": "2023-07-25T00:00:00Z",
+              "endTime": "2023-07-26T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 142,
+              "startTime": "2023-07-26T00:00:00Z",
+              "endTime": "2023-07-27T00:00:00Z",
+              "shards": [
+                {
+                  "id": 142,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.142.tar.gz",
+                  "size": 386,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 143,
+              "startTime": "2023-07-27T00:00:00Z",
+              "endTime": "2023-07-28T00:00:00Z",
+              "shards": [
+                {
+                  "id": 143,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.143.tar.gz",
+                  "size": 347,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "bcf68603b917f170",
+      "bucketName": "CO2",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 40,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 40,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.40.tar.gz",
+                  "size": 3830,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 51,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 51,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.51.tar.gz",
+                  "size": 3868,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 66,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 66,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.66.tar.gz",
+                  "size": 3902,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 81,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 81,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.81.tar.gz",
+                  "size": 3485,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 113,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 113,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.113.tar.gz",
+                  "size": 3372,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 131,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 131,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.131.tar.gz",
+                  "size": 3142,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "be6a74bd7e34af7a",
+      "bucketName": "Temperature",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 38,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 38,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.38.tar.gz",
+                  "size": 8916,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 55,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 55,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.55.tar.gz",
+                  "size": 9055,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 70,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 70,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.70.tar.gz",
+                  "size": 9177,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 85,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 85,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.85.tar.gz",
+                  "size": 8028,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 117,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 117,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.117.tar.gz",
+                  "size": 7747,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 135,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 135,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.135.tar.gz",
+                  "size": 5877,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "ca58957933c79c91",
+      "bucketName": "Water",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 41,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 41,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.41.tar.gz",
+                  "size": 1828,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 56,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 56,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.56.tar.gz",
+                  "size": 1842,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 71,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 71,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.71.tar.gz",
+                  "size": 1675,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 86,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 118,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 118,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.118.tar.gz",
+                  "size": 1557,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 136,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 136,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.136.tar.gz",
+                  "size": 1810,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "ce9d3c189726d5e6",
+      "bucketName": "Historical Power Consumption",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 107,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 107,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.107.tar.gz",
+                  "size": 545,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 120,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 138,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": []
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "d428afe4ca67c3a4",
+      "bucketName": "Light",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 37,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 37,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.37.tar.gz",
+                  "size": 2444,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 53,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 53,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.53.tar.gz",
+                  "size": 2669,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 68,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 68,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.68.tar.gz",
+                  "size": 2834,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 83,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 83,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.83.tar.gz",
+                  "size": 2691,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 115,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 115,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.115.tar.gz",
+                  "size": 2106,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 133,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 133,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.133.tar.gz",
+                  "size": 2230,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "d805cda373de6659",
+      "bucketName": "_tasks",
+      "description": "System bucket for task logs",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 259200000000000,
+          "shardGroupDuration": 86400000000000,
+          "shardGroups": [],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "e0e41ccf10f468e1",
+      "bucketName": "WeatherAPI",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 16,
+              "startTime": "2023-06-12T00:00:00Z",
+              "endTime": "2023-06-19T00:00:00Z",
+              "shards": [
+                {
+                  "id": 16,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.16.tar.gz",
+                  "size": 16702,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 33,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 33,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.33.tar.gz",
+                  "size": 10085,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 50,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": [
+                {
+                  "id": 50,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.50.tar.gz",
+                  "size": 10061,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 65,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": [
+                {
+                  "id": 65,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.65.tar.gz",
+                  "size": 10295,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 80,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": [
+                {
+                  "id": 80,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.80.tar.gz",
+                  "size": 9813,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 112,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": [
+                {
+                  "id": 112,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.112.tar.gz",
+                  "size": 10056,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 130,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 130,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.130.tar.gz",
+                  "size": 8040,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    },
+    {
+      "organizationID": "bb2b4cd848e10e76",
+      "organizationName": "my-org",
+      "bucketID": "f2da73236f091643",
+      "bucketName": "Test",
+      "defaultRetentionPolicy": "autogen",
+      "retentionPolicies": [
+        {
+          "name": "autogen",
+          "replicaN": 1,
+          "duration": 0,
+          "shardGroupDuration": 604800000000000,
+          "shardGroups": [
+            {
+              "id": 42,
+              "startTime": "2023-06-19T00:00:00Z",
+              "endTime": "2023-06-26T00:00:00Z",
+              "shards": [
+                {
+                  "id": 42,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.42.tar.gz",
+                  "size": 624,
+                  "compression": 1
+                }
+              ]
+            },
+            {
+              "id": 57,
+              "startTime": "2023-06-26T00:00:00Z",
+              "endTime": "2023-07-03T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 72,
+              "startTime": "2023-07-03T00:00:00Z",
+              "endTime": "2023-07-10T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 87,
+              "startTime": "2023-07-10T00:00:00Z",
+              "endTime": "2023-07-17T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 119,
+              "startTime": "2023-07-17T00:00:00Z",
+              "endTime": "2023-07-24T00:00:00Z",
+              "shards": []
+            },
+            {
+              "id": 137,
+              "startTime": "2023-07-24T00:00:00Z",
+              "endTime": "2023-07-31T00:00:00Z",
+              "shards": [
+                {
+                  "id": 137,
+                  "shardOwners": [],
+                  "fileName": "20230727T155901Z.137.tar.gz",
+                  "size": 2436,
+                  "compression": 1
+                }
+              ]
+            }
+          ],
+          "subscriptions": []
+        }
+      ]
+    }
+  ]
+}
