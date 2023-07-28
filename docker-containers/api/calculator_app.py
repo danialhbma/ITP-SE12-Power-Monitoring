@@ -8,27 +8,44 @@ app = Flask(__name__)
 def rack_calculator():
     pc_path = "Power Consumption.csv"
     pc_data = get_pc_data(pc_path)
-    print(pc_data)
+
     if pc_data is not None:  
         # get user inputs
         colour_of_led = request.json["colour_of_led"]
         led_usage_hours = request.json["led_usage_hours"]
-        num_of_days_ran = request.json["num_of_days_ran"]
-
+        water_usage_hours = request.json["water_usage_hours"]
+        num_of_days = request.json["num_of_days"]
+        
+        led_wattage = request.json["led_wattage"]
+        water_wattage = request.json["water_wattage"]
+        
         light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
         
-        purple_led_on_power, purple_led_off_power, white_led_on_power, white_led_off_power = get_racklight_power_consumption(light_mean_dict,
-                                                                                                                            num_of_days_ran,
-                                                                                                                            led_usage_hours,
-                                                                                                                            led_usage_hours,
-                                                                                                                            1, 1)
-        
-        # return power consumption based on selected led colour
-        if colour_of_led == "Purple":
-            result = purple_led_on_power + purple_led_off_power
+        if water_wattage != None:
+            # calculate water power consumption based on user input values
+            water_power = get_water_power_consumption(float(water_wattage), num_of_days, water_usage_hours, 1)
         else:
-            result = white_led_on_power + white_led_off_power
-            
+            # calculate water power consumption based on measured values
+            water_power = get_water_power_consumption(water_mean, num_of_days, water_usage_hours, 1) 
+        
+        if led_wattage != None:
+            # calculate LED power consumption based on user input values
+            led_power = calculate_power_from_watts(float(led_wattage), num_of_days, led_usage_hours, 1)
+            return led_power + water_power
+        
+        else:
+            purple_led_power, white_led_power = get_racklight_power_consumption(0,
+                                                                                light_mean_dict,
+                                                                                num_of_days,
+                                                                                led_usage_hours,
+                                                                                led_usage_hours,
+                                                                                1, 1)
+        
+            # return power consumption based on selected led colour
+            if colour_of_led == "Purple":
+                result = purple_led_power + water_power 
+            else:
+                result = white_led_power + water_power
     else:
         result = "Error"
         
@@ -42,13 +59,17 @@ def container_calculator():
     pc_data = get_pc_data(pc_path)
     
     if pc_data is not None:
-        # get user inputs
+        # led
         num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
         purple_led_usage_hours = request.json["purple_led_usage_hours"]
         num_of_white_led_racks = int(request.json["num_of_white_led_racks"])
         white_led_usage_hours = request.json["white_led_usage_hours"]
+        
+        # water pump
         water_pump_usage = request.json["water_pump_usage"]
         aircon_usage = request.json["aircon_usage"]
+        
+        # aircon
         num_aircon_units = request.json["num_aircon_units"]
         
         # get days in current month 

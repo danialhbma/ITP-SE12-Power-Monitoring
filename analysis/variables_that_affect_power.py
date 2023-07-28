@@ -44,7 +44,7 @@ if pc_data is not None:
     # store estimdated power consumption in dictionary
     estimated_power_dict = {}
     estimated_power_dict['Water'] = get_water_power_consumption(water_mean, days_in_month)
-    purple_led_on_power, purple_led_off_power, white_led_on_power, white_led_off_power = get_racklight_power_consumption(light_mean_dict, days_in_month)
+    purple_led_on_power, purple_led_off_power, white_led_on_power, white_led_off_power = get_racklight_power_consumption(1, light_mean_dict, days_in_month)
     
     estimated_power_dict['Purple LED On'] = purple_led_on_power
     estimated_power_dict['Purple LED Off'] = purple_led_off_power
