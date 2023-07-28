@@ -131,6 +131,6 @@ def get_racklight_power_consumption(details,
 # returns power consumption of aircon in kWh
 def get_aircon_power_consumption(days_ran,
                                 num_of_hours_ran = WHOLE_DAY,
-                                num_of_units = NUM_OF_AIRCON_UNITS):
-    total_watts = INDOOR_FAN + COOLING + COMPRESSOR + OUTDOOR_FAN
+                                num_of_units = NUM_OF_AIRCON_UNITS,
+                                total_watts = INDOOR_FAN + COOLING + COMPRESSOR + OUTDOOR_FAN):
     return round((total_watts * days_ran * num_of_hours_ran / 1000) * num_of_units, 2)
