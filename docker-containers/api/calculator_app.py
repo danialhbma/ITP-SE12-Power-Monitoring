@@ -18,6 +18,7 @@ def rack_calculator():
         
         led_wattage = int(request.json["led_wattage"])
         water_wattage = int(request.json["water_wattage"])
+        cost_per_kwh = float(request.json["cost_per_kwh"])
         
         light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
         
@@ -48,11 +49,22 @@ def rack_calculator():
                 result = white_led_power + water_power
 
         result = round(result, 2)
+        
+        # calculate cost
+        if cost_per_kwh > 0:
+            cost = calculate_cost(result, cost_per_kwh)
+        else:
+            cost = calculate_cost(result)
+        
     else:
         result = "Error"
+        cost = "Error"
         
     # Return result to client
-    return jsonify({"result": result})
+    return jsonify({
+        "result": result,
+        "cost": cost
+        })
 
 # calculate power consumption of container for 1 month if conditions are altered
 @app.route("/container_calculator", methods=["POST"])
@@ -79,6 +91,9 @@ def container_calculator():
         aircon_usage = request.json["aircon_usage_hours"]
         num_aircon_units = int(request.json["num_aircon_units"])
         aircon_wattage = int(request.json["aircon_wattage"])
+        
+        # cost
+        cost_per_kwh = float(request.json["cost_per_kwh"])
         
         # get days in current month 
         days_in_month = get_days_in_month()
@@ -126,14 +141,24 @@ def container_calculator():
         
         difference = result - current_power_consumption
         
+        # calculate cost
+        if cost_per_kwh > 0:
+            cost = calculate_cost(result, cost_per_kwh)
+            cost_diff = calculate_cost(difference, cost_per_kwh)
+            
+        else:
+            cost = calculate_cost(result)
+            cost_diff = calculate_cost(difference)
+            
     else:
-        result = "Error"
-        difference = "Error"
+        result, difference, cost, cost_diff = "Error"
         
     # Return result to client
     return jsonify({
         "result": result,
-        "diff": difference})
+        "diff": difference,
+        "cost": cost,
+        "cost_diff": cost_diff})
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080) # enable on port 8080 for all available ip addresses

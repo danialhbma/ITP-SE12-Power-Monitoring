@@ -7,6 +7,9 @@ from datetime import datetime
 
 PC_PATH = "analysis/data/Power Consumption.csv"
 
+# Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
+POWER_COST_PER_KWH = 0.2898
+
 TIMEZONE = timezone('Asia/Singapore')
 RACKS = ["Rack_1", "Rack_2"] # racks observed
 POWER_READ_INTERVAL = 1  # in hours
@@ -134,3 +137,8 @@ def get_aircon_power_consumption(days_ran,
                                 num_of_units = NUM_OF_AIRCON_UNITS,
                                 total_watts = INDOOR_FAN + COOLING + COMPRESSOR + OUTDOOR_FAN):
     return round((total_watts * days_ran * num_of_hours_ran / 1000) * num_of_units, 2)
+
+# returns cost of running appliance based on the given power (in kwh) used and cost per kwh
+def calculate_cost(power_used, cost_per_kwh = POWER_COST_PER_KWH):
+    return power_used  * cost_per_kwh
+    
