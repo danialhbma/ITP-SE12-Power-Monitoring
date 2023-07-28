@@ -16,22 +16,22 @@ def rack_calculator():
         water_usage_hours = request.json["water_usage_hours"]
         num_of_days = request.json["num_of_days"]
         
-        led_wattage = request.json["led_wattage"]
-        water_wattage = request.json["water_wattage"]
+        led_wattage = int(request.json["led_wattage"])
+        water_wattage = int(request.json["water_wattage"])
         
         light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
         
-        if water_wattage != None:
+        if water_wattage != 0:
             # calculate water power consumption based on user input values
-            water_power = get_water_power_consumption(float(water_wattage), num_of_days, water_usage_hours, 1)
+            water_power = get_water_power_consumption(water_wattage, num_of_days, water_usage_hours, 1)
         else:
             # calculate water power consumption based on measured values
             water_power = get_water_power_consumption(water_mean, num_of_days, water_usage_hours, 1) 
         
-        if led_wattage != None:
+        if led_wattage != 0:
             # calculate LED power consumption based on user input values
-            led_power = calculate_power_from_watts(float(led_wattage), num_of_days, led_usage_hours, 1)
-            return led_power + water_power
+            led_power = calculate_power_from_watts(led_wattage, num_of_days, led_usage_hours, 1)
+            result = led_power + water_power
         
         else:
             purple_led_power, white_led_power = get_racklight_power_consumption(0,
@@ -46,6 +46,8 @@ def rack_calculator():
                 result = purple_led_power + water_power 
             else:
                 result = white_led_power + water_power
+
+        result = round(result, 2)
     else:
         result = "Error"
         
