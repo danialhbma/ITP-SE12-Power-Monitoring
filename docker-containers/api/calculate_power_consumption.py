@@ -1,110 +1,144 @@
 import os
 import pandas as pd
 from collections import defaultdict
+from pytz import timezone
+import calendar
+from datetime import datetime
 
 PC_PATH = "analysis/data/Power Consumption.csv"
 
-RACKS = ["Rack_1", "Rack_2", "Rack_3"] # racks observed
+# Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
+POWER_COST_PER_KWH = 0.2898
+
+TIMEZONE = timezone('Asia/Singapore')
+RACKS = ["Rack_1", "Rack_2"] # racks observed
 POWER_READ_INTERVAL = 1  # in hours
 WHOLE_DAY = 24 # in hours
 
-# indoor aircon unit: Therm-Aire STA-024SPWM
-INDOOR_FAN = 120
-NUM_OF_INDOOR_UNITS = 2
+# rough baseline for racklights on/off 
+BASELINE_RACKLIGHT_ON = 350
+BASELINE_RACKLIGHT_OFF = 2
 
-# outdoor aircon unit: Therm-Aire STA5-048SPMM
-OUTDOOR_COOLING_MIN = 855
-OUTDOOR_COOLING_MAX = 4795
-OUTDOOR_COMPRESSOR_NORM = 2820
-OUTDOOR_COMPRESSOR_MAX = 3040
-OUTDOOR_FAN = 85
+# aircon unit: Therm-Aire STA-024SPWM (single split)
+INDOOR_FAN = 58
+COOLING = 1230
+COMPRESSOR = 1970
+OUTDOOR_FAN = 58
+NUM_OF_AIRCON_UNITS = 2
 
 # total number of racks currently in use in the container
 NUM_OF_WHITE_LED_RACKS = 6
 NUM_OF_PURPLE_LED_RACKS = 3
 
+# time that the rack water pumps and rack led lights are currently run for
+WATER_PUMP_RUNTIME = 24
+RACK_LIGHT_RUNTIME = 12
+
 def get_pc_data(pc_path=PC_PATH):    
     if os.path.isfile(pc_path):
-        pc_data = pd.read_csv(pc_path, usecols=[0, 1, 3])
-        number_of_days_observed = get_days_observed(pc_data)
-        # drop datetime col from dataframe
-        pc_data = pc_data.drop(pc_data.columns[0], axis=1)
-        
-        # create a defaultdict to store pc_data values based on time (and account for duplicates)
-        pc_data_dict = defaultdict(float)
-        for power, reading in pc_data.values:
-            pc_data_dict[reading] += power
-            
-        return pc_data_dict, number_of_days_observed
+        pc_data = pd.read_csv(pc_path, usecols=['_time', '_value', '_measurement'])        
+        return pc_data
     else:
         return None
-    
-# function that returns the number of days the data was collected over
-def get_days_observed(pc_data):
-    # get datetime col in dataframe
-    pc_data.iloc[:, 0] = pd.to_datetime(pc_data.iloc[:, 0])
-    
-    # get date range 
-    first_date = pc_data.iloc[:, 0].min()
-    last_date = pc_data.iloc[:, 0].max()
-    number_of_days_observed = (last_date - first_date).days + 1
 
-    return number_of_days_observed
+# function that returns the number of days in current month
+def get_days_in_month():
+    current_year = datetime.now().year
+    current_month = datetime.now().month
+    return calendar.monthrange(current_year, current_month)[1]
 
-# function that gets power consumption of all water pumps used rounded to 2dp
-def get_water_power_consumption(pc_data_dict,
-                                total_racks_used = NUM_OF_PURPLE_LED_RACKS + NUM_OF_WHITE_LED_RACKS,
-                                racks = RACKS,
-                                power_read_interval = POWER_READ_INTERVAL):
-    water_power_consumption = 0
+# basic function that calculates power kWh based on wattage, days ran and hours ran
+def calculate_power_from_watts(appliance_wattage, days_ran, hours_ran, num_of_racks):
+    return round((appliance_wattage * days_ran * hours_ran * num_of_racks) / 1000, 2)
+
+# function that returns mean watts measured for each rack light and water pump
+def get_mean_watt_measured(pc_data, racks = RACKS):
+    # convert time to correct timezone and set as index
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+    pc_data['_time'] = pc_data['_time'].dt.tz_convert(TIMEZONE)
+    pc_data.set_index('_time', inplace=True)
     
-    # calculate the total power consumption of water pumps from observed data
+    light_mean_dict = {}
+    water_sum = 0
+    
+    # filter on/off values based led colour
     for rack in racks:
-        water_power_consumption += (pc_data_dict[rack + "_Water"]) * power_read_interval / 1000
-
-    # use the observed data to estimate power consumption of all racks in use
-    return round(water_power_consumption / len(racks) * total_racks_used, 2)
-    
-# function that gets power consumption of all rack LED lights used
-# output: power consumption of white led lights and purple led lights, rounded to 2dps
-def get_racklight_power_consumption(pc_data_dict,
-                                    num_of_purple_led_racks = NUM_OF_PURPLE_LED_RACKS,
-                                    num_of_white_led_racks = NUM_OF_WHITE_LED_RACKS,
-                                    racks = RACKS,
-                                    power_read_interval = POWER_READ_INTERVAL):
-    purple_led_power_consumption = 0
-    white_led_power_consumption = 0
-    num_purple_racks_observed = 0
-    
-    # calculate the total power consumption of lights from observed data
-    # rack 1 is using purple LED, racks 2 and 3 is using white LED
-    for rack in racks:
-        # filter by racks observed
-        if rack.endswith('1'): 
-            purple_led_power_consumption += (pc_data_dict[rack + "_Light"]) * power_read_interval / 1000
-            num_purple_racks_observed += 1
+        # filter rack light on/off values based on recorded baseline vals
+        rack_light_on = pc_data[(pc_data['_value'] >= BASELINE_RACKLIGHT_ON) & (pc_data['_measurement'] == rack + '_Light')]
+        rack_light_off = pc_data[(pc_data['_value'] <= BASELINE_RACKLIGHT_OFF) & (pc_data['_measurement'] == rack + '_Light')]
+        
+        # take all water values since water pumps are always on
+        rack_water = pc_data[(pc_data['_measurement'] == rack + '_Water')]
+        
+        # Calculate the mean for the current rack and day/night
+        rack_light_on_mean = round(rack_light_on['_value'].mean(), 2)
+        rack_light_off_mean = round(rack_light_off['_value'].mean(), 2)
+        water_sum += round(rack_water['_value'].mean(), 2)
+        
+        # store the mean values in the dictionary based on rack led colour
+        if rack.endswith('1'):     
+            light_mean_dict['Purple_LED_On'] = rack_light_on_mean
+            light_mean_dict['Purple_LED_Off'] = rack_light_off_mean
         else:
-            white_led_power_consumption += (pc_data_dict[rack + "_Light"]) * power_read_interval / 1000
+            light_mean_dict['White_LED_On'] = rack_light_on_mean
+            light_mean_dict['White_LED_Off'] = rack_light_off_mean
     
-    # use the observed data to estimate power consumption of all racks in use
-    purple_led_power_consumption = round(purple_led_power_consumption / num_purple_racks_observed * num_of_purple_led_racks, 2)
-    white_led_power_consumption = round(white_led_power_consumption / (len(racks) - num_purple_racks_observed) * num_of_white_led_racks, 2)
+        # find mean of observed water pumps
+        water_pump_wattage = water_sum / len(racks)
+        
+    return light_mean_dict, water_pump_wattage
+
+# returns the power consumption of water pumps in kWh
+def get_water_power_consumption(water_pump_wattage,
+                                days_ran,
+                                hours_ran = WATER_PUMP_RUNTIME,
+                                total_racks = NUM_OF_PURPLE_LED_RACKS + NUM_OF_WHITE_LED_RACKS):
     
-    return purple_led_power_consumption, white_led_power_consumption
+    water_power = calculate_power_from_watts(water_pump_wattage, days_ran, hours_ran, total_racks)
+    return water_power
 
-# function that calculates the power consumption of the air conditioner at maximum cooling capacity
-# assumption: aircon runs for 24 hours a day for the specified number of days
-def get_max_aircon_power(number_of_days,
-                         number_of_hours_ran = WHOLE_DAY):
-    indoor = INDOOR_FAN * NUM_OF_INDOOR_UNITS
-    outdoor = OUTDOOR_COOLING_MAX + OUTDOOR_COMPRESSOR_MAX + OUTDOOR_FAN
-    return round((indoor + outdoor) * number_of_days * number_of_hours_ran / 1000, 2)
+# returns power consumption of each rack light based on its usage in kWh
+# details: 0 for simple (returns purple led and white led power) and 1 for detailed (returns led power based on colour and state)
+def get_racklight_power_consumption(details,
+                                    light_mean_dict,
+                                    days_ran,
+                                    purple_led_hours_ran = RACK_LIGHT_RUNTIME,
+                                    white_led_hours_ran = RACK_LIGHT_RUNTIME,
+                                    purple_led_racks = NUM_OF_PURPLE_LED_RACKS,
+                                    white_led_racks = NUM_OF_WHITE_LED_RACKS,
+                                    whole_day = WHOLE_DAY):
+    
+    # get mean watt measured for both white and purple leds
+    purple_led_on_mean = light_mean_dict['Purple_LED_On']
+    white_led_on_mean = light_mean_dict['White_LED_On']
+    purple_led_off_mean = light_mean_dict['Purple_LED_Off']
+    white_led_off_mean = light_mean_dict['White_LED_Off']
+    
+    # find power consumption of each led running for the specified number of hours
+    purple_led_on_power = calculate_power_from_watts(purple_led_on_mean, days_ran, purple_led_hours_ran, purple_led_racks)
+    purple_led_off_power = calculate_power_from_watts(purple_led_off_mean, days_ran, (whole_day - purple_led_hours_ran), purple_led_racks)
+    
+    white_led_on_power = calculate_power_from_watts(white_led_on_mean, days_ran, white_led_hours_ran, white_led_racks)
+    white_led_off_power = calculate_power_from_watts(white_led_off_mean, days_ran, (whole_day - white_led_hours_ran), white_led_racks)
+    
+    # if simple data needed, return the total power consumption of each led
+    if details == 0:
+        purple_led_power = purple_led_on_power + purple_led_off_power
+        white_led_power = white_led_on_power + white_led_off_power
+        return purple_led_power, white_led_power
+    
+    # if detailed data needed, return power consumption of each led based on its colour and on/off state
+    else:
+        return purple_led_on_power, purple_led_off_power, white_led_on_power, white_led_off_power
 
-# function that calculates the average power consumption of the air conditioner at normal cooling capacity
-# assumption: aircon runs for 24 hours a day for the specified number of days
-def get_avg_aircon_power(number_of_days,
-                         number_of_hours_ran = WHOLE_DAY):
-    avg_outdoor_cooling = (OUTDOOR_COOLING_MIN + OUTDOOR_COOLING_MAX)/2
-    indoor = INDOOR_FAN * NUM_OF_INDOOR_UNITS
-    outdoor = avg_outdoor_cooling + OUTDOOR_COMPRESSOR_NORM + OUTDOOR_FAN
-    return round((indoor + outdoor) * number_of_days * number_of_hours_ran / 1000, 2)
+# returns power consumption of aircon in kWh
+def get_aircon_power_consumption(days_ran,
+                                num_of_hours_ran = WHOLE_DAY,
+                                num_of_units = NUM_OF_AIRCON_UNITS,
+                                total_watts = INDOOR_FAN + COOLING + COMPRESSOR + OUTDOOR_FAN):
+    return round((total_watts * days_ran * num_of_hours_ran / 1000) * num_of_units, 2)
+
+# returns cost of running appliance based on the given power (in kwh) used and cost per kwh
+def calculate_cost(power_used, cost_per_kwh = POWER_COST_PER_KWH):
+    return round(power_used  * cost_per_kwh, 2)
+    

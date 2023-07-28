@@ -12,10 +12,12 @@ This setup guide is tailored for **Google Cloud Console**. All commands were exe
 4. Start docker containers.
 	* ``sudo docker-compose up -d`` 
 5. Docker images are hosted on the corresponding ports: 
-	* nodered: port 1880
+	* nginx: port 443 **access point for grafana webpage/dashboard**
+ 	* nodered: port 1880
 	* influxdb: port 8086
 	* grafana: port 3000
 	* eclipse-mosquitto: port 1883 **not accessible via web, but acts as broker for mqtt publishers and subscribers**
+  	* api: port 8080 **only accessible via POST requests**
 6. Verify docker images are up and running.
 	* ``sudo docker ps``
 	* ``curl <public-ip-address>:<port>`` 
@@ -25,6 +27,7 @@ This setup guide is tailored for **Google Cloud Console**. All commands were exe
 	* ``gcloud compute firewall-rules create node-red-rule --allow tcp:1880``
 	* ``gcloud compute firewall-rules create influxdb-rule --allow tcp:8086``
 	* ``gcloud compute firewall-rules create grafana-rule --allow tcp:3000``
+  	* ``gcloud compute firewall-rules create api-rule --allow tcp:8080``
 	* ``gcloud compute firewall-rules create allow-mqtt --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:1883 --source-ranges=0.0.0.0/0``
 8. Once firewall rules configured, you should be able to access these Grafana, InfluxDB and NodeRed via an internet broweser
 	* **public-ip-address:port** e.g., 35.198.233.52:8086 
