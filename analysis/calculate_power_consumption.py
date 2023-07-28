@@ -1,16 +1,14 @@
 import os
 import pandas as pd
 from collections import defaultdict
-from pytz import timezone
 import calendar
 from datetime import datetime
 
-PC_PATH = "./data/Power Consumption.csv"
+PC_PATH = "analysis/data/Power Consumption.csv"
 
 # Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898
 
-TIMEZONE = timezone('Asia/Singapore')
 RACKS = ["Rack_1", "Rack_2"] # racks observed
 POWER_READ_INTERVAL = 1  # in hours
 WHOLE_DAY = 24 # in hours
@@ -53,9 +51,7 @@ def calculate_power_from_watts(appliance_wattage, days_ran, hours_ran, num_of_ra
 
 # function that returns mean watts measured for each rack light and water pump
 def get_mean_watt_measured(pc_data, racks = RACKS):
-    # convert time to correct timezone and set as index
-    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
-    pc_data['_time'] = pc_data['_time'].dt.tz_convert(TIMEZONE)
+    # set datetime as index
     pc_data.set_index('_time', inplace=True)
     
     light_mean_dict = {}
@@ -138,15 +134,6 @@ def get_aircon_power_consumption(days_ran,
                                 total_watts = INDOOR_FAN + COOLING + COMPRESSOR + OUTDOOR_FAN):
     return round((total_watts * days_ran * num_of_hours_ran / 1000) * num_of_units, 2)
 
-# function that calculates the average power consumption of the air conditioner at normal cooling capacity
-# assumption: aircon runs for 24 hours a day for the specified number of days
-def get_avg_aircon_power(number_of_days,
-                         number_of_hours_ran = WHOLE_DAY):
-    avg_outdoor_cooling = (OUTDOOR_COOLING_MIN + OUTDOOR_COOLING_MAX)/2
-    indoor = INDOOR_FAN * NUM_OF_INDOOR_UNITS
-    outdoor = avg_outdoor_cooling + OUTDOOR_COMPRESSOR_NORM + OUTDOOR_FAN
-    return round((indoor + outdoor) * number_of_days * number_of_hours_ran / 1000, 2)
-=======
 # returns cost of running appliance based on the given power (in kwh) used and cost per kwh
 def calculate_cost(power_used, cost_per_kwh = POWER_COST_PER_KWH):
     return round(power_used  * cost_per_kwh, 2)

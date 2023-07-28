@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 from collections import defaultdict
-from pytz import timezone
 import calendar
 from datetime import datetime
 
@@ -10,7 +9,6 @@ PC_PATH = "analysis/data/Power Consumption.csv"
 # Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898
 
-TIMEZONE = timezone('Asia/Singapore')
 RACKS = ["Rack_1", "Rack_2"] # racks observed
 POWER_READ_INTERVAL = 1  # in hours
 WHOLE_DAY = 24 # in hours
@@ -53,9 +51,7 @@ def calculate_power_from_watts(appliance_wattage, days_ran, hours_ran, num_of_ra
 
 # function that returns mean watts measured for each rack light and water pump
 def get_mean_watt_measured(pc_data, racks = RACKS):
-    # convert time to correct timezone and set as index
-    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
-    pc_data['_time'] = pc_data['_time'].dt.tz_convert(TIMEZONE)
+    # set datetime as index
     pc_data.set_index('_time', inplace=True)
     
     light_mean_dict = {}
