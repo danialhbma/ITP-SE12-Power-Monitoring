@@ -77,3 +77,29 @@ But for the Correlate_ExtCond_To_IntCond_To_FPC, it has additional steps which a
 Threshold is based on https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/11-correlation-and-regression
 
 ## Cost Efficiency
+
+# Temperature Analysis
+Linear regression model was used to gauge / predict how internal farm temperature changes based off external farm temperature. Internal farm temperature retrieved from rack1, rack2 and rack3 temperature sensor readings while external farm temperature uses OpenWeatherMap temperature field.
+
+## High Level Overview
+1. Load both internal and external temperature data from their respective CSV files.
+2. Parse the timestamps from both datasets and set them as the index.
+3. Resample both datasets to get hourly average temperatures.
+4. Merge the two dataframes based on their timestamps.
+5. Handle missing data by replacing NaN entries with the mean of the respective column.
+6. Split the merged dataset into features (X - external temperatures) and target (y - internal temperatures).
+7. Further split the datasets into training and testing sets.
+8. Use the training set to train a linear regression model.
+9. Use the testing set to evaluate the model.
+
+## Model Explanation
+We used a linear regression model to predict the internal farm temperature based on the external temperature.
+
+The model assumes that there is a linear relationship between these two variables. The slope of the model (~0.755) implies that for every degree Celsius increase in the external temperature, the model predicts that the internal temperature will increase by about 0.755 degrees Celsius. The intercept of the model is approximately -2.21.
+
+We evaluated the model using the mean absolute error (MAE) metric, which provides an average of the absolute differences between the model's predictions and the actual internal temperatures. The MAE for this model is approximately 0.96, indicating that on average, the model's predictions are about 0.96 degrees Celsius away from the actual values.
+
+Please note that these results are based on the specific dataset we have and may vary as new data are collected.
+
+Conclusion
+This model provides a simple way to predict the internal temperature of the farm based on the external temperature, and it can be a useful tool for farm management. However, it is important to remember that temperature dynamics can be influenced by many other factors not considered in this model, such as insulation, humidity, and air circulation. Further research and more complex models might be needed to accurately predict internal temperature under various conditions.

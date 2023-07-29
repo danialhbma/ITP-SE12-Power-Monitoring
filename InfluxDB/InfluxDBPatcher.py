@@ -46,20 +46,20 @@ class InfluxDBPatcher:
                     new_measurement.time(record.get_time())
                     print(new_measurement)
                     # sys.exit(1) # Uncomment when ready to write 
-                    self.writer.write_single_measurement(new_measurement)
+                    # self.writer.write_single_measurement(new_measurement)
                     # sys.exit(1) # Uncomment when ready to write to all  
                 else:
                     last_non_zero_value = record.get_value()
 
 
 # Query used to patch rack 3 grow light power consumption
-"""
+
 query = f'''from(bucket: "Power Consumption")
   |> range(start: 2023-07-26T23:00:00Z, stop: 2023-07-27T11:00:00Z)
   |> filter(fn: (r) => r["_measurement"] == "Rack_3_Light")
   |> filter(fn: (r) => r["_field"] == "value")
 '''
-"""
+
 # Query used to patch rack 3 water pump power consumption
 """
 query = f'''from(bucket: "Power Consumption")
