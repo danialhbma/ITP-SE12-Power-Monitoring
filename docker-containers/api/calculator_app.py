@@ -110,25 +110,25 @@ def container_calculator():
         else:
             # calculate water power consumption based on measured values
             simulated_water_power = get_water_power_consumption(water_mean, days_in_month, water_usage_hours, total_racks) 
-        print("current water", current_water_power, flush=True)
-        print("water", simulated_water_power, flush=True)
 
         # get rack light power consumption
         current_purple_led, current_white_led = get_racklight_power_consumption(0, light_mean_dict, days_in_month)
         current_light_power = current_purple_led + current_white_led
+        
+        # use user variables but default wattage to calculate LED power consumption
+        simulated_purple_led_power, simulated_white_led_power = get_racklight_power_consumption(0,
+                                                                            light_mean_dict,
+                                                                            days_in_month,
+                                                                            purple_led_usage_hours,
+                                                                            white_led_usage_hours,
+                                                                            num_of_purple_led_racks,
+                                                                            num_of_white_led_racks)
+        # if led wattage is provided, replace previous values with calculations that take into account the wattage
         if purple_led_wattage != 0:
-            # use inputted wattage values to calculate LED power consumption
             simulated_purple_led_power = calculate_power_from_watts(purple_led_wattage, days_in_month, purple_led_usage_hours, num_of_purple_led_racks)
+        if white_led_wattage != 0:
             simulated_white_led_power = calculate_power_from_watts(white_led_wattage, days_in_month, white_led_usage_hours, num_of_white_led_racks)
-        else:
-            # use user variables but default wattage to calculate LED power consumption
-            simulated_purple_led_power, simulated_white_led_power = get_racklight_power_consumption(0,
-                                                                                light_mean_dict,
-                                                                                days_in_month,
-                                                                                purple_led_usage_hours,
-                                                                                white_led_usage_hours,
-                                                                                num_of_purple_led_racks,
-                                                                                num_of_white_led_racks)
+        
         simulated_light_power = simulated_purple_led_power + simulated_white_led_power
 
         # get aircon power consumption
