@@ -1,6 +1,7 @@
 from datetime import datetime
 import os
 import sys
+import pandas as pd
 influxdb_path = os.path.abspath(os.path.join("..", "InfluxDB"))
 sys.path.append(influxdb_path)
 from InfluxDBDataFrameHandler import InfluxDBDataFrameHandler
@@ -33,6 +34,10 @@ def extract_raw_data(buckets:list, reader: InfluxDBReader, date_range = "45d", a
         file_path = os.path.join(DATA_DIRECTORY, f"{bucket}.csv")
         bucket_data = reader.read_from_bucket(bucket, date_range, aggregation_window_interval) # Change window accordingly, it should cover the dates of all points of interest
         bucket_df = reader.query_result_to_dataframe(bucket_data)
+        # Convert the 'time' column to pandas datetime and remove microseconds
+        bucket_df['_time'] = pd.to_datetime(bucket_df['_time']).dt.strftime('%Y-%m-%d %H:%M:%S')
+        # Remove microseconds from the 'time' column using string manipulation
+        bucket_df['_time'] = bucket_df['_time'].str.replace(r'\.\d+', '')
         reader.dataframe_to_csv(bucket_df, file_path)
 
 # Extracting data from all our buckets in InfluxDB server
