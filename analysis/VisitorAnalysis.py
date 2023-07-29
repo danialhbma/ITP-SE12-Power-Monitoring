@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime, timezone
+import os 
 
 def read_ambient_data(file_path):
     df = pd.read_csv(file_path, usecols=["_time", "_value", "_measurement"])
@@ -69,8 +70,8 @@ def generate_visitors_graph(ambient_file, temperature_file, output_dir):
     plt.savefig(f"{output_dir}/visitors_graph.png")
     plt.show()
 
-ambient_file_path = 'data/ambient.csv' 
-temperature_file_path = 'data/temperature.csv' 
-output_directory = 'results' 
+ambient_file_path = os.path.join("data","Ambient.csv")
+temperature_file_path = os.path.join("data", "Temperature.csv")
+output_directory = "results"
 
 generate_visitors_graph(ambient_file_path, temperature_file_path, output_directory)

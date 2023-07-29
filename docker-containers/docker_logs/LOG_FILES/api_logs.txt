@@ -1,214 +1,3 @@
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8080
- * Running on http://172.23.0.7:8080
-[33mPress CTRL+C to quit[0m
-35.198.233.52 - - [27/Jul/2023 23:56:56] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [27/Jul/2023 23:57:11] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [27/Jul/2023 23:57:26] "POST /container_calculator HTTP/1.0" 200 -
-92.118.39.81 - - [27/Jul/2023 23:57:55] "[33mCONNECT myipb1a.mrrage.xyz:80 HTTP/1.1[0m" 404 -
-35.198.233.52 - - [27/Jul/2023 23:58:32] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [27/Jul/2023 23:58:37] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [27/Jul/2023 23:58:42] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [27/Jul/2023 23:59:36] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:02:27] "POST /container_calculator HTTP/1.0" 200 -
- * Serving Flask app 'calculator_app'
- * Debug mode: off
-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8080
- * Running on http://172.23.0.7:8080
-[33mPress CTRL+C to quit[0m
-35.198.233.52 - - [28/Jul/2023 00:04:21] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:06:02] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:06:09] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:06:12] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:06:16] "POST /container_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:09:28] "POST /rack_calculator HTTP/1.0" 200 -
-84.54.51.254 - - [28/Jul/2023 00:15:13] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
-193.35.18.33 - - [28/Jul/2023 00:37:59] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
-177.129.177.104 - - [28/Jul/2023 00:55:57] "[33mGET / HTTP/1.1[0m" 404 -
-35.198.233.52 - - [28/Jul/2023 00:56:24] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 00:56:42] "POST /rack_calculator HTTP/1.0" 200 -
-87.236.176.20 - - [28/Jul/2023 00:58:56] "[33mGET / HTTP/1.1[0m" 404 -
-205.210.31.33 - - [28/Jul/2023 01:03:08] code 400, message Bad request version ('À(À$À\x14À')
-205.210.31.33 - - [28/Jul/2023 01:03:08] "[35m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03ÞgU[\\å\x1fR\x0bÙSZl\\\x92¡B*[o»ÝÜ°c\x97öe8uè\x80\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" HTTPStatus.BAD_REQUEST -
-104.167.222.2 - - [28/Jul/2023 01:51:32] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
-103.214.21.17 - - [28/Jul/2023 02:09:21] code 400, message Bad request version ('À\x13À')
-103.214.21.17 - - [28/Jul/2023 02:09:21] "[35m[1m\x16\x03\x01\x01\x06\x01\x00\x01\x02\x03\x03EGvê¬}\x01Ô¶#ñÈÒ\x17Ø\x8aôÕ\x12\x9e±Ö\x83KCÖ\x025eJ§Ý \x92©ú\x06qÈ²\x81÷\x97æÓ²Göwg¶§ËhÐ¨*ÙÄÔ\x90¹\x17m\x88\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" HTTPStatus.BAD_REQUEST -
-45.128.232.140 - - [28/Jul/2023 02:30:58] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
-205.210.31.147 - - [28/Jul/2023 03:26:37] "[33mGET / HTTP/1.0[0m" 404 -
-92.118.39.40 - - [28/Jul/2023 03:38:07] "[33mGET / HTTP/1.1[0m" 404 -
-78.108.177.54 - - [28/Jul/2023 03:41:56] "[33mGET / HTTP/1.0[0m" 404 -
-104.167.222.2 - - [28/Jul/2023 03:47:50] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
-46.101.94.118 - - [28/Jul/2023 03:56:34] code 400, message Bad request syntax ('\x16\x03\x01\x01ü\x01\x00\x01ø\x03\x03È(Åÿq\x18\x1bÝNP¬ÞDOìô=\x15ÅáGv\x08\x9bÓÈ,\x17;\x01Ô|\x00\x01<Ì\x14Ì\x13Ì\x15À0À,À(À$À\x14À')
-46.101.94.118 - - [28/Jul/2023 03:56:34] "[35m[1m\x16\x03\x01\x01ü\x01\x00\x01ø\x03\x03È(Åÿq\x18\x1bÝNP¬ÞDOìô=\x15ÅáGv\x08\x9bÓÈ,\x17;\x01Ô|\x00\x01<Ì\x14Ì\x13Ì\x15À0À,À(À$À\x14À[0m" HTTPStatus.BAD_REQUEST -
-185.252.179.182 - - [28/Jul/2023 04:27:17] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
-46.174.191.28 - - [28/Jul/2023 04:28:18] "[33mGET / HTTP/1.0[0m" 404 -
-198.235.24.161 - - [28/Jul/2023 04:31:50] "[33mGET / HTTP/1.1[0m" 404 -
-35.198.233.52 - - [28/Jul/2023 04:51:05] "POST /rack_calculator HTTP/1.0" 200 -
-45.156.129.2 - - [28/Jul/2023 04:51:10] "[33mGET / HTTP/1.1[0m" 404 -
-35.198.233.52 - - [28/Jul/2023 05:07:10] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 05:07:16] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 05:07:34] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 05:07:55] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 05:08:15] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 05:08:40] "POST /rack_calculator HTTP/1.0" 200 -
-35.198.233.52 - - [28/Jul/2023 05:15:11] "POST /rack_calculator HTTP/1.0" 200 -
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
-0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
-1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
-2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
-3     2023-06-19 10:00:00+00:00    0.99  Rack_1_Light
-4     2023-06-19 11:00:00+00:00    0.86  Rack_1_Light
-...                         ...     ...           ...
-4666  2023-07-25 13:00:00+00:00   20.90  Rack_3_Water
-4667  2023-07-25 14:00:00+00:00   20.80  Rack_3_Water
-4668  2023-07-25 15:00:00+00:00   21.10  Rack_3_Water
-4669  2023-07-25 16:00:00+00:00   21.40  Rack_3_Water
-4670  2023-07-25 17:00:00+00:00   21.30  Rack_3_Water
-
-[4671 rows x 3 columns]
-                          _time  _value  _measurement
 0     2023-06-19 07:00:00+00:00    0.90  Rack_1_Light
 1     2023-06-19 08:00:00+00:00    0.89  Rack_1_Light
 2     2023-06-19 09:00:00+00:00    0.89  Rack_1_Light
@@ -998,3 +787,214 @@ NameError: name 'datetime' is not defined
 35.198.233.52 - - [28/Jul/2023 15:46:40] "POST /rack_calculator HTTP/1.0" 200 -
 35.198.233.52 - - [28/Jul/2023 15:46:40] "POST /rack_calculator HTTP/1.0" 200 -
 185.180.143.18 - - [28/Jul/2023 15:51:41] "[33mGET / HTTP/1.1[0m" 404 -
+45.128.232.140 - - [28/Jul/2023 16:03:12] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+167.172.200.67 - - [28/Jul/2023 16:15:35] "[33mGET / HTTP/1.0[0m" 404 -
+95.174.201.101 - - [28/Jul/2023 16:17:43] "[33mGET / HTTP/1.1[0m" 404 -
+45.128.232.125 - - [28/Jul/2023 16:24:03] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+185.170.144.3 - - [28/Jul/2023 16:29:38] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.170.144.3 - - [28/Jul/2023 16:29:38] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+45.128.232.128 - - [28/Jul/2023 16:35:37] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+185.180.143.188 - - [28/Jul/2023 17:21:46] "[33mGET / HTTP/1.1[0m" 404 -
+43.132.191.235 - - [28/Jul/2023 17:47:49] "[33mPOST /goform/set_LimitClient_cfg HTTP/1.1[0m" 404 -
+104.167.222.2 - - [28/Jul/2023 17:49:50] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
+92.63.196.76 - - [28/Jul/2023 17:50:54] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+92.63.196.76 - - [28/Jul/2023 17:50:54] "[35m[1m\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+162.216.149.148 - - [28/Jul/2023 18:04:40] "[33mGET / HTTP/1.1[0m" 404 -
+198.98.58.175 - - [28/Jul/2023 18:22:43] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+128.1.248.26 - - [28/Jul/2023 18:24:41] "[33mGET / HTTP/1.1[0m" 404 -
+185.233.19.141 - - [28/Jul/2023 18:45:00] "[33mGET / HTTP/1.1[0m" 404 -
+162.243.145.17 - - [28/Jul/2023 19:35:31] code 400, message Bad request syntax ('MGLNDD_35.198.233.52_8080')
+162.243.145.17 - - [28/Jul/2023 19:35:31] "[35m[1mMGLNDD_35.198.233.52_8080[0m" HTTPStatus.BAD_REQUEST -
+45.79.181.94 - - [28/Jul/2023 19:45:56] code 400, message Bad request version ('À\x14À')
+45.79.181.94 - - [28/Jul/2023 19:45:56] "[35m[1m\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03Ú\x92dÜ\x91B\x82MUêb?¶\x01û=±ét×éda'²m}Ïr­d\x83\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.12 - - [28/Jul/2023 19:49:57] "[33mGET / HTTP/1.1[0m" 404 -
+162.142.125.12 - - [28/Jul/2023 19:49:58] "[33mGET / HTTP/1.1[0m" 404 -
+162.142.125.12 - - [28/Jul/2023 19:49:58] code 505, message Invalid HTTP version (2.0)
+162.142.125.12 - - [28/Jul/2023 19:49:58] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+104.152.52.95 - - [28/Jul/2023 20:45:20] "[33mGET / HTTP/1.0[0m" 404 -
+209.141.40.248 - - [28/Jul/2023 21:16:06] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+78.108.177.50 - - [28/Jul/2023 21:59:33] "[33mGET / HTTP/1.0[0m" 404 -
+45.156.128.2 - - [28/Jul/2023 22:12:13] "[33mGET / HTTP/1.1[0m" 404 -
+198.235.24.109 - - [28/Jul/2023 22:16:35] "[33mGET / HTTP/1.1[0m" 404 -
+205.210.31.23 - - [28/Jul/2023 22:50:14] code 400, message Bad request version ('À(À$À\x14À')
+205.210.31.23 - - [28/Jul/2023 22:50:14] "[35m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03ããfÙ\x94 \x18U5¨b½º¶\x18&\x88: \x83´`\x05ÉïØ{\x9cz9sÓ\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" HTTPStatus.BAD_REQUEST -
+45.128.232.125 - - [28/Jul/2023 23:01:02] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+167.248.133.126 - - [28/Jul/2023 23:17:29] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.126 - - [28/Jul/2023 23:17:30] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.126 - - [28/Jul/2023 23:17:30] code 505, message Invalid HTTP version (2.0)
+167.248.133.126 - - [28/Jul/2023 23:17:30] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+45.128.232.140 - - [28/Jul/2023 23:33:58] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+198.98.58.175 - - [28/Jul/2023 23:49:17] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+193.35.18.33 - - [28/Jul/2023 23:58:45] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+205.210.31.129 - - [29/Jul/2023 00:12:46] "[33mGET / HTTP/1.0[0m" 404 -
+95.214.53.99 - - [29/Jul/2023 00:51:31] "[33mCONNECT create.roblox.com:443 HTTP/1.1[0m" 404 -
+205.210.31.155 - - [29/Jul/2023 01:23:36] "[33mGET / HTTP/1.1[0m" 404 -
+141.98.11.60 - - [29/Jul/2023 01:39:16] "[33mGET / HTTP/1.1[0m" 404 -
+200.8.184.59 - - [29/Jul/2023 01:45:48] "[33mGET / HTTP/1.1[0m" 404 -
+200.8.184.59 - - [29/Jul/2023 01:45:49] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+192.241.202.68 - - [29/Jul/2023 01:51:48] "[33mGET /manager/text/list HTTP/1.1[0m" 404 -
+216.218.206.70 - - [29/Jul/2023 01:57:49] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03U')
+216.218.206.70 - - [29/Jul/2023 01:57:49] "[35m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03U[0m" HTTPStatus.BAD_REQUEST -
+45.156.129.12 - - [29/Jul/2023 02:28:23] "[33mGET / HTTP/1.1[0m" 404 -
+92.118.39.40 - - [29/Jul/2023 02:45:10] "[33mGET / HTTP/1.1[0m" 404 -
+35.198.233.52 - - [29/Jul/2023 03:12:40] "POST /container_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [29/Jul/2023 03:13:21] "POST /container_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+current water 140.78
+water 15.64
+current light 1248.88
+light 1248.88
+current aircon 4934.21
+aircon 4934.21
+35.198.233.52 - - [29/Jul/2023 03:18:14] "POST /container_calculator HTTP/1.0" 200 -
+current water 140.78
+water 15.64
+current light 1248.88
+light 1248.88
+current aircon 4934.21
+aircon 4934.21
+35.198.233.52 - - [29/Jul/2023 03:19:41] "POST /container_calculator HTTP/1.0" 200 -
+46.101.81.209 - - [29/Jul/2023 03:21:30] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x01ü\x01\x00\x01ø\x03\x03\x02?ó@gËî\x18\x06±×J¯½l1¨µì¢>\x7fçH\x11'B")
+46.101.81.209 - - [29/Jul/2023 03:21:30] "[35m[1m\x16\x03\x01\x01ü\x01\x00\x01ø\x03\x03\x02?ó@gËî\x18\x06±×J¯½l1¨µì¢>\x7fçH\x11'B\x0bj\x00\x90O\x00\x01<Ì\x14Ì\x13Ì\x15À0À,À(À$À\x14À[0m" HTTPStatus.BAD_REQUEST -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+current water 140.78
+water 140.78
+35.198.233.52 - - [29/Jul/2023 03:21:48] "POST /container_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [29/Jul/2023 03:25:32] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:27:16] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:29:29] "POST /container_calculator HTTP/1.0" 200 -
+198.235.24.208 - - [29/Jul/2023 03:29:35] code 400, message Bad request syntax ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03+')
+198.235.24.208 - - [29/Jul/2023 03:29:35] "[35m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03+[0m" HTTPStatus.BAD_REQUEST -
+35.198.233.52 - - [29/Jul/2023 03:29:44] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:31:02] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:31:19] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:31:24] "POST /container_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [29/Jul/2023 03:44:56] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:45:00] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:45:03] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:03] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:07] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:11] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:15] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:24] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:37] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:47] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:49] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:50:54] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:51:25] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:51:37] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:52:38] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:52:43] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:52:48] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:09] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:19] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:26] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:31] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:34] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:37] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:53:39] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:54:57] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:55:17] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:55:19] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:55:24] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:55:29] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:56:57] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:57:26] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:58:44] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:59:02] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 03:59:18] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:02:11] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:02:24] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:02:31] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:03:51] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:04:50] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:05:15] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:05:44] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:05:53] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:06:06] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 04:07:45] "POST /container_calculator HTTP/1.0" 200 -
+209.141.40.248 - - [29/Jul/2023 04:28:14] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+209.141.41.25 - - [29/Jul/2023 04:31:37] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+35.198.233.52 - - [29/Jul/2023 04:59:56] "POST /container_calculator HTTP/1.0" 200 -
+45.128.232.125 - - [29/Jul/2023 05:00:09] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+35.198.233.52 - - [29/Jul/2023 05:02:11] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 05:02:17] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 05:02:24] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 05:02:27] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 05:02:30] "POST /container_calculator HTTP/1.0" 200 -
+45.128.232.140 - - [29/Jul/2023 05:09:15] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+198.98.58.175 - - [29/Jul/2023 05:24:34] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+198.199.118.93 - - [29/Jul/2023 05:48:37] "[33mGET / HTTP/1.1[0m" 404 -
+64.62.197.164 - - [29/Jul/2023 07:39:21] "[33mGET / HTTP/1.1[0m" 404 -
+64.62.197.158 - - [29/Jul/2023 07:39:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+64.62.197.159 - - [29/Jul/2023 07:39:56] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+64.62.197.153 - - [29/Jul/2023 07:40:06] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+35.198.233.52 - - [29/Jul/2023 07:49:45] "POST /rack_calculator HTTP/1.0" 200 -
+205.210.31.156 - - [29/Jul/2023 08:09:47] "[33mGET / HTTP/1.0[0m" 404 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [29/Jul/2023 08:36:39] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 08:36:41] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 09:01:44] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 09:01:51] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 09:53:49] "POST /rack_calculator HTTP/1.0" 200 -
+93.64.157.18 - - [29/Jul/2023 10:13:24] "[33mPOST /goform/set_LimitClient_cfg HTTP/1.1[0m" 404 -
+185.180.143.6 - - [29/Jul/2023 10:46:21] "[33mGET /api/session/properties HTTP/1.1[0m" 404 -
+35.198.233.52 - - [29/Jul/2023 10:53:45] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 10:53:50] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 10:54:48] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [29/Jul/2023 10:54:55] "POST /container_calculator HTTP/1.0" 200 -
+198.98.58.175 - - [29/Jul/2023 11:14:37] "[33mCONNECT www.baidu.com:443 HTTP/1.1[0m" 404 -
+46.174.191.30 - - [29/Jul/2023 11:34:50] "[33mGET / HTTP/1.0[0m" 404 -
+93.41.173.234 - - [29/Jul/2023 11:34:52] "[33mPOST /goform/set_LimitClient_cfg HTTP/1.1[0m" 404 -
+185.180.140.4 - - [29/Jul/2023 11:42:32] "[33mGET / HTTP/1.1[0m" 404 -
+185.180.140.4 - - [29/Jul/2023 11:42:33] "[33mGET /showLogin.cc HTTP/1.1[0m" 404 -
+45.128.232.140 - - [29/Jul/2023 11:56:32] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+104.167.222.2 - - [29/Jul/2023 12:06:04] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
+78.108.177.50 - - [29/Jul/2023 12:27:49] "[33mGET / HTTP/1.0[0m" 404 -
+45.128.232.125 - - [29/Jul/2023 13:07:29] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+80.94.92.15 - - [29/Jul/2023 13:16:56] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+193.35.18.33 - - [29/Jul/2023 13:26:40] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+45.128.232.140 - - [29/Jul/2023 13:33:06] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+193.35.18.33 - - [29/Jul/2023 14:50:32] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+170.64.171.174 - - [29/Jul/2023 15:14:33] "[33mGET / HTTP/1.1[0m" 404 -
+5.130.57.5 - - [29/Jul/2023 15:23:01] "[33mGET / HTTP/1.1[0m" 404 -
+91.206.244.2 - - [29/Jul/2023 15:40:03] "[33mGET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0[0m" 404 -

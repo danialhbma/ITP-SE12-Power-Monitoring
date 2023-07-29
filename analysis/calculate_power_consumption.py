@@ -4,7 +4,7 @@ from collections import defaultdict
 import calendar
 from datetime import datetime
 
-PC_PATH = "analysis/data/Power Consumption.csv"
+PC_PATH = os.path.join("data","Power Consumption.csv")
 
 # Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898

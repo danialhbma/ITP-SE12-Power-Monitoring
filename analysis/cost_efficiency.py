@@ -62,7 +62,7 @@ def get_cost_efficient_period():
     night_power = 0
 
     for time in pc_data_dict:
-        convertedTime = pd.to_datetime(time).tz_convert(TIMEZONE)
+        convertedTime = pd.to_datetime(time).tz_localize(TIMEZONE)  # Use tz_localize to add timezone information
         if convertedTime.time() >= pd.to_datetime('07:00:00').time() and convertedTime.time() <= pd.to_datetime("19:00:00").time():
             day_power += pc_data_dict[time] * POWER_READ_INTERVAL / 1000
         else:

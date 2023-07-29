@@ -1928,3 +1928,12 @@ HTTP response body: {"code":"unprocessable entity","message":"failure writing po
 {'weather_main': 'Clouds', 'temperature': 29.99, 'feels_like': 36.81, 'pressure': 1009, 'humidity': 77, 'temp_min': 29.86, 'temp_max': 29.99, 'wind_speed': 5.1, 'wind_deg': 166, 'cloudiness': 97}
 {'weather_main': 'Clouds', 'temperature': 29.92, 'feels_like': 36.34, 'pressure': 1008, 'humidity': 76, 'temp_min': 29.86, 'temp_max': 30.05, 'wind_speed': 4.63, 'wind_deg': 130, 'cloudiness': 75}
 {'weather_main': 'Clouds', 'temperature': 29.99, 'feels_like': 36.99, 'pressure': 1010, 'humidity': 79, 'temp_min': 29.86, 'temp_max': 29.99, 'wind_speed': 4.3, 'wind_deg': 158, 'cloudiness': 91}
+{'weather_main': 'Clouds', 'temperature': 29.66, 'feels_like': 35.87, 'pressure': 1008, 'humidity': 77, 'temp_min': 28.86, 'temp_max': 29.9, 'wind_speed': 5.66, 'wind_deg': 120, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.88, 'feels_like': 34.41, 'pressure': 1010, 'humidity': 80, 'temp_min': 28.86, 'temp_max': 28.88, 'wind_speed': 3.63, 'wind_deg': 151, 'cloudiness': 94}
+{'weather_main': 'Clouds', 'temperature': 28.86, 'feels_like': 33.74, 'pressure': 1009, 'humidity': 77, 'temp_min': 28.79, 'temp_max': 29.03, 'wind_speed': 4.63, 'wind_deg': 140, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.88, 'feels_like': 34.62, 'pressure': 1011, 'humidity': 81, 'temp_min': 28.86, 'temp_max': 29.3, 'wind_speed': 3.22, 'wind_deg': 144, 'cloudiness': 97}
+{'weather_main': 'Clouds', 'temperature': 28.86, 'feels_like': 33.74, 'pressure': 1010, 'humidity': 77, 'temp_min': 28.79, 'temp_max': 29.03, 'wind_speed': 4.63, 'wind_deg': 120, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.88, 'feels_like': 34.62, 'pressure': 1011, 'humidity': 81, 'temp_min': 28.75, 'temp_max': 28.88, 'wind_speed': 2.96, 'wind_deg': 130, 'cloudiness': 98}
+{'weather_main': 'Clouds', 'temperature': 28.81, 'feels_like': 32.67, 'pressure': 1010, 'humidity': 72, 'temp_min': 28.03, 'temp_max': 28.94, 'wind_speed': 3.6, 'wind_deg': 120, 'cloudiness': 75}
+{'weather_main': 'Clouds', 'temperature': 28.88, 'feels_like': 34.62, 'pressure': 1011, 'humidity': 81, 'temp_min': 28.75, 'temp_max': 28.88, 'wind_speed': 2.84, 'wind_deg': 131, 'cloudiness': 98}
+{'weather_main': 'Clouds', 'temperature': 28.73, 'feels_like': 32.49, 'pressure': 1011, 'humidity': 72, 'temp_min': 27.8, 'temp_max': 28.94, 'wind_speed': 3.09, 'wind_deg': 120, 'cloudiness': 75}

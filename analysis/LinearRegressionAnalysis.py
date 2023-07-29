@@ -11,9 +11,9 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 TIMEZONE = timezone('Asia/Singapore')
 # CSV paths
-PC_CSV = 'analysis/data/Power Consumption.csv'
-MODEL_PATH = 'analysis/model/pc_linear_regression_model.pkl'
-PREDICTIONS_CSV = 'analysis/data/monthly_predictions.csv'
+PC_CSV = os.path.join("data", "Power Consumption.csv")
+MODEL_PATH = os.path.join("model","pc_linear_regression_model.pkl")
+PREDICTIONS_CSV = os.path.join("data", "monthly_predictions.csv")
 
 class LinearRegressionModel():
     def __init__(self):
@@ -29,7 +29,7 @@ class LinearRegressionModel():
         power_consumption = power_consumption[['device_name', '_time', '_value']]
 
         # Convert the _time column to datetime (so that we can filter/group/sort on the column) and timezone (since csv is not in SG timezone)
-        power_consumption['_time'] = pd.to_datetime(power_consumption['_time']).dt.tz_convert(TIMEZONE)
+        power_consumption['_time'] = pd.to_datetime(power_consumption['_time']).dt.tz_localize(TIMEZONE)
 
         # Initialize an empty DataFrame to store the processed data
         processed_data = pd.DataFrame()

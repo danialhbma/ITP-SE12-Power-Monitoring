@@ -4,12 +4,15 @@ import datetime
 import os
 import matplotlib.pyplot as plt
 
+
 # Paths
-PREDICTIONS_CSV = 'analysis/data/monthly_predictions.csv'
-RACK_EMPC_CSV = 'analysis/data/rack_EMPC.csv'
-EDPC_CSV = 'analysis/data/daily_estimated_pc.csv'
-EMC_CSV = 'analysis/data/monthly_estimated_cost.csv'
-OUTPUT_PNG_PATH = 'analysis/results/'
+DATA_DIR = 'data'
+RESULTS_DIR = 'results'
+PREDICTIONS_CSV = os.path.join(DATA_DIR, 'monthly_predictions.csv')
+RACK_EMPC_CSV = os.path.join(DATA_DIR, 'rack_EMPC.csv')
+EDPC_CSV = os.path.join(DATA_DIR, 'daily_estimated_pc.csv')
+EMC_CSV = os.path.join(DATA_DIR, 'monthly_estimated_cost.csv')
+OUTPUT_PNG_PATH = RESULTS_DIR
 
 # Senoko's electricity rate per kWh in SGD
 ELECTRICITY_RATE = 28.98 / 100 
@@ -195,7 +198,7 @@ class MonthlyCostCalculator():
         plt.subplots_adjust(right=0.7)  # Increase right margin to make space for legend and text
 
         # Save the plot as an image
-        plt.savefig(OUTPUT_PNG_PATH + file_name)
+        plt.savefig(os.path.join(OUTPUT_PNG_PATH,file_name))
 
         # Show the plot
         plt.show()

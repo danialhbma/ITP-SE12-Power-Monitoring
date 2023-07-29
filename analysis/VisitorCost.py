@@ -1,4 +1,5 @@
 import pandas as pd
+import os 
 
 def read_csv(file_path, columns):
     return pd.read_csv(file_path, usecols=columns)
@@ -11,10 +12,10 @@ def get_measurement_label(measurement):
     return measurement
 
 # Read Ambient.csv
-ambient_df = read_csv('data/ambient.csv', ['_time', '_value'])
+ambient_df = read_csv(os.path.join("data", "Ambient.csv"), ['_time', '_value'])
 
 # Read Temperature.csv
-temperature_df = read_csv('data/Temperature.csv', ['_time', '_value', '_measurement'])
+temperature_df = read_csv(os.path.join("data", "Temperature.csv"), ['_time', '_value', '_measurement'])
 
 # Filter Ambient.csv data with _value above 600 (Visit detection)
 ambient_above_600_df = ambient_df[ambient_df['_value'] > 600]

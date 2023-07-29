@@ -14,10 +14,10 @@ async def main():
     # Create alert rules, the threshold values were dervied from actual sensor data
     rack_1_on_alert = GrowlightOnAlert("Rack 1 Grow light On Alert", 390, "Rack_1_Light") 
     rack_2_on_alert = GrowlightOnAlert("Rack 2 Grow light On Alert", 360, "Rack_2_Light")
-    rack_3_on_alert = GrowlightOnAlert("Rack 3 Grow light On Alert", 400, "Rack_3_Light")
+    rack_3_on_alert = GrowlightOnAlert("Rack 3 Grow light On Alert", 420, "Rack_3_Light")
     rack_1_off_alert = GrowlightOffAlert("Rack 1 Grow light Off Alert", -390, "Rack_1_Light")
     rack_2_off_alert = GrowlightOffAlert("Rack 2 Grow light Off Alert", -360, "Rack_2_Light")
-    rack_3_off_alert = GrowlightOffAlert("Rack 3 Grow light Off Alert", -400, "Rack_3_Light")
+    rack_3_off_alert = GrowlightOffAlert("Rack 3 Grow light Off Alert", -420, "Rack_3_Light")
 
     influx_db_reader = InfluxDBReader(URL, INFLUXDB_TOKEN, INFLUXDB_ORG) # init influxdb reader client
     telegram_alert_manager = TelegramAlertManager(influx_db_reader) # init telegram alert manager
