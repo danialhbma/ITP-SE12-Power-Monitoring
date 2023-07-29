@@ -99,15 +99,20 @@ def container_calculator():
         days_in_month = get_days_in_month()
         light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
         
+        # get total number of racks inputted
+        total_racks = num_of_purple_led_racks + num_of_white_led_racks
+
         # get water pump power consumption
         current_water_power = get_water_power_consumption(water_mean, days_in_month)
         if water_wattage != 0:
             # calculate water power consumption based on user input values
-            simulated_water_power = get_water_power_consumption(water_wattage, days_in_month, water_usage_hours, 1)
+            simulated_water_power = get_water_power_consumption(water_wattage, days_in_month, water_usage_hours, total_racks)
         else:
             # calculate water power consumption based on measured values
-            simulated_water_power = get_water_power_consumption(water_mean, days_in_month, water_usage_hours, 1) 
-        
+            simulated_water_power = get_water_power_consumption(water_mean, days_in_month, water_usage_hours, total_racks) 
+        print("current water", current_water_power, flush=True)
+        print("water", simulated_water_power, flush=True)
+
         # get rack light power consumption
         current_purple_led, current_white_led = get_racklight_power_consumption(0, light_mean_dict, days_in_month)
         current_light_power = current_purple_led + current_white_led
@@ -125,7 +130,7 @@ def container_calculator():
                                                                                 num_of_purple_led_racks,
                                                                                 num_of_white_led_racks)
         simulated_light_power = simulated_purple_led_power + simulated_white_led_power
-        
+
         # get aircon power consumption
         if aircon_wattage != 0:
             # use inputted wattage values to calculate aircon power consumption
@@ -135,7 +140,7 @@ def container_calculator():
             simulated_aircon_power = get_aircon_power_consumption(days_in_month, aircon_usage, num_aircon_units)
             
         current_aircon_power = get_aircon_power_consumption(days_in_month)
-        
+
         result = simulated_water_power + simulated_light_power + simulated_aircon_power
         current_power_consumption = current_water_power + current_light_power + current_aircon_power
         
