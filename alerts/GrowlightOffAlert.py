@@ -37,46 +37,30 @@ class GrowlightOffAlert(Alert):
             df = df_handler.format_as_dataframe(query_result)
             value, time, *ignore = df_handler.get_value_and_formatted_time(df)[0]
             sg_time = self.drm.utc_to_sg_time(time)
+            print("growlight off alert: ", value, sg_time)
             return value, sg_time
         except ValueError as e:
             raise ValueError(f"No data found: {e}")
 
     def growlight_switched_off_query(self):
         """ 
-            Retrieves the difference in wattage between the last two data points.
-            Query is designed to capture large delta difference when growlight is initally switched on or off.
-            When growlight was just turned on difference between points will be = 390W. 
-            When growlight was just turned off difference between points will be  -390W.
-            During growlight operation hours, power consumption stays constant at 390W, hence the difference between '
-            two points will be around 0.98 and will not meet threshold.
-            Similarly when growlight is not operating, power consumptions stays at ~0.98 to 1, hence difference between
-            points will not meet threshold. 
-            This query allows alerts to be sent ONLY WHEN growlight is first turned on or off.
+        Retrieves the difference in wattage between the last two data points. Query is designed to capture large delta difference when growlight is initally switched on or off.
+        When growlight was just turned on difference between points will be = 390W.  When growlight was just turned off difference between points will be  -390W.
+        During growlight operation hours, power consumption stays constant at 390W, hence the difference between two points will be around 0.98 and will not meet threshold.
+        Similarly when growlight is not operating, power consumptions stays at ~0.98 to 1, hence difference between points will not meet threshold. 
+        This query allows alerts to be sent ONLY WHEN growlight is first turned on or off.
         """
         date_range_manager = DateRangeManager()
         start, end = date_range_manager.get_time_range("24m")
-        query = f'''
-        from(bucket: "Power Consumption")
-        |> range(start: {start}, stop: {end})
-        |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
-        |> fill(column: "_value", usePrevious: true)
-        |> map(fn: (r) => ({{ r with _value: if exists r["_value"] then r["_value"] else 0.0}}))
-        |> difference(columns: ["_value"], keepFirst: false)
-        |> last()
-        '''
-        """
-        # Old query that worked when tuya only sends 1 data per hour
-        start, end = date_range_manager.get_time_range("2h")
         query = f'''from(bucket: "Power Consumption")
                 |> range(start: {start}, stop: {end})
                 |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
-                |> aggregateWindow(every: 1h, fn: mean, createEmpty: true)
+                |> aggregateWindow(every: 12m, fn: mean, createEmpty: true)
                 |> fill(column: "_value", usePrevious: true)
                 |> map(fn: (r) => ({{ r with _value: if exists r["_value"] then r["_value"] else 0.0 }}))
                 |> difference(columns: ["_value"], keepFirst: false)
                 |> first()
                 '''
-        """
         self.set_alert_query(query)
 
     def _create_alert_message(self, alert_state: AlertState, time, exception=""):
