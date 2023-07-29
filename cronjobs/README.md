@@ -63,3 +63,8 @@ Grow light alerts were scheduled to run at the 5th minute of every hour using th
 ### Data Gap Alerts
 Data gap alerts were scheduled to run every 6 hours using the CRON expression below.
 * ``*/6 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_data_gap_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/data_gap_output.txt``
+
+## Analysis and Reports Generation
+The 
+
+59 23 28-31 * * cd /home/yappi/ITP-SE12-Power-Monitoring/analysis && ./scheduled_analysis.sh
