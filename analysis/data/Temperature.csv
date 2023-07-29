@@ -1669,6 +1669,7 @@ _time,_value,_field,_measurement
 2023-07-29 15:00:00,18.22,value,rack1_temperature
 2023-07-29 15:30:00,17.96,value,rack1_temperature
 2023-07-29 16:00:00,17.83,value,rack1_temperature
+2023-07-29 16:30:00,17.74,value,rack1_temperature
 2023-06-19 06:30:00,23.45,value,rack2_temperature
 2023-06-19 07:00:00,21.15,value,rack2_temperature
 2023-06-19 09:00:00,25.27,value,rack2_temperature
@@ -3561,7 +3562,7 @@ _time,_value,_field,_measurement
 2023-07-29 15:00:00,17.7,value,rack2_temperature
 2023-07-29 15:30:00,17.43,value,rack2_temperature
 2023-07-29 16:00:00,17.26,value,rack2_temperature
-2023-07-29 16:27:24,17.16,value,rack2_temperature
+2023-07-29 16:30:00,17.16,value,rack2_temperature
 2023-06-19 06:30:00,23.46,value,rack3_temperature
 2023-06-19 07:00:00,22.7,value,rack3_temperature
 2023-06-19 07:30:00,22.37,value,rack3_temperature
@@ -5401,7 +5402,7 @@ _time,_value,_field,_measurement
 2023-07-29 15:00:00,18.33,value,rack3_temperature
 2023-07-29 15:30:00,18.01,value,rack3_temperature
 2023-07-29 16:00:00,17.8,value,rack3_temperature
-2023-07-29 16:27:24,17.71,value,rack3_temperature
+2023-07-29 16:30:00,17.71,value,rack3_temperature
 2023-06-19 06:30:00,21.66,value,rack4_temperature
 2023-06-19 07:00:00,24.36,value,rack4_temperature
 2023-06-19 08:00:00,26.4,value,rack4_temperature

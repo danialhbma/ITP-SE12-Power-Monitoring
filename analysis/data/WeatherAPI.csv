@@ -1,5 +1,4 @@
 _time,_value,_field,_measurement,location,source
-2023-06-14 17:00:00,75.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,54.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,75.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,57.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -2101,8 +2100,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,75.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,98.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,75.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,98.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,31.68,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,98.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,75.0,cloudiness,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,31.55,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,31.13,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,31.4,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -4204,8 +4203,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,33.74,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,34.62,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,32.67,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,34.62,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,89.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,34.62,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,32.49,feels_like,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,88.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,87.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,87.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -6307,8 +6306,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,77.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,81.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,72.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,81.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,1011.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,81.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,72.0,humidity,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,1010.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,1011.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,1009.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -8410,8 +8409,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,1010.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,1011.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,1010.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,1011.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,28.29,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,1011.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,1011.0,pressure,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,28.29,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,30.01,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,28.29,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -10513,8 +10512,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,29.03,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,28.88,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,28.94,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,28.88,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,26.53,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,28.88,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,28.94,temp_max,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,25.97,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,24.03,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,25.97,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -12616,8 +12615,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,28.79,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,28.75,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,28.03,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,28.75,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,27.37,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,28.75,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,27.8,temp_min,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,27.37,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,27.26,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,27.36,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -14719,8 +14718,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,28.86,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,28.88,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,28.81,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,28.88,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,250.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,28.88,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,28.73,temperature,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,157.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,340.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,100.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -16822,8 +16821,8 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,120.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,130.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,120.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,131.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-06-14 17:00:00,1.54,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,131.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,120.0,wind_deg,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 17:30:00,0.88,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:00:00,1.54,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-06-14 18:30:00,0.52,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
@@ -18925,4 +18924,5 @@ _time,_value,_field,_measurement,location,source
 2023-07-29 15:00:00,4.63,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 15:30:00,2.96,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
 2023-07-29 16:00:00,3.6,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
-2023-07-29 16:27:17,2.84,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:30:00,2.84,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap
+2023-07-29 16:37:54,3.09,wind_speed,External Weather Conditions,Woodlands,OpenWeatherMap

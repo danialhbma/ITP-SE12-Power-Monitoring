@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 from PIL import Image
 
 def execute_cost_efficiency_script():
-    result = subprocess.run(['python', 'cost_efficiency.py'], capture_output=True, text=True)
+    result = subprocess.run(['python3', 'cost_efficiency.py'], capture_output=True, text=True)
     return result.stdout
 
 def convert_images_to_pdf(image_directory, output_pdf_name=None):

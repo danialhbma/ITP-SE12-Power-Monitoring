@@ -967,7 +967,7 @@ _time,_value,_field,_measurement,device_id,device_name,type,unit
 2023-07-29 14:00:00,0.9295690583333334,value,Rack_1_Light,bf0f226c1b67ca0956izof,Rack 1 Light,cur_power,W
 2023-07-29 15:00:00,0.8901627083333334,value,Rack_1_Light,bf0f226c1b67ca0956izof,Rack 1 Light,cur_power,W
 2023-07-29 16:00:00,0.9222801666666667,value,Rack_1_Light,bf0f226c1b67ca0956izof,Rack 1 Light,cur_power,W
-2023-07-29 16:27:25,0.87236925,value,Rack_1_Light,bf0f226c1b67ca0956izof,Rack 1 Light,cur_power,W
+2023-07-29 16:38:03,0.8325600972222222,value,Rack_1_Light,bf0f226c1b67ca0956izof,Rack 1 Light,cur_power,W
 2023-06-19 06:00:00,22.973333333333333,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
 2023-06-19 07:00:00,22.97666666666667,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
 2023-06-19 08:00:00,22.77,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
@@ -1937,7 +1937,7 @@ _time,_value,_field,_measurement,device_id,device_name,type,unit
 2023-07-29 14:00:00,22.26804086388888,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
 2023-07-29 15:00:00,22.39545016388889,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
 2023-07-29 16:00:00,22.385720391666666,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
-2023-07-29 16:27:25,22.663722555555555,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
+2023-07-29 16:38:03,22.774545069444443,value,Rack_1_Water,bf1a17265640b62287pdh9,Rack 1 Water,cur_power,W
 2023-06-19 07:00:00,361.455,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
 2023-06-19 08:00:00,361.43,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
 2023-06-19 09:00:00,361.46,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
@@ -2906,7 +2906,7 @@ _time,_value,_field,_measurement,device_id,device_name,type,unit
 2023-07-29 14:00:00,0.9124419527777776,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
 2023-07-29 15:00:00,0.9768550194444445,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
 2023-07-29 16:00:00,0.9040012444444443,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
-2023-07-29 16:27:25,0.8843892916666665,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
+2023-07-29 16:38:03,0.8933885462962962,value,Rack_2_Light,bfe85a818a75648a29zffe,Rack 2 Light,cur_power,W
 2023-06-19 06:00:00,19.153333333333332,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
 2023-06-19 07:00:00,19.349999999999998,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
 2023-06-19 08:00:00,19.22,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
@@ -3875,7 +3875,7 @@ _time,_value,_field,_measurement,device_id,device_name,type,unit
 2023-07-29 14:00:00,19.67987133055555,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
 2023-07-29 15:00:00,19.799940680555558,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
 2023-07-29 16:00:00,19.759912011111116,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
-2023-07-29 16:27:25,19.78569152083333,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
+2023-07-29 16:38:03,19.928203773148145,value,Rack_2_Water,bf22bde1e0846f9e67h9ct,Rack 2 Water,cur_power,W
 2023-06-19 09:00:00,267.9,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
 2023-06-19 10:00:00,266.7,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
 2023-06-19 11:00:00,266.7,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
@@ -4843,7 +4843,7 @@ _time,_value,_field,_measurement,device_id,device_name,type,unit
 2023-07-29 14:00:00,83.92,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
 2023-07-29 15:00:00,167.84,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
 2023-07-29 16:00:00,0.0,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
-2023-07-29 16:27:25,0.0,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
+2023-07-29 16:38:03,0.0,value,Rack_3_Light,bfb01b4529be3ed5f0q4qk,Rack 3 Light,cur_power,W
 2023-06-19 09:00:00,22.5,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
 2023-06-19 10:00:00,22.4,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
 2023-06-19 11:00:00,22.0,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
@@ -5812,4 +5812,4 @@ _time,_value,_field,_measurement,device_id,device_name,type,unit
 2023-07-29 14:00:00,21.060000000000002,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
 2023-07-29 15:00:00,20.919999999999998,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
 2023-07-29 16:00:00,21.02,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
-2023-07-29 16:27:25,21.1,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
+2023-07-29 16:38:03,21.1,value,Rack_3_Water,bf6dc985a6437b4df4eqna,Rack 3 Water,cur_power,W
