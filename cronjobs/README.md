@@ -80,3 +80,4 @@ Dead sensor alerts were scheduled to run daily at 2359 using the CRON expression
 Retrieves updated data files from InfluxDB using [extract_raw_data.py](README.md), executes all analysis scripts in [analysis folder](../analysis) and runs the [ReportGeneration.py](../analysis/ReportGeneration.py). Generated report is sent via Telegram. Scheduled to run at the end of each month.
 * [scheduled_analysis.sh](../analysis/scheduled_analysis.sh)
 * ``59 23 28-31 * * cd /home/yappi/ITP-SE12-Power-Monitoring/analysis && ./scheduled_analysis.sh``
+

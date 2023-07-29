@@ -4,6 +4,11 @@ from datetime import datetime
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from PIL import Image
+import sys
+import asyncio
+telegram_service_path = os.path.abspath(os.path.join("..", "telegram_service"))
+sys.path.append(telegram_service_path)
+from TelegramService import TelegramService
 
 def execute_cost_efficiency_script():
     result = subprocess.run(['python3', 'cost_efficiency.py'], capture_output=True, text=True)
@@ -109,10 +114,10 @@ def convert_images_to_pdf(image_directory, output_pdf_name=None):
             print(f"Included image in Prediction Analysis: {image_file}")
 
     c.save()
-
     print(f"PDF file saved at: {pdf_output_path}")
+    return pdf_output_path
 
-if __name__ == "__main__":
+async def main():
     image_directory = "results"
 
     script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -120,4 +125,10 @@ if __name__ == "__main__":
     # Combine the script's directory with the image_directory to get the absolute path of the image directory
     image_directory_absolute = os.path.join(script_directory, image_directory)
 
-    convert_images_to_pdf(image_directory_absolute)
+    path = convert_images_to_pdf(image_directory_absolute)
+    tele_client = TelegramService()
+    tele_client.retrieve_token_from_environment()
+    await tele_client.send_pdf(path)
+
+if __name__ == "__main__":
+    asyncio.run(main())
