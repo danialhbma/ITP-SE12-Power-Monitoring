@@ -22,6 +22,10 @@ class GrowlightOffAlert(Alert):
             # If wattage is within +-30 of threshold, set it to alerting state
             if wattage > 30: # If wattage difference reading > 30, can guarantee that switch did not just turn off, hence can ignore
                 return AlertState.OK
+
+            if (self.measurement_name == "Rack_3_Light"):
+                self.threshold /= 2 # Patch to fix embedded 0's
+
             if (self.threshold - 30 <= wattage <= self.threshold + 30): # add a +-30 W buffer
                 return AlertState.ALERTING
             else: 
@@ -52,6 +56,7 @@ class GrowlightOffAlert(Alert):
         """
         date_range_manager = DateRangeManager()
         start, end = date_range_manager.get_time_range("24m")
+        
         query = f'''from(bucket: "Power Consumption")
                 |> range(start: {start}, stop: {end})
                 |> filter(fn: (r) => r["_measurement"] == "{self.measurement_name}")
@@ -61,6 +66,7 @@ class GrowlightOffAlert(Alert):
                 |> difference(columns: ["_value"], keepFirst: false)
                 |> first()
                 '''
+
         self.set_alert_query(query)
 
     def _create_alert_message(self, alert_state: AlertState, time, exception=""):
