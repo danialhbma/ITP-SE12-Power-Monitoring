@@ -1,329 +1,3 @@
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mGET /api/v4/users/49 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mGET /api/v4/users/50 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mGET /api/v4/users/51 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mGET /api/v4/users/52 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mGET /api/v4/users/53 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:13] "[33mGET /api/v4/users/54 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/55 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/56 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/57 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/58 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/59 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/60 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/61 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/62 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/63 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/64 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/65 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/66 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/67 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/68 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/69 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/70 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/71 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/72 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET https://127.0.0.1:587 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/73 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/74 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/75 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/76 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/77 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/78 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/79 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:14] "[33mGET /api/v4/users/80 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/81 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/82 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/83 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/84 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/85 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/86 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/87 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/88 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/89 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/90 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/91 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/92 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/93 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/94 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/95 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/96 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/97 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/98 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/99 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /api/v4/users/100 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /233.tar.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /35.198.tar.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /35.198.233.52.db HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /233.52.db HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /233.db HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /35.198.db HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /35.198.233.52.sqlite HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /233.52.sqlite HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mGET /233.sqlite HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:15] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.sqlite HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.233.52.sqlitedb HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.52.sqlitedb HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.sqlitedb HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.sqlitedb HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.233.52.sql.7z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.52.sql.7z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.sql.7z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.sql.7z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.233.52.sql.bz2 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.52.sql.bz2 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET http://localhost/ HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.sql.bz2 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET https://localhost/ HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.sql.bz2 HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.233.52.sql.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.52.sql.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.sql.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.sql.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.233.52.sql.lz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.52.sql.lz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /233.sql.lz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.sql.lz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mGET /35.198.233.52.sql.rar HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:16] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.52.sql.rar HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.sql.rar HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.sql.rar HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.233.52.sql.tar.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.52.sql.tar.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.sql.tar.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.sql.tar.gz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.233.52.sql.xz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.52.sql.xz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.sql.xz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.sql.xz HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.233.52.sql.zip HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.52.sql.zip HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.sql.zip HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.sql.zip HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.233.52.sql.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.52.sql.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.sql.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.sql.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.233.52.sql.tar.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.52.sql.tar.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /233.sql.tar.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mGET /35.198.sql.tar.z HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:17] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:18] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:19] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:20] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:20] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:20] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:20] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:20] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-34.126.191.155 - - [27/Jul/2023 23:54:20] "[33mPOST /xmlrpc.php HTTP/1.1[0m" 404 -
-[2023-07-27 23:55:05,674] ERROR in app: Exception on /container_calculator [POST]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/app/calculator_app.py", line 46, in container_calculator
-    num_of_purple_led_racks = int(request.json["num_of_purple_led_racks"])
-KeyError: 'num_of_purple_led_racks'
-35.198.233.52 - - [27/Jul/2023 23:55:05] "[35m[1mPOST /container_calculator HTTP/1.0[0m" 500 -
-35.198.233.52 - - [27/Jul/2023 23:55:18] "POST /container_calculator HTTP/1.0" 200 -
- * Serving Flask app 'calculator_app'
- * Debug mode: off
-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
  * Running on http://172.23.0.7:8080
@@ -998,3 +672,329 @@ KeyError: 'num_aircon_units'
 213.109.202.66 - - [28/Jul/2023 10:39:41] "[33mGET /index.php?s=/Index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 HTTP/1.1[0m" 404 -
 213.109.202.66 - - [28/Jul/2023 10:47:05] "[33mGET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1[0m" 404 -
 104.167.222.2 - - [28/Jul/2023 11:15:00] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
+141.98.11.60 - - [28/Jul/2023 11:54:43] "[33mGET / HTTP/1.1[0m" 404 -
+35.198.233.52 - - [28/Jul/2023 12:27:44] "POST /rack_calculator HTTP/1.0" 200 -
+103.149.192.139 - - [28/Jul/2023 12:38:12] "[33mGET / HTTP/1.1[0m" 404 -
+92.118.39.40 - - [28/Jul/2023 12:44:25] "[33mGET / HTTP/1.1[0m" 404 -
+103.219.162.146 - - [28/Jul/2023 12:48:48] "[33mGET / HTTP/1.1[0m" 404 -
+35.198.233.52 - - [28/Jul/2023 12:54:04] "POST /rack_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [28/Jul/2023 12:55:46] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 12:55:51] "POST /rack_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [28/Jul/2023 12:58:31] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 12:58:39] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 12:58:42] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 12:58:44] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 12:58:50] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:03:19] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:03:22] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:03:32] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:03:33] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:04:24] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:04:25] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:04:57] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:12:52] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:14:04] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:14:43] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:18:23] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:18:33] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:43:34] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:48:27] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:48:34] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:57:03] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 13:57:35] "POST /container_calculator HTTP/1.0" 200 -
+104.167.222.2 - - [28/Jul/2023 14:01:22] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
+192.241.196.34 - - [28/Jul/2023 14:07:45] "[33mGET / HTTP/1.1[0m" 404 -
+35.198.233.52 - - [28/Jul/2023 14:31:03] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:35:08] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:35:35] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:38:00] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:38:06] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:38:29] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:38:38] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:38:43] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:38:45] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:44:42] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 14:48:19] "POST /container_calculator HTTP/1.0" 200 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+[2023-07-28 14:51:23,018] ERROR in app: Exception on /container_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 100, in container_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 57, in get_mean_watt_measured
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "<<<<<<< HEAD" doesn't match format "%Y-%m-%d %H:%M:%S%z", at position 874. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+35.198.233.52 - - [28/Jul/2023 14:51:23] "[35m[1mPOST /container_calculator HTTP/1.0[0m" 500 -
+[2023-07-28 14:51:36,153] ERROR in app: Exception on /container_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 100, in container_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 57, in get_mean_watt_measured
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "<<<<<<< HEAD" doesn't match format "%Y-%m-%d %H:%M:%S%z", at position 874. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+35.198.233.52 - - [28/Jul/2023 14:51:36] "[35m[1mPOST /container_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+[2023-07-28 14:52:40,631] ERROR in app: Exception on /rack_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 23, in rack_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 57, in get_mean_watt_measured
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "<<<<<<< HEAD" doesn't match format "%Y-%m-%d %H:%M:%S%z", at position 874. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+35.198.233.52 - - [28/Jul/2023 14:52:40] "[35m[1mPOST /rack_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+[2023-07-28 15:16:43,295] ERROR in app: Exception on /container_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 100, in container_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 57, in get_mean_watt_measured
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "<<<<<<< HEAD" doesn't match format "%Y-%m-%d %H:%M:%S%z", at position 874. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+35.198.233.52 - - [28/Jul/2023 15:16:43] "[35m[1mPOST /container_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+[2023-07-28 15:17:39,657] ERROR in app: Exception on /container_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 100, in container_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 57, in get_mean_watt_measured
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "2023-07-28 14:59:05.344313+00:00" doesn't match format "%Y-%m-%d %H:%M:%S%z", at position 944. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+35.198.233.52 - - [28/Jul/2023 15:17:39] "[35m[1mPOST /container_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+[2023-07-28 15:18:46,115] ERROR in app: Exception on /rack_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 23, in rack_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 57, in get_mean_watt_measured
+    pc_data['_time'] = pd.to_datetime(pc_data['_time'])
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "2023-07-28 14:59:05.344313+00:00" doesn't match format "%Y-%m-%d %H:%M:%S%z", at position 944. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+35.198.233.52 - - [28/Jul/2023 15:18:46] "[35m[1mPOST /rack_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+[2023-07-28 15:40:26,128] ERROR in app: Exception on /rack_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 23, in rack_calculator
+    light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
+  File "/app/calculate_power_consumption.py", line 58, in get_mean_watt_measured
+    pc_data['_time'] = pc_data['_time'].dt.tz_convert(TIMEZONE)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/accessor.py", line 112, in f
+    return self._delegate_method(name, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/indexes/accessors.py", line 128, in _delegate_method
+    result = method(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/indexes/datetimes.py", line 269, in tz_convert
+    arr = self._data.tz_convert(tz)
+  File "/usr/local/lib/python3.9/site-packages/pandas/core/arrays/datetimes.py", line 867, in tz_convert
+    raise TypeError(
+TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
+35.198.233.52 - - [28/Jul/2023 15:40:26] "[35m[1mPOST /rack_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [28/Jul/2023 15:44:53] "POST /rack_calculator HTTP/1.0" 200 -
+[2023-07-28 15:44:55,273] ERROR in app: Exception on /container_calculator [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/calculator_app.py", line 99, in container_calculator
+    days_in_month = get_days_in_month()
+  File "/app/calculate_power_consumption.py", line 43, in get_days_in_month
+    current_year = datetime.now().year
+NameError: name 'datetime' is not defined
+35.198.233.52 - - [28/Jul/2023 15:44:55] "[35m[1mPOST /container_calculator HTTP/1.0[0m" 500 -
+ * Serving Flask app 'calculator_app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.7:8080
+[33mPress CTRL+C to quit[0m
+35.198.233.52 - - [28/Jul/2023 15:45:30] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:45:31] "POST /container_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:45:38] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:45:46] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:45:47] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:45:48] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:46:39] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:46:40] "POST /rack_calculator HTTP/1.0" 200 -
+35.198.233.52 - - [28/Jul/2023 15:46:40] "POST /rack_calculator HTTP/1.0" 200 -
+185.180.143.18 - - [28/Jul/2023 15:51:41] "[33mGET / HTTP/1.1[0m" 404 -

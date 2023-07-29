@@ -124,3 +124,11 @@ System Health Report: 2023-07-27 23:59:02
 	/dev/sda1 - Used: 7.47 GB / Total: 9.62 GB (82.0%)
 ******************************************************
 
+******************************************************
+System Health Report: 2023-07-28 23:59:03
+(1) System Detected High Network Traffic usage
+	Network Traffic: Sent = 17289.32 MB, Received = 21283.48 MB
+(2) Low Disk Space Detected 
+	/dev/sda1 - Used: 7.54 GB / Total: 9.62 GB (82.8%)
+******************************************************
+

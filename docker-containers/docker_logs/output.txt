@@ -92,3 +92,9 @@ Generated Logs for nginx
 Generated Logs for 69f387687a5f_grafana
 Generated Logs for docker-containers_influxdb_1
 Generated Logs for docker-containers_nodered_1
+Generated Logs for api
+Generated Logs for docker-containers_mosquitto_1
+Generated Logs for nginx
+Generated Logs for 69f387687a5f_grafana
+Generated Logs for docker-containers_influxdb_1
+Generated Logs for docker-containers_nodered_1
