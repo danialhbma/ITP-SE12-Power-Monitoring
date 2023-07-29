@@ -29,8 +29,8 @@ During the processing of the query result, the data is read into a dataframe, an
 * [30% Data Gap Threshold](alerts_validation/data_gap_alerts_threshold-30.txt):In this scenario, threshold was set to 30%. Since all buckets do not have data gaps that exceed 30%, AlertState will be set to AlertState.OK and no alerts will be sent out. 
 
 # CRON Expression
-The ``scheduled_growlight_alerts.py``, was configured to be evaluated at the 5th minute of every hour. This 5 minute buffer was incorporated to ensure sensors would have enough time to write new data to database i.e., network latency buffer.
-* ``5 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output.txt`` 
+The ``scheduled_growlight_alerts.py``, was configured to be evaluated at the every 12 minutes. Tuya sends data every 12 minutes.
+* ``*/12 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output``
 
 The ``scheduled_data_gap_alerts.py`` was configured to be evaluated every 6 hours. 
 * ``** */6 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_data_gap_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/data_gap_output.txt``
