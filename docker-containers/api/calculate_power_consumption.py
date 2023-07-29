@@ -9,13 +9,23 @@ PC_PATH = "analysis/data/Power Consumption.csv"
 # Senoko's power cost - Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898
 
-RACKS = ["Rack_1", "Rack_2"] # racks observed
+RACKS = ["Rack_1", "Rack_2" ] # racks observed
 POWER_READ_INTERVAL = 1  # in hours
 WHOLE_DAY = 24 # in hours
 
 # rough baseline for racklights on/off 
-BASELINE_RACKLIGHT_ON = 350
-BASELINE_RACKLIGHT_OFF = 2
+BASELINE_MIN_PURPLE_LED_ON = 390
+BASELINE_MAX_PURPLE_LED_ON = 395
+BASELINE_MIN_PURPLE_LED_OFF = 0.80
+BASELINE_MAX_PURPLE_LED_OFF = 0.95
+
+BASELINE_MIN_WHITE_LED_ON = 360
+BASELINE_MAX_WHITE_LED_ON = 365
+BASELINE_MIN_WHITE_LED_OFF = 0.90
+BASELINE_MAX_WHITE_LED_OFF = 1.015
+
+BASELINE_MIN_WATER = 18.5
+BASELINE_MAX_WATER = 23.5
 
 # aircon unit: Therm-Aire STA-024SPWM (single split)
 INDOOR_FAN = 58
@@ -51,36 +61,47 @@ def calculate_power_from_watts(appliance_wattage, days_ran, hours_ran, num_of_ra
 
 # function that returns mean watts measured for each rack light and water pump
 def get_mean_watt_measured(pc_data, racks = RACKS):
+    light_mean_dict = {}
+    purple_led_on_list = []
+    purple_led_off_list = []
+    white_led_on_list = []
+    white_led_off_list = []
+    water_list = []
+    
     # set datetime as index
     pc_data.set_index('_time', inplace=True)
     
-    light_mean_dict = {}
-    water_sum = 0
-    
     # filter on/off values based led colour
     for rack in racks:
-        # filter rack light on/off values based on recorded baseline vals
-        rack_light_on = pc_data[(pc_data['_value'] >= BASELINE_RACKLIGHT_ON) & (pc_data['_measurement'] == rack + '_Light')]
-        rack_light_off = pc_data[(pc_data['_value'] <= BASELINE_RACKLIGHT_OFF) & (pc_data['_measurement'] == rack + '_Light')]
-        
         # take all water values since water pumps are always on
-        rack_water = pc_data[(pc_data['_measurement'] == rack + '_Water')]
+        water_list.append(pc_data[(pc_data['_value'] >= BASELINE_MIN_WATER) & (pc_data['_value'] <= BASELINE_MAX_WATER) & (pc_data['_measurement'] == rack + '_Water')])
         
-        # Calculate the mean for the current rack and day/night
-        rack_light_on_mean = round(rack_light_on['_value'].mean(), 2)
-        rack_light_off_mean = round(rack_light_off['_value'].mean(), 2)
-        water_sum += round(rack_water['_value'].mean(), 2)
-        
-        # store the mean values in the dictionary based on rack led colour
-        if rack.endswith('1'):     
-            light_mean_dict['Purple_LED_On'] = rack_light_on_mean
-            light_mean_dict['Purple_LED_Off'] = rack_light_off_mean
+        # filter rack light on/off values based on recorded baseline vals for each led colour
+        if rack.endswith('1'):  
+            rack_light_on = pc_data[(pc_data['_value'] >= BASELINE_MIN_PURPLE_LED_ON) & (pc_data['_value'] <= BASELINE_MAX_PURPLE_LED_ON) & (pc_data['_measurement'] == rack + '_Light')]
+            rack_light_off = pc_data[(pc_data['_value'] >= BASELINE_MIN_PURPLE_LED_OFF) & (pc_data['_value'] <= BASELINE_MAX_PURPLE_LED_OFF) & (pc_data['_measurement'] == rack + '_Light')]
+            purple_led_on_list.append(rack_light_on)
+            purple_led_off_list.append(rack_light_off)
+            
         else:
-            light_mean_dict['White_LED_On'] = rack_light_on_mean
-            light_mean_dict['White_LED_Off'] = rack_light_off_mean
+            rack_light_on = pc_data[(pc_data['_value'] >= BASELINE_MIN_WHITE_LED_ON) & (pc_data['_value'] <= BASELINE_MAX_WHITE_LED_ON) & (pc_data['_measurement'] == rack + '_Light')]
+            rack_light_off = pc_data[(pc_data['_value'] >= BASELINE_MIN_WHITE_LED_OFF) & (pc_data['_value'] <= BASELINE_MAX_WHITE_LED_OFF) & (pc_data['_measurement'] == rack + '_Light')]
+            white_led_on_list.append(rack_light_on)
+            white_led_off_list.append(rack_light_off)    
     
-        # find mean of observed water pumps
-        water_pump_wattage = water_sum / len(racks)
+    # concat all dataframes
+    purple_led_on = pd.concat(purple_led_on_list)
+    purple_led_off = pd.concat(purple_led_off_list)
+    white_led_on = pd.concat(white_led_on_list)
+    white_led_off = pd.concat(white_led_off_list)
+    water = pd.concat(water_list)    
+        
+    # Calculate the mean for the each rack and on/off state
+    light_mean_dict['Purple_LED_On'] = round(purple_led_on['_value'].mean(), 2)
+    light_mean_dict['Purple_LED_Off'] = round(purple_led_off['_value'].mean(), 2)
+    light_mean_dict['White_LED_On'] = round(white_led_on['_value'].mean(), 2)
+    light_mean_dict['White_LED_Off'] = round(white_led_off['_value'].mean(), 2)
+    water_pump_wattage = round(water['_value'].mean(), 2)
         
     return light_mean_dict, water_pump_wattage
 

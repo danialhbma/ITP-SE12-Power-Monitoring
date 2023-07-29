@@ -4,14 +4,15 @@ import numpy as np
 from calculate_power_consumption import *
 
 # constants
-OUTPUT_ANALYSIS_IMG_PATH = "./results/"
+OUTPUT_ANALYSIS_IMG_PATH = "analysis/results/"
 
 # function that generates a pie chart using the estimated power consumption and saves as png file
 def generate_pie_chart(estimated_power_dict, filename): 
+    print(estimated_power_dict.values())
     # get pie chart data and labels from the dictionary
     data = np.array(list(estimated_power_dict.values()))
     labels = list(estimated_power_dict.keys())
-
+    
     plt.figure(figsize=(12, 7))
     plt.title(filename, pad=40)
     
@@ -37,10 +38,8 @@ pc_data = get_pc_data()
 if pc_data is not None:
     days_in_month = get_days_in_month()
     light_mean_dict, water_mean = get_mean_watt_measured(pc_data)
-    
-    print("Estimated Power Consumption for 1 Container in July")
     water_power = get_water_power_consumption(water_mean, days_in_month)
-    
+
     # store estimdated power consumption in dictionary
     estimated_power_dict = {}
     estimated_power_dict['Water'] = get_water_power_consumption(water_mean, days_in_month)
@@ -55,6 +54,7 @@ if pc_data is not None:
     
     # generate charts 
     generate_pie_chart(estimated_power_dict, 'Variables that Affect Monthly Power Consumption')
-
+    print('Chart generated successfully')
+    
 else:
     print("File does not exist.")
