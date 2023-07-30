@@ -41,5 +41,10 @@ For the analysis on cost efficient period, the script categorises the power data
 
 Analysis on cost efficient season works in a similar fashion. The script categorises the power data into categories defined by 3 different temperature ranges, before retreiving the total power consumption (kWh) for each of the categories. These values will be converted into cost, and the most cost efficient season can be determined.
 
+## Variables that Affect Power Consumption
+``variables_that_affect_power.py`` works by taking power consumption data, obtaining the mean readings for purple LED grow lights, white LED grow lights, and water pumps. Using the mean readings, it calculates the estimated power consumption of each item, as well as the estimated power consumption of the aircon units used in the container. 
+
+This is outputted in a pie chart that shows a breakdown of the total power consumption of the current container farm and how much each item contributes to the overall power consumption.
+
 # Analysis and Reports Generation
 Retrieves updated data files from InfluxDB using [extract_raw_data.py](README.md), executes all analysis scripts in [analysis folder](../analysis) and runs the [ReportGeneration.py](../analysis/ReportGeneration.py). Generated report is sent via Telegram. 
