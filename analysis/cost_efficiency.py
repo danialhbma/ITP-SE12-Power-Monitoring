@@ -10,7 +10,7 @@ TEMP_PATH = "data/WeatherAPI.csv"
 
 # Refer to https://www.senokoenergy.com/households/price-plans
 POWER_COST_PER_KWH = 0.2898
-POWER_READ_INTERVAL = 1 # in hours
+POWER_READ_INTERVAL = 0.2 # 12/60 minutes
 
 # Function that returns cost efficient season (above 31, 27 to 31, below 27) for the previous month
 def get_cost_efficient_season():

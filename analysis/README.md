@@ -35,6 +35,11 @@ The ``MonthlyCorrelation.py`` works similarly to ``HistoricalCorrelation.py`` bu
 Strength of Correlation Coefficients is based on https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/11-correlation-and-regression
 
 ## Cost Efficiency
+The ``cost_efficiency.py`` uses a historical analysis to retrieve the lowest cost period (day/night) and season (within 3 temperature ranges) based on the data collected for power consumption and external environmental API calls.
+
+For the analysis on cost efficient period, the script categorises the power data into the categories defined by the two time ranges, before retrieving the total power consumption (kWh). These values will be converted into cost, and the most cost efficient period can be determined.
+
+Analysis on cost efficient season works in a similar fashion. The script categorises the power data into categories defined by 3 different temperature ranges, before retreiving the total power consumption (kWh) for each of the categories. These values will be converted into cost, and the most cost efficient season can be determined.
 
 # Analysis and Reports Generation
 Retrieves updated data files from InfluxDB using [extract_raw_data.py](README.md), executes all analysis scripts in [analysis folder](../analysis) and runs the [ReportGeneration.py](../analysis/ReportGeneration.py). Generated report is sent via Telegram. 
