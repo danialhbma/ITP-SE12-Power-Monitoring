@@ -35,6 +35,10 @@ The ``MonthlyCorrelation.py`` works similarly to ``HistoricalCorrelation.py`` bu
 Strength of Correlation Coefficients is based on https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/11-correlation-and-regression
 
 ## Cost Efficiency
+## Variables that Affect Power Consumption
+``variables_that_affect_power.py`` works by taking power consumption data, obtaining the mean readings for purple LED grow lights, white LED grow lights, and water pumps. Using the mean readings, it calculates the estimated power consumption of each item, as well as the estimated power consumption of the aircon units used in the container. 
+
+This is outputted in a pie chart that shows a breakdown of the total power consumption of the current container farm and how much each item contributes to the overall power consumption.
 
 # Analysis and Reports Generation
 Retrieves updated data files from InfluxDB using [extract_raw_data.py](README.md), executes all analysis scripts in [analysis folder](../analysis) and runs the [ReportGeneration.py](../analysis/ReportGeneration.py). Generated report is sent via Telegram. 
