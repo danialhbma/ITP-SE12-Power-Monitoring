@@ -130,7 +130,9 @@ This section briefly describes each code file in this repository
 | light.py | Retrieves data from light sensor and sends data via MQTT | 
 | tvoctemp.py | Retrieves data from temperature and CO2 sensors and sends data via MQTT | 
 | waterflow.py | Retrieves data from water sensor and sends data via MQTT | 
-
+| clamp.py | Retrieves data from AC current sensor and sends data via MQTT | 
+| ambient.py | Retrieves data from ambient light sensor and sends data via MQTT | 
+| dfrobot_b_lux_v30b.py | Arduino library for ambient light sensor converted into MicroPython | 
 
 ## Running Project Codes in M5StickC
 ### Load Codes into M5StickC
