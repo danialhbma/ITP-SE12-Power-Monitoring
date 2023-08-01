@@ -35,6 +35,10 @@ Examples:
 # Scheduled Cron Jobs
 The [crontab.txt](crontab.txt) file provided contains the list of all scheduled cron jobs used in this project. Instead of providing the actual script itself, we are providing commands to change directory to location containing script before executing the script. This was done to as certain scripts require loading of environmental variables within the **.env** file that resides in the corresponding directory. We also redirected all outputs to an output file for debugging. Redirecting of output is not necessary but recommended as it facilitates debugging.
 
+
+![Alt text](CRONJOBS.png)
+Figure 1. Summary of all the scheduled Cron Jobs
+
 ## Retrieving External Weather Conditions from OpenWeatherMap 
 The [OpenWeatherMapAPIClient](../InfluxDB/OpenWeatherMapAPIClient.py) was designed to query OpenWeatherMapAPI to retrieve external weather conditions. We scheduled an API call to be made every 30 minutes using the CRON expression below. 
 * ``*/30 * * * *  cd /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB && python3 OpenWeatherMapAPIClient.py >> /home/yappi/ITP-SE12-Power-Monitoring/InfluxDB/output.log 2>&1``
@@ -54,17 +58,26 @@ System monitoring plays a vital role in cloud deployments, ensuring the health a
 ## Threshold Analysis & Telegram Alerts
 Grafana was configured to detect and alert abnormal conditions such as high temperature, high CO2 levels, and disrupted water flow rates. However, we encountered difficulties when setting up alerts to notify whenever the grow lights switched on or off. To overcome this challenge, we developed our own Python-based solution called [Telegram Alert Module](../alerts/TelegramAlertModule.py). This module offers a customized alert system that integrates with our existing infrastructure. It utilizes several key components, including our custom [InfluxDB Reader](../InfluxDB/InfluxDBReader.py), [DateRangeManager](../InfluxDB/DateRangeManager.py) and [DataFrameHandler](../InfluxDB/InfluxDBDataFrameHandler.py) classes to directly query InfluxDB database, to retrieve data stored and to perform threshold analysis. It also uses [TelegramService](../telegram_service/TelegramService.py) to send out telegram alerts. 
 
-We also created our own data gap alerts that would send out an alert whenever data gaps exceeded a certain threshold. 
-
-###  Grow light Alerts 
-Grow light alerts were scheduled to run at the 5th minute of every hour using the CRON exrpession below. 
-* ``5 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output.txt``
+###  Grow light status alerts 
+Grow light status alerts were scheduled to run every 12 minutes.
+* [scheduled_growlight_alerts.py](../alerts/scheduled_growlight_alerts.py)
+* Classes implementing grow light status alerts can be found in [GrowLightOnAlert.py](../alerts/GrowlightOnAlert.py), and [GrowLightOffAlert.py](../alerts/GrowlightOffAlert.py)
+* ``*/12 * * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_growlight_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/output.``
 
 ### Data Gap Alerts
 Data gap alerts were scheduled to run every 6 hours using the CRON expression below.
+* [scheduled_data_gap_alerts.py](../alerts/scheduled_data_gap_alerts.py)
+* Classes implementing data gap alerts can be found in [DataGapAlert.py](../alerts/DataGapAlert.py)
 * ``*/6 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_data_gap_alerts.py >> /home/yappi/ITP-SE12-Power-Monitoring/alerts/data_gap_output.txt``
 
-## Analysis and Reports Generation
-The 
+### Dead Sensor Alerts
+Dead sensor alerts were scheduled to run daily at 2359 using the CRON expression below.
+* [scheduled_dead_sensor_alerts.py](../alerts/scheduled_dead_sensor_alerts.py)
+* Classes implenmenting dead sensor alerts can be found in [DeadSensorAlert.py](../alerts/DataGapAlert.py)
+* ``59 23 * * * cd /home/yappi/ITP-SE12-Power-Monitoring/alerts && python3 scheduled_dead_sensor_alerts.py >> dead_sensor_alerts_output.txt 2>&1``
 
-59 23 28-31 * * cd /home/yappi/ITP-SE12-Power-Monitoring/analysis && ./scheduled_analysis.sh
+## Analysis and Reports Generation
+Retrieves updated data files from InfluxDB using [extract_raw_data.py](README.md), executes all analysis scripts in [analysis folder](../analysis) and runs the [ReportGeneration.py](../analysis/ReportGeneration.py). Generated report is sent via Telegram. Scheduled to run at the end of each month.
+* [scheduled_analysis.sh](../analysis/scheduled_analysis.sh)
+* ``59 23 28-31 * * cd /home/yappi/ITP-SE12-Power-Monitoring/analysis && ./scheduled_analysis.sh``
+
