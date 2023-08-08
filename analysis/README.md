@@ -13,21 +13,11 @@ DESCRIBE CONTENT IN THIS DIRECTORY
 The ``HistoricalCorrelation.py`` is used to calculate the correlation between 2 buckets - Historical Power Consumption & Historical Weather Data and produce a heatmap to represent the result. It uses the CorrleationCalculator & CorrelationPlotter classes from the ``CorrelationCalculator.py`` to do this.
 
 ### **How to use**
-Inside ``HistoricalCorrelation.py``, we define the buckets that we want to read from as the bucket_configs variable.
-
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/ab7944fd-3f4c-4052-9985-3e43c628eb33)
-
-Then, we create an instance of the CorrelationCalculator and call the read_data_from_bucket method and pass the bucket_configs as its parameter.
-
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/f2dbe580-b1d7-449d-859d-0d2f041193b0)
+Inside ``HistoricalCorrelation.py``, we define the buckets that we want to read from as the bucket_configs variable. Then, we create an instance of the CorrelationCalculator and call the read_data_from_bucket method and pass the bucket_configs as its parameter. 
 
 The read_data_from_bucket method will process each bucket as a dataframe and process the dataframe based on the bucket as some buckets only have monthly data while others have daily data and to calculate correlation, each variable needs to have the same amount of data points. Hence, the different processing of each bucket.
 
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/66207f72-9899-4f63-b6ad-910564f7ffa1)
-
 The output from read_data_from_bucket method will be passed to the calculate_correlations method which will correlate each variable in the output against each other including itself and store the result into a dictionary in this format -  "variable 1 vs variable 2" : result. Then, we create an instance of CorrelationPlotter and call the plot_correlation_matrix method to produce the heatmap for our correlation result.
-
-![image](https://github.com/danialhbma/ITP-SE12-Power-Monitoring/assets/92836838/122025e1-47bd-483a-8c29-4cd89b738d08)
 
 ## Monthly Correlation
 The ``MonthlyCorrelation.py`` works similarly to ``HistoricalCorrelation.py`` but it performs correlation analysis on external weather data (from OpenWeatherMap API) and internal farm conditions (which is our live sensor data obtained from our deployed sensors) for the month.
