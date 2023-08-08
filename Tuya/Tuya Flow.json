@@ -1,0 +1,1936 @@
+[
+    {
+        "id": "d725d11d10da0759",
+        "type": "tab",
+        "label": "Tuya Cloud API",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4fdc97e52b37ce75",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Get a Token API",
+        "func": "/*set the full url of the API which includes the endpoint \nof the region where we deployed our device */\nvar url = \"https://openapi.tuyaeu.com/v1.0/token?grant_type=1\";\n\n// Get the time and sign from the previous nodes\nvar time = msg.time;\nvar sign = msg.payload;\n\n// Get client_id from flow context\nvar client_id  = flow.get(\"tuya_client_id\");\n\n// Set up the necessary details for the API request\nmsg.headers ={\n \"sign_method\": \"HMAC-SHA256\",\n \"client_id\" : client_id,\n \"t\": time.toString(),\n \"sign\": sign.toUpperCase()\n },\n msg.payload = '';\n msg.url = url;\n msg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 240,
+        "wires": [
+            [
+                "f379b89b1fadbfb7"
+            ]
+        ]
+    },
+    {
+        "id": "f379b89b1fadbfb7",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 990,
+        "y": 240,
+        "wires": [
+            [
+                "0f43339dd50f58b3"
+            ]
+        ]
+    },
+    {
+        "id": "cf9fa7f912e87578",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "name": "Timestamp",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "5fbf0c581371c9f5"
+            ]
+        ]
+    },
+    {
+        "id": "5fbf0c581371c9f5",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id  = flow.get(\"tuya_client_id\");\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for signature string\n// Set the HTTP Method of the API\nvar http_method = \"GET\";\n\n// Set the URL of the API\nvar api_url = \"/v1.0/token?grant_type=1\";\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Creating the signature string\nvar string_to_sign = http_method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + api_url;\nvar signStr = client_id + time + string_to_sign;\n\n/* Pass on these details to the next node\nto sign with SHA256 */\nmsg.payload = signStr;\nmsg.time = msg.time;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "beb1e41e6aa952bf"
+            ]
+        ]
+    },
+    {
+        "id": "6e9a81a38164990c",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Access Token + Refresh Token",
+        "info": "",
+        "x": 220,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0f43339dd50f58b3",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Extract Token from Response",
+        "func": "// Get the necessary data from the payload (access token, refresh token and expire time)\nvar data = msg.payload;\nvar access_token = data.result.access_token;\nvar refresh_token = data.result.refresh_token;\nvar expire_time = data.result.expire_time;\n\nvar creds ={\n    \"access_token\": access_token,\n    \"refresh_token\": refresh_token\n}\n\n// Store these details in the flow context\nflow.set(\"tuya\", creds);\n\n// Store the expire time for countdown\nflow.set(\"current_expire_time\", expire_time);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 240,
+        "wires": [
+            [
+                "f4c6e555c4b832cb",
+                "20c87e3e2b79820e"
+            ]
+        ]
+    },
+    {
+        "id": "f4c6e555c4b832cb",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f5281174f1762b1f",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Tuya Account Settings",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Get these details from Tuya Cloud Account\nvar client_id = \"uffcchjtugraq8apv94g\";\nvar user_id = \"eu1683510579448Dyitj\";\nvar client_secret = \"1e94362fe7744ee89a0e5c52e0a27aea\"\n\n// Stores & persists these details in the flow context\n// Using these details when calling API later\nflow.set(\"tuya_client_id\", client_id);\nflow.set(\"tuya_user_id\", user_id);\nflow.set(\"tuya_secret\", client_secret);",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0facbe1996e51e6e",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Refresh Token API",
+        "func": "// Get the time, sign and refresh_token from the previous nodes\nvar time = msg.time;\nvar sign = msg.payload;\n\n// Get client_id from flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the refresh_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar refresh_token = creds.refresh_token\n\n/*set the full url of the API which includes the endpoint \nof the region where we deployed our device */\nvar url = \"https://openapi.tuyaeu.com/v1.0/token/\" + refresh_token;\n\n// Set up the necessary details for the API request\nmsg.headers ={\n \"sign_method\": \"HMAC-SHA256\",\n \"client_id\" : client_id,\n \"t\": time.toString(),\n \"sign\": sign.toUpperCase()\n },\n msg.payload = '';\n msg.url = url;\n msg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "88ac4fdaf979bd9b"
+            ]
+        ]
+    },
+    {
+        "id": "88ac4fdaf979bd9b",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1010,
+        "y": 340,
+        "wires": [
+            [
+                "3251c805126b30d8"
+            ]
+        ]
+    },
+    {
+        "id": "d88fef39b93a9c12",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the refresh_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar refresh_token = creds.refresh_token\n\n// Get the current timestamp from previous node\nvar time = msg.payload;\n\n// Check the countdown status\nvar token_expired = flow.get(\"token_expired\");\n\nif (token_expired) {\n    // Countdown has reached 0, proceed with the next node\n\n    // Setting up the variables for signature string\n    // Set the HTTP Method of the API\n    var http_method = \"GET\";\n\n    // Set the URL of the API\n    var api_url = \"/v1.0/token/\" + refresh_token;\n\n    /* This represents our request body but we don't need it \n    since most of the data is in the headers or url itself \n    (query parameters). So, we can use the empty body encryption\n    given in Tuya */\n    var content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n    // Creating the signature string\n    var string_to_sign = http_method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + api_url;\n    var signStr = client_id + time + string_to_sign;\n\n    /* Pass on these details to the next node\n    to sign with SHA256 */\n    msg.payload = signStr;\n    msg.time = time; // Pass the current timestamp to the next node\n\n    return msg;\n} else {\n    // Countdown hasn't reached 0, prevent the next node from running\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "29bfbdd09c91a9e1"
+            ]
+        ]
+    },
+    {
+        "id": "e1dc78fa9f53afc5",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3251c805126b30d8",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Extract Token from Response",
+        "func": "// Get the necessary data from the payload (access token, refresh token and expire time)\nvar data = msg.payload;\nvar access_token = data.result.access_token;\nvar refresh_token = data.result.refresh_token;\nvar expire_time = data.result.expire_time;\n\nvar creds ={\n    \"access_token\": access_token,\n    \"refresh_token\": refresh_token\n}\n\n// Store these details in the flow context\nflow.set(\"tuya\", creds);\n\n// Store the expire time for countdown\nflow.set(\"current_expire_time\", expire_time);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 340,
+        "wires": [
+            [
+                "e1dc78fa9f53afc5",
+                "20c87e3e2b79820e"
+            ]
+        ]
+    },
+    {
+        "id": "8f7071f9682d54f8",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Get User's Device List API",
+        "func": "// Get the time and signfrom the previous nodes\nvar time = msg.time;\nvar sign = msg.payload;\n\n// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the user id from the flow context\nvar user_id = flow.get(\"tuya_user_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token\n\n/*set the full url of the API which includes the endpoint \nof the region where we deployed our device */\nvar url = \"https://openapi.tuyaeu.com/v1.0/users/\" + user_id + \"/devices\";\n\n// Set up the necessary details for the API request\nmsg.headers ={\n \"sign_method\": \"HMAC-SHA256\",\n \"client_id\" : client_id,\n \"t\": time.toString(),\n \"sign\": sign.toUpperCase(),\n \"access_token\": access_token\n },\n msg.payload = '';\n msg.url = url;\n msg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 480,
+        "wires": [
+            [
+                "cf49cb7dac2ad2a5"
+            ]
+        ]
+    },
+    {
+        "id": "cf49cb7dac2ad2a5",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1050,
+        "y": 480,
+        "wires": [
+            [
+                "d7b26838b82dc913"
+            ]
+        ]
+    },
+    {
+        "id": "3c62734ab2083ecf",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "name": "Timestamp",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "4417eb5598516440"
+            ]
+        ]
+    },
+    {
+        "id": "4417eb5598516440",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id  = flow.get(\"tuya_client_id\");\n\n// Get the user id from the flow context\nvar user_id = flow.get(\"tuya_user_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for signature string\n// Set the HTTP Method of the API\nvar http_method = \"GET\";\n\n// Set the URL of the API\nvar api_url = \"/v1.0/users/\" + user_id + \"/devices\";\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Creating the signature string\nvar string_to_sign = http_method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + api_url;\nvar signStr = client_id + access_token + time + string_to_sign;\n\n/* Pass on these details to the next node\nto sign with SHA256 */\nmsg.payload = signStr;\nmsg.time = msg.time;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "8cae8252200cc321"
+            ]
+        ]
+    },
+    {
+        "id": "1729f98cf28565e2",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get All Devices",
+        "info": "",
+        "x": 160,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e06a629ee0fc5556",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d7b26838b82dc913",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar data = msg.payload.result;\n\n// create a new array to store the devices\nvar deviceList = [];\n\n// iterate over each data and store into deviceList\ndata.forEach(function (device) {\n    var deviceDetail = {\n        id: device.id,\n        name: device.name\n    };\n\n    deviceList.push(deviceDetail);\n});\n\n// Store the deviceList into flow context\nflow.set('deviceList', deviceList)\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: deviceList\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 480,
+        "wires": [
+            [
+                "e06a629ee0fc5556"
+            ]
+        ]
+    },
+    {
+        "id": "c9093509febf148a",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Turn Device Off (For Light)",
+        "info": "",
+        "x": 190,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9aa39b333cca623f",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Control Device API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/commands\";\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '{\"commands\":[{\"code\":\"r_mode\",\"value\":\"close\"}]}';\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"POST\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1080,
+        "wires": [
+            [
+                "1f089a6fdf195c5c"
+            ]
+        ]
+    },
+    {
+        "id": "1f089a6fdf195c5c",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 930,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c9960f3c16cded77",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 19 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"commands\":[{\"code\":\"r_mode\",\"value\":\"close\"}]}",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1080,
+        "wires": [
+            [
+                "0e7b3bcd2393dedd"
+            ]
+        ]
+    },
+    {
+        "id": "af93f3584adef201",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"POST\";\n\nvar content_SHA256 = msg.payload;\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name contains \"light\"\n    if (device.name.toLowerCase().includes(\"light\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/commands\";\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1080,
+        "wires": [
+            [
+                "9aa39b333cca623f"
+            ]
+        ]
+    },
+    {
+        "id": "eb32164bd744dcf2",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Turn Device On (For Light)",
+        "info": "",
+        "x": 190,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "b87c1272985a5f03",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 930,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54c6dff9ba99f4ec",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 07 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"commands\":[{\"code\":\"r_mode\",\"value\":\"open\"}]}",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1160,
+        "wires": [
+            [
+                "8cf7b15048129099"
+            ]
+        ]
+    },
+    {
+        "id": "08b4397b923929c4",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"POST\";\n\nvar content_SHA256 = msg.payload;\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name contains \"light\"\n    if (device.name.toLowerCase().includes(\"light\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/commands\";\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1160,
+        "wires": [
+            [
+                "b4ca60b3734101fd"
+            ]
+        ]
+    },
+    {
+        "id": "b4ca60b3734101fd",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Control Device API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/commands\";\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '{\"commands\":[{\"code\":\"r_mode\",\"value\":\"open\"}]}';\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"POST\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1160,
+        "wires": [
+            [
+                "b87c1272985a5f03"
+            ]
+        ]
+    },
+    {
+        "id": "20c87e3e2b79820e",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Countdown for Token Expiry",
+        "func": "// Get the current_expire_time value from flow context\nvar cur_exp_time = flow.get(\"current_expire_time\");\n\nfunction performCountdown() {\n    if (cur_exp_time === 5) {\n        // Countdown reached 5, trigger the token refresh flow\n        flow.set(\"token_expired\", true);\n\n        // Get the current timestamp\n        var currentTimestamp = Date.now();\n\n        // Pass the current timestamp to the next node\n        msg.payload = currentTimestamp;\n        node.send(msg);\n        \n    } else {\n\n        flow.set(\"token_expired\", false);\n\n        // Decrement the current_expire_time by 1 second\n        cur_exp_time--;\n\n        // Output the current_expire_time when it reaches 10 or less for debugging purposes\n        if (cur_exp_time <= 10) {\n            msg.payload = \"Current Expire Time: \" + cur_exp_time;\n            node.send(msg);\n        }\n\n        if (cur_exp_time > 0) {\n            // Schedule the next iteration of the countdown (every second)\n            setTimeout(performCountdown, 1000);\n        }\n    }\n}\n\n// Start the countdown\nperformCountdown();\n\n// Update the modified current_expire_time in Flow context\nflow.set(\"current_expire_time\", cur_exp_time);\n\n// Return null to prevent passing the message to the next node\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 240,
+        "wires": [
+            [
+                "d88fef39b93a9c12",
+                "bf3388a6e69406b2"
+            ]
+        ]
+    },
+    {
+        "id": "bf3388a6e69406b2",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7f093698d26679ee",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "0 0-23 * * *",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "x": 150,
+        "y": 580,
+        "wires": [
+            [
+                "5266b770c0f095bd"
+            ]
+        ]
+    },
+    {
+        "id": "d21705f7963aa7fd",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Device Log (For Light)",
+        "info": "",
+        "x": 190,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5266b770c0f095bd",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"GET\";\n\n// Set the required parameters of the API\nvar start_time = time - 3600000; // Get logs for 1 hour worth\nvar end_time = time;\nvar event_type = 7;\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name contains \"light\"\n    if (device.name.toLowerCase().includes(\"light\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time,\n            start_time: start_time,\n            end_time: end_time,\n            event_type: event_type,\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "ee849953d2eb043e",
+                "10bc4498241a0893"
+            ]
+        ]
+    },
+    {
+        "id": "10bc4498241a0893",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Query Device Log API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n    var start_time = item.start_time;\n    var end_time = item.end_time;\n    var event_type = item.event_type;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '';\n\n    // Attach the device_id to the msg object\n    msg.device_id = device_id;\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"GET\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 580,
+        "wires": [
+            [
+                "f7630f9f207d4f1f"
+            ]
+        ]
+    },
+    {
+        "id": "f7630f9f207d4f1f",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 580,
+        "wires": [
+            [
+                "890f7ab5aefb76c1"
+            ]
+        ]
+    },
+    {
+        "id": "5c61ed48ce24c73f",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ee849953d2eb043e",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "Check Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "890f7ab5aefb76c1",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar logs = msg.payload.result.logs;\nvar device_id = msg.payload.result.device_id;\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// create a new array to store the devices\nvar logsList = [];\n\n// iterate over each log and store into logsList\nlogs.forEach(function (log) {\n    if (log.code === \"cur_power\") {\n        // Find the device object with matching id in the deviceList\n        var device = deviceList.find(function (device) {\n            return device.id === device_id;\n        });\n\n        // If a matching device is found, retrieve its name\n        var device_name = device ? device.name : '';\n\n        var newLog = {\n            type: log.code,\n            value: log.value,\n            time: log.event_time,\n            device_id: device_id,\n            device_name: device_name\n        };\n\n        logsList.push(newLog);\n    }\n});\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: logsList[0]\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 580,
+        "wires": [
+            [
+                "5c61ed48ce24c73f",
+                "4aeb02707d83c0a3"
+            ]
+        ]
+    },
+    {
+        "id": "4aeb02707d83c0a3",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Transform Data For InfluxDB",
+        "func": "var log = msg.payload;\n\nif (log && log.device_name) {\n    // Extract the rack number from the device_name\n    var rackNumber = log.device_name.match(/Rack (\\d+)/);\n    var rackMeasurement = rackNumber ? \"Rack_\" + rackNumber[1] : \"\"; // Create the measurement name\n\n    var transformedLog = {\n        measurement: rackMeasurement + \"_Power_Consumption\", // Use the rackMeasurement to create the measurement name\n        tags: { device_id: log.device_id, device_name: log.device_name, type: log.type }, // Set the device_id and device_name as tags\n        fields: { value: parseFloat(log.value) }, // Set the value as a field (converted to a number if needed)\n        timestamp: new Date(log.time).getTime() // Set the timestamp (converted to a Unix timestamp)\n    };\n\n    // Create an array of transformed payloads\n    var transformedPayloads = [transformedLog];\n\n    // Assign the array of transformed payloads to msg.payload\n    msg.payload = transformedPayloads;\n\n    // Return the modified message object\n    return msg;\n} else {\n    // Create an empty array to indicate no data\n    msg.payload = [];\n\n    // Return the modified message object\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 620,
+        "wires": [
+            [
+                "c1173dc80d78bfb2",
+                "0e672093e69b612d"
+            ]
+        ]
+    },
+    {
+        "id": "feb1a131fd307d78",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "0 0-23 * * *",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "7be3e542e6fd1c85"
+            ]
+        ]
+    },
+    {
+        "id": "cc5fdc6ef387a1fd",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Device Log (For Water)",
+        "info": "",
+        "x": 200,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "7be3e542e6fd1c85",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"GET\";\n\n// Set the required parameters of the API\nvar start_time = time - 3600000; // Get logs for 1 hour worth\nvar end_time = time;\nvar event_type = 7;\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name contains \"water\"\n    if (device.name.toLowerCase().includes(\"water\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time,\n            start_time: start_time,\n            end_time: end_time,\n            event_type: event_type\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 720,
+        "wires": [
+            [
+                "b5765aadbc60d279",
+                "2106a8a9f295675b"
+            ]
+        ]
+    },
+    {
+        "id": "2106a8a9f295675b",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Query Device Log API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n    var start_time = item.start_time;\n    var end_time = item.end_time;\n    var event_type = item.event_type;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '';\n\n    // Attach the device_id to the msg object\n    msg.device_id = device_id;\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"GET\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 720,
+        "wires": [
+            [
+                "9050a8f3764aa742"
+            ]
+        ]
+    },
+    {
+        "id": "9050a8f3764aa742",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 720,
+        "wires": [
+            [
+                "08671f7d2acf15d0"
+            ]
+        ]
+    },
+    {
+        "id": "8d658009706f1e5b",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "b5765aadbc60d279",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "Check Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "08671f7d2acf15d0",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar logs = msg.payload.result.logs;\nvar device_id = msg.payload.result.device_id;\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// create a new array to store the devices\nvar logsList = [];\n\n// iterate over each log and store into logsList\nlogs.forEach(function (log) {\n    if (log.code === \"cur_power\") {\n        // Find the device object with matching id in the deviceList\n        var device = deviceList.find(function (device) {\n            return device.id === device_id;\n        });\n\n        // If a matching device is found, retrieve its name\n        var device_name = device ? device.name : '';\n\n        var newLog = {\n            type: log.code,\n            value: log.value,\n            time: log.event_time,\n            device_id: device_id,\n            device_name: device_name\n        };\n\n        logsList.push(newLog);\n    }\n});\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: logsList[0]\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 720,
+        "wires": [
+            [
+                "8d658009706f1e5b",
+                "a2ba94847e9fb881"
+            ]
+        ]
+    },
+    {
+        "id": "a2ba94847e9fb881",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Transform Data For InfluxDB",
+        "func": "var log = msg.payload;\n\nif (log && log.device_name) {\n    // Extract the rack number from the device_name\n    var rackNumber = log.device_name.match(/Rack (\\d+)/);\n    var rackMeasurement = rackNumber ? \"Rack_\" + rackNumber[1] : \"\"; // Create the measurement name\n\n    var transformedLog = {\n        measurement: rackMeasurement + \"_Power_Consumption\", // Use the rackMeasurement to create the measurement name\n        tags: { device_id: log.device_id, device_name: log.device_name, type: log.type }, // Set the device_id and device_name as tags\n        fields: { value: parseFloat(log.value) }, // Set the value as a field (converted to a number if needed)\n        timestamp: new Date(log.time).getTime() // Set the timestamp (converted to a Unix timestamp)\n    };\n\n    // Create an array of transformed payloads\n    var transformedPayloads = [transformedLog];\n\n    // Assign the array of transformed payloads to msg.payload\n    msg.payload = transformedPayloads;\n\n    // Return the modified message object\n    return msg;\n} else {\n    // Create an empty array to indicate no data\n    msg.payload = [];\n\n    // Return the modified message object\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 760,
+        "wires": [
+            [
+                "3f7a29e265ea2cac",
+                "5d0df937f50c8039"
+            ]
+        ]
+    },
+    {
+        "id": "7e3b8a87fa2b3a2b",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "0 0-23 * * *",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "1a4cd5e924b2d305"
+            ]
+        ]
+    },
+    {
+        "id": "3a96888cd15272b4",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Device Log (For Others)",
+        "info": "",
+        "x": 200,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1a4cd5e924b2d305",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"GET\";\n\n// Set the required parameters of the API\nvar start_time = time - 3600000; // Get logs for 1 hour worth\nvar end_time = time;\nvar event_type = 7;\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name does not contain \"light\" or \"water\"\n    if (!device.name.toLowerCase().includes(\"light\") && !device.name.toLowerCase().includes(\"water\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time,\n            start_time: start_time,\n            end_time: end_time,\n            event_type: event_type\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 840,
+        "wires": [
+            [
+                "296e463f2de638ce",
+                "9f6f21043c2698d5"
+            ]
+        ]
+    },
+    {
+        "id": "9f6f21043c2698d5",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Query Device Log API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n    var start_time = item.start_time;\n    var end_time = item.end_time;\n    var event_type = item.event_type;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '';\n\n    // Attach the device_id to the msg object\n    msg.device_id = device_id;\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"GET\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 840,
+        "wires": [
+            [
+                "26135464317b97da"
+            ]
+        ]
+    },
+    {
+        "id": "26135464317b97da",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 840,
+        "wires": [
+            [
+                "ea94f196eae4351b"
+            ]
+        ]
+    },
+    {
+        "id": "4fcccaff290427b4",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "296e463f2de638ce",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "Check Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "ea94f196eae4351b",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar logs = msg.payload.result.logs;\nvar device_id = msg.payload.result.device_id;\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// create a new array to store the devices\nvar logsList = [];\n\n// iterate over each log and store into logsList\nlogs.forEach(function (log) {\n    if (log.code === \"cur_power\") {\n        // Find the device object with matching id in the deviceList\n        var device = deviceList.find(function (device) {\n            return device.id === device_id;\n        });\n\n        // If a matching device is found, retrieve its name\n        var device_name = device ? device.name : '';\n\n        var newLog = {\n            type: log.code,\n            value: log.value,\n            time: log.event_time,\n            device_id: device_id,\n            device_name: device_name\n        };\n\n        logsList.push(newLog);\n    }\n});\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: logsList[0]\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 840,
+        "wires": [
+            [
+                "4fcccaff290427b4",
+                "d02126fdf39f274d"
+            ]
+        ]
+    },
+    {
+        "id": "d02126fdf39f274d",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Transform Data For InfluxDB",
+        "func": "var log = msg.payload;\n\nif (log && log.device_name) {\n    var transformedLog = {\n        measurement: getMeasurementName(log.device_name), // Use the rackMeasurement to create the measurement name\n        tags: { device_id: log.device_id, device_name: log.device_name, type: log.type }, // Set the device_id and device_name as tags\n        fields: { value: parseFloat(log.value) }, // Set the value as a field (converted to a number if needed)\n        timestamp: new Date(log.time).getTime() // Set the timestamp (converted to a Unix timestamp)\n    };\n\n    // Create an array of transformed payloads\n    var transformedPayloads = [transformedLog];\n\n    // Assign the array of transformed payloads to msg.payload\n    msg.payload = transformedPayloads;\n\n    // Return the modified message object\n    return msg;\n} else {\n    // Create an empty array to indicate no data\n    msg.payload = [];\n\n    // Return the modified message object\n    return msg;\n}\n\n// Function to get the measurement name based on the device name\nfunction getMeasurementName(deviceName) {\n    var splitName = deviceName.split(\" - \");\n    if (splitName.length === 2) {\n        var deviceType = splitName[1].trim().replace(/\\s/g, '_');\n        return deviceType + \"_Power_Consumption\";\n    }\n    return \"\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 880,
+        "wires": [
+            [
+                "8bae42e50b6857f2",
+                "466f462899f776d9"
+            ]
+        ]
+    },
+    {
+        "id": "ab3bfae89e6b6ef7",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "0 0-23 * * *",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "x": 150,
+        "y": 1240,
+        "wires": [
+            [
+                "ac7b8e7cb427f85f"
+            ]
+        ]
+    },
+    {
+        "id": "080ffbf26c513e95",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Device Log (For Light - Test)",
+        "info": "",
+        "x": 210,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "ac7b8e7cb427f85f",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"GET\";\n\n// Set the required parameters of the API\nvar start_time = time - 3600000; // Get logs for 1 hour worth\nvar end_time = time;\nvar event_type = 7;\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name contains \"light\"\n    if (device.name.toLowerCase().includes(\"light\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time,\n            start_time: start_time,\n            end_time: end_time,\n            event_type: event_type,\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1240,
+        "wires": [
+            [
+                "13d5c6184d6a6c9a",
+                "fbf71fd943df5fb0"
+            ]
+        ]
+    },
+    {
+        "id": "fbf71fd943df5fb0",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Query Device Log API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n    var start_time = item.start_time;\n    var end_time = item.end_time;\n    var event_type = item.event_type;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '';\n\n    // Attach the device_id to the msg object\n    msg.device_id = device_id;\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"GET\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1240,
+        "wires": [
+            [
+                "42ba51b02503a8fc"
+            ]
+        ]
+    },
+    {
+        "id": "42ba51b02503a8fc",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1240,
+        "wires": [
+            [
+                "303aad3ec3262453"
+            ]
+        ]
+    },
+    {
+        "id": "f91178ca039591a4",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "13d5c6184d6a6c9a",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "Check Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "303aad3ec3262453",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar logs = msg.payload.result.logs;\nvar device_id = msg.payload.result.device_id;\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// create a new array to store the devices\nvar logsList = [];\n\n// iterate over each log and store into logsList\nlogs.forEach(function (log) {\n    if (log.code === \"cur_power\") {\n        // Find the device object with matching id in the deviceList\n        var device = deviceList.find(function (device) {\n            return device.id === device_id;\n        });\n\n        // If a matching device is found, retrieve its name\n        var device_name = device ? device.name : '';\n\n        var newLog = {\n            type: log.code,\n            value: log.value,\n            time: log.event_time,\n            device_id: device_id,\n            device_name: device_name\n        };\n\n        logsList.push(newLog);\n    }\n});\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: logsList[0]\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 1240,
+        "wires": [
+            [
+                "f91178ca039591a4",
+                "69e976de82406e82"
+            ]
+        ]
+    },
+    {
+        "id": "69e976de82406e82",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Transform Data For InfluxDB",
+        "func": "var transformedData = [];\n\nmsg.payload.forEach(function (log) {\n    // Extract the rack number from the device_name\n    var rackNumber = log.device_name.match(/Rack (\\d+)/);\n    var rackMeasurement = rackNumber ? \"Rack_\" + rackNumber[1] : \"\"; // Create the measurement name\n\n    var transformedLog = {\n        measurement: rackMeasurement + \"_Power_Consumption\", // Use the rackMeasurement to create the measurement name\n        tags: { device_id: log.device_id, device_name: log.device_name, type: log.type }, // Set the device_id and device_name as tags\n        fields: { value: parseFloat(log.value) }, // Set the value as a field (converted to a number if needed)\n        timestamp: new Date(log.time).getTime() // Set the timestamp (converted to a Unix timestamp)\n    };\n\n    transformedData.push(transformedLog);\n});\n\n// Create a new message object with the transformed payload\nvar newMsg = {\n    payload: transformedData\n};\n\n// Return the new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 1280,
+        "wires": [
+            [
+                "745177f4cf3143fb"
+            ]
+        ]
+    },
+    {
+        "id": "92b5e5aea31d182e",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "x": 150,
+        "y": 1380,
+        "wires": [
+            [
+                "e8c62234304f791f"
+            ]
+        ]
+    },
+    {
+        "id": "a92c91bc1b34deca",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Device Log (For Water - Test)",
+        "info": "",
+        "x": 210,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "e8c62234304f791f",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"GET\";\n\n// Set the required parameters of the API\nvar start_time = time - 3600000; // Get logs for 1 hour worth\nvar end_time = time;\nvar event_type = 7;\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name contains \"water\"\n    if (device.name.toLowerCase().includes(\"water\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time,\n            start_time: start_time,\n            end_time: end_time,\n            event_type: event_type\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1380,
+        "wires": [
+            [
+                "5ea318145b40f299",
+                "e8f67e7eef4c747b"
+            ]
+        ]
+    },
+    {
+        "id": "e8f67e7eef4c747b",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Query Device Log API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n    var start_time = item.start_time;\n    var end_time = item.end_time;\n    var event_type = item.event_type;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '';\n\n    // Attach the device_id to the msg object\n    msg.device_id = device_id;\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"GET\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1380,
+        "wires": [
+            [
+                "7dd80690d549860b"
+            ]
+        ]
+    },
+    {
+        "id": "7dd80690d549860b",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1380,
+        "wires": [
+            [
+                "453c95a83e02e5ca"
+            ]
+        ]
+    },
+    {
+        "id": "55201fd91fbec86c",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "5ea318145b40f299",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "Check Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "453c95a83e02e5ca",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar logs = msg.payload.result.logs;\nvar device_id = msg.payload.result.device_id;\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// create a new array to store the devices\nvar logsList = [];\n\n// iterate over each log and store into logsList\nlogs.forEach(function (log) {\n    if (log.code === \"cur_power\") {\n        // Find the device object with matching id in the deviceList\n        var device = deviceList.find(function (device) {\n            return device.id === device_id;\n        });\n\n        // If a matching device is found, retrieve its name\n        var device_name = device ? device.name : '';\n\n        var newLog = {\n            type: log.code,\n            value: log.value,\n            time: log.event_time,\n            device_id: device_id,\n            device_name: device_name\n        };\n\n        logsList.push(newLog);\n    }\n});\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: logsList\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 1380,
+        "wires": [
+            [
+                "55201fd91fbec86c",
+                "28a0ce874df4b8f6"
+            ]
+        ]
+    },
+    {
+        "id": "28a0ce874df4b8f6",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Transform Data For InfluxDB",
+        "func": "var transformedData = [];\n\nmsg.payload.forEach(function (log) {\n    // Extract the rack number from the device_name\n    var rackNumber = log.device_name.match(/Rack (\\d+)/);\n    var rackMeasurement = rackNumber ? \"Rack_\" + rackNumber[1] : \"\"; // Create the measurement name\n\n    var transformedLog = {\n        measurement: rackMeasurement + \"_Power_Consumption\", // Use the rackMeasurement to create the measurement name\n        tags: { device_id: log.device_id, device_name: log.device_name, type: log.type }, // Set the device_id and device_name as tags\n        fields: { value: parseFloat(log.value) }, // Set the value as a field (converted to a number if needed)\n        timestamp: new Date(log.time).getTime() // Set the timestamp (converted to a Unix timestamp)\n    };\n\n    transformedData.push(transformedLog);\n});\n\n// Create a new message object with the transformed payload\nvar newMsg = {\n    payload: transformedData\n};\n\n// Return the new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 1420,
+        "wires": [
+            [
+                "c74a839bb98a8b99"
+            ]
+        ]
+    },
+    {
+        "id": "c5fdbd996cd64646",
+        "type": "inject",
+        "z": "d725d11d10da0759",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "time",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "x": 150,
+        "y": 1500,
+        "wires": [
+            [
+                "c51bf03844f01c03"
+            ]
+        ]
+    },
+    {
+        "id": "80431bc1f661b38a",
+        "type": "comment",
+        "z": "d725d11d10da0759",
+        "name": "Get Device Log (For Others - Test)",
+        "info": "",
+        "x": 220,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "c51bf03844f01c03",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Create signStr",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the client secret from the flow context\nvar client_secret = flow.get(\"tuya_secret\");\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Get the time from the previous node\nvar time = msg.time;\n\n// Setting up the variables for the signature string\n// Set the HTTP Method of the API\nvar method = \"GET\";\n\n// Set the required parameters of the API\nvar start_time = time - 3600000; // Get logs for 1 hour worth\nvar end_time = time;\nvar event_type = 7;\n\n/* This represents our request body but we don't need it \nsince most of the data is in the headers or url itself \n(query parameters). So, we can use the empty body encryption\ngiven in Tuya */\nvar content_SHA256 = \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\";\n\n// Initialize an array to store the modified messages\nvar modifiedMessages = [];\n\n// Import the HmacSHA256 method from the functionGlobalContext\nvar HmacSHA256 = global.get('hmacSHA256');\n\n// Iterate over the device list\ndeviceList.forEach(function (device) {\n    // Check if the device name does not contain \"light\" or \"water\"\n    if (!device.name.toLowerCase().includes(\"light\") && !device.name.toLowerCase().includes(\"water\")) {\n        // Create a separate sign_url and device_id for each device\n        var sign_url = \"/v1.0/devices/\" + device.id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n        var string_to_sign = method + \"\\n\" + content_SHA256 + \"\\n\" + \"\" + \"\\n\" + sign_url;\n        var signStr = client_id + access_token + time + string_to_sign;\n\n        // Perform HMAC-SHA256 encryption on the message\n        var hash = HmacSHA256(signStr, client_secret);\n\n        // Convert the hash to a hexadecimal string\n        var hashHex = hash.toString();\n\n        // Create a modified message object for the device\n        var modifiedMsg = {\n            device_id: device.id,\n            payload: hashHex,\n            time: time,\n            start_time: start_time,\n            end_time: end_time,\n            event_type: event_type\n        };\n\n        // Add the modified message to the array\n        modifiedMessages.push(modifiedMsg);\n    }\n});\n\n// Set the modified messages as the new payload\nmsg.payload = modifiedMessages;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1500,
+        "wires": [
+            [
+                "0860aad068387cb4",
+                "e06f6cceb90c036e"
+            ]
+        ]
+    },
+    {
+        "id": "e06f6cceb90c036e",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Call Query Device Log API",
+        "func": "// Get the client id from the flow context\nvar client_id = flow.get(\"tuya_client_id\");\n\n// Get the access_token from the flow context\nvar creds = flow.get(\"tuya\");\nvar access_token = creds.access_token;\n\n// Iterate over each item in the msg.payload array\nmsg.payload.forEach(function (item) {\n    // Get the sign, time, and device_id from the current item\n    var sign = item.payload;\n    var time = item.time;\n    var device_id = item.device_id;\n    var start_time = item.start_time;\n    var end_time = item.end_time;\n    var event_type = item.event_type;\n\n    // Set the full URL of the API which includes the endpoint of the region where the device is deployed\n    var url = \"https://openapi.tuyaeu.com/v1.0/devices/\" + device_id + \"/logs?end_time=\" + end_time + \"&start_time=\" + start_time + \"&type=\" + event_type;\n\n    // Configure the message headers\n    var headers = {\n        \"sign_method\": \"HMAC-SHA256\",\n        \"client_id\": client_id,\n        \"t\": time.toString(),\n        \"mode\": \"cors\",\n        \"Content-Type\": \"application/json\",\n        \"sign\": sign.toUpperCase(),\n        \"access_token\": access_token\n    };\n\n    // Set the message payload and other properties\n    var payload = '';\n\n    // Attach the device_id to the msg object\n    msg.device_id = device_id;\n\n    // Make the API call for the current item\n    // You can use a HTTP request node or call an external service here\n\n    // Example using a HTTP request node:\n    var newMsg = {\n        url: url,\n        method: \"GET\",\n        headers: headers,\n        payload: payload\n    };\n    node.send(newMsg);\n});\n\n// Return null to prevent the original message from passing through\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1500,
+        "wires": [
+            [
+                "7cfcaf30fff49ef2"
+            ]
+        ]
+    },
+    {
+        "id": "7cfcaf30fff49ef2",
+        "type": "http request",
+        "z": "d725d11d10da0759",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1500,
+        "wires": [
+            [
+                "4b10b4037db6156b"
+            ]
+        ]
+    },
+    {
+        "id": "d0ad3d1b2977d90c",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "0860aad068387cb4",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "Check Time",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "4b10b4037db6156b",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Filter Out Details",
+        "func": "// Extract the result for filtering later\nvar logs = msg.payload.result.logs;\nvar device_id = msg.payload.result.device_id;\n\n// Get the device list from the flow context\nvar deviceList = flow.get(\"deviceList\");\n\n// create a new array to store the devices\nvar logsList = [];\n\n// iterate over each log and store into logsList\nlogs.forEach(function (log) {\n    if (log.code === \"cur_power\") {\n        // Find the device object with matching id in the deviceList\n        var device = deviceList.find(function (device) {\n            return device.id === device_id;\n        });\n\n        // If a matching device is found, retrieve its name\n        var device_name = device ? device.name : '';\n\n        var newLog = {\n            type: log.code,\n            value: log.value,\n            time: log.event_time,\n            device_id: device_id,\n            device_name: device_name\n        };\n\n        logsList.push(newLog);\n    }\n});\n\n// create a new message object with the transformed logs payload\nvar newMsg = {\n    payload: logsList\n};\n\n// return new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 1500,
+        "wires": [
+            [
+                "d0ad3d1b2977d90c",
+                "308096ab59bd19d3"
+            ]
+        ]
+    },
+    {
+        "id": "308096ab59bd19d3",
+        "type": "function",
+        "z": "d725d11d10da0759",
+        "name": "Transform Data For InfluxDB",
+        "func": "var transformedData = [];\n\nmsg.payload.forEach(function (log) {\n    var transformedLog = {\n        measurement: getMeasurementName(log.device_name), // Use the rackMeasurement to create the measurement name\n        tags: { device_id: log.device_id, device_name: log.device_name, type: log.type }, // Set the device_id and device_name as tags\n        fields: { value: parseFloat(log.value) }, // Set the value as a field (converted to a number if needed)\n        timestamp: new Date(log.time).getTime() // Set the timestamp (converted to a Unix timestamp)\n    };\n\n    transformedData.push(transformedLog);\n});\n\n// Function to get the measurement name based on the device name\nfunction getMeasurementName(deviceName) {\n    var splitName = deviceName.split(\" - \");\n    if (splitName.length === 2) {\n        var deviceType = splitName[1].trim().replace(/\\s/g, '_');\n        return deviceType + \"_power_consumption\";\n    }\n    return \"\";\n}\n\n// Create a new message object with the transformed payload\nvar newMsg = {\n    payload: transformedData\n};\n\n// Return the new message object\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 1540,
+        "wires": [
+            [
+                "6c89a48ca5b0fdd5"
+            ]
+        ]
+    },
+    {
+        "id": "c1173dc80d78bfb2",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5d0df937f50c8039",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "466f462899f776d9",
+        "type": "debug",
+        "z": "d725d11d10da0759",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3f7a29e265ea2cac",
+        "type": "influxdb batch",
+        "z": "d725d11d10da0759",
+        "influxdb": "04d549fdfe279be2",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "InfluxDB",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Waterpump_Power_Consumption",
+        "x": 1380,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "8bae42e50b6857f2",
+        "type": "influxdb batch",
+        "z": "d725d11d10da0759",
+        "influxdb": "04d549fdfe279be2",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "InfluxDB",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Other_Power_Consumption",
+        "x": 1380,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "745177f4cf3143fb",
+        "type": "influxdb batch",
+        "z": "d725d11d10da0759",
+        "influxdb": "04d549fdfe279be2",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "InfluxDB",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Growlight_Power_Consumption",
+        "x": 1360,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "c74a839bb98a8b99",
+        "type": "influxdb batch",
+        "z": "d725d11d10da0759",
+        "influxdb": "04d549fdfe279be2",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "InfluxDB",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Waterpump_Power_Consumption",
+        "x": 1360,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "6c89a48ca5b0fdd5",
+        "type": "influxdb batch",
+        "z": "d725d11d10da0759",
+        "influxdb": "04d549fdfe279be2",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "InfluxDB",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Other_Power_Consumption",
+        "x": 1360,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "0e672093e69b612d",
+        "type": "influxdb batch",
+        "z": "d725d11d10da0759",
+        "influxdb": "04d549fdfe279be2",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "InfluxDB",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "my-org",
+        "bucket": "Growlight_Power_Consumption",
+        "x": 1380,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "beb1e41e6aa952bf",
+        "type": "hmac",
+        "z": "d725d11d10da0759",
+        "name": "Sign signStr with Tuya Secret",
+        "algorithm": "HmacSHA256",
+        "key": "1e94362fe7744ee89a0e5c52e0a27aea",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "4fdc97e52b37ce75"
+            ]
+        ]
+    },
+    {
+        "id": "29bfbdd09c91a9e1",
+        "type": "hmac",
+        "z": "d725d11d10da0759",
+        "name": "Sign signStr with Tuya Secret",
+        "algorithm": "HmacSHA256",
+        "key": "1e94362fe7744ee89a0e5c52e0a27aea",
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "0facbe1996e51e6e"
+            ]
+        ]
+    },
+    {
+        "id": "8cae8252200cc321",
+        "type": "hmac",
+        "z": "d725d11d10da0759",
+        "name": "Sign signStr with Tuya Secret",
+        "algorithm": "HmacSHA256",
+        "key": "1e94362fe7744ee89a0e5c52e0a27aea",
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "8f7071f9682d54f8"
+            ]
+        ]
+    },
+    {
+        "id": "0e7b3bcd2393dedd",
+        "type": "digest",
+        "z": "d725d11d10da0759",
+        "name": "Hash the body data",
+        "algorithm": "SHA256",
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "af93f3584adef201"
+            ]
+        ]
+    },
+    {
+        "id": "8cf7b15048129099",
+        "type": "digest",
+        "z": "d725d11d10da0759",
+        "name": "Hash the body data",
+        "algorithm": "SHA256",
+        "x": 310,
+        "y": 1160,
+        "wires": [
+            [
+                "08b4397b923929c4"
+            ]
+        ]
+    },
+    {
+        "id": "04d549fdfe279be2",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "Google Cloud DB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://34.124.179.126:8086",
+        "rejectUnauthorized": true
+    }
+]
